@@ -10,6 +10,7 @@ function App() {
     <Header title={"Aditya"}/>
     <h1>Welcome to Curalink</h1>
     <Header title={"Rohan"} />
+    
     </>
   )
 }

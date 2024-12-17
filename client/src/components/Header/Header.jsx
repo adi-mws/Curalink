@@ -12,7 +12,7 @@ export default function Header({}) {
     return (
         <div className='Header' ref={header}>
             This is my header for {data}
-
+            <h1>This is test</h1>
         </div>
     )
 }
