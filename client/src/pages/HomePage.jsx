@@ -1,7 +1,6 @@
-function HomePage()
-{
-    return 
-    (
+
+function HomePage() {
+    return (
         <>
             <h1>Hi Everyone!</h1>
         </>
