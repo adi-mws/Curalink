@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Registration Email</title>
+    <title>Patient Registration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
@@ -15,24 +15,23 @@
 
     <main class="flex1">
         <div>
-            <p>Hello Aashish Kumar,<br><br>
-
-                Thank you for registering with Curalink, a platform dedicated to empowering healthcare professionals and improving patient care <br>
-                
-                We are currently reviewing your registration details to ensure everything is in order. This process helps us maintain the highest standards of trust and quality on our platform.</p>
+            <p>Hello Dr. Rahul Gandhi, <br><br> 
+                Congratulations! Your account has been successfully verified, and we’re thrilled to welcome you to the Curalink platform—a space dedicated to empowering healthcare professionals like you and enhancing patient care.</p>
         </div>
         <div class="list">
             <strong style="color: #7C336F;">What to expect next?</strong>
-            <ul>
-                <li>The verification process typically takes 1-2 business days.</li>
-                <li>Once your account is verified, you will receive a confirmation email with instructions to set up your profile and start consulting.</li>
-            </ul>
+            <p>Set up your profile to showcase your expertise and start consulting with patients.<br>
+                To complete your onboarding, click the button below:</p>
+            <button id="b1" aria-label="Reset Password">Complete Your Profile</button>
+            <p>Already completed your profile? Click below to view or update it anytime:</p>
+            <button id="b2" aria-label="Reset Password">View Profile</button>
+        </div>
+        
+        <div>
+            <strong>If you have any questions or need assistance in the meantime, feel free to contact us at  <a style="color: #7C336F;">support@curalink.com.</a></strong>
         </div>
         <div>
-            <strong>If you have any questions or need assistance in the meantime, feel free to contact us at <a style="color: #7C336F;">support@curalink.com.</a></strong>
-        </div>
-        <div>
-            <p>Thank you for your patience and understanding as we complete this process.<br>
+            <p>Thank you for your patience and understanding.<br>
                 Warm regards,<br>
                 <i>The Curalink Team</i></p>
         </div>
@@ -41,7 +40,7 @@
     <footer>
         <div class="motto">
             <img src="../assets/logo/logo.png" class="footer-logo" alt="Curalink Logo">
-            <p> Connecting Experts, Transforming Healthcare</p>
+            <p>Connecting Experts, Transforming Healthcare</p>
         </div>
         <div>
             <a style="color: #7C336F;">Privacy policy</a>
@@ -55,7 +54,6 @@
         </div>
         <strong class="foot-message" style="color: #7C336F;">We’re excited to have you on board and can’t wait for you<br>to start making a difference!</strong>
     </footer>
-    
 </body>
 <style>
     body {
@@ -85,14 +83,6 @@
             width: 100%;
         }
     }
-    .flex1{display: flex;
-        flex-direction: column;
-        gap: 3em;
-        padding: 1%;
-        width: 90%;
-        max-width: 1073px;
-
-    }
     .list{
         display: flex;
         flex-direction: column;
@@ -105,6 +95,46 @@
         margin-top: 4vh;
         
     }
+    #b1 {
+        padding: 0.8em 3em;
+        font-size: 1em;
+        border: none;
+        color: white;
+        background-color: #7C336F;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #b2 {
+        padding: 0.8em 3em;
+        font-size: 1em;
+        border: none;
+        color: #862374;
+        background-color: #EAC4ED;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .flex1 {
+        display: flex;
+        flex-direction: column;
+        gap: 6vh;
+        padding: 1%;
+        width: 90%;
+        max-width: 1073px;
+    }
+    .email {
+        color: #7C336F;
+        text-decoration: none;
+    }
+    .email:hover {
+        text-decoration: underline;
+    }
+    .reset-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+    }
+    
     .motto {
         display: flex;
         align-items: center;
@@ -126,6 +156,10 @@
     .icons > a > img {
         width: 100%;
     }
+    .foot-message
+    {
+        text-align: center;
+    }
     footer {
         display: flex;
         flex-direction: column;
@@ -135,9 +169,7 @@
         background-color: #f9f9f9;
         width: 100%;
     }
-    .foot-message {
-        text-align: center;
-    }
+
     .footer-logo {
         width: 30%;
     }
