@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient appointment completed</title>
+</head>
+<body>
+    <header>
+        <div><img class="logo" src="../assets/logo/logo.png" alt="Curalink Logo"></div>
+    </header>
+    <main class="flex1">
+        <div><p>Hello Aashish Kumar,
+            <br> <br>
+            Thank you for trusting Curalink with your healthcare needs! We're glad to have been a part of your consultation journey. <br> <br>
+            
+            Your appointment with Dr. [Doctor_Name] has been successfully completed. Rest assured, your appointment history and records are securely saved on our platform and will be readily available for your next consultation. <br> <br>
+            
+            If you experience any issues or concerns related to your treatment within the [FollowUpDuration] days following your appointment, you can request a follow-up consultation for free. This period ensures that any concerns can be addressed promptly without additional charges.</p></div>
+        <div>
+            <p>You can now view your doctor's prescription or revisit the details of your consultation anytime:</p>
+        </div>
+        <button class="prescription">View prescription</button>
+        <div><strong>If you have any feedback, questions, or need further assistance, feel free to contact us at   <a style="color: #7C336F;" href="">support@curalink.com.</a></strong></div>
+        <div>Thank you for choosing Curalink. We’re here to support you in your healthcare journey!  <br>
+            Warm regards,<br>The Curalink Team</div>
+    </main>
+    <footer>
+        <div class="motto">
+            <img src="../assets/logo/logo.png" class="footer-logo" alt="Curalink Logo">
+            <p>Your health, our priority</p>
+        </div>
+        <p>Follow us on:</p>
+        <div class="icons">
+            <a href="#"><img src="../assets/icons/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="../assets/icons/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="../assets/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="../assets/icons/twitter.png" alt="Twitter"></a>
+        </div>
+        <strong style="color: #7C336F;">Never share your password reset link with anyone.</strong>
+    </footer>
+</body>
+</html>
+<style>
+     body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #4D4D4D;
+        font-family: 'Poppins', sans-serif;
+        margin: 0px;
+        padding: 0px;
+        gap: 3em;
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+
+    }
+    header {
+       
+       width: 100%;
+
+       div {
+           width: fit-content;
+           display: grid; 
+           place-items: center;
+           width: 100%;
+       }
+   }
+   
+   .flex1 {
+        display: flex;
+        flex-direction: column;
+        gap: 6vh;
+        padding: 1%;
+        width: 90%;
+        max-width: 1073px;
+    }
+    button{
+        padding: 0.8em 3em;
+        font-size: 1em;
+        border: none;
+        color: white;
+        background-color: #7C336F;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: auto;
+    }
+   .motto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            height: 100%; 
+            border-left: solid 2px dimgray;
+            padding-left: 1em;
+        }
+    }
+    
+    .icons {
+        display: flex;
+        gap: 3vw;
+        justify-content: center;
+        margin-top: 1vh;
+    }
+    .icons > a > img {
+        width: 100%;
+    }
+   footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        padding: 2em;
+        background-color: #f9f9f9;
+        width: 100%;
+    }
+
+    .footer-logo {
+        width: 30%;
+    }
+    @media screen and (max-width:576px){
+        .logo{
+            width: 55%;
+        }
+
+    }
+</style>
