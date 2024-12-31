@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Registration - Curalink</title>
+    <title>Patient Appointments - Curalink</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
@@ -15,22 +15,29 @@
 
     <main class="flex1">
         <div>
-            <p>Hello Vedant Gupta,<br><br>
-                We recieved a request to reset your Curalink password. No worries - we are here to help!</p>
+            <p>Hello Arvind Kejriwal, <br><br> 
+                Thank you for choosing Curalink for your healthcare needs! We're excited to help you connect with top healthcare professionals. Your appointment has been successfully scheduled. Here are the details:</p>
         </div>
         <div class="list">
-            <strong style="color: #7C336F;">With Curalink, you can</strong>
+            <strong style="color: #7C336F;">Appointment Details:</strong>
             <ul>
-                <li>Connect with experienced healthcare professionals at your convenience.</li>
-                <li>Schedule consultations and access medical advice anytime, anywhere.</li>
-                <li>Stay on top of your health with a user-friendly interface and secure platform.</li>
+                <li>Doctor: Dr. Sagar Nath</li>
+                <li>Specialization: HIV</li>
+                <li>Date: 02/01/2025</li>
+                <li>Time: 08:30 AM</li>
+                <li>Mode: Video Call</li>
             </ul>
+            <p>Get to know your doctor better by viewing their profile.</p>
+            <button id="b1" aria-label="View Doctor Profile">View Doctor Profile</button>
+            <p>Review your appointment details anytime.</p>
+            <button id="b2" aria-label="View Doctor Profile">View Appointment Details</button>
+        </div>
+        
+        <div>
+            <strong>If you have any questions or need to reschedule, don’t hesitate to contact us at <a style="color: #7C336F;">support@curalink.com.</a></strong>
         </div>
         <div>
-            <strong>Should you have any questions or need assistance, our support team is here to help. Simply reply to this email or contact us at <a style="color: #7C336F;">support@curalink.com.</a></strong>
-        </div>
-        <div>
-            <p>Thank you for choosing Curalink!<br>
+            <p>We look forward to assisting you on your healthcare journey!<br>
                 Warm regards,<br>
                 <i>The Curalink Team</i></p>
         </div>
@@ -39,7 +46,10 @@
     <footer>
         <div class="motto">
             <img src="../assets/logo/logo.png" class="footer-logo" alt="Curalink Logo">
-            <p>Your Health, Our Priority</p>
+            <p>Connecting Experts, Transforming Healthcare</p>
+        </div>
+        <div>
+            <a style="color: #7C336F;">Privacy policy</a>
         </div>
         <p>Follow us on:</p>
         <div class="icons">
@@ -48,7 +58,7 @@
             <a href="#"><img src="../assets/icons/linkedin.png" alt="LinkedIn"></a>
             <a href="#"><img src="../assets/icons/twitter.png" alt="Twitter"></a>
         </div>
-        <strong class="foot-message" style="color: #7C336F;">Don't forget to book your first consultation today!</strong>
+        <strong class="foot-message" style="color: #7C336F;">Your Health, Our Priority – Thank You for Choosing Curalink!</strong>
     </footer>
 </body>
 <style>
@@ -91,12 +101,21 @@
         margin-top: 4vh;
         
     }
-    button {
+    #b1 {
         padding: 0.8em 3em;
         font-size: 1em;
         border: none;
         color: white;
         background-color: #7C336F;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #b2 {
+        padding: 0.8em 3em;
+        font-size: 1em;
+        border: none;
+        color: #862374;
+        background-color: #EAC4ED;
         border-radius: 5px;
         cursor: pointer;
     }
@@ -152,11 +171,9 @@
         background-color: #f9f9f9;
         width: 100%;
     }
-
     .foot-message {
         text-align: center;
     }
-
     .footer-logo {
         width: 30%;
     }
