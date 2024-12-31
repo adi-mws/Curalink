@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div><img class="logo" src="../assets/logo/logo.png" alt="Curalink Logo"></div>
+    </header>
+
+    <main class="flex1">
+        <div>
+            <p>Hello Aashish Kumar,<br><br>
+
+                Thank you for registering with Curalink, a platform dedicated to empowering healthcare professionals and improving patient care <br>
+                
+                We are currently reviewing your registration details to ensure everything is in order. This process helps us maintain the highest standards of trust and quality on our platform.</p>
+        </div>
+        <div class="list">
+            <strong style="color: #7C336F;">What to expect next?</strong>
+            <ul>
+                <li>The verification process typically takes 1-2 business days.</li>
+                <li>Once your account is verified, you will receive a confirmation email with instructions to set up your profile and start consulting.</li>
+            </ul>
+        </div>
+        <div>
+            <strong>If you have any questions or need assistance in the meantime, feel free to contact us at <a style="color: #7C336F;">support@curalink.com.</a></strong>
+        </div>
+        <div>
+            <p>Thank you for your patience and understanding as we complete this process. <br>
+                Warm regards, <br>The Curalink Team</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="motto">
+            <img src="../assets/logo/logo.png" class="footer-logo" alt="Curalink Logo">
+            <p> Connecting Experts, Transforming Healthcare</p>
+        </div>
+        <div>
+            <a style="color: #7C336F;">Privacy policy</a>
+        </div>
+        <p>Follow us on:</p>
+        <div class="icons">
+            <a href="#"><img src="../assets/icons/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="../assets/icons/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="../assets/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="../assets/icons/twitter.png" alt="Twitter"></a>
+        </div>
+        <strong style="color: #7C336F;"> We’re excited to have you on board and can’t wait for you to start making a difference!</strong>
+    </footer>
+    
+</body>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #4D4D4D;
+        font-family: 'Poppins', sans-serif;
+        margin: 0px;
+        padding: 0px;
+        gap: 3em;
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+
+    }
+    header {
+       
+        width: 100%;
+
+        div {
+            width: fit-content;
+            display: grid; 
+            place-items: center;
+            width: 100%;
+        }
+    }
+    .flex1{display: flex;
+        flex-direction: column;
+        gap: 3em;
+        padding: 1%;
+        width: 90%;
+        max-width: 1073px;
+
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        ul {
+            margin-left: 1em;
+        }
+    }
+    .logo{
+        margin-top: 4vh;
+        
+    }
+    .motto {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            height: 100%; 
+            border-left: solid 2px dimgray;
+            padding-left: 1em;
+        }
+    }
+    
+    .icons {
+        display: flex;
+        gap: 3vw;
+        justify-content: center;
+        margin-top: 1vh;
+    }
+    .icons > a > img {
+        width: 100%;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        padding: 2em;
+        background-color: #f9f9f9;
+        width: 100%;
+    }
+    .footer-logo {
+        width: 30%;
+    }
+    @media screen and (max-width:576px){
+        .logo{
+            width: 55%;
+        }
+
+    }
+</style>
+</html>
