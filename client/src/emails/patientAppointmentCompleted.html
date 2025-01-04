@@ -3,43 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Registration - Curalink</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <title>Patient appointment completed</title>
 </head>
 <body>
     <header>
         <div><img class="logo" src="../assets/logo/logo.png" alt="Curalink Logo"></div>
     </header>
-
     <main class="flex1">
+        <div><p>Hello Aashish Kumar,
+            <br> <br>
+            Thank you for trusting Curalink with your healthcare needs! We're glad to have been a part of your consultation journey. <br> <br>
+            
+            Your appointment with Dr. [Doctor_Name] has been successfully completed. Rest assured, your appointment history and records are securely saved on our platform and will be readily available for your next consultation. <br> <br>
+            
+            If you experience any issues or concerns related to your treatment within the [FollowUpDuration] days following your appointment, you can request a follow-up consultation for free. This period ensures that any concerns can be addressed promptly without additional charges.</p></div>
         <div>
-            <p>Hello Vedant Gupta,<br><br>
-                We received a request to reset your Curalink password. No worries - we are here to help!</p>
+            <p>You can now view your doctor's prescription or revisit the details of your consultation anytime:</p>
         </div>
-        <div class="list">
-            <strong style="color: #7C336F;">With Curalink, you can</strong>
-            <ul>
-                <li>Connect with experienced healthcare professionals at your convenience.</li>
-                <li>Schedule consultations and access medical advice anytime, anywhere.</li>
-                <li>Stay on top of your health with a user-friendly interface and secure platform.</li>
-            </ul>
-        </div>
-        <div>
-            <strong>Should you have any questions or need assistance, our support team is here to help. Simply reply to this email or contact us at <a style="color: #7C336F;">support@curalink.com.</a></strong>
-        </div>
-        <div>
-            <p>Thank you for choosing Curalink!<br>
-                Warm regards,<br>
-                <i>The Curalink Team</i></p>
-        </div>
+        <button class="prescription">View prescription</button>
+        <div><strong>If you have any feedback, questions, or need further assistance, feel free to contact us at   <a style="color: #7C336F;" href="">support@curalink.com.</a></strong></div>
+        <div>Thank you for choosing Curalink. We’re here to support you in your healthcare journey!  <br>
+            Warm regards,<br><i>The Curalink Team</i></div>
     </main>
-
     <footer>
         <div class="motto">
             <img src="../assets/logo/logo.png" class="footer-logo" alt="Curalink Logo">
-            <p>Your Health, Our Priority</p>
+            <p>Your health, our priority</p>
         </div>
         <p>Follow us on:</p>
         <div class="icons">
@@ -51,8 +40,9 @@
         <strong class="foot-message" style="color: #7C336F;">Don't forget to book your first consultation today!</strong>
     </footer>
 </body>
+</html>
 <style>
-    body {
+     body {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -70,37 +60,17 @@
     }
     header {
        
-        width: 100%;
+       width: 100%;
 
-        div {
-            width: fit-content;
-            display: grid; 
-            place-items: center;
-            width: 100%;
-        }
-    }
-    .list{
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        ul {
-            margin-left: 1em;
-        }
-    }
-    .logo{
-        margin-top: 4vh;
-        
-    }
-    button {
-        padding: 0.8em 3em;
-        font-size: 1em;
-        border: none;
-        color: white;
-        background-color: #7C336F;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .flex1 {
+       div {
+           width: fit-content;
+           display: grid; 
+           place-items: center;
+           width: 100%;
+       }
+   }
+   
+   .flex1 {
         display: flex;
         flex-direction: column;
         gap: 6vh;
@@ -108,21 +78,17 @@
         width: 90%;
         max-width: 1073px;
     }
-    .email {
-        color: #7C336F;
-        text-decoration: none;
+    button{
+        padding: 0.8em 3em;
+        font-size: 1em;
+        border: none;
+        color: white;
+        background-color: #7C336F;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: auto;
     }
-    .email:hover {
-        text-decoration: underline;
-    }
-    .reset-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3vh;
-    }
-    
-    .motto {
+   .motto {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -143,7 +109,7 @@
     .icons > a > img {
         width: 100%;
     }
-    footer {
+   footer {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -152,11 +118,9 @@
         background-color: #f9f9f9;
         width: 100%;
     }
-
     .foot-message {
         text-align: center;
     }
-
     .footer-logo {
         width: 30%;
     }
@@ -167,4 +131,3 @@
 
     }
 </style>
-</html>
