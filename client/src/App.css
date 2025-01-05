@@ -1,12 +1,21 @@
 :root {
-  --primary-color: rgb(66, 15, 133);
-  --primary-font: rubik;
+  --primary-color: #7C336F;
+  --secondary-color: rgba(134, 35, 116, 0.1);
+  --primary-font: 'Raleway', serif;
+  --secondary-font: 'Poppins', serif;
+  --gray-text: #4D4D4D;
 }
 
 h1 {
   color: var(--primary-color);
   font-family: var(--primary-font);
 }
+button {
+  background: none; 
+  cursor: pointer; 
+  border: none;
+}
+
 
 @media screen {
   
