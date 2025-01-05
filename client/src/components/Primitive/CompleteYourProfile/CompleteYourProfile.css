@@ -21,17 +21,15 @@ h2{
 }
 
 .progress{
-    width: 100%;
     max-width: 180px;
     height: 8px;
     background-color: white;
 }
 
 .fill{
-    width: 100%;
     max-width: 120px;
     height: 8px;
-    background-color: green;
+    background-color: #5C9249;
 }
 
 p{
