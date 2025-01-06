@@ -2,10 +2,8 @@
     width: auto; 
     height: auto; 
     padding: 2em; 
-    width: 400px; 
-    position: relative; 
-    top: 50%; 
-    left: 50%; 
+    width: 0em; 
+    position: relative;
     transform: translateX(-50%, -50%);
     
     img {
@@ -16,7 +14,7 @@
 
 .collection-2 {
     top: -1em;
-    right: 10em;
+    right: -10em;
     animation: collection-1 1.9s infinite both ease-in-out;
 }
 
