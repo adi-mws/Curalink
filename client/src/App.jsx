@@ -11,16 +11,13 @@ function App() {
 
   return (
     <>
-<<<<<<< HEAD
       <Header />
       <CompleteYourProfile />  
 
-=======
       <PatientLoginForm /> 
       {/* <HomePage />  */}
       {/* <CompleteYourProfile />   */}
       {/* < Footer/> */}
->>>>>>> e41a232f12aa79431e2b00fb14f380da4a8c3bba
     </>
   )
 }
