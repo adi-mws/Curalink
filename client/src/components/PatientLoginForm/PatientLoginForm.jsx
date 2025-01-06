@@ -1,6 +1,6 @@
 import './PatientLoginForm.css'
 import React from 'react'
-import { useForm } from "react-hook-form"
+/* import { useForm } from 'react-hook-form' */
 import googleIcon from '../../assets/icons/google-icon.webp'
 import eyeIcon from '../../assets/icons/eye.png'
 
