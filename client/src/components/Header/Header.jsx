@@ -1,18 +1,40 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Header.css'
+import logo from "../../assets/logo/logo.png";
+import down from "../../assets/icons/arrow-down.png"
 
 export default function Header({}) {
     const [data, setData] = useState(false);
     useEffect(() => {
         console.log("hello ")
-        header.current.style.background = "red";
+        header.current.style.background = "white";
 
     }, [data])
     const header = useRef(null);
     return (
         <div className='Header' ref={header}>
-            This is my header for {data}
-            <h1>This is test</h1>
+            <div className="ham-burger"></div>
+            <div className="Logo" ><img src={logo} alt="" /></div>
+            <div className="nav-bar">
+                <div><a href="#">Home</a></div>
+                <div><a href="#">About</a></div>
+                <div className="services">
+                    <a className="services-dropdown" href="#">Services</a><img src={down} alt="" className="down-arrow"/>
+                    <div className="services-content">
+                        <a id="service1" href="#">Service 1</a>
+                        <a href="#">Service 2</a>
+                    </div>
+                </div>
+                <div><a href="#">News</a></div>
+            </div>
+            <div className="auth-buttons">
+                <div>
+                    <button className="login-btn">Login</button>
+                </div>
+                <div>
+                    <button className="register-btn">Register</button>
+                </div>
+            </div>
         </div>
     )
 }
