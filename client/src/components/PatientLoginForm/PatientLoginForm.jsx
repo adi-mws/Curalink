@@ -1,22 +1,30 @@
 import './PatientLoginForm.css'
 import React from 'react'
 import { useForm } from "react-hook-form"
+import googleIcon from '../../assets/icons/google-icon.webp'
+import eyeIcon from '../../assets/icons/eye.png'
 
 export default function PatientLoginForm() {
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-      } = useForm();
   return (
-    <div className="PatientLoginForm">PatientLoginForm
-        <form action="">
+    <div className="PatientLoginForm">
+      <div className="email inputFields">
+          <label >Email</label>
             <input type="Email" placeholder="Enter Email"/>
+            </div>
+           <div className="inputFields">
+            <label>Password</label>
             <input type="password" placeholder="Enter Password"/>
-            <p>Forgot Password</p>
-            <input type="submit" />
-        </form>
+            <span class="eye-icon" onclick="togglePasswordVisibility()">
+              <img src={eyeIcon} alt="" />
+            </span>
+           </div>
+            <div className="recovery"><a>Forgot Password?</a></div>
+            <button type="submit" className='button'>Login</button>
+        <p className="or">or</p>
+        <div className="googleLogin">
+          <img src={googleIcon} alt="" />
+          <p>Continue with google</p>
+        </div>
     </div>
   )
 }
