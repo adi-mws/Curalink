@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--primary-font);
+}
+
+/* General Footer Styling */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+  margin: 40px;
+}
+
+.footer-section {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.logo{
+    width: 100%;
+}
+
+.footer-section .social-icons a {
+  margin-right: 10px;
+  color: #333;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 15px 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+.animation{
+  width: 100%;
+  background: #ffffff;
+}
+
+.footer-section:last-child{
+  background-image: url("../../assets/footer/graphic-section-background.png");
+  background-size: 100% 100%;
+}
+.footer-section button {
+  margin-top: 10px;
+  padding: 10px 25px;
+  background-color: #ffffff;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.subFooter p{
+  text-align: center;
+}
+
+/* Responsiveness */
+/* @media (max-width: 1024px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+} */
