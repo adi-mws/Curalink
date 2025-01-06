@@ -3,12 +3,14 @@ import './App.css'
 import HomePage from './pages/HomePage.jsx'
 import CompleteYourProfile from './components/Primitive/CompleteYourProfile/CompleteYourProfile.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import PatientLoginForm from './components/PatientLoginForm/PatientLoginForm.jsx' 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+      <PatientLoginForm /> 
       {/* <HomePage />  */}
       {/* <CompleteYourProfile />   */}
       {/* < Footer/> */}
