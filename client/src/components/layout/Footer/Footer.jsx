@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import CompleteYourProfile from "../Primitive/CompleteYourProfile/CompleteYourProfile.jsx";
-import NewsletterPerson from "../Graphics/NewsletterPerson/NewsletterPerson.jsx";
+import CompleteYourProfile from "../../Primitive/CompleteYourProfile/CompleteYourProfile.jsx";
+import NewsletterPerson from "../../Graphics/NewsletterPerson/NewsletterPerson.jsx";
 import logo from "../../assets/logo/logo.png";
 import twitterIcon from "../../assets/icons/twitter.png";
 import facebookIcon from "../../assets/icons/facebook.png";

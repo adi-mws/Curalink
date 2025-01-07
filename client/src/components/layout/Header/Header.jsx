@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Header.css'
-import logo from "../../assets/logo/logo.png";
-import down from "../../assets/icons/arrow-down.png"
+import logo from "../../../assets/logo/logo.png";
+import down from "../../../assets/icons/arrow-down.png"
+import SecondaryButton from '../../shared/buttons/SecondaryButton/SecondaryButton';
+import PrimaryButton from '../../shared/buttons/PrimaryButton/PrimaryButton';
 
-export default function Header({}) {
+export default function Header({ }) {
     const [data, setData] = useState(false);
     useEffect(() => {
         console.log("hello ")
@@ -19,7 +21,7 @@ export default function Header({}) {
                 <div><a href="#">Home</a></div>
                 <div><a href="#">About</a></div>
                 <div className="services">
-                    <a className="services-dropdown" href="#">Services</a><img src={down} alt="" className="down-arrow"/>
+                    <a className="services-dropdown" href="#">Services</a><img src={down} alt="" className="down-arrow" />
                     <div className="services-content">
                         <a id="service1" href="#">Service 1</a>
                         <a href="#">Service 2</a>
@@ -29,10 +31,10 @@ export default function Header({}) {
             </div>
             <div className="auth-buttons">
                 <div>
-                    <button className="login-btn">Login</button>
+                    <SecondaryButton text={"Login"} fontSize={"1em"} />
                 </div>
                 <div>
-                    <button className="register-btn">Register</button>
+                    <PrimaryButton text={"Register"} fontSize={"1em"} />
                 </div>
             </div>
         </div>

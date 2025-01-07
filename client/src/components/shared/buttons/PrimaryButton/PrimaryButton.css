@@ -1,0 +1,12 @@
+.PrimaryButton {
+    padding: .6em 3em;
+    background: var(--primary-color);
+    font-family: var(--secondary-font);
+    color: white;
+    font-weight: 300;
+    border-radius: 10px;
+}
+
+.PrimaryButton:hover {
+    background: var(--hover-primary-color);
+}   
