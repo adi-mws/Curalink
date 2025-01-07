@@ -33,15 +33,6 @@
 
     }
     
-    .button {
-        background-color: var(--primary-color);
-        border: 0px;
-        padding: 0.4em 3em;
-        border-radius: 0.4em;
-        padding: 0.6em 7em;
-        font-size: 1em;
-        color: white;
-    }
     
     .googleLogin {
         display: flex;
@@ -67,9 +58,8 @@
         gap: 0.5em;
     }
     
-    input[type="email"],
-    input[type="password"] {
-        padding: 0.4em;
+    input {
+        padding: .8em 1em;
         background-color: #F2F2F2;
         border: 1px solid var(--primary-color);
         border-radius: 5px;
