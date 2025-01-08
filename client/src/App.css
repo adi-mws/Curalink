@@ -17,3 +17,7 @@ button {
   cursor: pointer; 
   border: none;
 }
+
+body {
+  background-color: #7C336F;  
+}

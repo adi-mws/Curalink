@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
-import './Header.css'
+import React, { useEffect, useRef, useState } from 'react';
+import './Header.css';
 import logo from "../../../assets/logo/logo.png";
-import down from "../../../assets/icons/arrow-down.png"
+import down from "../../../assets/icons/arrow-down.png";
 import SecondaryButton from '../../shared/buttons/SecondaryButton/SecondaryButton';
 import PrimaryButton from '../../shared/buttons/PrimaryButton/PrimaryButton';
 
@@ -15,7 +15,9 @@ export default function Header({ }) {
     const header = useRef(null);
     return (
         <div className='Header' ref={header}>
-            <div className="ham-burger"></div>
+            <div className="ham-burger">
+                &#9776;
+            </div>
             <div className="Logo" ><img src={logo} alt="" /></div>
             <div className="nav-bar">
                 <div><a href="#">Home</a></div>

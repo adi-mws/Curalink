@@ -9,10 +9,15 @@
         width: 3em;
     }    
 
+    .Logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3em;
+    }
+    
     .Logo > img {
         width: 9em;
-        position: relative;
-        top: 0.2em;
     }
 
     .nav-bar {
@@ -85,8 +90,9 @@
         display: flex;
         gap: 0.75em;
         align-items: center;
-        justify-content: center;
-        width: 40em;
+        justify-content: flex-end;
+        width: 37em;
+        padding-right: 2em;
     }
 
     .login-btn,
@@ -117,5 +123,7 @@
     .login-btn:hover {
         background-color: #4D4D4D;
     }
-
+    .ham-burger {
+        display: none;
+    }
 }
