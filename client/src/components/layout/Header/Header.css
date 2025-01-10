@@ -1,0 +1,129 @@
+.Header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    height: 4em;
+    font-family: var(--secondary-font);
+
+    .ham-burger {
+        width: 3em;
+    }    
+
+    .Logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3em;
+    }
+    
+    .Logo > img {
+        width: 9em;
+    }
+
+    .nav-bar {
+        display: flex;
+        align-items: center;
+        width: 45em;
+        gap: 3em;
+        justify-content: flex-end;
+    }
+
+    .nav-bar a {
+        text-decoration: none;
+        color: black;
+        font-size: 1em;
+        transition: color 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .nav-bar a:hover {
+        color: #862374;
+    }
+
+    .services {
+        .down-arrow {
+            position: relative;
+            top: 0.2em;
+            left: 0.2em;
+            transition: 0.3s;
+        }
+        position: relative;
+    }
+
+    .services-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        #service1 {
+            margin-top: 1.35em;
+        }
+    }
+    
+    .down-arrow:hover, 
+    .services-dropdown:hover + .down-arrow {
+        transform: rotate(180deg);
+    }
+
+    .services-content a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: black;
+        font-size: 0.9em;
+        white-space: nowrap;
+    }
+
+    .services-content a:hover {
+        color: #862374;
+        background-color: #EAC4ED;
+    }
+
+    .services:hover .services-content {
+        display: block;
+    }
+
+    .auth-buttons {
+        display: flex;
+        gap: 0.75em;
+        align-items: center;
+        justify-content: flex-end;
+        width: 37em;
+        padding-right: 2em;
+    }
+
+    .login-btn,
+    .register-btn {
+        padding: 0.8em 3.5em;
+        font-size: 1em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: auto;
+        transition: all 0.3s ease;
+    }
+
+    .login-btn {
+        color: #862374;
+        background-color: #EAC4ED;
+    }
+
+    .register-btn {
+        color: white;
+        background-color: #7C336F;
+    }
+
+    .register-btn:hover {
+        background-color: #5e005e;
+    }
+
+    .login-btn:hover {
+        background-color: #4D4D4D;
+    }
+    .ham-burger {
+        display: none;
+    }
+}
