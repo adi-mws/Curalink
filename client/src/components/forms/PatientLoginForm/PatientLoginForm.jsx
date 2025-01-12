@@ -18,10 +18,10 @@ export default function PatientLoginForm() {
   return (
     <div className="PatientLoginForm">
       <form onSubmit={handleSubmit((data) => console.log(data))}>
-      <div className="email inputFields">
+  <div className="email inputFields">
   <label >Email</label>
   <input
-    className={errors.email ? "input-error" : ""}
+    className={errors.email ? "email-error" : ""}
     {...register("email", {
       required: { value: true, message: "Email is required" },
     })}
@@ -34,7 +34,7 @@ export default function PatientLoginForm() {
         <div className="password inputFields">
           <label>Password</label>
           <input 
-          className={errors.password ? "input-error" : ""}
+          className={errors.password ? "password-error" : ""}
           {...register('password', 
           {required:{value:true, message:'Password is required'}, 
           minLength:{value:8, message:'Password must contain at least 8 characters'}, 
