@@ -26,6 +26,10 @@
     }
     .password{
         position: relative;
+        padding-left: 0.2em;
+    }
+    .password-error{
+        padding-left: 0.2em;
     }
     .error{
         font-size: 0.8em;
@@ -34,6 +38,10 @@
     }
     .email {
         margin-top: 1.5em;
+        padding-left: 0.2em;
+    }
+    .email-error{
+        padding-left: 0.2em;
     }
     
     .inputFields>label {
