@@ -1,13 +1,12 @@
 import React from "react";
 import "./Footer.css";
-import CompleteYourProfile from "../../Primitive/CompleteYourProfile/CompleteYourProfile.jsx";
-import NewsletterPerson from "../../Graphics/NewsletterPerson/NewsletterPerson.jsx";
-import logo from "../../assets/logo/logo.png";
-import twitterIcon from "../../assets/icons/twitter.png";
-import facebookIcon from "../../assets/icons/facebook.png";
-import instagramIcon from "../../assets/icons/instagram.png";
-import linkedinIcon from "../../assets/icons/linkedin.png";
-import graphics from "../../assets/footer/graphic-section-background.png";
+import NewsletterPerson from "../../shared/graphics/NewsletterPerson/NewsletterPerson.jsx";
+import logo from "../../../assets/logo/logo.png"
+import twitterIcon from "../../../assets/icons/twitter.png";
+import facebookIcon from "../../../assets/icons/facebook.png";
+import instagramIcon from "../../../assets/icons/instagram.png";
+import linkedinIcon from "../../../assets/icons/linkedin.png";
+import CompleteYourProfile from "../../shared/adcards/CompleteYourProfile/CompleteYourProfile.jsx";
 
 const Footer = () => {
   return (
@@ -31,7 +30,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="footer-ads">
-            <CompleteYourProfile />
+            <CompleteYourProfile/>
           </div>
         </div>
         <div className="footer-section">

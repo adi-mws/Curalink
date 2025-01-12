@@ -32,10 +32,10 @@ export default function Header({ }) {
                 <div><a href="#">News</a></div>
             </div>
             <div className="auth-buttons">
-                <div>
+                <div className="login-btn">
                     <SecondaryButton text={"Login"} fontSize={"1em"} />
                 </div>
-                <div>
+                <div className="register-btn">
                     <PrimaryButton text={"Register"} fontSize={"1em"} />
                 </div>
             </div>

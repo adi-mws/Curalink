@@ -1,8 +1,8 @@
 import React from 'react'
-import personLeftLeg from '../../../assets/graphics/newsletterPerson/person-left-leg.png';
-import person from '../../../assets/graphics/newsletterPerson/person.png';
-import collection1 from '../../../assets/graphics/newsletterPerson/collection-1.png';
-import collection2 from '../../../assets/graphics/newsletterPerson/collection-2.png';
+import personLeftLeg from '../../../../assets/graphics/newsletterPerson/person-left-leg.png';
+import person from '../../../../assets/graphics/newsletterPerson/person.png';
+import collection1 from '../../../../assets/graphics/newsletterPerson/collection-1.png';
+import collection2  from '../../../../assets/graphics/newsletterPerson/collection-2.png';
 import './NewsletterPerson.css';
 export default function NewsletterPerson() {
   return (
