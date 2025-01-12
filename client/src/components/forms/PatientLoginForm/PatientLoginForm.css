@@ -26,7 +26,6 @@
     }
     .password{
         position: relative;
-        margin-left: 1em;
     }
     .error{
         font-size: 0.8em;
@@ -84,6 +83,10 @@
             width: 19.9em;
             height: 3.3em;
             border: 0px;
+        }
+        .password{
+            padding-left: 1em;
+            margin: 0px;
         }
         .input-error:focus{
             outline: 2px solid var(--red-color);

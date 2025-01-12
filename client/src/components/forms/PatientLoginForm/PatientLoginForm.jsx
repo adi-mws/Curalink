@@ -18,7 +18,7 @@ export default function PatientLoginForm() {
   return (
     <div className="PatientLoginForm">
       <form onSubmit={handleSubmit((data) => console.log(data))}>
-      <div className="email inputFields">
+  <div className="email inputFields">
   <label >Email</label>
   <input
     className={errors.email ? "input-error" : ""}
