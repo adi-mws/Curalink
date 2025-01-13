@@ -1,0 +1,56 @@
+.Sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 276px;
+    font-family: var(--secondary-font);
+    gap: 2em;
+
+    
+
+    .Logo-Cross {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 3.5em;
+        width: 276px;
+        .Logo {
+            width: 8em;
+        }
+        .Cross {
+            font-size: 1.7em;
+        }
+    }
+
+    .Complete-Your-Profile {
+        padding: 0em 0.2em;
+    }
+
+    .Menu-Bar {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        p {
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        div > ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding-left: 2em;
+            list-style-type: none;
+        }
+        div > div {
+            img {
+                height: 1.5em;
+                padding-left: 0.5em;
+            }
+            display: flex;
+            gap: 0.5em;
+            align-items: center;
+        }
+        div > img {
+            display: flex;
+        }
+    }
+}
