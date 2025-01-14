@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import PatientRegistrationForm from './components/forms/PatientRegistrationForm/PatientRegistrationForm'
+import PatientRegistrationPage from './pages/PatientRegistrationPage/PatientRegistrationPage'
 function App() {
   return (
     <>
-    <PatientRegistrationForm />
+      <PatientRegistrationPage />
     </>
   )
 }
