@@ -64,7 +64,7 @@ export default function PatientRegistrationForm() {
               })}
             />
             <button type="button" onClick={() => setShowPassword(!showPassword)}>
-              <img src={showPassword ? eyeSlashIcon : eyeIcon} alt="" />
+              <img className="eye-icon" src={showPassword ? eyeSlashIcon : eyeIcon} alt="" />
             </button>
             {errors.password && <p className="error">{errors.password.message}</p>}
           </div>

@@ -1,6 +1,5 @@
 .PatientRegistrationForm{
     max-width: 725px;
-    max-height: 579px;
    
     *{
         margin: 0;
@@ -27,6 +26,7 @@
             flex-direction: column;
             gap: 1.3em;
             justify-content: center;
+            max-width: 320px;
         }
         .div-2{
             display: flex;
@@ -45,14 +45,17 @@
         }
         .password{
             position: relative;
+            display: flex;
             button{
                 position: absolute;
                 padding: 0px;
-                right: 8.5em;
+                right: 5.3em;
                 top: 3.25em;
                 background-color: #F2F2F2;
                 border: 0px;
                 border-radius: 5px;
+                align-self: flex-end;
+                cursor: pointer;
             }
         }
         .error{
@@ -93,21 +96,27 @@
         form {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-        }
-        
-        .div-1 {
-            display: flex;
+            flex-wrap: wrap;
             align-items: center;
         }
-        
-        .div-2 {
-            display: flex;
-            align-self: center;
+        .div-1{
+            align-items: center;
+            min-width: 320px;
+            width: 100%;
         }
-        
+        .div-2{
+            align-items: center;
+            min-width: 320px;
+            width: 100%;
+        }
         label {
             align-self: flex-start;
+        }
+        .password{
+            button{
+                left: 17em;
+                position: absolute;
+            }
         }
         
     }
