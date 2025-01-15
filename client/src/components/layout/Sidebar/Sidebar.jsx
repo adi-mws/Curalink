@@ -31,6 +31,7 @@ export default function Sidebar({ }) {
                         <img src={essentials} alt="" />
                         <p>Essentials</p>
                     </div>
+                    <br />
                     <ul>
                         <li>Login</li>
                         <li>Home</li>
@@ -39,37 +40,79 @@ export default function Sidebar({ }) {
                         <li>Support Fourm</li>
                         <li>Support</li>
                     </ul>
+                    <br />
                 </div>
                 <div>
                     <div>
                         <img src={appointments} alt="" />
                         <p>Appointments</p>
                     </div>
+                    <br />
+                    <ul>
+                        <li>Scheduled Appointments</li>
+                        <li>Schedules</li>
+                        <li>Patients</li>
+                        <li>Book Appointments</li>
+                        <li>Request Follow Up</li>
+                        <li>Payments</li>
+                    </ul>
+                    <br />
                 </div>
                 <div>
                     <div>
                         <img src={prescriptions} alt="" />
                         <p>Prescriptions</p>
                     </div>
+                    <br />
+                    <ul>
+                        <li>All Prescriptions</li>
+                        <li>Active Prescriptions</li>
+                        <li>Dosage Tracker</li>
+                    </ul>
+                    <br />
                 </div>
                 <div>
                     <div>
                         <img src={company} alt="" />
                         <p>Company</p>
                     </div>
+                    <br />
+                    <ul>
+                        <li>Events</li>
+                        <li>Announcements</li>
+                    </ul>
+                    <br />
                 </div>
                 <div>
                     <div>
                         <img src={others} alt="" />
                         <p>Others</p>
                     </div>
+                    <br />
+                    <ul>
+                        <li>News</li>
+                        <li>Contact Us</li>
+                        <li>About Us</li>
+                        <li>Daily Reads</li>
+                        <li>App Updates</li>
+                    </ul>
+                    <br />
                 </div>
                 <div>
                     <div>
                         <img src={legals} alt="" />
                         <p>Legals</p>
                     </div>
+                    <br />
+                    <ul>
+                        <li>Privacy Policy</li>
+                        <li>Terms Of Service</li>
+                    </ul>
+                    <br />
                 </div>
+            </div>
+            <div className="Yellow-Card">
+                <p>Now you can follow-up  to reschedule the appointment without booking a new one. Just follow-up again. Show the old data to doctors and many more!</p>
             </div>
         </div>
     )

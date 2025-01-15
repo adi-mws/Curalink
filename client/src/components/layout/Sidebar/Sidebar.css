@@ -2,8 +2,10 @@
     display: flex;
     flex-direction: column;
     width: 276px;
+    height: 700px;
     font-family: var(--secondary-font);
     gap: 2em;
+    justify-content: space-evenly;
 
     
 
@@ -37,20 +39,46 @@
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            padding-left: 2em;
+            padding-left: 2.5em;
             list-style-type: none;
+            gap: 0.5em;
+            font-size: 0.87em;
+            li {
+                background-color: #F9F9F9;
+                height: 3em;
+                padding-left: 2em;
+                display: flex;
+                align-items: center;
+                border-radius: 5px;
+            }
+            li:hover {
+                background-color: var(--primary-color);
+                color: white;
+            }
         }
         div > div {
             img {
                 height: 1.5em;
                 padding-left: 0.5em;
             }
+            padding-left: 0.7em;
             display: flex;
-            gap: 0.5em;
+            gap: 0.7em;
             align-items: center;
         }
         div > img {
             display: flex;
         }
+    }
+    .Yellow-Card {
+        display: flex;
+        p {
+            padding: 1em;
+        }
+        position: relative;
+        left: 3px;
+        width: 270px;
+        background-color: #EEC521;
+        border-radius: 10px;
     }
 }
