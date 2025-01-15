@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-
+import mongoose from mongoose; 
 const AppointmentSchema = new mongoose.Schema({
   appointmentDate: { type: Date, required: true },
   appointmentTime: { type: String, required: true },
@@ -32,7 +31,9 @@ const AppointmentSchema = new mongoose.Schema({
       {
         testName: { type: String, required: true },
         description: { type: String },
-        instructions: { type: String }
+        instructions: { type: String },
+        status: {type: String, enum: ['pending', 'completed'], default: 'pending'},
+        fileUrl: {type: String}
       }
     ],
     notes: { type: String },
