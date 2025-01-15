@@ -91,6 +91,7 @@
             width: 19.9em;
             height: 3.3em;
             border: 0px;
+            outline: none;
         }
         .password{
             padding-left: 1em;
