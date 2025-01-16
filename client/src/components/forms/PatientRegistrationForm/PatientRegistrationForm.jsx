@@ -5,8 +5,12 @@ import PrimaryButton from '../../shared/buttons/PrimaryButton/PrimaryButton';
 import eyeIcon from '../../../assets/icons/eye.png';
 import eyeSlashIcon from '../../../assets/icons/eye-slash.png';
 
-export default function PatientRegistrationForm() {
+export default function PatientRegistrationForm(margin="0px",boxShadow="none") {
   const [showPassword, setShowPassword] = useState(false);
+  const styles = {
+    margin:margin,
+    boxShadow:boxShadow
+  };
   const {
     register,
     handleSubmit,
@@ -19,7 +23,7 @@ export default function PatientRegistrationForm() {
   };
 
   return (
-    <div className="PatientRegistrationForm">
+    <div style={styles} className="PatientRegistrationForm">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="div-1">
           <div className="input-field">
