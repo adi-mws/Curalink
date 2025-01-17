@@ -6,7 +6,7 @@ import facebook from '../../assets/icons/facebook.png'
 import instagram from '../../assets/icons/instagram.png'
 import linkedin from '../../assets/icons/linkedin.png'
 import SecondaryButton from '../../components/shared/buttons/SecondaryButton/SecondaryButton.jsx'
-import 
+import contentImage from '../../assets/imgs/patientLoginPageDoctor.png'
 
 
 
@@ -35,14 +35,19 @@ export default function PatientLoginPage() {
       <div className="form">
         <PatientLoginFrom/>
       </div>
-    <div className="patient-registration-page-content">
-      <img src={} alt="" />
-      <div className="welcomeMessage">
+    <div className="pagecontent">
+      <img src={contentImage} />
+      <div className="welcomeMessage-2">
         <p className="heading">Welcome Back to Better Health</p>
         <p className="text">Log in to access your appointments, prescriptions, and health dashboard.</p>
         <b>Cured 1800+ Patients</b>
       </div>
     </div>
+    <div className="welcomeMessage">
+        <p className="heading">Welcome Back to Better Health</p>
+        <p className="text">Log in to access your appointments, prescriptions, and health dashboard.</p>
+        <b>Cured 1800+ Patients</b>
+      </div>
       
     </div>
   )

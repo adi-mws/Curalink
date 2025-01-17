@@ -22,7 +22,7 @@
         max-width: 360px;
         border-radius: 10px;
         p{
-            font-size: 0.8em;
+            font-size: 1em;
             color: var(--gray-text);
             max-width: 227px;
         }
@@ -49,7 +49,7 @@
         gap: 1em;
         p{
             max-width: 334px;
-            font-size: 0.8em;
+            font-size: 1em;
         }
     }
     .form{
@@ -57,8 +57,14 @@
         margin-top: 1em;
     }
     .welcomeMessage{
-
         display: none;
+    }
+    .welcomeMessage-2{
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        bottom: 0.2em;
+        display: flex;
         flex-direction: column;
         gap: 1.2em;
         align-items: center;
@@ -79,6 +85,13 @@
 
         }
     }
+    .pagecontent{
+        position: relative;
+        grid-area: A;
+        margin: 1em;
+        max-height: 484px;
+        
+    }
     
 }
 @media screen and (max-width:992px){
@@ -90,11 +103,28 @@
         "temp1 form"
         "temp2 form";
         grid-gap: 1em;
-        .welcomeMessage{
-            display: flex;
-            grid-area: head;
+        .pagecontent{
+            display: none;
         }
-        
+        .welcomeMessage{
+            grid-area: head;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2em;
+            align-items: center;
+            font-family: var(--primary-font);
+            .heading{
+                font-size: 1.9em;
+                font-family: var(--primary-font);
+            }
+            .text{
+                max-width: 462px;
+                text-align: center;
+            }
+            b{
+                color: var(--primary-color);
+            }
+        }
         .social-handles{
             grid-area: temp1;
         }
@@ -104,6 +134,11 @@
         .form{
             grid-area: form;
             justify-self: center;
+        }
+        .pagecontent{
+            img{
+                display: none;
+                }
         }
     }
     
@@ -132,11 +167,13 @@
         }
         .registerNow{
             grid-area: C;
-            align-items: center;
         }
         .form{
             grid-area: B;
             max-height:462px;
+        }
+        .pagecontent{
+            display: none;
         }
     }
 }

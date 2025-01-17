@@ -96,17 +96,3 @@
     .div-4 {
         grid-area: D;
     }
-<<<<<<< HEAD
-    main{
-        display: grid;
-        grid-template-columns: 350fr 262fr 400fr 325fr;
-        grid-template-rows: 120fr 322fr 132fr;
-        grid-template-areas: 
-        'A A D D'
-        'B E D D'
-        'C C D D';
-        max-height: 579px;
-    }
-=======
->>>>>>> 55ac0871b96c52349df3e41ac0b55ef6b92e4c6e
-}
