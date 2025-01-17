@@ -1,11 +1,14 @@
-.PatientRegistrationPage{
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: var(--secondary-font);
-    }
-    .GoogleLogin{
+.PatientRegistrationPage {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 0.4fr 2.5fr 1fr;
+    grid-template-areas:
+        'A A A A D D D D'
+        'B B E E D D D D'
+        'C C C C D D D D';
+    max-height: 579px;
+
+    .GoogleLogin {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -15,42 +18,50 @@
         height: 15em;
         gap: 1em;
         border-radius: 2px;
-        button{
+
+        button {
             padding: 0.8em 2em;
             background-color: white;
             border-radius: 2px;
         }
-        .register{
+
+        .register {
             padding: 0.8em 4.6em;
         }
-        .google{
+
+        .google {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             font-size: 0.8em;
         }
     }
-    .heading{
+
+    .heading {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    #GoogleLogin{
+
+    #GoogleLogin {
         align-self: flex-end;
         grid-area: E;
     }
-    #HandshakeImage{
+
+    #HandshakeImage {
         align-self: flex-end;
         grid-area: B;
         margin-left: 1em;
     }
-    .googlelogo{
+
+    .googlelogo {
         width: 2em;
         height: 2em;
     }
-    .login-redirect{
+
+    .login-redirect {
         display: flex;
-        justify-content:space-between;
+        justify-content: space-between;
         align-items: center;
         gap: 0.5em;
         font-size: 0.8em;
@@ -58,36 +69,31 @@
         margin-top: 1em;
         max-width: 605px;
     }
-    .login-redirect-text{
-        p{
+
+    .login-redirect-text {
+        p {
             max-width: 359px;
         }
     }
-    .handshake-image{
+
+    .handshake-image {
         width: 17em;
         height: auto;
     }
-    .div-1{
+
+    .div-1 {
         grid-row: 1/2;
-        grid-column:1/2;
+        grid-column: 1/2;
         margin-left: 1em;
-        grid-area:A;
+        grid-area: A;
     }
-    .div-3{
+
+    .div-3 {
         grid-area: C;
         margin-left: 1em;
     }
-    .div-4{
+
+    .div-4 {
         grid-area: D;
-    }
-    main{
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: 0.4fr 2.5fr 1fr;
-        grid-template-areas: 
-        'A A A A D D D D'
-        'B B E E D D D D'
-        'C C C C D D D D';
-        max-height: 579px;
     }
 }

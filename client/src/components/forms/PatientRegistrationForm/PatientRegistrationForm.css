@@ -92,7 +92,7 @@
             margin-left: 0.7em;
         }
     }
-    @media screen and (max-width:650px){
+    @media screen and (max-width: 768px){
         form {
             display: flex;
             flex-direction: column;
