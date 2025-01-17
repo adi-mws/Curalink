@@ -82,12 +82,12 @@
     }
     main{
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: 0.4fr 2.5fr 1fr;
+        grid-template-columns: 350fr 262fr 400fr 325fr;
+        grid-template-rows: 120fr 322fr 132fr;
         grid-template-areas: 
-        'A A A A D D D D'
-        'B B E E D D D D'
-        'C C C C D D D D';
+        'A A D D'
+        'B E D D'
+        'C C D D';
         max-height: 579px;
     }
 }
