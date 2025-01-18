@@ -7,11 +7,14 @@ import instagram from '../../assets/icons/instagram.png'
 import linkedin from '../../assets/icons/linkedin.png'
 import SecondaryButton from '../../components/shared/buttons/SecondaryButton/SecondaryButton.jsx'
 import contentImage from '../../assets/imgs/patientLoginPageDoctor.png'
-
+import Header from '../../components/layout/Header/Header.jsx'
+import Footer from '../../components/layout/Footer/Footer.jsx'
 
 
 export default function PatientLoginPage() {
   return (
+    <>
+    <Header></Header>
     <div  className="PatientLoginPage">
        <div className="social-handles">
         <div className="text">
@@ -47,9 +50,10 @@ export default function PatientLoginPage() {
         <p className="heading">Welcome Back to Better Health</p>
         <p className="text">Log in to access your appointments, prescriptions, and health dashboard.</p>
         <b>Cured 1800+ Patients</b>
-      </div>
-      
+      </div>      
     </div>
+    <Footer></Footer>
+    </>
   )
 }
 

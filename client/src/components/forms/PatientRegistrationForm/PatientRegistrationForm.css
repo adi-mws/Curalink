@@ -9,6 +9,7 @@
     }
     form{
         display: grid;
+        justify-content: center;
         grid-template-columns: repeat(auto-fit, minmax(320px, 366px));
         grid-template-rows: repeat(auto-fit, minmax(62px, 1fr));
         margin:2em;

@@ -12,6 +12,8 @@
     "A B D";
     grid-template-columns: 506fr 366fr 360fr;
     grid-template-rows: 220fr 263fr;
+    margin-top: 2em;
+    margin-bottom: 2em;
     
     .social-handles{
         margin: 1em;
@@ -146,7 +148,7 @@
 @media screen and (max-width:576px){
     .PatientLoginPage{
         display:grid;
-        grid-template-rows: 52fr 411fr 227fr;
+        grid-template-rows: 52fr 320fr 227fr;
         grid-template-columns: 1fr;
         grid-template-areas: 
         "A"
@@ -155,6 +157,7 @@
         .welcomeMessage{
             display: flex;
             grid-area: A;
+            text-align: center;
             .text{
                 display: none;   
             }
@@ -167,10 +170,14 @@
         }
         .registerNow{
             grid-area: C;
+            text-align: center;
+            p{
+                text-align: center;
+            }
         }
         .form{
             grid-area: B;
-            max-height:462px;
+            max-height:400px;
         }
         .pagecontent{
             display: none;
