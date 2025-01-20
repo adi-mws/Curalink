@@ -1,11 +1,6 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
-}
-
 .PatientLoginForm {
+    font-family: var(--secondary-font);
+
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -14,7 +9,8 @@
     width: 18em;
     align-items: center;
     border-radius: 0.4em;
-    form{
+
+    form {
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -24,42 +20,47 @@
         align-items: center;
         border-radius: 0.4em;
     }
-    .password{
+
+    .password {
         position: relative;
         padding-left: 0.2em;
     }
-    .password-error{
+
+    .password-error {
         padding-left: 0.2em;
     }
-    .error{
+
+    .error {
         font-size: 0.8em;
         color: var(--red-color);
-        margin: 0em 0.8em 0.2em 1em;    
+        margin: 0em 0.8em 0.2em 1em;
     }
+
     .email {
         margin-top: 1.5em;
         padding-left: 0.2em;
     }
-    .email-error{
+
+    .email-error {
         padding-left: 0.2em;
     }
-    
+
     .inputFields>label {
         margin-right: auto;
     }
-    
+
     .recovery {
         width: 100%;
     }
-    
-    .recovery > a {
+
+    .recovery>a {
         color: var(--primary-color);
         margin-left: 1em;
         font-size: 0.8em;
 
     }
-    
-    
+
+
     .googleLogin {
         display: flex;
         gap: 1em;
@@ -72,17 +73,21 @@
         align-items: center;
         border-radius: 0.3em;
         font-size: 0.9em;
-        img{
-            width:3em;
+
+        img {
+            width: 3em;
         }
-        p{
-            text-wrap:none;
+
+        p {
+            text-wrap: none;
         }
     }
+
     .inputFields {
         display: flex;
         flex-direction: column;
         gap: 0.5em;
+
         input {
             padding: .8em 1em;
             background-color: #F2F2F2;
@@ -93,16 +98,18 @@
             border: 0px;
             outline: none;
         }
-        .password{
+
+        .password {
             padding-left: 1em;
             margin: 0px;
         }
-        .input-error:focus{
+
+        .input-error:focus {
             outline: 2px solid var(--red-color);
         }
     }
-    
-    
+
+
     .eye-icon {
         position: absolute;
         top: 3.2em;
@@ -112,4 +119,3 @@
         font-size: 18px;
     }
 }
-

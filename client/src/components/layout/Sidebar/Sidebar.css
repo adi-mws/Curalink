@@ -1,12 +1,21 @@
+
+.Sidebar::-webkit-scrollbar {
+    display: none;
+}
+
 .Sidebar {
     display: flex;
     flex-direction: column;
     width: 276px;
-    height: 700px;
+    position: fixed; 
+    height: 100%;
+    top: 0; 
+    left: 0;
+    overflow-y: scroll;
     font-family: var(--secondary-font);
     gap: 2em;
     justify-content: space-evenly;
-
+    box-shadow: 1px 0 3px whitesmoke;
     
 
     .Logo-Cross {
@@ -20,6 +29,7 @@
         }
         .Cross {
             font-size: 1.7em;
+            cursor: pointer;
         }
     }
 
@@ -41,19 +51,21 @@
             justify-content: space-evenly;
             padding-left: 2.5em;
             list-style-type: none;
-            gap: 0.5em;
+            gap: 0.3em;
+            padding: 0 1em 0 2em;
             font-size: 0.87em;
             li {
-                background-color: #F9F9F9;
+                background-color: whitesmoke;
                 height: 3em;
                 padding-left: 2em;
-                display: flex;
-                align-items: center;
+                display: flex;  
                 border-radius: 5px;
+                align-items: center;
             }
             li:hover {
                 background-color: var(--primary-color);
                 color: white;
+                cursor: pointer;
             }
         }
         div > div {

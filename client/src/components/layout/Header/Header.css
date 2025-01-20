@@ -1,10 +1,19 @@
+.Header-relative {
+    height: 4em; 
+    width: 100%;
+}
 .Header {
     display: flex;
     align-items: center;
+    position: fixed; 
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px .5px 3px 0 whitesmoke;
     gap: 1em;
     height: 4em;
     font-family: var(--secondary-font);
-
     .ham-burger {
         width: 3em;
     }    

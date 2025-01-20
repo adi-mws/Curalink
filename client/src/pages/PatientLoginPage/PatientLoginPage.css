@@ -1,12 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--secondary-font);
-    justify-self: center;
-}
 .PatientLoginPage{
     display: grid;
+    font-family: var(--secondary-font);
     grid-template-areas: 
     "A B C"
     "A B D";

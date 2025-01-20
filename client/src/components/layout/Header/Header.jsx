@@ -14,31 +14,34 @@ export default function Header({ }) {
     }, [data])
     const header = useRef(null);
     return (
-        <div className='Header' ref={header}>
-            <div className="ham-burger">
-                &#9776;
-            </div>
-            <div className="Logo" ><img src={logo} alt="" /></div>
-            <div className="nav-bar">
-                <div><a href="#">Home</a></div>
-                <div><a href="#">About</a></div>
-                <div className="services">
-                    <a className="services-dropdown" href="#">Services</a><img src={down} alt="" className="down-arrow" />
-                    <div className="services-content">
-                        <a id="service1" href="#">Service 1</a>
-                        <a href="#">Service 2</a>
+        <>
+            <div className='Header-relative'></div>
+            <header className='Header' ref={header}>
+                <div className="ham-burger">
+                    &#9776;
+                </div>
+                <div className="Logo" ><img src={logo} alt="" /></div>
+                <div className="nav-bar">
+                    <div><a href="#">Home</a></div>
+                    <div><a href="#">About</a></div>
+                    <div className="services">
+                        <a className="services-dropdown" href="#">Services</a><img src={down} alt="" className="down-arrow" />
+                        <div className="services-content">
+                            <a id="service1" href="#">Service 1</a>
+                            <a href="#">Service 2</a>
+                        </div>
+                    </div>
+                    <div><a href="#">News</a></div>
+                </div>
+                <div className="auth-buttons">
+                    <div className="login-btn">
+                        <SecondaryButton text={"Login"} fontSize={"1em"} />
+                    </div>
+                    <div className="register-btn">
+                        <PrimaryButton text={"Register"} fontSize={"1em"} />
                     </div>
                 </div>
-                <div><a href="#">News</a></div>
-            </div>
-            <div className="auth-buttons">
-                <div className="login-btn">
-                    <SecondaryButton text={"Login"} fontSize={"1em"} />
-                </div>
-                <div className="register-btn">
-                    <PrimaryButton text={"Register"} fontSize={"1em"} />
-                </div>
-            </div>
-        </div>
+            </header>
+        </>
     )
 }
