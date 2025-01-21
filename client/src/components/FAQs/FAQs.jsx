@@ -15,7 +15,7 @@ function FAQItem({ question, answer }) {
     return (
         <div className="faq-item">
             <div className="faq-question">
-                <h3>{question}</h3>
+                <p>{question}</p>
                 <button onClick={toggleAnswer} className="faq-toggle-button">
                     <img
                         src={DownArrow}
@@ -57,7 +57,7 @@ export default function FAQs({ faqData = defaultFaqData}) {
                 <FAQItem key={index} question={faq.question} answer={faq.answer} />
             ))}
             <button className="More-Faqs">
-                See more FAQs
+                View more FAQs
                 <img src={RightArrow} alt="See more FAQs" />
             </button>
         </div>
