@@ -151,7 +151,8 @@
 @media screen and (max-width: 1200px) {
 
   .footer-main-content {
-    grid-template-areas: "A C"
+    grid-template-areas: 
+      "A C"
       "B B";
     justify-items: center;
   }

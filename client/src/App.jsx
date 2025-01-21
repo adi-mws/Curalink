@@ -1,14 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import PatientLoginPage from './pages/PatientLoginPage/PatientLoginPage'
-import PatientRegistrationPage from './pages/PatientRegistrationPage/PatientRegistrationPage'
-import Sidebar from './components/layout/Sidebar/Sidebar'
+import FAQs from './components/FAQs/FAQs.jsx'
 
 function App() {
   return (
-    <>
-      <Sidebar />
-    </>
+    <FAQs />
   )
 }
 export default App

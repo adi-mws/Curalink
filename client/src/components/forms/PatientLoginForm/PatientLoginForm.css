@@ -27,13 +27,29 @@
     }
 
     .password-error {
-        padding-left: 0.2em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        margin-left: 1em;
+        label{
+            font-size: 0.8em;
+        }
+
+        input {
+            padding: .8em 1em;
+            background-color: #F2F2F2;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            width: 19.9em;
+            height: 3.3em;
+            border: 0px;
+            outline: none;
+        }
     }
 
     .error {
         font-size: 0.8em;
         color: var(--red-color);
-        margin: 0em 0.8em 0.2em 1em;
     }
 
     .email {
@@ -87,6 +103,10 @@
         display: flex;
         flex-direction: column;
         gap: 0.5em;
+
+        label{
+            font-size: 0.8em;
+        }
 
         input {
             padding: .8em 1em;

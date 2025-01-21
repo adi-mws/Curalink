@@ -12,6 +12,7 @@
     .social-handles{
         margin: 1em;
         display: flex;
+        max-height: 203px;
         grid-area: C;
         gap: 1em;
         background-color: #F3F9CB;
@@ -19,11 +20,14 @@
         border-radius: 10px;
         p{
             font-size: 1em;
+            max-height: 120px;
+            overflow: hidden;
             color: var(--gray-text);
-            max-width: 227px;
+            width: 227px;
         }
         .text{
             display: flex;
+            overflow: auto;
             gap: 1em;
             flex-direction: column;
             margin: 1em;
@@ -40,17 +44,22 @@
         grid-area: D;
         display: flex;
         flex-direction: column;
-        max-width: 360px;
+        max-height: 230px;
+        width: 360px;
         margin: 1em;
         gap: 1em;
         p{
             max-width: 334px;
+            max-height: 96px;
             font-size: 1em;
         }
     }
     .form{
         grid-area:B;
         margin-top: 1em;
+        max-height: 430px;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+        justify-self: center;
     }
     .welcomeMessage{
         display: none;
@@ -59,7 +68,7 @@
         position: absolute;
         background-color: rgba(255, 255, 255, 0.5);
         width: 100%;
-        bottom: 0.2em;
+        bottom: 0em;
         display: flex;
         flex-direction: column;
         gap: 1.2em;
@@ -84,6 +93,7 @@
     .pagecontent{
         position: relative;
         grid-area: A;
+        justify-self: end;
         margin: 1em;
         max-height: 484px;
         
@@ -123,13 +133,17 @@
         }
         .social-handles{
             grid-area: temp1;
+            justify-self: flex-end;
+
         }
         .registerNow{
             grid-area: temp2;
+            justify-self: flex-end;
+            width: auto;
         }
         .form{
             grid-area: form;
-            justify-self: center;
+            justify-self: flex-start;
         }
         .pagecontent{
             img{
@@ -165,6 +179,7 @@
         .registerNow{
             grid-area: C;
             text-align: center;
+            justify-self: center;
             p{
                 text-align: center;
             }
@@ -172,6 +187,7 @@
         .form{
             grid-area: B;
             max-height:400px;
+            justify-self: center;
         }
         .pagecontent{
             display: none;
