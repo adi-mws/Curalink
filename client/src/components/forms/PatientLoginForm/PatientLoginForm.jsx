@@ -31,10 +31,9 @@ export default function PatientLoginForm() {
   {errors.email && <p className="error">{errors.email.message}</p>}
 </div>
 
-        <div className="password inputFields">
+        <div className={errors.password ? "password-error" : "password inputFields"}>
           <label>Password</label>
           <input 
-          className={errors.password ? "password-error" : ""}
           {...register('password', 
           {required:{value:true, message:'Password is required'}, 
           minLength:{value:8, message:'Password must contain at least 8 characters'}, 

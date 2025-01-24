@@ -1,0 +1,162 @@
+.ContactPage{
+    font-family: var(--secondary-font);
+    width: 100%;
+    margin: 1em;
+    display: grid;
+    grid-template-areas: 
+    "A B"
+    "F F";
+    grid-template-columns: 560fr 477fr;
+    grid-gap: 5em;
+    grid-row-gap: 2em;
+    .ContactForm{
+        height: fit-content;
+        width: 100%;
+        margin: 3em;
+        grid-area: B;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+        width: fit-content;
+        padding: 1em 0em;
+
+        .FormHeading{
+            justify-self: center;
+            font-size: 1.5em;
+        }
+        .input-field{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            margin: 1em 2em;
+            input,textarea{
+                padding: .8em 1em;
+                background-color: #F2F2F2;
+                border: 1px solid var(--primary-color);
+                border-radius: 5px;
+                width: 100%;
+                height: 3.3em;
+                border: 0px;
+            }  
+            textarea{
+                height: 10em;
+                width: 30em;    
+            }
+            .error{
+                outline: var(--red-color);
+            }
+            .error-message{
+                color: var(--red-color);
+                font-size: 0.8em;
+                
+            }
+        }
+        .SubmitButton{
+            margin: 1em 2em;
+        }
+    }
+    .PageContent{
+        margin: 3em;
+        grid-area: A;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 115fr 115fr 200fr;
+        grid-gap: 2em;
+        grid-template-areas: 
+        "A A"
+        "B C"
+        "D D";
+
+        .StayConnected{
+            display: flex;
+            grid-area: A;
+            flex-direction: column;
+            gap: 1.5em;
+            h1{
+                color: black;
+            }
+        }
+        .SupportPageRedirect{
+            grid-area: D;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+            .NeedAssistance{
+                font-weight: bold;
+                font-family: 'raleway';
+            }
+            .AssistanceButton{
+                color: white;
+                background-color: black;
+                max-width: 269px;
+                padding: 0.8em 3em;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.8em;
+            }
+        }
+        .SocialMedia{
+            grid-area: B;
+            display: flex;
+            padding: 2em;
+            flex-direction: column;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+            background-color: #E4D3F9;
+            .icons{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1em;
+            }
+        }
+
+        .SupportEmail{
+            grid-area: C;
+            padding: 2em;
+            display: flex;
+            gap: 1em;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: #A6EFA2;
+        }
+    }
+    .faq-section{
+        grid-area: F;
+    }
+}
+
+@media screen and (max-width:992px){
+    .ContactPage{
+        grid-template-areas: 
+        "Form"
+        "Content"
+        "Faqs";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        .ContactForm{
+            grid-area: Form;
+            justify-self: center;
+        }
+        .PageContent{
+            grid-area: Content;
+            grid-area: Content;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            .StayConnected{
+                h1{
+                    display: none;
+                }
+            }
+        }
+        .faq-section{
+            grid-area: Faqs;
+        }
+    }
+}

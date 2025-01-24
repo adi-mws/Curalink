@@ -1,6 +1,7 @@
 .PatientRegistrationPage{
     max-width: 1440px;
     margin: 2em;
+    grid-gap: 1em;
     display: grid;
     grid-template-rows: minmax(none,80fr) minmax(none,322fr) minmax(none,132fr);
     grid-template-columns: 620fr 725fr;
@@ -25,6 +26,8 @@
     .handshake{
         grid-area: C;
         margin-left: 1em;
+        display: flex;
+        align-items: end;
     }
     .google-sign-in{
         grid-area: D;
@@ -64,6 +67,7 @@
     .login-redirect{
         grid-area: E;
         display: flex;
+        width: 91%;
         flex-wrap: wrap;
         justify-content: center;
         justify-content: space-between;
@@ -88,6 +92,7 @@
     .form{
         grid-area: B;
         box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+        height: fit-content;
     }
     .SmallHeading{
         display: none;
@@ -109,7 +114,7 @@
         }
         .google-sign-in{
             grid-area: B;
-            justify-self: flex-start;
+            justify-self: center;
         }
         .handshake{
             grid-area: A;
@@ -120,7 +125,9 @@
         }
         .form{
             grid-area: F;
-            
+            justify-self: center;
+        height: fit-content;
+
         }
     }
 }
@@ -128,14 +135,23 @@
     .PatientRegistrationPage{
         max-height: none;
         grid-template-columns: 1fr;
-        grid-template-rows: 130fr 1000fr 242fr 322fr;
+        grid-template-rows: 130fr 700fr 130fr 322fr;
         grid-template-areas: 
         "H"
         "F"
         "L"
         "I";
+
         .login-redirect{
             grid-area: L;
+            gap: 1em;
+            justify-content: center;
+            div{
+                align-items: center;
+                p{
+                    text-align: center;
+                }
+            }
         }
         .google-sign-in{
             display: none;
@@ -143,13 +159,15 @@
         .handshake{
             grid-area: I;
             max-width: 410px;
+            max-height: 363px;
         }
         .MainHeading{
             display: none;
         }
         .form{
             grid-area: F;
-            
+            max-height: 1150px;
+        height: fit-content;
         }
         .SmallHeading{
             display: flex;
@@ -162,15 +180,14 @@
                 color: black;
             }
             button{
-                padding: 0.8em 9em;
-                text-align: center;
+                padding: 0.2em 7em;
                 color: black;
                 background-color: rgba(0, 0, 0, 0.2);
                 border-radius: 5px;
                 display: flex;
                 align-items: center;
                 img{
-                    width: 2em;
+                    width: 4em;
                 }
             }
         }
