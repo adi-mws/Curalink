@@ -1,0 +1,24 @@
+.Hero{
+    display: flex;
+    gap: 1em;
+
+
+
+    .Hero-Left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4em;
+    }
+    .Hero-Right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4em;
+
+        .Smiling-Woman{
+            height: 37em;
+        }
+    }
+}
