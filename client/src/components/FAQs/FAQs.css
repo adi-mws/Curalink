@@ -1,5 +1,5 @@
 .faqs {
-    width: 60%;
+    width: 90%;
     margin: 0 auto; 
     font-family: var(--secondary-font);
 }
@@ -69,5 +69,10 @@
     }
     to {
         opacity: 1;
+    }
+}
+@media screen and (max-width:768px){
+    .faqs{
+        width: 90%;
     }
 }
