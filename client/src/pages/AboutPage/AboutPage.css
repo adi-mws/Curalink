@@ -1,24 +1,78 @@
-.Hero{
-    display: flex;
-    gap: 1em;
+.AboutPage {
 
 
 
-    .Hero-Left {
+    .Hero{
+        
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 4em;
+        gap: 1em;
+
+        .Hero-Left {
+            font-family: var(--primary-font);
+            h1 {
+                font-size: 2.7em;  
+                color: black;
+                padding-bottom: 0.5em;  
+            }
+            p {
+                font-family: var(--secondary-font);
+                font-size: 0.95em;
+                line-height: 1.8em;
+                padding-bottom: 3em;  
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4em;
+            padding-top: 1em;
+            .Cards {
+                display: flex;
+                justify-content: center;
+                gap: 4em;
+                div {
+                    border-radius: 0.5em;
+                    display: flex;
+                    flex-direction: column;
+                    p {
+                        font-size: 0.8em;
+                    }
+                    a {
+                        font-size: 0.8em;
+                        font-family: var(--secondary-font);
+                        color: black;
+                    }
+                    padding: 1em;
+                    gap: 0.8em;
+                }
+                .Vision {
+                    background-color: #E9F682;
+                }
+                .Mission {
+                    background-color: #FFC0EA;
+                }
+            }
+
+        }
+        .Hero-Right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4em;
+            padding-top: 1em;
+    
+            .Smiling-Woman{
+                height: 37em;
+            }
+        }
     }
-    .Hero-Right{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 4em;
-
-        .Smiling-Woman{
-            height: 37em;
+    .Services {
+        h1 {
+            text-align: center;
+            color: black;
+            font-size: 3em;
+            font-family: var(--primary-font);
+            padding-top: 1em;
         }
     }
 }
