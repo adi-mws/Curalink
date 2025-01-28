@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 import NewsCard from './components/NewsCard/NewsCard.jsx'
+import NewsSection from './components/sections/NewsSection/NewsSection.jsx'
 
 
 function App() {
   return (
-    <NewsCard/>
+    <NewsSection/>
   )
 }
 export default App

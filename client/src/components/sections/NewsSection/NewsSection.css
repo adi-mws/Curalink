@@ -1,0 +1,6 @@
+.NewsSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4em; 
+    justify-content: center; 
+  }
