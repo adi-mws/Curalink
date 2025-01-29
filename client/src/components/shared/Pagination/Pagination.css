@@ -1,0 +1,32 @@
+.Pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    .buttons{
+        background-color: #EDEDED;
+        padding: 0.3em 1em;
+        border-radius: 8.71px;
+        button{
+            height: 3em;
+            width: 3em;        
+            background-color: #EDEDED;
+            border-radius: 8.71px;
+        }
+        .Previous-button, .Next-button{
+            width: 4em;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+        .Previous-button:disabled, .Next-button:disabled{
+            background-color: #EDEDED;
+            color: var(--gray-text);
+            cursor:not-allowed;
+        }
+        .currentPage{
+            background-color: var(--primary-color);
+            color: white;
+            transition: 2ms fade;
+        }
+    }
+}
