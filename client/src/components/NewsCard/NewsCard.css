@@ -1,0 +1,27 @@
+.NewsCard{
+    height: 33.4em;
+    display: grid;
+    grid-template-rows: 193fr 54fr 115fr 63fr;
+    border-radius: 10px;
+    width: 23em;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    font-size: 1em;
+    font-family: var(--secondary-font);
+    padding-bottom: 1em;
+    grid-gap: 0.9em;
+    img,p{
+        margin: 0.5em;
+    }
+
+    .Heading{
+        font-weight: bold;
+    }
+    .DateAndButton{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .ReadMoreButton{
+            margin-right: 0.6em;
+        }
+    }
+}

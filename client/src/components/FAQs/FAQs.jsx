@@ -14,9 +14,9 @@ function FAQItem({ question, answer }) {
 
     return (
         <div className="faq-item">
-            <div className="faq-question">
+            <div onClick={toggleAnswer} className="faq-question">
                 <p>{question}</p>
-                <button onClick={toggleAnswer} className="faq-toggle-button">
+                <button className="faq-toggle-button">
                     <img
                         src={DownArrow}
                         alt="Toggle FAQ"

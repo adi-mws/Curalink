@@ -1,17 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import ContactPage from './pages/ContactPage/ContactPage.jsx'
-import Header from './components/layout/Header/Header.jsx'
-import Footer from './components/layout/Footer/Footer.jsx'
+import NewsPage from './pages/NewsPage/NewsPage'
+import Pagination from './components/shared/Pagination/Pagination'
 
 
 function App() {
   return (
-    <>
-    <Header/>
-    <ContactPage />
-    <Footer/>
-    </>
+    <NewsPage/>
   )
 }
 export default App
