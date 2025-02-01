@@ -8,7 +8,7 @@ import PrimaryButton from '../../shared/buttons/PrimaryButton/PrimaryButton';
 export default function Header({ }) {
     const [data, setData] = useState(false);
     useEffect(() => {
-        console.log("hello ")
+        // console.log("hello ")
         header.current.style.background = "white";
 
     }, [data])
