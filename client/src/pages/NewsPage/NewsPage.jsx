@@ -47,8 +47,8 @@ export default function NewsPage({ News, newsTitles = searchData }) {
     <div className="NewsPage">
       <div className="SearchSection">
         <div className="NewsPage-Heading">
-          <h1>We’ve Got It All Covered for You</h1>
-          <p>
+          <p className="MainHead">We’ve Got It All Covered for You</p>
+          <p className="HeadingBody">
             Stay informed and up-to-date with the latest news and developments
             in healthcare! At CuraLink, we provide both patients and doctors
             with curated news articles, tips, and updates to ensure you’re
@@ -72,7 +72,7 @@ export default function NewsPage({ News, newsTitles = searchData }) {
                       {title}
                     </li>
                   ))
-                ) : (
+                ):(
                   <li className="NoResults">No results found</li>
                 )}
               </ul>
@@ -89,4 +89,3 @@ export default function NewsPage({ News, newsTitles = searchData }) {
     </div>
   );
 }
-
