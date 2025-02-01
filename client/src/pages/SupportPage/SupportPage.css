@@ -1,0 +1,38 @@
+.SupportPage{
+    font-family: var(--secondary-font);
+    .ChecklistSection{
+        p{
+            color: var(--primary-color);
+            font-weight: bold;
+            padding-left: 0.8em;
+        }
+    }
+    .Checklist{
+        height: 3.5em;
+        width: 25em;
+        border-radius: 10px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        div{
+            background-color: white;
+            height: 2.8em;
+            width: 2.8em;
+            border-radius: 1.4em;
+            margin-right: 0.4em;
+            img{
+                
+            }
+        }
+    }
+    .Checklist-1{
+        background-color: #FFD9D9;
+
+    }
+    .Checklist-2{
+        background-color: #F8FBA5;
+    }
+    .Checklist-3{
+        background-color: #F3D9FF;
+    }
+}
