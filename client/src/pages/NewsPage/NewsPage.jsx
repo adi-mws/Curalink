@@ -5,6 +5,8 @@ import FAQs from '../../components/FAQs/FAQs.jsx';
 import searchIcon from '../../assets/icons/search-normal.png';
 import Pagination from '../../components/shared/Pagination/Pagination.jsx';
 import DummyImage from '../../assets/imgs/NewsCardLady.png';
+import BackgroundImageNewsPage from '../../assets/imgs/NewsSearchPage-bg-1368.png'
+import BackgroundImageNewsPage2 from '../../assets/imgs/NewsSearchPage-bg-992.png'
 
 
 const searchData = [
@@ -21,12 +23,13 @@ const searchData = [
 export default function NewsPage({ News, newsTitles = searchData }) {
   const [search, setSearch] = useState('');
   const [filteredNews, setFilteredNews] = useState([]);
-  const [showDropdown, setShowDropdown] = useState(false);  
+  const [showDropdown, setShowDropdown] = useState(false);
+  
+  
 
   const handleChange = (event) => {
     const value = event.target.value;
     setSearch(value);
-
     if (value.length > 0) {
       const filtered = newsTitles.filter((title) =>
         title.toLowerCase().includes(value.toLowerCase())
@@ -47,7 +50,7 @@ export default function NewsPage({ News, newsTitles = searchData }) {
     <div className="NewsPage">
       <div className="SearchSection">
         <div className="NewsPage-Heading">
-          <p className="MainHead">We’ve Got It All Covered for You</p>
+          <p className="MainHead">We've Got It All Covered for You</p>
           <p className="HeadingBody">
             Stay informed and up-to-date with the latest news and developments
             in healthcare! At CuraLink, we provide both patients and doctors
