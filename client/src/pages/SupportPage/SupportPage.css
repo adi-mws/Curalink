@@ -1,38 +1,204 @@
 .SupportPage{
     font-family: var(--secondary-font);
-    .ChecklistSection{
-        p{
-            color: var(--primary-color);
-            font-weight: bold;
-            padding-left: 0.8em;
-        }
-    }
-    .Checklist{
-        height: 3.5em;
-        width: 25em;
-        border-radius: 10px;
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        div{
-            background-color: white;
-            height: 2.8em;
-            width: 2.8em;
-            border-radius: 1.4em;
-            margin-right: 0.4em;
-            img{
+        .Hero-Section{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "H I"
+            "C C"
+            ;
+
+            .MainImage{
+                grid-area: I;
+                justify-self: center;
+                align-self: center;
+            }
+
+            .SupportHeading{
+                grid-area: H;
+                display: flex;
+                justify-self: center;
+                flex-direction: column;
+                align-self: center;
+                gap: 3em;
+                *{
+                    margin-left: 1em;
+                }
+                .HeadingMain{
+                    font-size: 2.5em;
+                    font-weight: bold;
+                    max-width: 618px;
+                    margin-left: 0.8em;
+                    font-family: (var(--primary-font));
+                }
+                .HeadingBody{
+                    margin-left: 2em;
+                    max-width:514px;
+                }
+                .HeadingButtons{
+                    display: flex;
+                    max-width: 550px;
+                    justify-content: space-evenly;
+                    margin: 0;
+                }
                 
             }
-        }
-    }
-    .Checklist-1{
-        background-color: #FFD9D9;
 
-    }
-    .Checklist-2{
-        background-color: #F8FBA5;
-    }
-    .Checklist-3{
-        background-color: #F3D9FF;
-    }
+            .ChecklistSection{
+                grid-area: C;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+                p{
+                    color: var(--primary-color);
+                    font-weight: bold;
+                    padding-left: 0.8em;
+                    font-size: 1em;
+                }
+                .Checklist{
+                    height: 5em;
+                    width: 25em;
+                    border-radius: 10px;
+                    align-items: center;
+                    display: flex;
+                    text-wrap: nowrap;
+                    justify-content: center;
+                    gap: 2em !important;
+                    margin-bottom: 1em;
+                    div{
+                        background-color: white;
+                        height:3.4em;
+                        width: 3.4em;
+                        border-radius: 1.7em;
+                        margin-right: 0.4em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        justify-self: flex-end !important;
+                        img{
+                            width: 2em;
+                        }
+                    }
+                }
+                .Checklist-1{
+                    background-color: #FFD9D9;
+        
+                }
+                .Checklist-2{
+                    background-color: #F8FBA5;
+                }
+                .Checklist-3{
+                    background-color: #F3D9FF;
+                }
+            }
+        }
+
+        .SupportTicketDetails{
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background: linear-gradient(to bottom,white,#E1C9DD);
+
+            .TicketDetailsHeading{
+                font-size: 2em;
+                align-self: center;
+                font-weight: bold;
+                font-family: var(--primary-font);
+            }
+            .TicketDetailsDiscription{
+                display: flex;
+                justify-content: space-evenly;
+                .discription{
+                    display: flex;
+                    background-color: white;
+                    padding: 3em 4em;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1em;
+                    border-radius: 10px;
+                    .Body{
+                        max-width: 314px;
+                        text-align: center;
+                    }
+                    .Head{
+                        max-width: 314px;
+                        color: var(--primary-color);
+                        font-size: 1.2em;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+            }
+            .SupportTicketButton{
+                background: linear-gradient(to right,#965497,#EF5F5F);
+                background-color: black;
+                padding: 0.8em 4em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                border-radius: 10px;
+                align-self: center;
+                font-weight: bold;
+                font-size: 1.1em;
+                gap: 0.5em;
+            }
+            
+
+        }
+        .SupportTicketStatus{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 80vh;
+            .TicketStatusHeading{
+                font-size: 2em;
+                font-weight: bold;
+                align-self: center;
+                margin-top: 2em;
+                font-family: var(--primary-font);
+            }
+            .TicketStatusBody{
+                width: 70%;
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 80%;
+                gap: 1em;
+            }
+            .StatusFields{
+                display: grid;
+                align-self: center;
+                width: 100%;
+                grid-template-columns:250fr 65fr 110fr;
+                p{
+                    font-weight: bold;
+                    justify-self: center;
+                    margin-right: 1em;
+                }
+            }
+            .IssueDetails{
+                display: grid;
+                align-self: center;
+                width: 100%;
+                grid-template-columns:250fr 65fr 110fr;
+                justify-content: center;
+                *{
+                    justify-self: center;
+                    margin-right: 1em;
+                }
+                .TicketStatus{
+                color: #A4A434;
+                }
+            }
+        }
+        .FAQs-Section{
+            margin-bottom: 5em;
+        }
 }
