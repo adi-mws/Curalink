@@ -42,6 +42,8 @@
                     max-width: 550px;
                     justify-content: space-evenly;
                     margin: 0;
+                    gap: 0.5em;
+                    flex-wrap: wrap;
                 }
                 
             }
@@ -49,7 +51,7 @@
             .ChecklistSection{
                 grid-area: C;
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
                 p{
@@ -112,6 +114,9 @@
             .TicketDetailsDiscription{
                 display: flex;
                 justify-content: space-evenly;
+                flex-wrap: wrap;
+                gap: 2em;
+                padding: 1em 1em;
                 .discription{
                     display: flex;
                     background-color: white;
@@ -122,7 +127,7 @@
                     gap: 1em;
                     border-radius: 10px;
                     .Body{
-                        max-width: 314px;
+                        width: 20em;
                         text-align: center;
                     }
                     .Head{
@@ -148,8 +153,6 @@
                 font-size: 1.1em;
                 gap: 0.5em;
             }
-            
-
         }
         .SupportTicketStatus{
             display: flex;
@@ -189,6 +192,9 @@
                 width: 100%;
                 grid-template-columns:250fr 65fr 110fr;
                 justify-content: center;
+                p{
+                    max-height: 10px;
+                }
                 *{
                     justify-self: center;
                     margin-right: 1em;
@@ -201,4 +207,107 @@
         .FAQs-Section{
             margin-bottom: 5em;
         }
+}
+@media screen and (max-width:992px){
+    .SupportPage{
+        grid-template-areas: 
+        "Hero"
+        "Discription"
+        "Status"
+        "FAQs";
+        grid-gap: 1em;
+        .Hero-Section{
+            justify-self: center;
+            grid-area: Hero;
+            height: fit-content;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: 
+            "A"
+            "B"
+            "C"
+            ;
+            .SupportHeading{
+                grid-area: A;
+                p{
+                    text-align: center;
+                    align-self: center;
+                }
+                .HeadingButtons{
+                    align-self: center;
+                }
+            }
+            .MainImage{
+                grid-area: B;
+            }
+            .ChecklistSection{
+                grid-area: C;
+            }
+        }
+        
+    .SupportTicketDetails{
+        grid-area: Discription;
+        height: fit-content;
+        padding: 3em 0em;
+        gap: 3em;
+        .TicketDetailsDiscription{
+            .discription{
+                width: 40em;
+                .Body{
+                   width: auto;
+                   max-width: 500px;
+                }
+            }
+        }
+    }
+    .SupportTicketStatus{
+        grid-area: Status;
+        justify-self: center;
+
+    }
+    .FAQs-Section{
+        grid-area: FAQs;
+        justify-self: center;
+    }
+    }
+}
+@media screen and (max-width:576px){
+    .SupportPage{
+
+        .SupportTicketStatus{
+
+           .TicketStatusBody{
+
+            .IssueDetails{
+
+               .TicketStatus{
+                    display: hidden;
+               } 
+            }
+           } 
+        }
+        .SupportTicketStatus{
+            .StatusFields{
+                .StatusField-Status{
+                    display: none;
+                }
+            }
+            .IssueDetails{
+                p{ 
+                    min-width: 187px; 
+                }
+                .TicketStatus{
+                    display: none;
+                }
+            }
+        }
+        .TicketDetailsDiscription{
+            .discription{
+                .Body{
+                   width: auto;
+                   max-width: 500px;
+                   min-width: 393px;
+                }
+            }
+        }
+    }
 }

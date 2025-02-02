@@ -18,7 +18,7 @@ export default function SupportPage() {
         <p className="HeadingBody">Have questions or need help? Our team is here to assist you with quick solutions and expert guidance to ensure a seamless experience.</p>
         <div className="HeadingButtons">
             <PrimaryButton text="Raise a Ticket Now" padding='1em 5em'/>
-            <SecondaryButton text="Email Us" padding='1em 6.7em'/>
+            <SecondaryButton text="Email Us" padding='1em 7.4em'/>
         </div>
     </div>
 
