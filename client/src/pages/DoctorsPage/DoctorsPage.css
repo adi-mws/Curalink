@@ -1,3 +1,138 @@
 .DoctorsPage{
     font-family: var(--secondary-font);
+    .Hero-Section{
+        display: grid;
+        background-size: 100% 100%;
+        grid-template-rows: 1.5fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "A C"
+        "B C";
+        height: 100vh;
+        background-position: bottom;
+        .Hero-content{
+            grid-area: A;
+            align-self: flex-end;
+            top: 8em;
+            margin: 2em;
+            display: flex;
+            max-width: 712px;
+            margin-bottom: 3.5em;
+            flex-direction: column;
+            gap: 1.5em;
+            .Heading{
+                font-size: 2.5em;
+                font-weight: bold;
+                font-family: var(--primary-font);
+            }
+            .Body{
+                max-width: 666px;
+                font-size: 1.1em;
+            }
+        }
+        .MainImage{
+            bottom: -0.4em;
+            grid-area: C;
+            align-self: flex-end;
+            img{
+                width: 40rem;
+                margin-bottom: 0px;
+            }
+        }
+        .Hero-Merits{
+            grid-area: B;
+            display: flex;
+            align-self: flex-end;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            div{
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 3px;
+                .Merit-Head{
+                    font-weight: bold;
+                    font-size: 1.2em;
+                }
+
+            }
+            .Merit-1{
+                width: 10em;
+                height: 10em;
+                border-radius: 5em;
+                margin-bottom: 1em;
+                
+            }
+            .Merit-2{
+                width: 13em;
+                height: 13em;
+                margin-bottom: 0.5em;
+                border-radius: 6.5em;
+            }
+            .Merit-3{
+                width: 17em;
+                height: 17em;
+                border-radius: 8.5em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1368px){
+    .DoctorsPage{
+        .Hero-Section{
+            .Hero-content{
+                max-width: 600px;
+            }
+            .Hero-content{
+                align-self: flex-end;
+                .Heading{
+                    font-size: 2em;
+                }
+                .Body{
+                    font-size: 1em;
+                }
+            }
+            .MainImage{
+                justify-self: flex-end;
+                align-self: flex-end;
+            }
+            .Hero-Merits{
+                justify-content: flex-start;
+                gap: 0.3em;
+                .Merit-1, .Merit-2, .Merit-3{
+                    width: 10em;
+                    height: 10em;
+                    border-radius: 5em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:992px){
+    .DoctorsPage{
+        .Hero-Section{
+            height: 100vh;
+            background-position: center;
+            .MainImage{
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                bottom: 0em;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:576px){
+    .DoctorsPage{
+        .Hero-Section{
+            
+        }
+    }
 }
