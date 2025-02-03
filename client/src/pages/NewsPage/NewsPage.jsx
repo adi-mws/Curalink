@@ -9,15 +9,13 @@ import instagram from '../../assets/icons/instagram.png'
 import linkedin from '../../assets/icons/linkedin.png'
 import CompleteYourProfile from '../../components/shared/adcards/CompleteYourProfile/CompleteYourProfile.jsx'
 
-export default function NewsPage({NewsArticles= NewsData}) {
+export default function NewsPage({NewsArticles= NewsData, Heading="Revolutionizing Healthcare: The Role of AI in Early Disease Detection"}) {
   return (
     <div className="NewsPage">
         <div className="MainSection">
-        <div className="MainImage">
-            <img src={MainImage} alt="" />
-        </div>
+            <img className="MainImage" src={MainImage} alt="" />
         <div className="NewsArticleSection">
-            <p className="ArticleSectionHeading"></p>
+            <p className="ArticleSectionHeading" style={{margin: "1em 0 2em 0.2em", fontWeight: "bold", fontSize: "2em", maxWidth:"830px"}}>{Heading}</p>
             {NewsArticles.map((news) => (
                 <div key={news.id} style={{ marginBottom: "20px", padding: "10px", maxWidth: "830px" }}>
                     <p style={{fontWeight:"bold", fontSize:"1.2em", marginBottom:"1em"}}>{news.heading}</p>

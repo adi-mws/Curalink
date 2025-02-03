@@ -10,7 +10,13 @@
 
     .MainSection{
         padding-left: 2em;
+        padding-right: 4em;
         grid-area: A;
+        .MainImage{
+                width: 100%;
+                object-fit: contain;
+                height: auto;
+        }
     }
 
     .FAQsSection{
@@ -59,5 +65,18 @@
         grid-area: C;
         justify-self: center;
 
+    }
+}
+@media screen and (max-width:1368px) {
+    .NewsPage{
+        display: grid;
+        grid-template-columns: 1fr;
+        .MainSection{
+            justify-self: center;
+            align-items: center;
+        }
+        .FAQsSection{
+            display: none;
+        }
     }
 }
