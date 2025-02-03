@@ -36,6 +36,7 @@
                     flex-direction: column;
                     p {
                         font-size: 0.8em;
+                        padding-bottom: 0em;
                     }
                     a {
                         font-size: 0.8em;
@@ -73,6 +74,118 @@
             font-size: 3em;
             font-family: var(--primary-font);
             padding-top: 1em;
+        }
+        .First {
+            display: flex;
+            padding: 4em;
+            align-items: center;
+            gap: 3em;
+            .Written-Block {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                bottom: 1em;
+                gap: 3em;
+                padding-right: 15em;
+                .First-P {
+                    font-size: 2em;
+                    font-family: var(--primary-font);
+                }
+                .Second-P {
+                    font-family: var(--secondary-font);
+                }
+            }
+            .Read-More {
+                display: flex;
+                gap: 1em;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0.5em;
+                background-color:#8623741A;
+                position: relative;
+                top: 1.8em;
+                right: 15em;
+                font-family: var(--secondary-font);
+                width: 40em;
+                height: 9em;
+                .Right-Arrow {
+                    transform: rotate(270deg);
+                    width: 1.7em;
+                }
+            }
+        }
+        .Second {
+            padding: 4em;
+            padding-top: 0em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            div {
+                border-radius: 0.5em;
+                display: flex;
+                width: 26em;
+                flex-direction: column;
+                font-family: var(--secondary-font);
+                p {
+                    font-size: 0.8em;
+                }
+                h3 {
+                    font-size: 1em;
+                    font-family: var(--primary-font);
+                }
+                padding: 2em;
+                gap: 0.8em;
+                border-radius: 0.5em;
+                background-color: #8623741A;
+            }
+            gap: 1em;
+        }
+    }
+    .Different {
+        .Heading {
+            display: flex;
+            gap: 1.7em;
+            h1 {
+                color: black;
+                font-size: 2.5em;
+                font-family: var(--primary-font);
+                padding-top: 0.5em;
+                padding-left: 1.6em;
+            }
+            .P-Block {
+                background-color: #818DDC;
+                width: 3em;
+                height: 4.2em;
+                position: relative;
+                bottom: 1px;
+                border-bottom-right-radius: 0.25em;
+                border-bottom-left-radius: 0.25em;
+            }
+        }
+        .Body {
+            display: flex;
+            flex-direction: column;
+            padding: 4em;
+            justify-content: space-evenly;
+            gap: 5em;
+            > div {
+                display: flex;
+                gap: 2em;
+                justify-content: space-evenly;
+                > div {
+                    justify-content: center;
+                    b {
+                        font-family: var(--primary-font);
+                        font-size: 1.2em;
+                    }
+                    font-family: var(--secondary-font);
+                    display: flex;
+                    flex-direction: column;
+                    width: 46em;
+                    gap: 2em;
+                }
+            }
         }
     }
 }
