@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 import Pagination from './components/shared/Pagination/Pagination'
-import SupportPage from './pages/SupportPage/SupportPage.jsx'
+import NewsPage from './pages/NewsPage/NewsPage.jsx'
 
 
 function App() {
   return (
-    <SupportPage/>
+    <NewsPage/>
   )
 }
 export default App
