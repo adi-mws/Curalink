@@ -14,6 +14,8 @@
                 grid-area: I;
                 justify-self: center;
                 align-self: center;
+                object-fit: cover;
+                overflow: hidden;
             }
 
             .SupportHeading{
@@ -54,6 +56,7 @@
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
+                gap: 2em;
                 p{
                     color: var(--primary-color);
                     font-weight: bold;
@@ -226,6 +229,9 @@
             "B"
             "C"
             ;
+            .ChecklistSection{
+                gap: 1em;
+            }
             .SupportHeading{
                 grid-area: A;
                 p{
@@ -273,8 +279,33 @@
 @media screen and (max-width:576px){
     .SupportPage{
 
+        *{
+            margin: 0;
+        }
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "A"
+        "B"
+        "C"
+        "D";
+        .Hero-Section{
+            grid-area: A;
+            .MainImage{
+                grid-area: A;
+                justify-self: center;
+                align-self: center;
+            }
+            .SupportHeading{
+                grid-area: B;
+                margin-bottom: 2em;
+                p{
+                    margin-left: 0px;
+                }
+            }
+        }
         .SupportTicketStatus{
-
+            grid-area: C;
            .TicketStatusBody{
 
             .IssueDetails{
@@ -300,6 +331,9 @@
                 }
             }
         }
+        .SupportTicketDetails{
+            grid-area: C;
+        }
         .TicketDetailsDiscription{
             .discription{
                 .Body{
@@ -308,6 +342,9 @@
                    min-width: 393px;
                 }
             }
+        }
+        .FAQs-Section{
+            grid-area: D;
         }
     }
 }

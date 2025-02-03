@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './NewsPage.css';
-import NewsSection from '../../components/sections/NewsSection/NewsSection';
+import './NewsSearchPage.css';
+import NewsSection from '../../components/sections/NewsSection/NewsSection.jsx';
 import FAQs from '../../components/FAQs/FAQs.jsx';
 import searchIcon from '../../assets/icons/search-normal.png';
 import Pagination from '../../components/shared/Pagination/Pagination.jsx';
@@ -20,7 +20,7 @@ const searchData = [
 ];
 
 
-export default function NewsPage({ News, newsTitles = searchData }) {
+export default function NewsSearchPage({ News, newsTitles = searchData }) {
   const [search, setSearch] = useState('');
   const [filteredNews, setFilteredNews] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -47,7 +47,7 @@ export default function NewsPage({ News, newsTitles = searchData }) {
   };
 
   return (
-    <div className="NewsPage">
+    <div className="NewsSearchPage">
       <div className="SearchSection">
         <div className="NewsPage-Heading">
           <p className="MainHead">We've Got It All Covered for You</p>
