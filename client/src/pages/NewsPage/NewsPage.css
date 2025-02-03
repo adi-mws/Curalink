@@ -1,84 +1,82 @@
 .NewsPage{
-    display: flex;
-    flex-direction: column;
-    gap: 5em;
-    .SearchSection{
-        .NewsPage-Heading{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            .MainHead{
-                font-family: var(--primary-font);
-                color: black;
-                font-weight: bold;
-                font-size:4em;
-                text-wrap:nowrap;
-                text-align: center;
-                margin-bottom: 0.5em;
-            }
-            .HeadingBody{
-                font-family: var(--secondary-font);
-                max-width: 732px;
-                align-self: center;
-                text-align: center;
-                margin-bottom: 2em;
-            }
-        .Search-bar {
-          max-width: 400px;
-          position: relative;
-                width: 30em;
-                img{
-                    position: absolute;
-                    bottom: 1em;
-                    right: 2.5em;
-                }
-                input{
-                  width: 100%;
-                  height: 4em;
-                  padding-left: 1em;
-                  border-radius: 10px;
-                  border: 2px solid black;
-                  outline: none;
-                } 
-        } 
-        .Dropdown {
-          position: absolute;
-          font-family: var(--secondary-font);
-          width: 100%;
-          background: white;
-          margin:5px 0px;
-          border: 1px solid #ccc;
-          border-radius: 15px;
-          max-height: 200px;
-          overflow-y: auto;
-          list-style: none;
-          padding: 0;
-          z-index: 1000;
+    font-family: var(--secondary-font);
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 971fr 416fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "A B"
+    "C B";
+
+    .MainSection{
+        padding-left: 2em;
+        padding-right: 4em;
+        grid-area: A;
+        .MainImage{
+                width: 100%;
+                object-fit: contain;
+                height: auto;
         }
-        
-        .Dropdown li {
-          padding: 10px;
-          cursor: pointer;
-        }
-        
-        .Dropdown li:hover {
-          background: #f1f1f1;
-        }
-        
-        .NoResults {
-          padding: 10px;
-          color: gray;
-          text-align: center;
-        }
-        
     }
 
-    .Pagination-Section{
+    .FAQsSection{
+        grid-area: B;
+        justify-self: center;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        gap: 3em;
+        .social-handles{
+            justify-self:start;
+            display: flex;
+            max-height: 203px;
+            gap: 1em;
+            background-color: #F3F9CB;
+            max-width: 380px;
+            border-radius: 10px;
+            b{
+                margin-left: 1em;
+            }
+            p{
+                font-size: 1em;
+                max-height: 120px;
+                overflow: hidden;
+                color: var(--gray-text);
+                width: 227px;
+                margin-left: 1em;
+            }
+            .text{
+                display: flex;
+                overflow: auto;
+                gap: 1em;
+                flex-direction: column;
+                margin: 1em;
+                
+            }
+            .handles{
+                display: flex;
+                flex-direction: column;
+                margin: 1em;
+                gap:0.5em;
+            }
+        }
     }
-  }
+
+    .NewsPage-NewsCardSection{
+        grid-area: C;
+        justify-self: center;
+
+    }
+}
+@media screen and (max-width:1368px) {
+    .NewsPage{
+        display: grid;
+        grid-template-columns: 1fr;
+        .MainSection{
+            justify-self: center;
+            align-items: center;
+        }
+        .FAQsSection{
+            display: none;
+        }
+    }
 }

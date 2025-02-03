@@ -1,0 +1,350 @@
+.SupportPage{
+    font-family: var(--secondary-font);
+        .Hero-Section{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "H I"
+            "C C"
+            ;
+
+            .MainImage{
+                grid-area: I;
+                justify-self: center;
+                align-self: center;
+                object-fit: cover;
+                overflow: hidden;
+            }
+
+            .SupportHeading{
+                grid-area: H;
+                display: flex;
+                justify-self: center;
+                flex-direction: column;
+                align-self: center;
+                gap: 3em;
+                *{
+                    margin-left: 1em;
+                }
+                .HeadingMain{
+                    font-size: 2.5em;
+                    font-weight: bold;
+                    max-width: 618px;
+                    margin-left: 0.8em;
+                    font-family: (var(--primary-font));
+                }
+                .HeadingBody{
+                    margin-left: 2em;
+                    max-width:514px;
+                }
+                .HeadingButtons{
+                    display: flex;
+                    max-width: 550px;
+                    justify-content: space-evenly;
+                    margin: 0;
+                    gap: 0.5em;
+                    flex-wrap: wrap;
+                }
+                
+            }
+
+            .ChecklistSection{
+                grid-area: C;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 2em;
+                p{
+                    color: var(--primary-color);
+                    font-weight: bold;
+                    padding-left: 0.8em;
+                    font-size: 1em;
+                }
+                .Checklist{
+                    height: 5em;
+                    width: 25em;
+                    border-radius: 10px;
+                    align-items: center;
+                    display: flex;
+                    text-wrap: nowrap;
+                    justify-content: center;
+                    gap: 2em !important;
+                    margin-bottom: 1em;
+                    div{
+                        background-color: white;
+                        height:3.4em;
+                        width: 3.4em;
+                        border-radius: 1.7em;
+                        margin-right: 0.4em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        justify-self: flex-end !important;
+                        img{
+                            width: 2em;
+                        }
+                    }
+                }
+                .Checklist-1{
+                    background-color: #FFD9D9;
+        
+                }
+                .Checklist-2{
+                    background-color: #F8FBA5;
+                }
+                .Checklist-3{
+                    background-color: #F3D9FF;
+                }
+            }
+        }
+
+        .SupportTicketDetails{
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background: linear-gradient(to bottom,white,#E1C9DD);
+
+            .TicketDetailsHeading{
+                font-size: 2em;
+                align-self: center;
+                font-weight: bold;
+                font-family: var(--primary-font);
+            }
+            .TicketDetailsDiscription{
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                gap: 2em;
+                padding: 1em 1em;
+                .discription{
+                    display: flex;
+                    background-color: white;
+                    padding: 3em 4em;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1em;
+                    border-radius: 10px;
+                    .Body{
+                        width: 20em;
+                        text-align: center;
+                    }
+                    .Head{
+                        max-width: 314px;
+                        color: var(--primary-color);
+                        font-size: 1.2em;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+            }
+            .SupportTicketButton{
+                background: linear-gradient(to right,#965497,#EF5F5F);
+                background-color: black;
+                padding: 0.8em 4em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                border-radius: 10px;
+                align-self: center;
+                font-weight: bold;
+                font-size: 1.1em;
+                gap: 0.5em;
+            }
+        }
+        .SupportTicketStatus{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 80vh;
+            .TicketStatusHeading{
+                font-size: 2em;
+                font-weight: bold;
+                align-self: center;
+                margin-top: 2em;
+                font-family: var(--primary-font);
+            }
+            .TicketStatusBody{
+                width: 70%;
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 80%;
+                gap: 1em;
+            }
+            .StatusFields{
+                display: grid;
+                align-self: center;
+                width: 100%;
+                grid-template-columns:250fr 65fr 110fr;
+                p{
+                    font-weight: bold;
+                    justify-self: center;
+                    margin-right: 1em;
+                }
+            }
+            .IssueDetails{
+                display: grid;
+                align-self: center;
+                width: 100%;
+                grid-template-columns:250fr 65fr 110fr;
+                justify-content: center;
+                p{
+                    max-height: 10px;
+                }
+                *{
+                    justify-self: center;
+                    margin-right: 1em;
+                }
+                .TicketStatus{
+                color: #A4A434;
+                }
+            }
+        }
+        .FAQs-Section{
+            margin-bottom: 5em;
+        }
+}
+@media screen and (max-width:992px){
+    .SupportPage{
+        grid-template-areas: 
+        "Hero"
+        "Discription"
+        "Status"
+        "FAQs";
+        grid-gap: 1em;
+        .Hero-Section{
+            justify-self: center;
+            grid-area: Hero;
+            height: fit-content;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: 
+            "A"
+            "B"
+            "C"
+            ;
+            .ChecklistSection{
+                gap: 1em;
+            }
+            .SupportHeading{
+                grid-area: A;
+                p{
+                    text-align: center;
+                    align-self: center;
+                }
+                .HeadingButtons{
+                    align-self: center;
+                }
+            }
+            .MainImage{
+                grid-area: B;
+            }
+            .ChecklistSection{
+                grid-area: C;
+            }
+        }
+        
+    .SupportTicketDetails{
+        grid-area: Discription;
+        height: fit-content;
+        padding: 3em 0em;
+        gap: 3em;
+        .TicketDetailsDiscription{
+            .discription{
+                width: 40em;
+                .Body{
+                   width: auto;
+                   max-width: 500px;
+                }
+            }
+        }
+    }
+    .SupportTicketStatus{
+        grid-area: Status;
+        justify-self: center;
+
+    }
+    .FAQs-Section{
+        grid-area: FAQs;
+        justify-self: center;
+    }
+    }
+}
+@media screen and (max-width:576px){
+    .SupportPage{
+
+        *{
+            margin: 0;
+        }
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "A"
+        "B"
+        "C"
+        "D";
+        .Hero-Section{
+            grid-area: A;
+            .MainImage{
+                grid-area: A;
+                justify-self: center;
+                align-self: center;
+            }
+            .SupportHeading{
+                grid-area: B;
+                margin-bottom: 2em;
+                p{
+                    margin-left: 0px;
+                }
+            }
+        }
+        .SupportTicketStatus{
+            grid-area: C;
+           .TicketStatusBody{
+
+            .IssueDetails{
+
+               .TicketStatus{
+                    display: hidden;
+               } 
+            }
+           } 
+        }
+        .SupportTicketStatus{
+            .StatusFields{
+                .StatusField-Status{
+                    display: none;
+                }
+            }
+            .IssueDetails{
+                p{ 
+                    min-width: 187px; 
+                }
+                .TicketStatus{
+                    display: none;
+                }
+            }
+        }
+        .SupportTicketDetails{
+            grid-area: C;
+        }
+        .TicketDetailsDiscription{
+            .discription{
+                .Body{
+                   width: auto;
+                   max-width: 500px;
+                   min-width: 393px;
+                }
+            }
+        }
+        .FAQs-Section{
+            grid-area: D;
+        }
+    }
+}
