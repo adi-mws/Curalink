@@ -7,15 +7,16 @@ import PrimaryButton from '../../components/shared/buttons/PrimaryButton/Primary
 export default function DoctorsPage() {
   return (
     <div className="DoctorsPage">
-        <div style={{backgroundImage: `url(${HeroSectionSlope})`,backgroundSize:"cover" }} className="Hero-Section">
+      
+        <div style={{backgroundImage:`url(${HeroSectionSlope})`}} className="Hero-Section">
             <div className="Hero-content">
                 <p className="Heading">Join Us in Revolutionizing Healthcare</p>
                 <p className="Body">Become a part of our mission to provide exceptional care through innovation, compassion, and expertise. Together, let's transform lives and shape the future of online healthcare.</p>
                 <PrimaryButton text="Join Us" width='12em'/>
             </div>
-            <div className="MainImage">
-                <img src={MainHeroImage} alt="" />
-            </div>
+             
+                <img className="MainImage" src={MainHeroImage} alt="" />
+            
             <div className="Hero-Merits">
               <div className="Merit-1">
                 <p className="Merit-Head">80+</p>
