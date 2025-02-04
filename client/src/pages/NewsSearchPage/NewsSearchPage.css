@@ -105,8 +105,28 @@
 }
 @media screen and (max-width:768px){
   .NewsSearchPage{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "Hero"
+    "News"
+    "faqs";
+    .SearchSection{
+      grid-area: Hero;
+    }
+    .NewsSectionWrapper{
+      grid-area: News;
+    }
+    .FAQsSection{
+      grid-area: faqs;
+    }
     .MainHead{
       font-size: 2em !important;
+    }
+    .HeadingBody{
+      font-size: 0.8em !important;
+      min-width: 351px;
     }
   }
 }
