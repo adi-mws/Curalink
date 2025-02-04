@@ -9,13 +9,13 @@ export default function DoctorsPage() {
     <div className="DoctorsPage">
       
         <div style={{backgroundImage:`url(${HeroSectionSlope})`}} className="Hero-Section">
+          <div className="Text-Content">
             <div className="Hero-content">
                 <p className="Heading">Join Us in Revolutionizing Healthcare</p>
                 <p className="Body">Become a part of our mission to provide exceptional care through innovation, compassion, and expertise. Together, let's transform lives and shape the future of online healthcare.</p>
                 <PrimaryButton text="Join Us" width='12em'/>
             </div>
              
-                <img className="MainImage" src={MainHeroImage} alt="" />
             
             <div className="Hero-Merits">
               <div className="Merit-1">
@@ -31,6 +31,8 @@ export default function DoctorsPage() {
                 <p className="Merit-Body">Platform Charge</p>
               </div>
             </div>
+            </div>
+          <img className="MainImage" src={MainHeroImage} alt="" />
         </div>
 
         <div className="Video-Section"></div>

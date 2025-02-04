@@ -1,55 +1,68 @@
 .DoctorsPage{
     font-family: var(--secondary-font);
+    box-sizing: border-box;
     .Hero-Section{
         height: 100vh;
-        background-size: cover;
+        background-size:100% 100%;
         display: grid;
-        grid-template-rows: 0.8fr 1.2fr;
-        grid-template-areas: 
-        "A B"
-        "C B";
+        grid-template-columns: 1.2fr 0.8fr;
         .mainImage{
-            grid-area: B;
+            width: 100%;
+            align-self: flex-end;
+            width: 40em;
         }
-        .Hero-content{
-            grid-area: A;
+        .Text-Content{
+            height: 100%;
             display: flex;
             flex-direction: column;
-            gap: 2em;
-            max-width: 650px;
-            margin-left: 2em;
-            align-self: center;
-            .Heading{
-                font-size: 2.5em;
-                font-weight: 500;
-                font-family: var(--primary-font);
+            justify-content: space-between;
+            .Hero-content{
+                display: flex;
+                margin-top: 10rem;
+                flex-direction: column;
+                gap: 2rem;
+                max-width: 650px;
+                margin-left: 2rem;
+                .Heading{
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    font-family: var(--primary-font);
+                }
             }
-            .Body{
-                
-            }
-        }
-        .Hero-Merits{
-            align-self: center;
-            grid-area: C;
-            display: flex;
-            div{
-                background-color: white;
-            }
-            .Merit-1{
-                height: 10em;
-                width: 10em;
-                border-radius: 5em;
-            }
-            .Merit-2{
-                height: 15em;
-                width: 15em;
-                border-radius: 7.5em;
+            .Hero-Merits{
+                display: flex;
+                width: 100%;
+                gap: 2em;
+                align-items: flex-end;
+                padding-bottom: 0.2em;
+                div{
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    .Merit-Head{
+                        font-weight: bold;
+                        font-size: clamp(1em,5em,2em);
+                    }
+                }
+                .Merit-1{
+                    height: 8em;
+                    width: 8em;
+                    border-radius: 4em;
+                    
+                }
+                .Merit-2{
+                    height: 11em;
+                    width: 11em;
+                    border-radius: 5.5em;
 
-            }
-            .Merit-3{
-                height: 20em;
-                width: 20em;
-                border-radius: 10em;
+                }
+                .Merit-3{
+                    height: 15em;
+                    width: 15em;
+                    border-radius: 7.5em;
+                }
             }
         }
     }
