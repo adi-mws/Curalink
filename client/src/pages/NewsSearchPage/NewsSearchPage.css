@@ -2,7 +2,10 @@
     display: flex;
     flex-direction: column;
     gap: 5em;
+    width: 100%;
     .SearchSection{
+      background-image: url(../../assets/imgs/NewsSearchPage-bg-1368.png);
+      background-size: 100% 100%;
         .NewsPage-Heading{
             display: flex;
             flex-direction: column;
@@ -79,6 +82,31 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width:992px){
+  .NewsSearchPage{
+    width: 100%;
+    .SearchSection{
+      background-image: url(../../assets/imgs/NewsSearchPage-bg-992.png);
+      .NewsPage-Heading{
+        width: 80%;
+        justify-self: center;
+        .MainHead{
+          font-size: 3em;
+          text-wrap: nowrap ;
+        }
+      }
+
+    }
+  }
+}
+@media screen and (max-width:768px){
+  .NewsSearchPage{
+    .MainHead{
+      font-size: 2em !important;
     }
   }
 }
