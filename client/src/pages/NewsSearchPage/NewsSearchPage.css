@@ -6,6 +6,7 @@
     .SearchSection{
       background-image: url(../../assets/imgs/NewsSearchPage-bg-1368.png);
       background-size: 100% 100%;
+      height: 600px;
         .NewsPage-Heading{
             display: flex;
             flex-direction: column;
@@ -41,6 +42,7 @@
                   width: 100%;
                   height: 4em;
                   padding-left: 1em;
+                  font-size: 1em;
                   border-radius: 10px;
                   border: 2px solid black;
                   outline: none;
@@ -114,6 +116,9 @@
     "faqs";
     .SearchSection{
       grid-area: Hero;
+      .HeadingBody{
+        max-width: 630px;
+      }
     }
     .NewsSectionWrapper{
       grid-area: News;
