@@ -1,6 +1,5 @@
 import './DoctorsPage.css'
 import React from 'react'
-import HeroSectionSlope from '../../assets/imgs/heroDoctorsPage-slope.png'
 import MainHeroImage from '../../assets/imgs/heroDoctorPage.png'
 import PrimaryButton from '../../components/shared/buttons/PrimaryButton/PrimaryButton.jsx'
 
@@ -8,7 +7,7 @@ export default function DoctorsPage() {
   return (
     <div className="DoctorsPage">
       
-        <div style={{backgroundImage:`url(${HeroSectionSlope})`}} className="Hero-Section">
+        <div style={{backgroundImage:`url(${MainHeroImage})`}} className="Hero-Section">
           <div className="Text-Content">
             <div className="Hero-content">
                 <p className="Heading">Join Us in Revolutionizing Healthcare</p>
@@ -32,7 +31,6 @@ export default function DoctorsPage() {
               </div>
             </div>
             </div>
-          <img className="MainImage" src={MainHeroImage} alt="" />
         </div>
 
         <div className="Video-Section"></div>

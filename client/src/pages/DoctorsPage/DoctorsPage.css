@@ -1,67 +1,241 @@
-.DoctorsPage{
+.DoctorsPage {
     font-family: var(--secondary-font);
     box-sizing: border-box;
-    .Hero-Section{
-        height: 100vh;
-        background-size:100% 100%;
+
+    .Hero-Section {
+        height: 650px;
+        background-size: 100% 100%;
         display: grid;
         grid-template-columns: 1.2fr 0.8fr;
-        .mainImage{
+
+        .mainImage {
             width: 100%;
             align-self: flex-end;
             width: 40em;
         }
-        .Text-Content{
+
+        .Text-Content {
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            .Hero-content{
+
+            .Hero-content {
                 display: flex;
-                margin-top: 10rem;
+                margin-top: 6rem;
+
                 flex-direction: column;
                 gap: 2rem;
                 max-width: 650px;
-                margin-left: 2rem;
-                .Heading{
+                margin-left: 3rem;
+
+                .Heading {
                     font-size: 2.5rem;
                     font-weight: bold;
                     font-family: var(--primary-font);
                 }
             }
-            .Hero-Merits{
-                display: flex;
-                width: 100%;
+
+            .Hero-Merits {
+                width: 80%;
                 gap: 2em;
+                align-items: center;
+                /* padding-bottom: 1em; */
+                display: flex;
                 align-items: flex-end;
-                padding-bottom: 0.2em;
-                div{
+
+                justify-content: space-evenly;
+
+                div {
                     background-color: white;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    .Merit-Head{
+                    border-radius: 50%;
+
+                    .Merit-Head {
                         font-weight: bold;
-                        font-size: clamp(1em,5em,2em);
+                        font-size: clamp(1em, 5em, 2em);
                     }
                 }
-                .Merit-1{
+
+                .Merit-1 {
                     height: 8em;
                     width: 8em;
-                    border-radius: 4em;
-                    
+                
+                    /* left: 1em; 
+                    top: .3em;  */
                 }
-                .Merit-2{
+
+                .Merit-2 {
                     height: 11em;
                     width: 11em;
-                    border-radius: 5.5em;
+
+                    /* left: 20%; 
+                    bottom: 0; */
 
                 }
-                .Merit-3{
-                    height: 15em;
-                    width: 15em;
-                    border-radius: 7.5em;
+
+                .Merit-3 {
+                    height: 14.5em;
+                    width: 14.5em;
+
+
+                    /* left: 50%; 
+                    bottom: 0; */
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1168px) {
+    .DoctorsPage {
+        .Hero-Section {
+            height: 550px;
+            .Hero-Merits {
+                width: 100% !important;
+            }
+
+            .Text-Content {
+                .Hero-content {
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .DoctorsPage {
+        .Hero-Section {
+            height: 530px;
+
+            .Text-Content {
+                .Hero-content {
+                    margin-top: 3rem;
+                }
+            }
+        }
+
+        .Hero-Merits {
+
+            padding: 0 !important;
+            font-size: .8em;
+        }
+
+        .Merit-1,
+        .Merit-2,
+        .Merit-3 {
+            padding: 2em;
+        }
+
+        .Merit-3 {
+            margin-bottom: .5em !important;
+
+        }
+
+        .Merit-2 {
+            margin-bottom: .5em !important;
+
+        }
+
+        .Merit-1 {
+            width: 10em;
+            height: 10em;
+            margin-bottom: 1em !important;
+
+        }
+
+        .Heading {
+            font-size: 2rem !important;
+        }
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .DoctorsPage {
+        .Hero-Section {
+            height: fit-content;
+            padding-top: 4em !important;
+            background-image: none !important;
+            grid-template-columns: 100%;
+            padding: 2em;
+
+            .Hero-content {
+
+                text-align: center;
+
+                margin: 0 !important;
+                align-items: center;
+
+                button {
+                    width: 100% !important;
+                }
+            }
+
+            .Hero-Merits {
+                margin-top: 2.5em;
+
+                div {
+                    margin: 0 !important;
+                    background: whitesmoke !important;
+                    width: 10em !important;
+                    height: 10em !important;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .DoctorsPage {
+        .Hero-Section {
+
+            gap: 1em !important;
+
+            .Hero-content {
+
+                .Heading {
+                    font-size: 1.8em !important;
+                }
+            }
+
+            .Hero-Merits {
+                font-size: .7em;
+
+                div {
+                    text-align: center !important;
+                }
+
+                .Merit-3 {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .DoctorsPage {
+        .Hero-Section {
+            padding-left: 1em !important;
+            padding-right: 1em !important;
+
+            .Hero-content {
+
+                .Heading {
+                    font-size: 1.5em !important;
                 }
             }
         }
