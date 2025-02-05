@@ -10,11 +10,7 @@ import UserInfoHeader from './components/layout/UserInfoHeader/UserInfoHeader.js
 
 function App() {
   return (
-<<<<<<< HEAD
     <DoctorsPage/>
-=======
-    <UserInfoHeader />
->>>>>>> 3e28dd5b07bbb4296ed27bef36fb70e6cad45f83
   )
 }
 export default App
