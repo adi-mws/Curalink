@@ -1,12 +1,38 @@
 import './DoctorsPage.css'
 import React from 'react'
 import MainHeroImage from '../../assets/imgs/heroDoctorPage.png'
+import FAQs from '../../components/FAQs/FAQs.jsx'
 import PrimaryButton from '../../components/shared/buttons/PrimaryButton/PrimaryButton.jsx'
 import DummyVideo from '../../assets/videos/DoctorsPageDummyVideo.mp4'
 import SecondaryButton from '../../components/shared/buttons/SecondaryButton/SecondaryButton.jsx'
 import SupportStaff from '../../assets/imgs/Support-Staff-1.png'
+import TestimonialsImage from '../../assets/imgs/Surgeon-With-Mask.png'
+import JoinButtonImage from '../../assets/icons/right-arrow-rectangle.png'
 
 export default function DoctorsPage() {
+  const doctors = [
+    {
+        TestimonialsImage: TestimonialsImage,
+        name: "Dr. Emily Carter",
+        specialization: "Cardiologist",
+        testimonial: "The patient communication features are top-notch. I can manage appointments, share reports, and follow up with patients seamlessly."
+    },
+    {
+        TestimonialsImage: TestimonialsImage,
+        name: "Dr. Rajesh Malhotra",
+        specialization: "Neurologist",
+        testimonial: "Managing patient records has never been easier. The seamless integration of reports and scheduling makes my work so much more efficient."
+    },
+    {
+        TestimonialsImage: TestimonialsImage,
+        name: "Dr. Sophia Martinez",
+        specialization: "Dermatologist",
+        testimonial: "This platform has revolutionized my practice. From consultations to follow-ups, everything is smooth and well-organized."
+    }
+];
+
+console.log(doctors);
+
   return (
     <div className="DoctorsPage">
       
@@ -83,18 +109,40 @@ export default function DoctorsPage() {
             <SecondaryButton text="Register Now"/>
           </div>
         </div>
-          <div className="Communication-image">
-          <img src={SupportStaff} alt="" />
-       </div>
+          <img className="Communication-image" src={SupportStaff} alt="" />
         </div>
 
         
 
-        <div className="Doctor-Testimonials-Section"></div>
+        <div className="Doctor-Testimonials-Section">
+          <p className="Tetimonial-Heading">Voices of Our Trusted Doctors</p>
+          <p className="Testimonial-Body">Don’t just take our word for it – hear from the healthcare professionals who trust us.</p>
+          <div className="Testimonial-Cards">
+            {doctors.map((doctor) => (
+              <div className="Testimonial">
+              <img src={TestimonialsImage} alt="" className="Testimonial-Image" />
+              <p className="Doctors-Name">{doctor.name}</p>
+              <p className="Doctors-Specialization">{doctor.specialization}</p>
+              <p className="Doctors-Testimonial">{doctor.testimonial}</p>
+            </div>
+            ))}
+          </div>
+        </div>
 
-        <div className="Join-request-Section"></div>
+        <div className="Join-request-Section">
+          <p className="heading">Join Us and Transform Healthcare Together</p>
+          <p className="Description">Become part of a revolutionary platform designed to empower doctors and improve patient care. With cutting-edge tools, secure communication, and a growing network of professionals, you’ll be equipped to deliver exceptional care anytime, anywhere. Together, let’s redefine the future of online healthcare.</p>
+          <div className="Joining-Perks-Container">
+          <div className="Joining-Perk"><p >Work with flexibility and freedom</p></div>
+          <div className="Joining-Perk"><p>Leverage powerful tools for streamlined care.</p></div>
+          <div className="Joining-Perk"><p>Reach more patients effortlessly</p></div>
+          </div>
+          <button className="Join-Button">Join Us Now <img src={JoinButtonImage} alt="" /></button>
+        </div>
 
-        <div className="FAQs-Section"></div>
+        <div className="FAQs-Section">
+          <FAQs/>
+        </div>
     </div>
   )
 }
