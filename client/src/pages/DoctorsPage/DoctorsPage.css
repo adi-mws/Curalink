@@ -218,9 +218,9 @@
             justify-content: center;
             gap:1em;
             .Testimonial{
-                height: 30em;
+                height: fit-content;
                 padding: 1em;
-                width: 25em;
+                width: 22em;
                 border-radius: 10px;
                 box-shadow: 0px 0px 3.38px #00000040;
                 .Doctors-Name{
