@@ -11,7 +11,7 @@ import PageLoading from './components/shared/loading/PageLoading/PageLoading.jsx
 
 function App() {
   return (
-    <UserInfoHeader />
+    <DoctorsPage />
   )
 }
 export default App
