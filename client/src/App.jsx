@@ -7,11 +7,12 @@ import Pagination from './components/shared/Pagination/Pagination'
 import SupportPage from './pages/SupportPage/SupportPage.jsx'
 import AboutPage from './pages/AboutPage/AboutPage.jsx'
 import UserInfoHeader from './components/layout/UserInfoHeader/UserInfoHeader.jsx'
+import PageLoading from './components/shared/loading/PageLoading/PageLoading.jsx'
 
 
 function App() {
   return (
-    <UserInfoHeader />
+    <PageLoading />
   )
 }
 export default App
