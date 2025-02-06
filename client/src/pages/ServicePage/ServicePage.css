@@ -1,0 +1,106 @@
+.ServicePage{
+    overflow-x: hidden;
+    font-family: var(--secondary-font);
+    .Hero-Section{
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        background-image: url(../../assets/imgs/Service-Page-Hero-bg.png);
+        background-size: 100% 100%;
+        .Hero-Content{
+            width: 70%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            gap: 2em;
+            flex-direction: column;
+            margin-top:5em;
+            .Heading{
+                font-weight: bold;
+                font-family: var(--primary-font);
+                font-size: 2.5em;
+            }
+            .Body{
+                width: 80%;
+                line-height: 1.5;
+            }
+            .Hero-Buttons{
+                display: flex;
+                gap: 0.5em;
+                align-items: center;
+
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+        }
+    }
+    .Services-Section{
+        display: flex;
+        margin-top: 3em;
+        padding: 1em;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+        .Heading{
+            font-size: 2em;
+            text-align: center;
+            font-weight: bold;
+            font-family: var(--primary-font);
+        }
+        .Body{
+            width: 70%;
+            text-align: center;
+        }
+        .Services-Card-Section{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media screen and (max-width:1168px){
+
+}
+
+@media screen and (max-width:992px){
+    .ServicePage{
+        .Hero-Section{
+            background-image: none;
+            .Hero-Content{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .ServicePage{
+        .Hero-Section{
+            .Hero-Content{
+                width: 90%;
+                .Heading{
+                    font-size: 2em;   
+                }
+            }
+        }
+        .Services-Section{
+            .Heading{
+                width: 90%;
+            }
+            .Body{
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px){
+
+}
+
+@media screen and (max-width:576px){
+
+}

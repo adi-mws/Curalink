@@ -1,0 +1,37 @@
+.Services{
+    font-family: var(--secondary-font);
+    width: 21em;
+    margin: 1em;
+    height: 23em;
+    display: flex;
+    box-shadow: 0 0 7.81px #00000040;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1em;
+    padding-top: 0em;
+    border-radius: 10px;
+    .p{
+        overflow: hidden;
+    }
+    .ServiceName{
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+    .ServiceImage{
+        border-radius: 11.48px;
+    }
+    .ServiceDescription{
+        overflow: hidden;
+    }
+    .Duration-Button{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .Duration{
+        display: flex;
+        gap: 0.5em;
+        text-wrap: nowrap;
+        align-items: center;
+    }
+}

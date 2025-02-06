@@ -1,5 +1,6 @@
 .SupportPage{
     font-family: var(--secondary-font);
+    overflow-x: hidden;
     width: 100%;
         .Hero-Section{
             height: 100vh;
