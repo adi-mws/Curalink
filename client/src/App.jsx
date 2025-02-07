@@ -8,7 +8,6 @@ import AboutPage from './pages/AboutPage/AboutPage.jsx'
 import UserInfoHeader from './components/layout/UserInfoHeader/UserInfoHeader.jsx'
 import ServicePage from './pages/ServicePage/ServicePage.jsx'
 
-
 function App() {
   return (
     <ServicePage/>
