@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "lucide-react": "^0.475.0",
-    "prop-types": "^15.8.1",
-    "react-rating-stars-component": "^2.2.0"
-  }
-}
