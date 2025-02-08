@@ -1,0 +1,55 @@
+.UserNotification{
+    font-family: var(--secondary-font);
+    width: 100%;
+    max-width: 450px;
+    padding: 20px 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+
+    .text p{
+        font-size: 20px;
+    }
+
+    .notificationHead{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .clearText{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            cursor: pointer;
+        }
+    }
+
+    .notification{
+        margin: 10px 0;
+        padding: 5px 0 15px 0;
+        border-block: 4px solid #f4f4f4;
+
+        .title{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+
+            p:first-child{
+                font-size: 20px;
+            }
+
+            p:last-child{
+                cursor: pointer;
+            }
+        }
+
+        .description{
+            font-size: 12px;
+        }
+
+    }
+
+    .fade-out{
+        transform: translateY(-10px);
+        transition: transform o.2s ease;
+    }
+}

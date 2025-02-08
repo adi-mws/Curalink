@@ -1,85 +1,93 @@
 .UserInfoHeader {
-    position: relative;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: var(--secondary-font);
+  max-width: 320px;
+
+  .header-container {
+    display: flex;
+    width: 320px;
+    align-items: center;
+    gap: 20px;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    .notification-section {
+      width: 20%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .numberCircle {
+      padding: 4px 4px;
+      background-color: red;
+      color: white;
+      font-size: 10px;
+      border-radius: 50%;
+      position: absolute;
+      top: -4px;
+      right: 8px;
+    }
+  }
+
+  .profile-section {
+    width: 80%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: #ffdedeb1;
+    padding: 0 10px;
+    border-radius: 10px;
 
-    .header-container{
-        display: flex;
-        width: 300px;
-        align-items: center;
-        padding: 8px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        
+    .user-name {
+      font-weight: 600;
+      color: #530542;
+    }
+  }
 
-        .notification-section{
-            width: 30%;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+  .dropdown-content {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-        .numberCircle{
-            padding: 4px 4px;
-            background-color: red;
-            color: white;
-            font-size: 10px;
-            border-radius: 50%;
-            position: absolute;
-            top: -4px;
-            right: 22px;
-        }
+    .dropdown-item {
+      padding: 15px;
+      cursor: pointer;
+      list-style: none;
+      color: gray;
+      text-align: center;
     }
 
-    .profile-section{
-        width: 70%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #ffdedeb1;
-        padding: 0 5px;
-        border-radius: 10px;
-
-        .user-name{
-            font-weight: bold;
-            color: #530542;
-        }
-
-        .dropdown-icon{
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .dropdown-icon.open{
-            transform: rotate(180deg);
-        }
+    .dropdown-item a{
+        text-decoration: none;
+        color: inherit;
     }
 
-    .dropdown-content{
-        position: absolute;
-        top: 60px;
-        left: 90px;
-        width: 200px;
-        padding: 10px 0;
-
-        .dropdown-item{
-            padding: 10px;
-            cursor: pointer;
-            list-style: none;
-            color: gray;
-            text-align: center;
-        }
-
-        .dashboard{
-            background-color: #fbfbfb;
-        }
-
-        .logout{
-            color: #d92e2e;
-            background-color: #ffdede;
-        }
-
+    .dashboard {
+      background-color: #fbfbfb;
     }
+
+    .logout {
+      color: #d92e2e;
+      background-color: #ffdede;
+    }
+  }
+
+  .profile-section:hover .dropdown-content {
+    display: block;
+  }
+
+  .profile-section:hover .dropdown-icon {
+    transform: rotate(180deg);
+    transition: transform 0.1s ease-in-out;
+  }
 }

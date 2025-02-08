@@ -1,0 +1,62 @@
+.AppointmentAlert {
+  font-family: var(--secondary-font);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  padding-block: 30px;
+  text-align: center;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+
+    p{
+      font-size: 20px;
+      flex-grow: 1;
+    }
+
+    img{
+        cursor: pointer;
+    }
+
+  }
+
+  .doctorName {
+    line-height: 1.4;
+
+    p:first-child {
+      color: var(--primary-color);
+      font-size: 20px;
+    }
+  }
+
+  .videoCall {
+    display: flex;
+    gap: 30px;
+
+    .video {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .videoCall img {
+      max-width: 150px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .videoCall img {
+      max-width: 100px;
+    }
+    .header p{
+        font-size: 16px;
+    }
+  }
+}

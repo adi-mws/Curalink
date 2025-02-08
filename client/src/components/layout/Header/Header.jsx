@@ -4,6 +4,7 @@ import logo from "../../../assets/logo/logo.png";
 import down from "../../../assets/icons/arrow-down.png";
 import SecondaryButton from '../../shared/buttons/SecondaryButton/SecondaryButton';
 import PrimaryButton from '../../shared/buttons/PrimaryButton/PrimaryButton';
+import UserInfoHeader from '../UserInfoHeader/UserInfoHeader';
 
 export default function Header({ }) {
     const [data, setData] = useState(false);
@@ -41,6 +42,7 @@ export default function Header({ }) {
                         <PrimaryButton text={"Register"} fontSize={"1em"} />
                     </div>
                 </div>
+                {/* <UserInfoHeader /> */}
             </header>
         </>
     )
