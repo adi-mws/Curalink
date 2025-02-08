@@ -40,7 +40,7 @@ export default function PatientLoginForm() {
           maxLength:{value:20, message:'Password must contain at most 20 characters'}})}
           type={showPassword ? 'text' : 'password'} placeholder="Enter Password" />
           {errors.password && <p className="error">{errors.password.message}</p>}
-          <button className="eye-icon" onClick={() => {setShowPassword(!showPassword)}}>
+          <button className="eye-icon" type='button' onClick={() => {setShowPassword(!showPassword)}}>
             <img src={showPassword ? eyeSlashIcon : eyeIcon} alt="" />
           </button>
         </div>

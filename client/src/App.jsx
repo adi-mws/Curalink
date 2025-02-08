@@ -1,23 +1,45 @@
 import { useState } from 'react'
 import './App.css'
-import NewsPage from './pages/NewsPage/NewsPage'
-import NewsSearchPage from './pages/NewsSearchPage/NewsSearchPage.jsx'
-import DoctorsPage from './pages/DoctorsPage/DoctorsPage.jsx'
-import SupportPage from './pages/SupportPage/SupportPage.jsx'
-import AboutPage from './pages/AboutPage/AboutPage.jsx'
-import UserInfoHeader from './components/layout/UserInfoHeader/UserInfoHeader.jsx'
-import Header from "./components/layout/Header/Header.jsx"
-
-import ServicePage from './pages/ServicePage/ServicePage.jsx'
-import PrimaryHollowButton from './components/shared/buttons/PrimaryHollowButton/PrimaryHollowButton.jsx'
-import AppointmentAlert from './components/shared/alerts/AppointmentAlert/AppointmentAlert.jsx'
-import UserNotification from './components/shared/alerts/UserNotification/UserNotification.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
+import AboutPage from './pages/AboutPage/AboutPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import DoctorsPage from './pages/DoctorsPage/DoctorsPage';
+import ServicePage from './pages/ServicePage/ServicePage';
+import NewsPage from './pages/NewsPage/NewsPage';
+import NewsSearchPage from './pages/NewsSearchPage/NewsSearchPage';
+import HomePage from './pages/HomePage/HomePage';
+import SupportPage from './pages/SupportPage/SupportPage';
+import PatientLoginPage from './pages/PatientLoginPage/PatientLoginPage';
+import PatientRegistrationPage from './pages/PatientRegistrationPage/PatientRegistrationPage';
+import ScrollToTop from './components/shared/primitive/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <>
-      <UserNotification />
-      
+
+      <Router>
+      <ScrollToTop />
+
+        <Routes>
+
+          <Route path='/' element={<MainLayout />}>
+
+            <Route path='/' element={<DoctorsPage />} />
+            <Route path='/support' element={<SupportPage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/doctors' element={<DoctorsPage />} />
+            <Route path='/services' element={<ServicePage />} />
+            <Route path='/news' element={<NewsSearchPage />} />
+            <Route path='/news/:id' element={<NewsPage />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='/login' element={<PatientLoginPage />} />
+            <Route path='/register' element={<PatientRegistrationPage />} />
+          </Route>
+        </Routes>
+      </Router>
+
+
     </>
   )
 }
