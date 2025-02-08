@@ -15,7 +15,7 @@ import Rating from './components/shared/Rating/Rating.jsx'
 
 function App() {
   return (
-    <Rating/>
+    <ServicePage />
   )
 }
 export default App
