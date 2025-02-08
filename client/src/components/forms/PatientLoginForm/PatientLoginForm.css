@@ -5,8 +5,7 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-    height: 26em;
-    width: 18em;
+    padding: 1.5em;
     align-items: center;
     border-radius: 0.4em;
 
@@ -29,6 +28,7 @@
     .password-error {
         display: flex;
         flex-direction: column;
+        position: relative; 
         gap: 0.5em;
         margin-left: 1em;
         label{
@@ -41,6 +41,7 @@
             border: 1px solid var(--primary-color);
             border-radius: 5px;
             width: 19.9em;
+            font-family: var(--secondary-font);
             height: 3.3em;
             border: 0px;
             outline: none;
@@ -103,17 +104,19 @@
         display: flex;
         flex-direction: column;
         gap: 0.5em;
-
+        position: relative; 
         label{
             font-size: 0.8em;
         }
 
         input {
+            
             padding: .8em 1em;
             background-color: #F2F2F2;
             border: 1px solid var(--primary-color);
             border-radius: 5px;
             width: 19.9em;
+            font-family: var(--secondary-font);
             height: 3.3em;
             border: 0px;
             outline: none;
@@ -132,9 +135,8 @@
 
     .eye-icon {
         position: absolute;
-        top: 3.2em;
+        top: 2em;
         right: 1.2em;
-        transform: translateY(-50%);
         cursor: pointer;
         font-size: 18px;
     }

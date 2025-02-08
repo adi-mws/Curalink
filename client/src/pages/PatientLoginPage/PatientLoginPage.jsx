@@ -14,7 +14,6 @@ import Footer from '../../components/layout/Footer/Footer.jsx'
 export default function PatientLoginPage() {
   return (
     <>
-      <Header />
       <div className="PatientLoginPage">
         <div className="social-handles">
           <div className="text">
@@ -52,7 +51,6 @@ export default function PatientLoginPage() {
           <b>Cured 1800+ Patients</b>
         </div>
       </div>
-      <Footer />
     </>
   )
 }

@@ -1,0 +1,334 @@
+.ServicePage{
+    overflow-x: hidden;
+    font-family: var(--secondary-font);
+    padding-bottom: 5em;
+    .Hero-Section{
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        background-image: url(../../assets/imgs/Service-Page-Hero-bg.png);
+        background-size: 100% 100%;
+        .Hero-Content{
+            width: 70%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            gap: 2em;
+            flex-direction: column;
+            margin-top:5em;
+            .Heading{
+                font-weight: bold;
+                font-family: var(--primary-font);
+                font-size: 2.5em;
+            }
+            .Body{
+                width: 80%;
+                line-height: 1.5;
+            }
+            .Hero-Buttons{
+                display: flex;
+                gap: 0.5em;
+                align-items: center;
+
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+        }
+    }
+    .Services-Section{
+        display: flex;
+        margin-top: 3em;
+        padding: 1em;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+        .Heading{
+            font-size: 2em;
+            text-align: center;
+            font-weight: bold;
+            font-family: var(--primary-font);
+        }
+        .Body{
+            width: 70%;
+            text-align: center;
+        }
+        .Services-Card-Section{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+    .VideoCallAd{
+        padding: 2em;
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+        color: white;
+        margin-bottom: 2em;
+        p{
+        width: 70%;
+        text-align: center;
+        }
+        .Head{
+            font-size: 2em;
+        }
+        
+    }
+    .News-Redirect-Section{
+        display: flex;
+        height: fit-content;
+        .Text{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding: 2em;
+            .Heading{
+                font-weight: bold;
+                font-family: var(--primary-font);
+                font-size: 2.5em;
+                background: linear-gradient(to right,#965497, #EF5F5F);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+            .Redirect-Button{
+                padding: 0.5em 4em;
+                background: linear-gradient(to right,#965497,#EF5F5F);
+                display: flex;
+                gap: 1em;
+                align-items: center;
+                border-radius: 10px;
+                font-size: 1.1em;
+                font-weight: bold;
+                color: white;
+            }
+        }
+        .Redirect-Image{
+            width: 50%;
+            background-image: url(../../assets/imgs/Pink-Rectangle.png);
+            background-repeat: no-repeat;
+            background-size: 80% 40%;
+            background-position: bottom;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            img{
+                width: 70%;
+                height: auto;
+            }
+        }
+        
+    }
+    .Journey-Section{
+        display: flex;
+        flex-direction: column;
+        min-height: 2000px;
+        padding: 6em 0em;
+        height: fit-content;
+        position: relative;
+        .Heading{
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+        .CentralLine{
+            width: 2px;
+            border: 2px solid var(--secondary-color);
+            height: 67%;
+            position: absolute;
+            right: 50%;
+            top: 15%;
+        }
+        .Video-Journey{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            background-color: #ffffff00;
+            padding-top: 13em;
+            gap: 3em;
+            .VideosWithImage{
+                display: flex;
+                position: relative; 
+                height: fit-content;
+                justify-content: center;
+                align-items: center;
+                gap: 15%;
+                .PinkCircle{
+                    background-color: var(--primary-color);
+                    height: 2em;
+                    position: absolute;
+                    top: 5%;
+                    left: 48.9%;
+                    width: 2em;
+                    border-radius: 50%;
+                }
+                img{
+                    width: 20%;
+                    height: 90%;
+                    min-width: 250px;
+                }
+                .VideoDiscription{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    min-width: 350px;
+                    width: 30%;
+                    gap: 1em;
+                    video{
+                        border-radius: 5px;
+                        height: 100%;
+                    }
+                    p{
+                        width: 100%;
+                        background-color: #EEEEEE;
+                        padding: 0.8em;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1168px){
+    .ServicePage{
+        
+    }
+}
+
+@media screen and (max-width:992px){
+    .ServicePage{
+        .Hero-Section{
+            background-image: none;
+            .Hero-Content{
+                width: 80%;
+            }
+        }
+        .News-Redirect-Section{
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .Text{
+                width: 80%;
+                text-align: center;
+                align-items: center;
+                gap: 1.5em;
+            }
+            .Redirect-Image{
+                width: 60%;
+            }
+        }
+        .Journey-Section{
+            .Heading{
+                font-size: 1.5em;
+                padding: 2em;
+            }
+            .CentralLine{
+                top: 9%;
+                height: 73%;
+            }
+            .Video-Journey{
+                gap: 4em;
+                .VideosWithImage{
+                    flex-direction: column !important;
+                    gap: 2em;
+                    padding-top: 2em;
+                    img{
+                        margin: 0 !important;
+                        margin-right: 1.5em !important;
+                        width: 30%;
+                        min-width: 300px;
+                    }
+                    .PinkCircle{
+                        left: 48.3vw;
+                        top: -3%;
+                    }
+                    .VideoDiscription{
+                        width: 70%;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width:768px){
+    .ServicePage{
+        .Hero-Section{
+            height: fit-content;
+            .Hero-Content{
+                width: 90%;
+                .Heading{
+                    font-size: 2em;   
+                }
+            }
+        }
+        .Services-Section{
+            .Heading{
+                width: 90%;
+            }
+            .Body{
+                width: 90%;
+            }
+        }
+        .News-Redirect-Section{
+            .Text{
+                width: 100%;
+                .Heading{
+                    font-size: 1.5em;
+                }
+                .Redirect-Button{
+                    text-wrap: nowrap;
+                    width: 100%;
+                    justify-content: center;
+                    font-size: 1em;
+                }
+            }
+            .Redirect-Image{
+                width: 90%;
+            }
+    }
+    .VideoCallAd{
+        p{
+            width: 100%;
+        }
+    }
+}
+}
+
+@media screen and (max-width:576px){
+    .ServicePage{
+        .VideoCallAd{
+            p{
+                width: 100%;
+            }
+        }   
+    }
+}
+
+@media screen and (max-width:400){
+    .ServicePage{
+        .Journey-Section{
+            .Video-Journey{
+                .VideosWithImage{
+                    img{
+                        min-width: 0px !important;
+                        width: 90%;
+                    }
+                    .VideoDiscription{
+                        width: 100%;
+                        min-width: 0px !important;
+                    }
+                }
+            }
+        }
+    }
+}

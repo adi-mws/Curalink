@@ -1,10 +1,12 @@
 .Header-relative {
     height: 4em; 
     width: 100%;
+
 }
 .Header {
     display: flex;
     align-items: center;
+    background: white; 
     position: fixed; 
     z-index: 100;
     top: 0;

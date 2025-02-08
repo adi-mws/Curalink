@@ -1,5 +1,7 @@
 .SupportPage{
     font-family: var(--secondary-font);
+    overflow-x: hidden;
+    width: 100%;
         .Hero-Section{
             height: 100vh;
             display: grid;
@@ -103,8 +105,10 @@
 
         .SupportTicketDetails{
             display: flex;
-            height: 100vh;
+            height: fit-content;
             flex-direction: column;
+            gap: 3em;
+            padding: 2em;
             justify-content: space-evenly;
             background: linear-gradient(to bottom,white,#E1C9DD);
 
@@ -263,6 +267,9 @@
                    max-width: 500px;
                 }
             }
+            .SupportTicketButton{
+                margin-bottom: 2em;
+            }
         }
     }
     .SupportTicketStatus{
@@ -278,10 +285,10 @@
 }
 @media screen and (max-width:576px){
     .SupportPage{
-
         *{
             margin: 0;
         }
+        display: grid;
         grid-template-rows: auto auto auto auto;
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -291,10 +298,9 @@
         "D";
         .Hero-Section{
             grid-area: A;
+            width: 100%;
             .MainImage{
                 grid-area: A;
-                justify-self: center;
-                align-self: center;
             }
             .SupportHeading{
                 grid-area: B;
@@ -305,41 +311,36 @@
             }
         }
         .SupportTicketStatus{
+            width: 100vw;
+            justify-items: center;
             grid-area: C;
-           .TicketStatusBody{
-
-            .IssueDetails{
-
-               .TicketStatus{
-                    display: hidden;
-               } 
-            }
-           } 
-        }
-        .SupportTicketStatus{
             .StatusFields{
                 .StatusField-Status{
                     display: none;
                 }
             }
+           .TicketStatusBody{
+
             .IssueDetails{
                 p{ 
                     min-width: 187px; 
                 }
-                .TicketStatus{
+               .TicketStatus{
                     display: none;
-                }
+               } 
             }
+           } 
         }
         .SupportTicketDetails{
-            grid-area: C;
-        }
-        .TicketDetailsDiscription{
-            .discription{
-                .Body{
-                   width: auto;
-                   max-width: 500px;
-                   min-width: 393px;
+            grid-area: B;
+            .TicketDetailsDiscription{
+                .discription{
+                    width: 90%;
+                    .Body{
+                       width: auto;
+                       max-width: 500px;
+                       min-width: 393px;
+                    }
                 }
             }
         }

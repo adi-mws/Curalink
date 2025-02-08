@@ -1,3 +1,548 @@
-.DoctorsPage{
+.DoctorsPage {
     font-family: var(--secondary-font);
+    overflow-x: hidden;
+
+    .Hero-Section {
+        height: 650px;
+        background-size: 100% 100%;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+
+        .mainImage {
+            width: 100%;
+            align-self: flex-end;
+            width: 40em;
+        }
+
+        .Text-Content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .Hero-content {
+                display: flex;
+                margin-top: 6rem;
+
+                flex-direction: column;
+                gap: 2rem;
+                max-width: 650px;
+                margin-left: 3rem;
+
+                .Heading {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    font-family: var(--primary-font);
+                }
+            }
+
+            .Hero-Merits {
+                width: 80%;
+                gap: 2em;
+                align-items: center;
+                /* padding-bottom: 1em; */
+                display: flex;
+                align-items: flex-end;
+
+                justify-content: space-evenly;
+
+                div {
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    border-radius: 50%;
+
+                    .Merit-Head {
+                        font-weight: bold;
+                        font-size: clamp(1em, 5em, 2em);
+                    }
+                }
+
+                .Merit-1 {
+                    height: 8em;
+                    width: 8em;
+                
+                    /* left: 1em; 
+                    top: .3em;  */
+                }
+
+                .Merit-2 {
+                    height: 11em;
+                    width: 11em;
+
+                    /* left: 20%; 
+                    bottom: 0; */
+
+                }
+
+                .Merit-3 {
+                    height: 14.5em;
+                    width: 14.5em;
+
+
+                    /* left: 50%; 
+                    bottom: 0; */
+                }
+            }
+        }
+    }
+    .Video-Section{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2em;
+        padding: 4em;
+        height: fit-content;
+        .Video-Heading{
+            font-size: 2.7em;
+            font-family: var(--primary-font);
+            font-weight: bold;
+            max-width: 755px;
+            text-align: center;
+        }
+        .Video-Text{
+            font-size: 1.1em;
+            text-align: center;
+            max-width: 666px;
+        }
+        .DashBoardVideo{
+            width: 100%;
+            margin-top: 2em;
+            box-shadow: 0px 0px 9px #A81B1B40;
+            height: auto;
+            border-radius: 10px;
+
+            video{
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                box-shadow: 0px 0px 9px #A81B1B40;
+                border-radius: 10px;
+            }
+        }
+    }
+    .Perks-Section{
+        padding: 2em 0em;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        justify-content: space-evenly;
+        align-items: center;
+        .Perks-Heading{
+            font-weight: bold;
+            font-family: var(--primary-font);
+            font-size: 2em;
+            margin: 1em 0em;
+            text-align: center;
+            margin-bottom: 2em;   
+        }
+        .Perks-Body{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1em 0em;
+            justify-content: space-evenly;
+            align-content: flex-end;
+            height: 868px;
+            background-image: url(../../assets/imgs/Doctors-Page-Perks-bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            .perks{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                max-width: 450px;
+                gap: 0.8em;
+                height: 10em;
+                padding: 1em;
+                border-radius: 10px;
+                background-color: #000000BD ;
+                margin-bottom: 1em;
+                p{
+                    text-align: center;
+                }
+                .Heading{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .Communication-Section{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .Demo-Video-Subject{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            padding: 2em;
+            max-width: 650px;
+            .Communication-Heading{
+                font-weight: bold;
+                font-size: 2.5em;
+                font-family: var(--primary-font);
+            }
+            .Communication-Body{
+                line-height: 1.5;
+            }
+            .Demo-Video-Button{
+                display: flex;
+                gap: 1.5em;
+            }
+        }
+        .Communication-image{
+            width: 50%;
+            border-radius: 10px;
+        }
+    }
+    .Doctor-Testimonials-Section{
+        display: flex;
+        text-align: center;
+        margin-top: 4em;
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+        padding: 2em 1em;
+        gap: 2em;
+        .Tetimonial-Heading{
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .Testimonial-Cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap:1em;
+            .Testimonial{
+                height: 30em;
+                padding: 1em;
+                width: 22em;
+                padding-bottom: 0;
+                border-radius: 10px;
+                box-shadow: 0px 0px 3.38px #00000040;
+                .Doctors-Name{
+                    font-size: 1.5em;
+                }
+                p{
+                overflow: hidden;
+                text-align: center;
+                    margin-bottom: 0.8em;
+                }
+                .Doctors-Specialization{
+                    color: var(--primary-color);
+                }
+                .Testimonial-Image{
+                    border-radius: 8.44px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .Join-request-Section{
+        height: 632px;
+        padding: 2em 1em;
+        background: linear-gradient(to bottom, #FFFFFF, #E1C9DD);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1em;
+        align-items: center;
+        text-align: center;
+        .heading{
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .Description{
+            max-width: 776px;
+        }
+        .Joining-Perks-Container{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 1em;
+            justify-content: space-evenly;
+            .Joining-Perk{
+                display: flex;
+                align-items: center;
+                background-color: white;
+                justify-content: center;
+                color: var(--primary-color);
+                width: 27em;
+                height: 5.3em;
+                padding: 1em;
+                font-weight: bold;
+                border-radius: 10px;
+            }
+        }
+        .Join-Button{
+            display: flex;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            text-wrap: nowrap;
+            gap: 1em;
+            border-radius: 10px;
+            background: linear-gradient(to right, #965497, #EF5F5F);
+            padding: 0.8em 11.35em;
+        }
+    }
+    .FAQs-Section{
+        height: fit-content;
+        width: 100%;
+        padding: 5em 0em;
+    }
+}
+
+
+
+@media screen and (max-width: 1168px) {
+    .DoctorsPage {
+        .Hero-Section {
+            height: 550px;
+            .Hero-Merits {
+                width: 100% !important;
+            }
+
+            .Text-Content {
+                .Hero-content {
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .DoctorsPage {
+        .Hero-Section {
+            height: 530px;
+
+            .Text-Content {
+                .Hero-content {
+                    margin-top: 3rem;
+                    
+
+                .Heading {
+                    font-size: 2rem !important;
+                }
+                }
+            }
+        }
+
+        .Hero-Merits {
+
+            padding: 0 !important;
+            font-size: .8em;
+        }
+
+        .Merit-1,
+        .Merit-2,
+        .Merit-3 {
+            padding: 2em;
+        }
+
+        .Merit-3 {
+            margin-bottom: .5em !important;
+
+        }
+
+        .Merit-2 {
+            margin-bottom: .5em !important;
+
+        }
+
+        .Merit-1 {
+            width: 10em;
+            height: 10em;
+            margin-bottom: 1em !important;
+
+        }
+          
+    .Video-Section{
+        .Video-Heading{
+            font-size: 2em;
+        }
+        .Video-Body{
+            font-size: 1em;
+        }
+    }
+    .Perks-Body{
+        height: fit-content !important;
+    }
+    .Communication-Section{
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        padding: 0px;
+        width: 80%;
+        .Demo-Video-Subject{
+            width: 100%;
+            .Communication-Heading{
+                text-align: center;
+                font-size: 2em;
+            }
+            .Communication-Body{
+                text-align: center;
+            }
+            .Demo-Video-Button{
+                justify-content: center;
+            }
+        }
+        .Communication-image{
+            width: 100%;
+        }
+        
+    }
+    .Join-request-Section{
+        height: fit-content;
+        .heading{
+            max-width: 90%;
+            font-size: 2em;
+        }
+        .Description{
+            max-width: 80%;
+        }
+        .Joining-Perks-Container{
+            flex-direction: column;
+        }
+    }
+    
+}
+}
+
+@media screen and (max-width: 768px) {
+    .DoctorsPage {
+        .Hero-Section {
+            height: fit-content;
+            padding-top: 4em !important;
+            background-image: none !important;
+            grid-template-columns: 100%;
+            padding: 2em;
+
+            .Hero-content {
+
+                text-align: center;
+
+                margin: 0 !important;
+                align-items: center;
+
+                button {
+                    width: 100% !important;
+                }
+            }
+
+            .Hero-Merits {
+                margin-top: 2.5em;
+
+                div {
+                    margin: 0 !important;
+                    background: whitesmoke !important;
+                    width: 10em !important;
+                    height: 10em !important;
+                }
+            }
+        }
+        
+        .Video-Section{
+            p{
+                display: none;
+            }
+            .DashBoardVideo{
+                margin-top: 0px;
+            }
+    }
+    .Perks-Section{
+        .Perks-Body{
+            background-image: none;
+            height: fit-content;
+            .perks{
+                height: fit-content;
+                margin: 0.5em;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .DoctorsPage {
+        .Hero-Section {
+
+            gap: 1em !important;
+
+            .Hero-content {
+
+                .Heading {
+                    font-size: 1.8em !important;
+                }
+            }
+
+            .Hero-Merits {
+                font-size: .7em;
+
+                div {
+                    text-align: center !important;
+                }
+
+                .Merit-3 {
+                    display: none !important;
+                }
+            }
+        }
+        .Video-Section{
+            padding: 1.5em;
+        }
+
+        .Communication-Section{
+            width: 90%;
+            gap: 3em;
+            .Demo-Video-Subject{
+                padding: 0px;
+                .Demo-Video-Button{
+                    flex-direction: column;
+                    gap: 5px;
+                }
+            }
+        }
+        .Join-request-Section{
+            .heading{
+                max-width: 90%;
+                font-size: 1.5em;
+            }
+            .Joining-Perks-Container{
+                gap: 0.5em;
+                margin-bottom: 1.5em;
+                .Joining-Perk{
+                    width: 100%;
+                }
+            }
+            .Join-Button{
+                max-width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .DoctorsPage {
+        .Hero-Section {
+            padding-left: 1em !important;
+            padding-right: 1em !important;
+
+            .Hero-content {
+
+                .Heading {
+                    font-size: 1.5em !important;
+                }
+            }
+        }
+    }
 }

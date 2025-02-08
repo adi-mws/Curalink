@@ -2,7 +2,7 @@
 function HomePage() {
     return (
         <>
-            <h1>Hi Everyone!</h1>
+            <h1>Welcome to Curalink Home Page!</h1>
         </>
     )
 }
