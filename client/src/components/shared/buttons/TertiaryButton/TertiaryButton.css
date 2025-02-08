@@ -1,0 +1,13 @@
+.TertiaryButton {
+    padding: .6em 3em;
+    background: white;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-weight: 500;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+}
+
+.TertiaryButton:hover {
+    
+}   
