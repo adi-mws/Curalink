@@ -127,7 +127,7 @@ export default function ServicePage({Service = Dummyservices, VideosDescrition=V
       <div className="PinkCircle"></div>
       <div className="VideoDiscription">
         <p>{comp.Discription}</p>
-        <video autoPlay muted controls src={comp.video}></video>     
+        <video autoPlay muted loop src={comp.video}></video>     
     </div>
   </div>
 ))}

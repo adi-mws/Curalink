@@ -1,6 +1,7 @@
 .ServicePage{
     overflow-x: hidden;
     font-family: var(--secondary-font);
+    padding-bottom: 5em;
     .Hero-Section{
         height: 650px;
         display: flex;
