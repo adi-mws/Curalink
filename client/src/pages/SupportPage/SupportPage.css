@@ -1,5 +1,6 @@
 .SupportPage{
     font-family: var(--secondary-font);
+    overflow-x: hidden;
     width: 100%;
         .Hero-Section{
             height: 100vh;
@@ -104,8 +105,10 @@
 
         .SupportTicketDetails{
             display: flex;
-            height: 100vh;
+            height: fit-content;
             flex-direction: column;
+            gap: 3em;
+            padding: 2em;
             justify-content: space-evenly;
             background: linear-gradient(to bottom,white,#E1C9DD);
 
@@ -263,6 +266,9 @@
                    width: auto;
                    max-width: 500px;
                 }
+            }
+            .SupportTicketButton{
+                margin-bottom: 2em;
             }
         }
     }
