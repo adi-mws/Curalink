@@ -7,15 +7,18 @@ import SupportPage from './pages/SupportPage/SupportPage.jsx'
 import AboutPage from './pages/AboutPage/AboutPage.jsx'
 import UserInfoHeader from './components/layout/UserInfoHeader/UserInfoHeader.jsx'
 import Header from "./components/layout/Header/Header.jsx"
-import UserNotification from './components/layout/UserNotification/UserNotification.jsx'
-import AppointmentAlert from './components/layout/AppointmentAlert/AppointmentAlert.jsx'
+
 import ServicePage from './pages/ServicePage/ServicePage.jsx'
 import PrimaryHollowButton from './components/shared/buttons/PrimaryHollowButton/PrimaryHollowButton.jsx'
-import Rating from './components/shared/Rating/Rating.jsx'
+import AppointmentAlert from './components/shared/alerts/AppointmentAlert/AppointmentAlert.jsx'
+import UserNotification from './components/shared/alerts/UserNotification/UserNotification.jsx'
 
 function App() {
   return (
-    <ServicePage />
+    <>
+      <UserNotification />
+      
+    </>
   )
 }
 export default App

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./UserNotification.css";
-import cutIcon from "../../../assets/icons/cutIcon.png";
+import cutIcon from "../../../../assets/icons/cutIcon.png";
 
 const UserNotification = () => {
 
