@@ -4,7 +4,7 @@ import cutIcon from "../../../assets/icons/cutIcon.png";
 import videoIcon from "../../../assets/icons/videoIcon.png";
 import doctorImage from "../../../assets/icons/doctor.png";
 import patientImage from "../../../assets/icons/patient.png";
-import SecondaryButton from "../../shared/buttons/SecondaryButton/SecondaryButton.jsx"
+import SecondaryButton from "../../buttons/SecondaryButton/SecondaryButton.jsx"
 
 const AppointmentAlert = () => {
   return (
