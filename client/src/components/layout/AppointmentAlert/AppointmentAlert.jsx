@@ -25,12 +25,13 @@ const AppointmentAlert = () => {
         </div>
         <img src={doctorImage} alt="DoctorImage" />
       </div>
-      <p style={{fontSize: "14px"}}>
+      <p style={{fontSize: "14px", color: "gray"}}>
         You can rejoin the appointment if you lost your network through
         appointments page
       </p>
       <SecondaryButton text="Join Now" />
     </div>
+
   );
 };
 
