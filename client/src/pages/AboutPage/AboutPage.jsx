@@ -159,6 +159,20 @@ export default function AboutPage({ }) {
                     </div>
                 </div>
             </div>
+            <div className="Contact-Cards">
+                <div className="Discover-Services">
+                    <h1>Discover Our Services</h1>
+                    <p>We’re more than just a company – we’re your partner in success. Explore our diverse range of services designed to transform your goals into reality. From innovative solutions to expert guidance, we’re here to support you every step of the way</p>
+                    <button>Explore services</button>
+                    <h1>Are you a doctor?</h1>
+                    <button>Join Us</button>
+                </div>
+                <div className="Get-In-Touch">
+                    <h1>Get in Touch</h1>
+                    <p>Have questions or ready to take the next step? Reach out to us and let’s discuss how we can help you achieve your goals. Our team is here to assist you with any inquiries or collaboration opportunities.</p>
+                    <button>Contact Us</button>
+                </div>
+            </div>
         </div>
         </>
     )
