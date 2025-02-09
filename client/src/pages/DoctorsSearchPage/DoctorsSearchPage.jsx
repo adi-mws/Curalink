@@ -78,6 +78,7 @@ export default function DoctorsSearchPage({searchResults = doctorsList, Category
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         <div className="ContentSection" style={{justifyContent:searchQuery ? "flex-start" : "space-evenly",display:useFilters? "none": ""}}>
             {(searchQuery  ? filteredDoctors : searchResults).map((result, index) => (
                 <DoctorsCard key={index} DoctorProfile={result} filter={false}/>
@@ -87,6 +88,11 @@ export default function DoctorsSearchPage({searchResults = doctorsList, Category
         <div className="ContentSection" style={{justifyContent:searchQuery ? "flex-start" : "space-evenly",display: useFilters ? "" : "none"}}>
             {(searchQuery ? filteredDoctors : searchResults).map((result, index) => (
                 <DoctorsCard key={index} DoctorProfile={result} filter={true}/>
+=======
+        <div className="ContentSection">
+            {searchResults.map((result) => (
+                <DoctorsCard filter={true} DoctorProfile={result}/>
+>>>>>>> f7512faf68303c99dd9402b10216bb08bc5815b2
             ))}
         </div>
     </div>

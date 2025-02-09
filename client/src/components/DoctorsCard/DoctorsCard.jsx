@@ -6,7 +6,7 @@ import RatingDisplay from '../Rating/RatingDisplay'
 import TertiaryButton from '../shared/buttons/TertiaryButton/TertiaryButton'
 import SecondaryButton from '../shared/buttons/SecondaryButton/SecondaryButton'
 import DurationIcon from '../../assets/icons/Services-Duration-Icon.png'
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 
 
@@ -48,14 +48,14 @@ export default function DoctorsCard({DoctorProfile = data, filter = false}) {
 }
 
 
-DoctorsCard.PropTypes={
-    name: PropTypes.string,
-    specialization: PropTypes.string,
-    review: PropTypes.number,
-    totalreviews:PropTypes.number,
-    price: PropTypes.number,
-    duration: PropTypes.number,
-    Currency: PropTypes.string
+DoctorsCard.propTypes={
+    name: propTypes.string,
+    specialization: propTypes.string,
+    review: propTypes.number,
+    totalreviews:propTypes.number,
+    price: propTypes.number,
+    duration: propTypes.number,
+    Currency: propTypes.string
 };
 
 const data = {
