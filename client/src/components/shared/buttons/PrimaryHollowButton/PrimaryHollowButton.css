@@ -1,0 +1,15 @@
+.PrimaryHollowButton {
+    padding: .6em 3em;
+    background: var(--secondary-color);
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.PrimaryHollowButton:hover {
+    border-bottom: 3px solid var(--primary-color);
+}
+.selected{
+    border-bottom: 3px solid var(--primary-color);
+}

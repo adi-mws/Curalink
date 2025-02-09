@@ -14,6 +14,7 @@ import PatientLoginPage from './pages/PatientLoginPage/PatientLoginPage';
 import PatientRegistrationPage from './pages/PatientRegistrationPage/PatientRegistrationPage';
 import ScrollToTop from './components/shared/primitive/ScrollToTop/ScrollToTop';
 import DoctorsCard from './components/DoctorsCard/DoctorsCard.jsx'
+import DoctorsSearchPage from './pages/DoctorsSearchPage/DoctorsSearchPage.jsx';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/login' element={<PatientLoginPage />} />
             <Route path='/register' element={<PatientRegistrationPage />} />
+            <Route path='/searchdoctors' element={<DoctorsSearchPage />} />
             <Route path='/test' element={<><DoctorsCard/><DoctorsCard filter={true}/></>} />
           </Route>
         </Routes>

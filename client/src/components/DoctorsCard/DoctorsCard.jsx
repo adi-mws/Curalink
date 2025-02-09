@@ -6,6 +6,7 @@ import RatingDisplay from '../Rating/RatingDisplay'
 import TertiaryButton from '../shared/buttons/TertiaryButton/TertiaryButton'
 import SecondaryButton from '../shared/buttons/SecondaryButton/SecondaryButton'
 import DurationIcon from '../../assets/icons/Services-Duration-Icon.png'
+import PropTypes from 'prop-types';
 
 
 
@@ -16,7 +17,7 @@ export default function DoctorsCard({DoctorProfile = data, filter = false}) {
         <div className="ImageAndRating">
             <img src={DoctorProfile.profilePic} alt="" className="ProfilePicture" />
             <div className="Reviews">
-                <p className="AvgRating">{DoctorProfile.review}</p>
+                <p className="AvgRating">{DoctorProfile.review.toFixed(1)}</p>
                 <RatingDisplay rating={DoctorProfile.review}/>
                 <p className="TotalReviews" style={{ display:filterEnabled ? "none" : ""}}>{DoctorProfile.totalreviews}+ reviews</p>
                 <p className="ViewProfile"style={{ display:filterEnabled ? "" : "none"}}>View Profile</p>
@@ -29,10 +30,10 @@ export default function DoctorsCard({DoctorProfile = data, filter = false}) {
 
             <div className="ButtonsOrPrice">
                 <div style={{ display:filterEnabled ? "" : "none"}} className="PriceAndDuration">
-                    <p className="Price">{DoctorProfile.price}</p>
+                    <p className="Price">{DoctorProfile.Currency}{DoctorProfile.price}</p>
                     <div className="Duration">
                         <img src={DurationIcon} alt="" className="DurationIcon" />
-                        <p className="DurationValue">{DoctorProfile.duration}</p>
+                        <p className="DurationValue">{DoctorProfile.duration} mins</p>
                     </div>
                 </div>
 
@@ -45,12 +46,25 @@ export default function DoctorsCard({DoctorProfile = data, filter = false}) {
     </div>
   )
 }
+
+
+DoctorsCard.PropTypes={
+    name: PropTypes.string,
+    specialization: PropTypes.string,
+    review: PropTypes.number,
+    totalreviews:PropTypes.number,
+    price: PropTypes.number,
+    duration: PropTypes.number,
+    Currency: PropTypes.string
+};
+
 const data = {
     profilePic: DummyImage,
     name: "Dr. John Carter",
     specialization: "Cardiologist",
-    review: 4.8,
+    review: 4.0,
     totalreviews:700,
-    price: "$150",
-    duration: "30 mins"
+    price: 150,
+    duration: 10,
+    Currency:"$"
   }

@@ -7,7 +7,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     box-shadow: 0px 0px 2.3px #00000040;
-    margin: 2em;
     border-radius: 10px;
     .ImageAndRating{
         display: flex;

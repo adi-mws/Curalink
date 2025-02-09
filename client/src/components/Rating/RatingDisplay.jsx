@@ -2,7 +2,9 @@
 import React from "react";
 
 export default function RatingDisplay({ rating = 2.5 }) {
+  if(rating % 1 !== 0){
     rating = Math.floor(rating) + 0.5;
+  }
     const stars = [];
 
     for (let i = 0; i < 5; i++) {
