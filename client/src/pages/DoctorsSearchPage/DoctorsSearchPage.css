@@ -168,6 +168,9 @@
                     width: 90%;
                 }
                 .Search-Bar{
+                    width: 100%;
+                }
+                .Search-Container{
                     width: 90%;
                 }
             }
@@ -183,9 +186,10 @@
                     width: 10em;
                 }
                 .Filter-Button-Dropdown-Wrapper{
-                .Filter-Buttons-Dropdown{
-                    width: 10em;
-                }}
+                    .Filter-Buttons-Dropdown{
+                        width: 10em;
+                    }
+                }
             }
         }
     }
