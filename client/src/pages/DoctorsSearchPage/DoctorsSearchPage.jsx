@@ -1,48 +1,106 @@
-import React from 'react'
+import {React, useState} from 'react'
 import './DoctorsSearchPage.css'
 import  DoctorsCard from '../../components/DoctorsCard/DoctorsCard.jsx'
 import SearchIcon from '../../assets/icons/search-normal.png'
 import DummyImage from "../../assets/imgs/Surgeon-With-Mask.png"
 import Vector from '../../assets/icons/Vector.png'
+import DownArrow from '../../assets/icons/arrow-down.png'
 import PrimaryHollowButton from '../../components/shared/buttons/PrimaryHollowButton/PrimaryHollowButton.jsx'
 
-export default function DoctorsSearchPage({searchResults = doctorsList}) {
+
+export default function DoctorsSearchPage({searchResults = doctorsList, Category = doctorCategories}) {
+    const [selectedCatg, selectCatg] = useState("All Category");
+    const [isVisible, toggleVisibility] = useState(false);
+    const [popularity, togglePopularity] = useState(false);
+    const [highlyRated, toggleHighlyRated] = useState(false);
+    const [Experienced, toggleExperienced] = useState(false);
+    const [searchQuery, setSearchQuery] = useState("");
+    const [filteredDoctors, setFilteredDoctors] = useState([]);
+
+    const handleSearch = (event) => {
+        const query = event.target.value.toLowerCase();
+        setSearchQuery(query);
+        if (query) {
+            setFilteredDoctors(doctorsList.filter(doctor => doctor.name.toLowerCase().includes(query)));
+        } else {
+            setFilteredDoctors([]);
+        }
+    };
+
   return (
-    <div className='DoctorsSearchPage'>
-      <div className="Hero-Section">
-        <div className="Hero-Content">
-        <p className="Heading">Find the Right Doctor for Your Healthcare Needs</p>
-        <p className="Description">Easily search, compare, and book appointments with trusted doctors across various specialties. Connect via video call, chat, or in-person consultations.</p>
-        <input type="text" className="SearchBar" placeholder='Search for Doctors'/>
-      </div>
-
-      <div className="Filters">
-        <div className="Filter-Logo"><img src={Vector} alt="" />Filters</div>
-        <div className="Filter-Buttons-Wrapper">
-        <div className="Filter-Buttons">
-        <PrimaryHollowButton padding="1.2em 2em" textWrap='nowrap' borderRadius='10px' width=" 100%" text="All Category"/>
+    <div className="DoctorsSearchPage">
+        <div className="Hero-Section">
+            <div className="Hero-Content">
+                <p className="Heading">Find the Right Doctor for Your Healthcare Needs</p>
+                <p className="Description">Easily search, compare, and book appointments with trusted doctors across various specialties. Connect via video call, chat, or in-person consultations.</p>
+                <div className="Search-Container">
+                    <input 
+                        type="text" 
+                        placeholder='Search for Doctors' 
+                        className="Search-Bar" 
+                        value={searchQuery} 
+                        onChange={handleSearch} 
+                    />
+                    {filteredDoctors.length > 0 && (
+                        <div className="Search-Dropdown">
+                            {filteredDoctors.map((doctor, index) => (
+                                <div key={index} className="Search-Item">
+                                    {doctor.name}
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </div>
         </div>
-        <div className="Filter-Buttons">
-        <PrimaryHollowButton padding="1.2em 2em" textWrap='nowrap' borderRadius='10px' width=" 100%" text="Popularity"/>
+        <div className="Filter-Bar">
+            <div className="FilterLogo">
+                <img src={Vector} alt="" />
+                <p>Filters</p>
+            </div>
+            <div className="Filter-Options">
+                <div className="Filter-Button-Dropdown-Wrapper">
+                    <button  className='Filter-Buttons-Dropdown'>{selectedCatg}<button className='ArrowButton' onClick={() => toggleVisibility(!isVisible)} style={{transform: isVisible ? "rotate(180deg)":"rotate(0deg)"}}><img src={DownArrow}  alt="" /></button></button>
+                    <div style={{display:isVisible ? "" : "none"}} className="Categories">
+                        {Category.map((catg) => (
+                            <div className="Category" onClick={() => selectCatg(catg)}>{catg}</div>
+                        ))}
+                    </div>
+                </div>
+                <div className="Filter-Buttons" onClick={() => togglePopularity(!popularity)}>
+                <PrimaryHollowButton padding="1.2em 2em" textWrap='nowrap' borderRadius='10px' width=" 100%" text="Popularity"/>
+                </div>
+                <div className="Filter-Buttons" onClick={() => toggleHighlyRated(!highlyRated)}>
+                <PrimaryHollowButton padding="1.2em 2em"  width=" 100%" borderRadius='10px' textWrap='nowrap' text="Highly Rated"/>
+                </div>
+                <div className="Filter-Buttons" onClick={() => toggleExperienced(!Experienced)}>
+                <PrimaryHollowButton padding="1.2em 2em" width="100%" borderRadius='10px' textWrap='nowrap' text="More Experienced"/>
+                </div>
+            </div>
         </div>
-        <div className="Filter-Buttons">
-        <PrimaryHollowButton padding="1.2em 2em"  width=" 100%" borderRadius='10px' textWrap='nowrap' text="Highly Rated"/>
+        <div className="ContentSection">
+            {searchResults.map((result) => (
+                <DoctorsCard DoctorProfile={result}/>
+            ))}
         </div>
-        <div className="Filter-Buttons">
-        <PrimaryHollowButton padding="1.2em 2em" width="100%" borderRadius='10px' textWrap='nowrap' text="More Experienced"/>
-        </div>
-        </div>
-      </div>
-      </div>
-
-      <div className="Search-Result-Section">
-        {searchResults.map((result) =>(
-          <DoctorsCard DoctorProfile={result} />
-        ))}
-      </div>
     </div>
   )
 }
+const doctorCategories = [
+    "All Category",
+    "Cardiologists",        // Heart specialists
+    "Dermatologists",       // Skin care experts
+    "Neurologists",         // Brain and nervous system doctors
+    "Pediatricians",        // Child healthcare specialists
+    "Orthopedic Surgeons",  // Bone and joint specialists
+    "Endocrinologists",     // Hormone and metabolism experts
+    "Psychiatrists",        // Mental health professionals
+    "Gastroenterologists",  // Digestive system specialists
+    "Ophthalmologists",     // Eye and vision care doctors
+    "Oncologists"          // Cancer specialists
+  ];
+  
+  
 
 const doctorsList = [
   {

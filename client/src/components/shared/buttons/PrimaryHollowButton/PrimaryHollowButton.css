@@ -1,6 +1,6 @@
 .PrimaryHollowButton {
     padding: .6em 3em;
-    background: var(--secondary-color);
+    background-color: var(--secondary-color);
     font-family: var(--secondary-font);
     color: var(--primary-color);
     font-weight: 500;
