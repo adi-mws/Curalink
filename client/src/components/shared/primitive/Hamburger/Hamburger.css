@@ -1,0 +1,45 @@
+.Hamburger {
+    height: 35px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    display: flex;
+    div {
+        border: solid 1px black;
+        width: 2em;
+    position: relative;
+
+        transition: .3s;
+
+
+    }
+
+    div:nth-child(2) {
+        width: 1.6em;
+    }
+}
+
+
+.hamburger-cross {
+    div:nth-child(2) {
+        opacity: 0;
+    }
+    
+    div:first-child {
+        transform: rotate(45deg);
+        top: 0.57em;
+
+    }
+    div:last-child {
+        transform: rotate(-45deg);
+        bottom: 0.57em;
+
+    }
+
+    div {
+        width: 2em;
+    }
+
+
+}

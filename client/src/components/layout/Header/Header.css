@@ -1,14 +1,16 @@
 .Header-relative {
-    height: 4em; 
+    height: 4em;
     width: 100%;
 
 }
+
 .Header {
     display: flex;
     align-items: center;
-    background: white; 
-    position: fixed; 
+    background: white;
+    position: fixed;
     z-index: 100;
+    padding: 1em;
     top: 0;
     left: 0;
     width: 100%;
@@ -16,9 +18,15 @@
     gap: 1em;
     height: 4em;
     font-family: var(--secondary-font);
+
     .ham-burger {
         width: 3em;
-    }    
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
 
     .Logo {
         display: flex;
@@ -26,8 +34,8 @@
         justify-content: center;
         padding: 0 .5em;
     }
-    
-    .Logo > img {
+
+    .Logo>img {
         width: 8em;
     }
 
@@ -58,6 +66,7 @@
             left: 0.2em;
             transition: 0.3s;
         }
+
         position: relative;
     }
 
@@ -68,13 +77,14 @@
         left: 0;
         background-color: white;
         z-index: 1000;
+
         #service1 {
             margin-top: 1.35em;
         }
     }
-    
-    .down-arrow:hover, 
-    .services-dropdown:hover + .down-arrow {
+
+    .down-arrow:hover,
+    .services-dropdown:hover+.down-arrow {
         transform: rotate(180deg);
     }
 
@@ -109,19 +119,43 @@
         display: none;
     }
 }
+
 @media screen and (max-width: 992px) {
     .nav-bar {
         display: none !important;
     }
-    .ham-burger {
-        display: flex;
-    }
+
     .Header {
         justify-content: space-between;
     }
+
+    .ham-burger {
+        display: flex !important;
+    }
 }
+
 @media screen and (max-width: 576px) {
     .register-btn {
         display: none !important;
+    }
+
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+
+    .Header {
+        .login-btn {
+            display: none !important;
+        }
+
+      
+
+        .Hamburger {
+            order: 2;
+            align-items: flex-end;
+        }
     }
 }

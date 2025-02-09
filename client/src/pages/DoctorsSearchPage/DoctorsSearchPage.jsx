@@ -80,7 +80,7 @@ export default function DoctorsSearchPage({searchResults = doctorsList, Category
         </div>
         <div className="ContentSection">
             {searchResults.map((result) => (
-                <DoctorsCard DoctorProfile={result}/>
+                <DoctorsCard filter={true} DoctorProfile={result}/>
             ))}
         </div>
     </div>
