@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import {React, useState, useEffect} from 'react'
 import './DoctorsSearchPage.css'
 import  DoctorsCard from '../../components/DoctorsCard/DoctorsCard.jsx'
 import SearchIcon from '../../assets/icons/search-normal.png'
@@ -11,17 +11,26 @@ import PrimaryHollowButton from '../../components/shared/buttons/PrimaryHollowBu
 export default function DoctorsSearchPage({searchResults = doctorsList, Category = doctorCategories}) {
     const [selectedCatg, selectCatg] = useState("All Category");
     const [isVisible, toggleVisibility] = useState(false);
-    const [popularity, togglePopularity] = useState(false);
-    const [highlyRated, toggleHighlyRated] = useState(false);
-    const [Experienced, toggleExperienced] = useState(false);
+    const [useFilters, setFilters] = useState(selectedCatg!=="All Category");
     const [searchQuery, setSearchQuery] = useState("");
     const [filteredDoctors, setFilteredDoctors] = useState([]);
+
+
+    useEffect(() => {
+        setFilters(selectedCatg !== "All Category");
+    }, [selectedCatg]);
 
     const handleSearch = (event) => {
         const query = event.target.value.toLowerCase();
         setSearchQuery(query);
+    
         if (query) {
-            setFilteredDoctors(doctorsList.filter(doctor => doctor.name.toLowerCase().includes(query)));
+            const filtered = doctorsList.filter(doctor =>
+                doctor.name.toLowerCase().includes(query) ||
+                doctor.specialization.toLowerCase().includes(query) ||
+                doctor.review.toString().includes(query)
+            );
+            setFilteredDoctors(filtered);
         } else {
             setFilteredDoctors([]);
         }
@@ -40,16 +49,7 @@ export default function DoctorsSearchPage({searchResults = doctorsList, Category
                         className="Search-Bar" 
                         value={searchQuery} 
                         onChange={handleSearch} 
-                    />
-                    {filteredDoctors.length > 0 && (
-                        <div className="Search-Dropdown">
-                            {filteredDoctors.map((doctor, index) => (
-                                <div key={index} className="Search-Item">
-                                    {doctor.name}
-                                </div>
-                            ))}
-                        </div>
-                    )}
+                    />    
                 </div>
             </div>
         </div>
@@ -63,24 +63,30 @@ export default function DoctorsSearchPage({searchResults = doctorsList, Category
                     <button  className='Filter-Buttons-Dropdown'>{selectedCatg}<button className='ArrowButton' onClick={() => toggleVisibility(!isVisible)} style={{transform: isVisible ? "rotate(180deg)":"rotate(0deg)"}}><img src={DownArrow}  alt="" /></button></button>
                     <div style={{display:isVisible ? "" : "none"}} className="Categories">
                         {Category.map((catg) => (
-                            <div className="Category" onClick={() => selectCatg(catg)}>{catg}</div>
+                            <div className="Category" onClick={() => {selectCatg(catg);}}>{catg}</div>
                         ))}
                     </div>
                 </div>
-                <div className="Filter-Buttons" onClick={() => togglePopularity(!popularity)}>
+                <div className="Filter-Buttons">
                 <PrimaryHollowButton padding="1.2em 2em" textWrap='nowrap' borderRadius='10px' width=" 100%" text="Popularity"/>
                 </div>
-                <div className="Filter-Buttons" onClick={() => toggleHighlyRated(!highlyRated)}>
+                <div className="Filter-Buttons" >
                 <PrimaryHollowButton padding="1.2em 2em"  width=" 100%" borderRadius='10px' textWrap='nowrap' text="Highly Rated"/>
                 </div>
-                <div className="Filter-Buttons" onClick={() => toggleExperienced(!Experienced)}>
+                <div className="Filter-Buttons" >
                 <PrimaryHollowButton padding="1.2em 2em" width="100%" borderRadius='10px' textWrap='nowrap' text="More Experienced"/>
                 </div>
             </div>
         </div>
-        <div className="ContentSection">
-            {searchResults.map((result) => (
-                <DoctorsCard DoctorProfile={result}/>
+        <div className="ContentSection" style={{justifyContent:searchQuery ? "flex-start" : "space-evenly",display:useFilters? "none": ""}}>
+            {(searchQuery  ? filteredDoctors : searchResults).map((result, index) => (
+                <DoctorsCard key={index} DoctorProfile={result} filter={false}/>
+            ))}
+        </div>
+
+        <div className="ContentSection" style={{justifyContent:searchQuery ? "flex-start" : "space-evenly",display: useFilters ? "" : "none"}}>
+            {(searchQuery ? filteredDoctors : searchResults).map((result, index) => (
+                <DoctorsCard key={index} DoctorProfile={result} filter={true}/>
             ))}
         </div>
     </div>
