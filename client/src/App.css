@@ -24,6 +24,9 @@ button {
   padding: 0; 
   box-sizing: border-box;
 }
+input{
+  font-family: var(--secondary-font);
+}
 /* 
 Media querry for max-width
 1368
@@ -49,7 +52,7 @@ Media querry for max-width
 
 }
 
-@media screen and (max-width:576px){
+@media screen and (max-width:400px){
 
 }
 

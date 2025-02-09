@@ -16,14 +16,14 @@ const RatingInput = ({ totalStars = 5, onChange }) => {
       {Array.from({ length: totalStars }, (_, index) => {
         const starValue = index + 1;
         return (
-          <FontAwesomeIcon
+          <i
             key={index}
-            icon={<i class="fa-solid fa-star" style={{color:"#EEC521"}}></i>}
-            color={starValue <= (hover || rating) ? "#EEC521" : "#EDEDED"}
+            className="fa-solid fa-star"
+            style={{ color: starValue <= (hover || rating) ? "#EEC521" : "#EDEDED" }}
             onMouseEnter={() => setHover(starValue)}
             onMouseLeave={() => setHover(0)}
             onClick={() => handleClick(starValue)}
-          />
+          ></i>
         );
       })}
     </div>
@@ -31,4 +31,3 @@ const RatingInput = ({ totalStars = 5, onChange }) => {
 };
 
 export default RatingInput;
-

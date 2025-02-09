@@ -1,0 +1,80 @@
+.DoctorsCard{
+    width: 20.6em;
+    height: 25.3em;
+    font-family: var(--secondary-font);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 2.3px #00000040;
+    border-radius: 10px;
+    .ImageAndRating{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 0.2em;
+        img{
+            height: 9.8em;
+            width: 9.8em;
+            border-radius: 50%;
+        }
+        .Reviews{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            justify-content: flex-start;
+            gap: 0.5em;
+            align-items: center;
+            .AvgRating{
+                font-size: 2.5em;
+            }
+            .TotalReviews{
+                color: var(--gray-text);
+            }
+            .ViewProfile{
+                font-weight: bold;
+                color: var(--primary-color);
+                cursor: pointer;
+            }
+            
+        }
+    }
+    .NameAndSpec{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        .Name{
+            font-size: 1.7em;
+            font-family: var(--primary-text);
+        }
+        .Specialization{
+            color: var(--primary-color);
+        }
+    }
+    .ButtonsOrPrice{
+        display: flex;
+        flex-direction: column;
+        gap: 0.3em;
+        .PriceAndDuration{
+            display: flex;
+            justify-content: space-between;
+            .Duration{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.1em;
+                color: var(--gray-text);
+                gap: 0.7em;
+                .DurationIcon{
+                    height: 2em;
+                    width: 2em;
+                }
+            }
+            .Price{
+                color: var(--gray-text);
+                font-size: 3em;
+            }
+        }
+    }
+}

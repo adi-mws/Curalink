@@ -29,7 +29,8 @@ const Videos = [
   {
     video: DummyVideo,
     Discription: "An exclusive behind-the-scenes look at how everything came together."
-  }
+  },
+  
 ];
 
 
