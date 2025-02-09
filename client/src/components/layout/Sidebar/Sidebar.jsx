@@ -8,11 +8,12 @@ import appointments from '../../../assets/icons/health.png';
 import others from '../../../assets/icons/colorfilter.png';
 import prescriptions from '../../../assets/icons/menu-board.png';
 import legals from '../../../assets/icons/stickynote.png';
-export default function Sidebar({ showMenubar = false, setShowMenubar, hamBurgerRef = null }) {
+export default function Sidebar({ showMenubar = false, dashboard=false, setShowMenubar, hamBurgerRef = null }) {
     const sidebarRef = useRef(null);
 
     useEffect(() => {
         function handleClickOutside(event) {
+            
             if (sidebarRef.current &&
                 !sidebarRef.current.contains(event.target) &&
                 hamBurgerRef.current &&
@@ -32,7 +33,7 @@ export default function Sidebar({ showMenubar = false, setShowMenubar, hamBurger
     }, [showMenubar]);
 
     return (
-        <div ref={sidebarRef} className='Sidebar' style={{ transform: `${showMenubar ? 'translate(0px)' : 'translate(-400px)'}`, transition: '.3s' }}>
+        <div po ref={sidebarRef} className='Sidebar' style={{ transform: `${showMenubar ? 'translate(0px)' : 'translate(-400px)'}`, position: `${dashboard ? 'relative' : 'fixed'}`, transition: '.3s' }}>
             <div className="Logo-Cross">
                 <img src={logo} alt="" className="Logo" />
                 <div className="Cross"></div>

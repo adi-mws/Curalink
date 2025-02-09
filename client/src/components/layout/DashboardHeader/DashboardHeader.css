@@ -1,0 +1,16 @@
+.DashboardHeader {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 1em;
+    width: 100%;
+    
+
+
+    .dash-header-title {
+        font-family: var(--primary-font);
+        font-weight: bold; 
+        font-size: 1.2em;
+    }
+}
