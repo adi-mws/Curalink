@@ -216,6 +216,11 @@ export default function DoctorsSearchPage({ categories = doctorCategories, docto
     const [isDropdownVisible, setDropdownVisible] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredDoctors, setFilteredDoctors] = useState(doctorsList);
+    const [isFiltered, setIsFiltered] = useState(false);
+
+    useEffect(() => {
+        setIsFiltered(selectedCategory !== 'All Category');
+    }, [selectedCategory]);
 
     useEffect(() => {
         const filtered = doctorsList.filter(doctor => 
@@ -228,7 +233,6 @@ export default function DoctorsSearchPage({ categories = doctorCategories, docto
         setFilteredDoctors(filtered);
     }, [selectedCategory, searchQuery, doctorsList]);
 
-    // Close dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (!event.target.closest('.Filter-Button-Dropdown-Wrapper')) {
@@ -286,10 +290,19 @@ export default function DoctorsSearchPage({ categories = doctorCategories, docto
                     <PrimaryHollowButton text="More Experienced" />
                 </div>
             </div>
-            <div className="ContentSection">
+            <div style={{display:isFiltered && "none"}} className="ContentSection">
                 {filteredDoctors.length > 0 ? (
                     filteredDoctors.map((doctor, index) => (
-                        <DoctorsCard key={index} DoctorProfile={doctor} />
+                        <DoctorsCard key={index} DoctorProfile={doctor} filter={false}/>
+                    ))
+                ) : (
+                    <p className="NoResults">No doctors found matching your search.</p>
+                )}
+            </div>
+            <div style={{display:!isFiltered && "none"}} className="ContentSection">
+                {filteredDoctors.length > 0 ? (
+                    filteredDoctors.map((doctor, index) => (
+                        <DoctorsCard key={index} DoctorProfile={doctor} filter={true}/>
                     ))
                 ) : (
                     <p className="NoResults">No doctors found matching your search.</p>
