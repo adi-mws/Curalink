@@ -6,6 +6,7 @@ import './FAQs.css';
 // Individual FAQ Component
 function FAQItem({ question, answer }) {
     const [isOpen, setIsOpen] = useState(false);
+    
 
 
     const toggleAnswer = () => {
@@ -49,14 +50,15 @@ const defaultFaqData = [
 ];
 
 // FAQs Wrapper Component
-export default function FAQs({ faqData = defaultFaqData}) {
+export default function FAQs({ faqData = defaultFaqData, moreButtonDisable="true",Heading="FAQs"}) {
     return (
         <div className="faqs">
-            <h2 className="faq-heading">FAQs</h2>
+            <h2 className="faq-heading">{Heading}</h2>
+
             {faqData.map((faq, index) => (
                 <FAQItem key={index} question={faq.question} answer={faq.answer} />
             ))}
-            <button className="More-Faqs">
+            <button style={{display: moreButtonDisable && "none"}} className="More-Faqs">
                 View more FAQs
                 <img src={RightArrow} alt="See more FAQs" />
             </button>

@@ -1,0 +1,121 @@
+.FAQsPage {
+    font-family: var(--secondary-font);
+    .Hero-Section {
+        padding-top: 4em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+
+
+        .Heading {
+            width: 80%;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+            font-family: var(--primary-font);
+        }
+
+
+        .Description {
+            width: 60%;
+            text-align: center;
+        }
+
+        .Search-Box {
+            width: 60%;
+            padding: 0.8em 2em;
+            border-radius: 47px;
+            border: 2px solid black;
+            font-size: 1.1em;
+            margin-top: 1em;
+        }
+    }
+
+    .Large-Faqs-Section {
+        padding-top: 5em;
+        padding-bottom: 5em;
+    }
+    .no-results{
+        font-size: 1.5em;
+        font-weight: 500;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .FAQsPage {
+        .Hero-Section {
+            .Heading {
+                font-size: 2em;
+                width: 90%;
+            }
+
+            .Description {
+                width: 80%;
+            }
+
+            .Search-Box {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .FAQsPage {
+        .Hero-Section {
+            .Heading {
+            }
+
+            .Description {
+            }
+
+            .Search-Box {
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .FAQsPage {
+        .Hero-Section {
+            padding: auto 1em;
+            .Heading {
+                font-size: 1.5em;
+                width: 100%;
+            }
+
+            .Description {
+                font-size: 1em;
+                width: 95%;
+            }
+            .Search-Box {
+                width: 95%;
+                font-size: 1em;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .FAQsPage {
+        .Hero-Section {
+            .Heading {
+            }
+
+            .Description {
+            }
+
+            .Search-Box {
+            }
+        }
+    }
+}
+
+
+

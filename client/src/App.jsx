@@ -18,6 +18,7 @@ import DoctorsSearchPage from './pages/DoctorsSearchPage/DoctorsSearchPage.jsx';
 import DashboardLayout from './layouts/DashboardLayout.jsx';
 import ScheduledAppointments from './components/dashboard/patient/ScheduledAppointments/ScheduledAppointments.jsx';
 import SupportSystem from './components/dashboard/patient/SupportSystem/SupportSystem.jsx';
+import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 
 function App() {
   return (
@@ -40,9 +41,12 @@ function App() {
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/login' element={<PatientLoginPage />} />
             <Route path='/register' element={<PatientRegistrationPage />} />
-            <Route path='/searchdoctors' element={<DoctorsSearchPage />} />
+            <Route path='/search-doctors' element={<DoctorsSearchPage />} />
             <Route path='/test' element={<DoctorsCard filter={true} />} />
+            <Route path='/search-faqs' element={<FAQsPage />} />
           </Route>
+
+
 
           <Route path='/dashboard' element={<DashboardLayout />}>
             <Route path='/dashboard/scheduled-appointments' element={<ScheduledAppointments />} />
