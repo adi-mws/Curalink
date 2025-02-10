@@ -54,6 +54,7 @@ export default function FAQsPage({ faqData = defaultFaqData }) {
         const filtered = faqData.filter(faq => 
             faq.question.toLowerCase().includes(searchQuery.toLowerCase())
         );
+        
         setFilteredFaqs(filtered);
     }, [searchQuery, faqData]);
 

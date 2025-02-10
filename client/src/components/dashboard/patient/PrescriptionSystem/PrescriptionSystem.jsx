@@ -61,7 +61,7 @@ const PrescriptionSystem = () => {
           <div className="prescription-rows" key={index}>
             <span>{prescription.appointmentWith}</span>
             <span className="hideCategory">{prescription.category}</span>
-            <TertiaryButton text="Full Details" />
+            <TertiaryButton text="Full Details" textWrap="nowrap" padding="1em 0.5em"/>
           </div>
         ))}
       </div>

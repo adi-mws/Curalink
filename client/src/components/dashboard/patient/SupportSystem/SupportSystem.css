@@ -1,6 +1,6 @@
 .SupportSystem{
   width: 100%;
-
+  overflow-x: hidden;
   .SupportSystemContent {
     padding: 20px;
     font-family: var(--secondary-font);
@@ -8,6 +8,7 @@
     .grid-headers,
     .grid-rows {
       display: grid;
+      grid-gap: 0.5em;
       grid-template-columns: repeat(3, 2fr);
       align-items: center;
       padding: 12px 20px;
@@ -24,12 +25,14 @@
 }
 
 @media screen and (max-width: 576px) {
-  .grid-headers,
-  .grid-rows {
-    grid-template-columns: repeat(2, 1fr);
+  .SupportSystem  {
+  .SupportSystemContent .grid-headers,
+   .SupportSystemContent .grid-rows {
+    grid-template-columns: 1.2fr 0.8fr;
   }
 
   .hideStatus {
     display: none;
   }
+}
 }

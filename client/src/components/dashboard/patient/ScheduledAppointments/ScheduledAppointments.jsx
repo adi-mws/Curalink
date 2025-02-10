@@ -144,7 +144,7 @@ export default function ScheduledAppointments() {
           <span className="hideDate">Date</span>
           <span className="hideTime">Time</span>
           <span className="hide-category">Category</span>
-          <span>Mode</span>
+          <span className="Show-mode">Mode</span>
           <span>Action</span>
         </div>
 
@@ -161,8 +161,11 @@ export default function ScheduledAppointments() {
                 <img src={AudioIcon} alt="audio-icon" />
               )}
             </span>
-            <TertiaryButton text="View Details"/>
+            <div className="DetailsButton">
+              <TertiaryButton text="View Details" width="100%" padding="1em 0.5em" textWrap="nowrap"/>
+            </div>
           </div>
+
         ))}
       </div>
     </div>

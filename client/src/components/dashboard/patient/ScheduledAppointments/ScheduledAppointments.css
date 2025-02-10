@@ -1,6 +1,7 @@
 .ScheduledAppointments {
   width: 100%;
   font-family: var(--secondary-font);
+  overflow-x: hidden;
 
   .appointments-container {
     padding: 20px;
@@ -8,7 +9,7 @@
     .grid-header,
     .grid-row {
       display: grid;
-      grid-template-columns: repeat(6, 2fr);
+      grid-template-columns: repeat(6, 1fr);
       align-items: center;
       padding: 12px 15px;
       border-bottom: 1px solid #ddd;
@@ -22,15 +23,20 @@
     .doctor-name {
       font-weight: 500;
     }
+
+    .DetailsButton {
+      width: 100%;
+    }
   }
 }
+
 
 @media (max-width: 768px) {
   .ScheduledAppointments {
     .appointments-container {
       .grid-header,
       .grid-row {
-        grid-template-columns: repeat(5, 1.5fr);
+        grid-template-columns: 1fr 0.8fr 0.8fr 0.5fr 1fr;
       }
 
       .hide-category {
@@ -45,7 +51,7 @@
     .appointments-container {
       .grid-header,
       .grid-row {
-        grid-template-columns: repeat(3, 2fr);
+        grid-template-columns: 1fr 0.5fr 1fr;
       }
 
       .hideTime,
@@ -55,3 +61,4 @@
     }
   }
 }
+
