@@ -56,8 +56,12 @@
             font-size: 1.3em;
             display: flex;
             align-items: center;
-            gap: 0.5em;
+            gap:1em;
             font-family: var(--secondary-font);
+            img {
+                width: 30px; 
+                height: 30px;
+            }
         }
         .Filter-Options{
             position: relative;

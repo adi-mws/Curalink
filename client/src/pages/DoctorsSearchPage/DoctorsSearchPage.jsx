@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import './DoctorsSearchPage.css';
 import DoctorsCard from '../../components/DoctorsCard/DoctorsCard.jsx';
-import SearchIcon from '../../assets/icons/search-normal.png';
 import DummyImage from '../../assets/imgs/Surgeon-With-Mask.png';
-import Vector from '../../assets/icons/Vector.png';
+import FilterIcon from '../../assets/icons/filter.png';
 import DownArrow from '../../assets/icons/arrow-down.png';
 import PrimaryHollowButton from '../../components/shared/buttons/PrimaryHollowButton/PrimaryHollowButton.jsx';
 
@@ -266,7 +265,7 @@ export default function DoctorsSearchPage({ categories = doctorCategories, docto
             </div>
             <div className="Filter-Bar">
                 <div className="FilterLogo">
-                    <img src={Vector} alt="Filter Icon" />
+                    <img src={FilterIcon} alt="Filter Icon" />
                     <p>Filters</p>
                 </div>
                 <div className="Filter-Options">
