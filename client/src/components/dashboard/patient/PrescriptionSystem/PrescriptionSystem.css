@@ -1,0 +1,35 @@
+.PrescriptionSystem{
+    width: 100%;
+  
+    .PrescriptionSystemContent {
+      padding: 20px;
+      font-family: var(--secondary-font);
+  
+      .prescription-headers,
+      .prescription-rows {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+      }
+  
+      .prescription-headers {
+        font-weight: 700;
+      }
+  
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .prescription-headers,
+    .prescription-rows {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .hideCategory {
+      display: none;
+    }
+  }
+  

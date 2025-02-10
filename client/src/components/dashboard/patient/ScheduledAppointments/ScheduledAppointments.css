@@ -1,17 +1,16 @@
 .ScheduledAppointments {
   width: 100%;
+  font-family: var(--secondary-font);
 
   .appointments-container {
-    border-radius: 8px;
     padding: 20px;
-    font-family: var(--secondary-font);
 
     .grid-header,
     .grid-row {
       display: grid;
       grid-template-columns: repeat(6, 2fr);
       align-items: center;
-      padding: 10px 20px;
+      padding: 12px 15px;
       border-bottom: 1px solid #ddd;
       text-align: center;
     }
@@ -20,40 +19,39 @@
       font-weight: 700;
     }
 
-    .hide-category {
-      text-align: center;
-    }
-
     .doctor-name {
       font-weight: 500;
-      color: #333;
     }
-
   }
 }
 
 @media (max-width: 768px) {
-  .grid-header,
-  .grid-row {
-    grid-template-columns: repeat(5, 1fr);
-  }
+  .ScheduledAppointments {
+    .appointments-container {
+      .grid-header,
+      .grid-row {
+        grid-template-columns: repeat(5, 1.5fr);
+      }
 
-  .hide-category {
-    display: none;
+      .hide-category {
+        display: none;
+      }
+    }
   }
 }
 
-@media screen and (max-width: 576px) {
-  .grid-header,
-  .grid-row {
-    grid-template-columns: repeat(3, 1fr);
-  }
+@media (max-width: 576px) {
+  .ScheduledAppointments {
+    .appointments-container {
+      .grid-header,
+      .grid-row {
+        grid-template-columns: repeat(3, 2fr);
+      }
 
-  .hideTime {
-    display: none;
-  }
-
-  .hideDate {
-    display: none;
+      .hideTime,
+      .hideDate {
+        display: none;
+      }
+    }
   }
 }
