@@ -16,7 +16,8 @@ import ScrollToTop from './components/shared/primitive/ScrollToTop/ScrollToTop';
 import DoctorsCard from './components/DoctorsCard/DoctorsCard.jsx'
 import DoctorsSearchPage from './pages/DoctorsSearchPage/DoctorsSearchPage.jsx';
 import DashboardLayout from './layouts/DashboardLayout.jsx';
-import ScheduledAppointments from './components/dashboard/patient/ScheuledAppointments/ScheduledAppointments.jsx';
+import ScheduledAppointments from './components/dashboard/patient/ScheduledAppointments/ScheduledAppointments.jsx';
+import SupportSystem from './components/dashboard/patient/SupportSystem/SupportSystem.jsx';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
 
           <Route path='/dashboard' element={<DashboardLayout />}>
             <Route path='/dashboard/scheduled-appointments' element={<ScheduledAppointments />} />
+            <Route path='/dashboard/support-system' element={<SupportSystem />} />
           </Route>
         </Routes>
       </Router>
