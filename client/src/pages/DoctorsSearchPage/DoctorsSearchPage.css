@@ -121,7 +121,6 @@
         }
         }
     }
-
     .ContentSection{
         display: flex;
         flex-wrap: wrap;
@@ -138,11 +137,6 @@
         }
     }
 }
-
-@media screen and (max-width:1168px){
-    
-}
-
 @media screen and (max-width:992px){
     .DoctorsSearchPage{
         .Hero-Section{
@@ -217,8 +211,4 @@
             }
         }
     }
-}
-
-@media screen and (max-width:400px){
-
 }
