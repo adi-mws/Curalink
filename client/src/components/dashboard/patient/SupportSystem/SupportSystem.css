@@ -1,0 +1,35 @@
+.SupportSystem{
+  width: 100%;
+
+  .SupportSystemContent {
+    padding: 20px;
+    font-family: var(--secondary-font);
+
+    .grid-headers,
+    .grid-rows {
+      display: grid;
+      grid-template-columns: repeat(3, 2fr);
+      align-items: center;
+      padding: 12px 20px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .grid-headers {
+      font-weight: 700;
+    }
+
+
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .grid-headers,
+  .grid-rows {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hideStatus {
+    display: none;
+  }
+}

@@ -18,6 +18,7 @@ import DoctorsSearchPage from './pages/DoctorsSearchPage/DoctorsSearchPage.jsx';
 import DashboardLayout from './layouts/DashboardLayout.jsx';
 import ScheduledAppointments from './components/dashboard/patient/ScheduledAppointments/ScheduledAppointments.jsx';
 import SupportSystem from './components/dashboard/patient/SupportSystem/SupportSystem.jsx';
+import PrescriptionSystem from './components/dashboard/patient/PrescriptionSystem/PrescriptionSystem.jsx';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path='/dashboard' element={<DashboardLayout />}>
             <Route path='/dashboard/scheduled-appointments' element={<ScheduledAppointments />} />
             <Route path='/dashboard/support-system' element={<SupportSystem />} />
+            <Route path='/dashboard/prescription-system' element={<PrescriptionSystem />} />
           </Route>
         </Routes>
       </Router>
