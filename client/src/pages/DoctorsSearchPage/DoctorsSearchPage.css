@@ -126,9 +126,16 @@
         display: flex;
         flex-wrap: wrap;
         gap: 1em;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         margin-top: 3em;
         margin-bottom: 3em;
+        .NoResults{
+            font-family: var(--secondary-font);
+            font-weight: 500;
+            font-size: 1.5em;
+            width: 100%;
+            text-align: center;
+        }
     }
 }
 
