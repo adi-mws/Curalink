@@ -8,7 +8,6 @@
         align-items: center;
         gap: 2em;
 
-
         .Heading {
             width: 80%;
             font-size: 2.5em;
@@ -43,6 +42,54 @@
         text-align: center;
         width: 100%;
     }
+    .News-Redirect-Section{
+        display: flex;
+        height: fit-content;
+        padding-bottom: 4em;
+        .Text{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding: 2em;
+            .Heading{
+                font-weight: bold;
+                font-family: var(--primary-font);
+                font-size: 2.5em;
+                background: linear-gradient(to right,#965497, #EF5F5F);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+            .Redirect-Button{
+                padding: 0.5em 4em;
+                background: linear-gradient(to right,#965497,#EF5F5F);
+                display: flex;
+                gap: 1em;
+                align-items: center;
+                border-radius: 10px;
+                font-size: 1.1em;
+                font-weight: bold;
+                color: white;
+            }
+        }
+        .Redirect-Image{
+            width: 50%;
+            background-image: url(../../assets/imgs/Pink-Rectangle.png);
+            background-repeat: no-repeat;
+            background-size: 80% 40%;
+            background-position: bottom;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            img{
+                width: 70%;
+                height: auto;
+            }
+        }
+        
+    }
 }
 
 
@@ -62,21 +109,42 @@
                 width: 70%;
             }
         }
+        .News-Redirect-Section{
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .Text{
+                width: 80%;
+                text-align: center;
+                align-items: center;
+                gap: 1.5em;
+            }
+            .Redirect-Image{
+                width: 60%;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 768px) {
     .FAQsPage {
-        .Hero-Section {
-            .Heading {
+        .News-Redirect-Section{
+            .Text{
+                width: 100%;
+                .Heading{
+                    font-size: 1.5em;
+                }
+                .Redirect-Button{
+                    text-wrap: nowrap;
+                    width: 100%;
+                    justify-content: center;
+                    font-size: 1em;
+                }
             }
-
-            .Description {
+            .Redirect-Image{
+                width: 90%;
             }
-
-            .Search-Box {
-            }
-        }
+    }
     }
 }
 
@@ -99,21 +167,6 @@
             }
         }
 
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .FAQsPage {
-        .Hero-Section {
-            .Heading {
-            }
-
-            .Description {
-            }
-
-            .Search-Box {
-            }
-        }
     }
 }
 

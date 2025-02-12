@@ -1,4 +1,6 @@
 import {React, useState, useEffect} from 'react'
+import CoffeeMan from '../../assets/imgs/Man-Sofa-Coffee.png'
+import ButtonIcon from '../../assets/icons/right-arrow-rectangle.png'
 import './FAQsPage.css'
 import FAQs from '../../components/FAQs/FAQs.jsx'
 
@@ -76,6 +78,17 @@ export default function FAQsPage({ faqData = defaultFaqData }) {
             ) : (
                 <div className="no-results">No matching questions found</div>
             )}
+        </div>
+
+        <div className="News-Redirect-Section">
+          <div className="Text">
+          <p className="Heading">Stay Informed with the Latest Health News</p>
+          <p className="Body">We bring you relevant, up-to-date health news from trusted sources to keep you informed about medical advancements, wellness tips, and healthcare trends. Stay ahead with expert insights, research updates, and essential health alerts—all in one place.</p>
+          <button className="Redirect-Button">Read Latest News<img src={ButtonIcon} alt="" /></button>
+          </div>
+          <div className="Redirect-Image">
+            <img src={CoffeeMan} alt="" />
+          </div>
         </div>
     </div>
   )
