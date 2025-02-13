@@ -1,351 +1,285 @@
 .SupportPage{
-    font-family: var(--secondary-font);
-    overflow-x: hidden;
     width: 100%;
-        .Hero-Section{
-            height: 100vh;
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-template-rows: auto auto;
-            grid-template-areas: 
-            "H I"
-            "C C"
-            ;
-
-            .MainImage{
-                grid-area: I;
-                justify-self: center;
-                align-self: center;
-                object-fit: cover;
-                overflow: hidden;
+    overflow-x: hidden;
+    font-family: var(--secondary-font);
+    .Hero-Section{
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "A B"
+        "C C";
+        .mainImage{
+            grid-area: B;
+            width: 75%;
+            height: 100%;
+        }
+        .Hero-Content{
+            grid-area: A;
+            width: 80%;
+            justify-self: center;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            .Heading{
+                font-size: 2.5em;
+                font-weight: bold;
+                font-family: var(--primary-font);
+            }
+            .Description{
+                width: 80%;
+                line-height: 1.5;
+            }
+            .Buttons{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
             }
 
-            .SupportHeading{
-                grid-area: H;
+        }
+        .Checklist-Section{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            grid-area: C;
+            justify-content: space-evenly;
+            .Checklist{
+                padding:1em 2em;
+                border-radius: 10px;
                 display: flex;
-                justify-self: center;
-                flex-direction: column;
-                align-self: center;
-                gap: 3em;
-                *{
-                    margin-left: 1em;
-                }
-                .HeadingMain{
-                    font-size: 2.5em;
-                    font-weight: bold;
-                    max-width: 618px;
-                    margin-left: 0.8em;
-                    font-family: (var(--primary-font));
-                }
-                .HeadingBody{
-                    margin-left: 2em;
-                    max-width:514px;
-                }
-                .HeadingButtons{
+                height: fit-content;
+                align-items: center;
+                gap: 1em;
+                font-size: 1.1em;
+                font-weight: bold;
+                color: var(--primary-color);
+                .CheckImage{
+                    height: 2.8em;
+                    width: 2.8em;
+                    border-radius: 50%;
+                    background-color: white;
                     display: flex;
-                    max-width: 550px;
-                    justify-content: space-evenly;
-                    margin: 0;
-                    gap: 0.5em;
-                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        height: 2em;
+                    }
+                }
+            }
+        }
+    }
+    
+    .Support-Section{
+        background: linear-gradient(to bottom, white, #E2CBDE, #E1C9DD);
+        min-height: 565px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 1em;
+        .Heading{
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .Support-Methods{
+            display: flex;
+            gap: 1em;
+            padding: 2em 1em;
+            .Method{
+                width: 33%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 2em;
+                gap: 1em;
+                background-color: white;
+                border-radius: 10px;
+                .Head{
+                    font-size: 1.2em;
+                    color: var(--primary-color);
+                    font-weight: 500;
+                    text-align: center;
+                }
+                .Body{
+                    text-align: center;
+                    line-height: 1.5;
+                    width: 80%;
+                }
+            }
+        }
+        .Support-Button{
+            color: white;
+            font-size: 1.1em;
+            font-weight: 500;
+            align-items: center;
+            display: flex;
+            gap: 0.8em;
+            padding: 1em 3em;
+            border-radius: 10px;
+            background: linear-gradient(to right, #965497, #EF5F5F);
+        }
+    }
+    .Status-Section{
+        height: fit-content;
+        padding: 4em;
+        .Heading{
+            font-size: 2em;
+            font-weight: bold;
+            font-family: var(--primary-font);
+            width: 100%;
+            margin-bottom: 2em;
+            text-align: center;
+        }
+        .Status-Container{
+            display: flex;
+            font-size: 1.1em;
+            flex-direction: column;
+            gap: 1.5em;
+            .Status-headings{
+                display: grid;
+                grid-template-columns: 1fr 0.5fr 1fr;
+                gap: 2em;
+                font-weight: bold;
+                justify-items: center;
+                align-items: center;
+            }
+            .Ticket{
+                display: grid;
+                gap: 2em;
+                grid-template-columns: 1fr 0.5fr 1fr;
+                align-items: center;
+                justify-items: center;
+                .Ticket-Issue{
+                    width: 80%;
+                    
+                }
+                .Ticket-Status{
+                    text-wrap: nowrap;
                 }
                 
             }
-
-            .ChecklistSection{
-                grid-area: C;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-                gap: 2em;
-                p{
-                    color: var(--primary-color);
-                    font-weight: bold;
-                    padding-left: 0.8em;
-                    font-size: 1em;
-                }
-                .Checklist{
-                    height: 5em;
-                    width: 25em;
-                    border-radius: 10px;
-                    align-items: center;
-                    display: flex;
-                    text-wrap: nowrap;
-                    justify-content: center;
-                    gap: 2em !important;
-                    margin-bottom: 1em;
-                    div{
-                        background-color: white;
-                        height:3.4em;
-                        width: 3.4em;
-                        border-radius: 1.7em;
-                        margin-right: 0.4em;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        justify-self: flex-end !important;
-                        img{
-                            width: 2em;
-                        }
-                    }
-                }
-                .Checklist-1{
-                    background-color: #FFD9D9;
-        
-                }
-                .Checklist-2{
-                    background-color: #F8FBA5;
-                }
-                .Checklist-3{
-                    background-color: #F3D9FF;
-                }
-            }
         }
-
-        .SupportTicketDetails{
-            display: flex;
-            height: fit-content;
-            flex-direction: column;
-            gap: 3em;
-            padding: 2em;
-            justify-content: space-evenly;
-            background: linear-gradient(to bottom,white,#E1C9DD);
-
-            .TicketDetailsHeading{
-                font-size: 2em;
-                align-self: center;
-                font-weight: bold;
-                font-family: var(--primary-font);
-            }
-            .TicketDetailsDiscription{
-                display: flex;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-                gap: 2em;
-                padding: 1em 1em;
-                .discription{
-                    display: flex;
-                    background-color: white;
-                    padding: 3em 4em;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1em;
-                    border-radius: 10px;
-                    .Body{
-                        width: 20em;
-                        text-align: center;
-                    }
-                    .Head{
-                        max-width: 314px;
-                        color: var(--primary-color);
-                        font-size: 1.2em;
-                        font-weight: bold;
-                        text-align: center;
-                    }
-                }
-            }
-            .SupportTicketButton{
-                background: linear-gradient(to right,#965497,#EF5F5F);
-                background-color: black;
-                padding: 0.8em 4em;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                border-radius: 10px;
-                align-self: center;
-                font-weight: bold;
-                font-size: 1.1em;
-                gap: 0.5em;
-            }
-        }
-        .SupportTicketStatus{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            height: 80vh;
-            .TicketStatusHeading{
-                font-size: 2em;
-                font-weight: bold;
-                align-self: center;
-                margin-top: 2em;
-                font-family: var(--primary-font);
-            }
-            .TicketStatusBody{
-                width: 70%;
-                align-self: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                height: 80%;
-                gap: 1em;
-            }
-            .StatusFields{
-                display: grid;
-                align-self: center;
-                width: 100%;
-                grid-template-columns:250fr 65fr 110fr;
-                p{
-                    font-weight: bold;
-                    justify-self: center;
-                    margin-right: 1em;
-                }
-            }
-            .IssueDetails{
-                display: grid;
-                align-self: center;
-                width: 100%;
-                grid-template-columns:250fr 65fr 110fr;
-                justify-content: center;
-                p{
-                    max-height: 10px;
-                }
-                *{
-                    justify-self: center;
-                    margin-right: 1em;
-                }
-                .TicketStatus{
-                color: #A4A434;
-                }
-            }
-        }
-        .FAQs-Section{
-            margin-bottom: 5em;
-        }
+    }
 }
+
 @media screen and (max-width:992px){
     .SupportPage{
-        grid-template-areas: 
-        "Hero"
-        "Discription"
-        "Status"
-        "FAQs";
-        grid-gap: 1em;
         .Hero-Section{
-            justify-self: center;
-            grid-area: Hero;
+            grid-template-columns: auto auto auto;
             height: fit-content;
-            grid-template-rows: auto auto auto;
             grid-template-areas: 
             "A"
             "B"
-            "C"
-            ;
-            .ChecklistSection{
-                gap: 1em;
+            "C";
+            .mainImage{
+                justify-self: center;
             }
-            .SupportHeading{
-                grid-area: A;
-                p{
+            .Hero-Content{
+                .Heading{
                     text-align: center;
-                    align-self: center;
+                    width: 100%;
                 }
-                .HeadingButtons{
-                    align-self: center;
+                .Description{
+                    text-align: center;
+                    width: 100%;
+                }
+                .Buttons{
+                    justify-content: center;
                 }
             }
-            .MainImage{
-                grid-area: B;
-            }
-            .ChecklistSection{
-                grid-area: C;
+            .Checklist-Section{
+                margin-top: 1.5em;
+                width: 100%;
+                flex-direction: column;
+                padding: 1em;
+                .Checklist{
+                    width: 100%;
+                    justify-content: center;
+                }
             }
         }
-        
-    .SupportTicketDetails{
-        grid-area: Discription;
-        height: fit-content;
-        padding: 3em 0em;
-        gap: 3em;
-        .TicketDetailsDiscription{
-            .discription{
-                width: 40em;
-                .Body{
-                   width: auto;
-                   max-width: 500px;
+        .Support-Section{
+            padding-top: 2.5em;
+            .Support-Methods{
+                flex-direction: column;
+                align-items: center;
+                .Method{
+                    width: 70%;
+                    padding: 2.5em;
                 }
             }
-            .SupportTicketButton{
-                margin-bottom: 2em;
-            }
         }
-    }
-    .SupportTicketStatus{
-        grid-area: Status;
-        justify-self: center;
-
-    }
-    .FAQs-Section{
-        grid-area: FAQs;
-        justify-self: center;
-    }
     }
 }
+
+@media screen and (max-width:768px){
+    .SupportPage{
+        .Support-Section{
+            .Support-Methods{
+                .Method{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width:576px){
     .SupportPage{
-        *{
-            margin: 0;
-        }
-        display: grid;
-        grid-template-rows: auto auto auto auto;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "A"
-        "B"
-        "C"
-        "D";
         .Hero-Section{
-            grid-area: A;
-            width: 100%;
-            .MainImage{
-                grid-area: A;
-            }
-            .SupportHeading{
-                grid-area: B;
-                margin-bottom: 2em;
-                p{
-                    margin-left: 0px;
+            grid-template-areas: 
+            "B"
+            "A"
+            "C";
+            .Hero-Content{
+                .Heading{
+                    font-size: 1.7em;
                 }
-            }
-        }
-        .SupportTicketStatus{
-            width: 100vw;
-            justify-items: center;
-            grid-area: C;
-            .StatusFields{
-                .StatusField-Status{
-                    display: none;
-                }
-            }
-           .TicketStatusBody{
-
-            .IssueDetails{
-                p{ 
-                    min-width: 187px; 
-                }
-               .TicketStatus{
-                    display: none;
-               } 
-            }
-           } 
-        }
-        .SupportTicketDetails{
-            grid-area: B;
-            .TicketDetailsDiscription{
-                .discription{
-                    width: 90%;
-                    .Body{
-                       width: auto;
-                       max-width: 500px;
-                       min-width: 393px;
+                .Buttons{
+                    .Button-Container{
+                        width: 100%;
                     }
                 }
             }
+            .Checklist-Section{
+                .Checklist{
+                    font-size: 0.8em;
+                }
+            }
         }
-        .FAQs-Section{
-            grid-area: D;
+        .Support-Section{
+            .Support-Methods{
+                .Method{
+                    width: 90%;
+                }
+            }
+        }
+        .Status-Section{
+            padding: 2em 1em;
+            .Status-headings{
+                .status-Head{
+                    display: none;
+                }
+            }
+            .Status-Container{
+                .Status-headings{
+                    grid-template-columns: 1.2fr 0.8fr;
+                    gap: 0.5em;
+                }
+                .Ticket{
+                    gap: 0.5em;
+                    grid-template-columns: 1.2fr 0.8fr;
+                    .Ticket-Issue{
+                        width: 100%;
+                    }
+                    .Ticket-Status{
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }
