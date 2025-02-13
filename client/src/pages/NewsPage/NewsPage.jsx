@@ -8,12 +8,13 @@ import facebook from '../../assets/icons/facebook.png'
 import instagram from '../../assets/icons/instagram.png'
 import linkedin from '../../assets/icons/linkedin.png'
 import CompleteYourProfile from '../../components/shared/adcards/CompleteYourProfile/CompleteYourProfile.jsx'
+import NewsCard from '../../components/NewsCard/NewsCard.jsx'
 
 export default function NewsPage({NewsArticles= NewsData, Heading="Revolutionizing Healthcare: The Role of AI in Early Disease Detection"}) {
   return (
     <div className="NewsPage">
         <div className="MainSection">
-            <img className="MainImage" src={MainImage} alt="" />
+            <div className="MainImage"><img className="MainImage" src={MainImage} alt="" /></div>
         <div className="NewsArticleSection">
             <p className="ArticleSectionHeading" style={{margin: "1em 0 2em 0.2em", fontWeight: "bold", fontSize: "2em", maxWidth:"830px"}}>{Heading}</p>
             {NewsArticles.map((news) => (
@@ -25,15 +26,10 @@ export default function NewsPage({NewsArticles= NewsData, Heading="Revolutionizi
         </div>
         </div>
 
-            <div className="NewsPage-NewsCardSection">
-                <NewsSection/>
-            </div>
-
             <div className="FAQsSection">
-                <div style={{width:"380px",justifySelf:"center"}}>
-                    <div style={{gridArea:"A"}}>
+              <div className="Filler-Box">
+                <div>
                 <CompleteYourProfile/>
-                </div>
                 </div>
                 <div className="social-handles">
                           <div className="text">
@@ -47,9 +43,16 @@ export default function NewsPage({NewsArticles= NewsData, Heading="Revolutionizi
                             <a href=""><img src={linkedin} alt="" /></a>
                           </div>
                         </div>
+                        </div>
                         <div  style={{gridArea:"C"}}>
                             <FAQs></FAQs>
                         </div>
+            </div>
+          
+            <div className="News-Cards">
+              {NewsArticles.map((news) => (
+                <NewsCard key={news.id} news={news}/>
+              ))}
             </div>
     </div>
   )
