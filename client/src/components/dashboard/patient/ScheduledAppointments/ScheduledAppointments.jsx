@@ -4,8 +4,8 @@ import DashboardHeader from "../../../layout/DashboardHeader/DashboardHeader";
 import VideoIcon from "../../../../assets/icons/videoTiny.png";
 import AudioIcon from "../../../../assets/icons/callIcon.png";
 import TertiaryButton from "../../../shared/buttons/TertiaryButton/TertiaryButton";
-
-export default function ScheduledAppointments() {
+import { useState } from "react";
+export default function ScheduledAppointments({appointmentsState='all'}) {
   const appointments = [
     {
       doctorName: "Dr. Harsh Mehta",
@@ -134,9 +134,25 @@ export default function ScheduledAppointments() {
     },
   ];
 
+  const items = [
+    {
+      text: "All Appointments",
+      link: "/dashboard/appointments",
+    },
+    {
+      text: "Schdeuled Appointments",
+      link: "/dashboard/appointments/scheduled",
+    },
+    {
+      text: "Past Appointments",
+      link: "/dashboard/appointments/past",
+    },
+    
+  ];  
+
   return (
     <div className="ScheduledAppointments">
-      <DashboardHeader title={"Scheduled Appointments"} />
+      <DashboardHeader title={appointmentsState === "scheduled" ? "Scheduled Appointments" : appointmentsState === "past" ? "Past Appointments" : "All Appointments"} items={items} />
 
       <div className="appointments-container">
         <div className="grid-header">
@@ -162,7 +178,7 @@ export default function ScheduledAppointments() {
               )}
             </span>
             <div className="DetailsButton">
-              <TertiaryButton text="View Details" width="100%" padding="1em 0.5em" textWrap="nowrap"/>
+              <TertiaryButton fontSize=".9em" text="View Details" width="100%" padding=".8em 0.5em" textWrap="nowrap"/>
             </div>
           </div>
 

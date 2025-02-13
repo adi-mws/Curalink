@@ -1,11 +1,13 @@
+
 .DashboardHeader {
+    background: white;
     display: flex; 
     align-items: center;
     justify-content: space-between;
     height: 60px;
     padding: 1em;
-    width: 100%;
-    
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+   
 
 
     .dash-header-title {
@@ -13,4 +15,64 @@
         font-weight: bold; 
         font-size: 1.2em;
     }
+
+    .dash-header-title {
+        cursor: pointer
+    }
+
+    .dash-header-title-dropdown-icon {
+        width: 15px;
+        height: 15px;
+        margin-left: .5em;
+    }
+
+    .dash-header-title-list {
+        display: none;
+        align-items: center;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        width: 20em;
+        position: absolute;
+        border-radius: 10px;
+        top: 45px;
+        left: -10px;
+        background: white;
+    }
+    .dash-header-title-wrapper {
+        height: fit-content;
+        display: flex;
+        position: relative;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .dash-header-title-list-item-wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .dash-header-title-list-item {
+        font-family: var(--secondary-font);
+        font-weight: normal; 
+        text-decoration: none;
+        font-size: 1em;
+        padding: .8em 1em;
+        transition: 0.3s;
+        width: 100%;
+        color: var(--gray-text);
+        text-align: center;
+    }   
+
+    .dash-header-title-list-item:hover {
+        background: var(--primary-color);
+        color: white;
+
+    }
+    
+
 }

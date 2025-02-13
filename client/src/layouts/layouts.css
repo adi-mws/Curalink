@@ -1,6 +1,7 @@
 .DashboardLayout {
     width: 100%; 
     display: grid; 
+    position: relative;
     grid-template: 100% / 22% 78%;
 }
 

@@ -50,7 +50,9 @@ function App() {
 
 
           <Route path='/dashboard' element={<DashboardLayout />}>
-            <Route path='/dashboard/scheduled-appointments' element={<ScheduledAppointments />} />
+            <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
+            <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
+            <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
             <Route path='/dashboard/support-system' element={<SupportSystem />} />
             <Route path='/dashboard/prescription-system' element={<PrescriptionSystem />} />
           </Route>
