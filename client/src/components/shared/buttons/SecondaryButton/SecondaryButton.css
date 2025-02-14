@@ -5,6 +5,15 @@
     color: var(--primary-color);
     font-weight: 500;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+    img{
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .SecondaryButton:hover {
