@@ -20,6 +20,7 @@ import ScheduledAppointments from './components/dashboard/patient/ScheduledAppoi
 import SupportSystem from './components/dashboard/patient/SupportSystem/SupportSystem.jsx';
 import PrescriptionSystem from './components/dashboard/patient/PrescriptionSystem/PrescriptionSystem.jsx';
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
+import SupportTicketForm from './components/dashboard/patient/SupportTicket/SupportTicketForm.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
 
 function App() {
@@ -52,13 +53,16 @@ function App() {
 
 
           <Route path='/dashboard' element={<DashboardLayout />}>
-            <Route path='/dashboard/scheduled-appointments' element={<ScheduledAppointments />} />
+            <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
+            <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
+            <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
             <Route path='/dashboard/support-system' element={<SupportSystem />} />
             <Route path='/dashboard/prescription-system' element={<PrescriptionSystem />} />
           </Route>
         </Routes>
       </Router>
 
+      <SupportTicketForm />
 
     </>
   )

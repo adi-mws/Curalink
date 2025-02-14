@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './SupportPage.css'
 import MainImage from '../../assets/imgs/SupportPageMainImage.png'
 import { Link } from 'react-router-dom'
@@ -9,8 +9,12 @@ import tickCircleYellow from '../../assets/icons/tick-circle-yellow.png'
 import tickCircleRed from '../../assets/icons/tick-circle-red.png'
 import tickCirclePurple from '../../assets/icons/tick-circle-purple.png'
 import ButtonIcon from '../../assets/icons/right-arrow-rectangle.png'
+import SupportTicketForm from '../../components/dashboard/patient/SupportTicket/SupportTicketForm'
 
 export default function SupportPage() {
+
+    const [showTicketForm, setShowTicketForm] = useState(false);
+
     const supportTickets = [
         { issue: "Unable to log in to the portal", status: "Open" },
         { issue: "Payment not processed after transaction", status: "In Progress" },
@@ -26,6 +30,7 @@ export default function SupportPage() {
     
   return (
     <div className='SupportPage'>
+        <SupportTicketForm  showTicketForm={showTicketForm} setShowTicketForm={setShowTicketForm} /> 
         <div className="Hero-Section">
             <div className="Hero-Content">
                 <p className="Heading">Dedicated Support for Your Healthcare Needs</p>
@@ -63,7 +68,7 @@ export default function SupportPage() {
                     <p className="Body">Track your ticket’s progress and receive updates directly to your registered email or dashboard.</p>
                 </div>
             </div>
-            <button className="Support-Button">Open Support Ticket Now <img src={ButtonIcon} alt="" /></button>
+            <button className="Support-Button" onClick={() => setShowTicketForm(true)}>Open Support Ticket Now <img src={ButtonIcon} alt="" /></button>
         </div>
 
         <div className="Status-Section">
