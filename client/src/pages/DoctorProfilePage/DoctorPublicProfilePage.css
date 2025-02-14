@@ -1,0 +1,48 @@
+.DoctorPublicProfilePage{
+    font-family: var(--secondary-font);
+    overflow-x: hidden;
+    .Doctor-Profile{
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr 1.5fr;
+        position: relative;
+        .Doctor-Details{
+            .Licence-Id{
+                position: relative;
+            }
+            .Doctor-Rating{
+                display: flex;
+                align-items: center;
+            }
+            .Buttons{
+                .Book-Appointment{
+                    background-color: #C63A97;
+                }
+                .Prescription-Renewal{
+                    background-color: #14C3A0;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width:1168px){
+
+}
+
+@media screen and (max-width:992px){
+
+}
+
+@media screen and (max-width:768px){
+
+}
+
+@media screen and (max-width:576px){
+
+}
+
+@media screen and (max-width:400px){
+
+}
