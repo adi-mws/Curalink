@@ -20,6 +20,8 @@ import ScheduledAppointments from './components/dashboard/patient/ScheduledAppoi
 import SupportSystem from './components/dashboard/patient/SupportSystem/SupportSystem.jsx';
 import PrescriptionSystem from './components/dashboard/patient/PrescriptionSystem/PrescriptionSystem.jsx';
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
+import SupportTicketForm from './components/dashboard/patient/SupportTicket/SupportTicketForm.jsx';
+import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
 
 function App() {
   return (
@@ -45,6 +47,7 @@ function App() {
             <Route path='/search-doctors' element={<DoctorsSearchPage />} />
             <Route path='/test' element={<DoctorsCard filter={true} />} />
             <Route path='/search-faqs' element={<FAQsPage />} />
+            <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
           </Route>
 
 
