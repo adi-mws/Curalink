@@ -4,7 +4,7 @@ import RatingDisplay from '../../components/Rating/RatingDisplay.jsx'
 import DummyImage from '../../assets/imgs/Dummy-Doctor-Profile-Picture.png'
 import MenuIcon from '../../assets/icons/Menu-Book.png'
 import RefreshIcon from '../../assets/icons/refresh-2.png'
-import CopyIcon from '../../assets/icons/copy-icon.png'
+import CopyIcon from '../../assets/icons/copy.png'
 
 export default function DoctorPublicProfilePage() {
     const doctor = {
@@ -24,6 +24,7 @@ export default function DoctorPublicProfilePage() {
                 <div className="Profile-Picture">
                     <img src={doctor.profilePicture} alt="" />
                 </div>
+            <p className="Licence-Id">Licence No: {doctor.licenceNo} <button className='Copy-Button'><img src={CopyIcon} alt="" /></button></p>
             </div>
             <div className="Doctor-Details">
                 <p className="Doctor-Name">{doctor.name}</p>
@@ -32,23 +33,24 @@ export default function DoctorPublicProfilePage() {
                 <RatingDisplay rating={doctor.rating} /></div>
                 <div className="Consultation-Reviews">
                     <div className="Consultation">
-                        <p>{doctor.consultations} Consultations</p>
+                        <p className='Consultation-Number'>{doctor.consultations} <p className='Consultation-Text'>Consultations</p></p>
                     </div>
                     <div className="Reviews">
-                        <p>{doctor.totalReviews} Reviews</p>
+                        <p className='Reviews-Number'>{doctor.totalReviews} <p className='Reviews-Text'>Reviews</p></p>
                     </div>
                 </div>   
             </div>
 
             <div className="Buttons">
                 <button className="Book-Appointment"><img src={MenuIcon} alt="" /></button>
+                <p>Book Appointment</p>
                 <button className="Prescription-Renewal"><img src={RefreshIcon} alt="" /></button>
+                <p>Priscription Renewal</p>
             </div>
             <div className="About-Doctor">
                     <p className='About-Doctor-Title'>About Doctor</p>
                     <p className='About-Doctor-Description'>{doctor.about}</p>
             </div>
-            <p className="Licence-Id">Licence No: {doctor.licenceNo} <img src={CopyIcon} alt="" /></p>
         </div>
     </div>
   )

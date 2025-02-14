@@ -3,23 +3,119 @@
     overflow-x: hidden;
     .Doctor-Profile{
         display: grid;
-        grid-template-columns: 1fr 1fr 0.5fr 1.5fr;
+        justify-items: center;
+        padding-left: 2em;
+        grid-template-columns: 0.6fr 0.7fr 0.35fr 1.5fr;
         position: relative;
-        .Doctor-Details{
-            .Licence-Id{
-                position: relative;
+        .Profile-Picture-Section{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            width: 90%;
+            .Profile-Picture{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
             }
+            .Licence-Id{
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+                color: var(--gray-text);
+                text-wrap: nowrap;
+                .Copy-Button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .Licence-Id{
+            position: relative;
+        }
+        .Doctor-Details{
+            display: flex;
+            width: 100%;
+            padding-left: 2em;
+            padding-right: 1em;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
             .Doctor-Rating{
                 display: flex;
                 align-items: center;
+                margin-left: 1em;
+                gap: 1em;
             }
-            .Buttons{
-                .Book-Appointment{
-                    background-color: #C63A97;
+            .Doctor-Name{
+                font-size: 1.5em;
+                margin-left: 1rem;
+            }
+            .Doctor-Category{
+                color: var(--gray-text);
+                margin-left: 1em;
+            }
+            .Consultation-Reviews{
+                display: flex;
+                width: 18.5em;
+                background-color: #CDFFCF;
+                height: 73px;
+                border-radius: 20px;
+                align-items: center;
+                padding: 1em;
+                align-items: center;
+                justify-content: space-evenly;
+                gap: 1.5em;
+                .Consultation-Number, .Reviews-Number{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: 1.3em;
+                    font-weight: 400;
+                    p{
+                        font-size: 0.8em;
+                        font-weight: 300;
+                    }
                 }
-                .Prescription-Renewal{
-                    background-color: #14C3A0;
-                }
+                
+            }
+            
+            
+        }
+        .About-Doctor{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            padding: 1em;
+            .About-Doctor-Title{
+                font-size: 1.5em;
+            }
+            .About-Doctor-Description{
+                min-width: 255px;
+            }
+        }
+        .Buttons{
+            font-size: 0.8em;
+            gap: 1em;
+            display: flex;
+            text-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .Book-Appointment{
+                background-color: #C63A97;
+            }
+            .Prescription-Renewal{
+                background-color: #14C3A0;
+            }
+            .Book-Appointment, .Prescription-Renewal{
+                width: 5em;
+                height: 5em;
+                border-radius: 50%;
+            }
+            p{
+                margin-bottom: 1em;
             }
         }
     }
