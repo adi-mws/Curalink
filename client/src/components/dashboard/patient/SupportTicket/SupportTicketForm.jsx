@@ -6,7 +6,6 @@ import PlusIcon from "../../../../assets/icons/PlusIcon.png";
 import PrimaryButton from "../../../shared/buttons/PrimaryButton/PrimaryButton.jsx";
 
 const SupportTicketForm = ({showTicketForm, setShowTicketForm}) => {
-
   return (
     <div className="SupportTicketForm" style={{display: `${showTicketForm ? 'block' : 'none'}`}}>
       <div className="form-heading">
