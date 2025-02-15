@@ -1,8 +1,5 @@
 .AboutPage {
-
-
-
-    .Hero{
+    .Hero-Section{
         
         display: flex;
         gap: 1em;
@@ -67,7 +64,7 @@
             }
         }
     }
-    .Services {
+    .About-Services {
         h1 {
             text-align: center;
             color: black;
@@ -101,9 +98,9 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                position: relative;
                 border-radius: 0.5em;
                 background-color:#8623741A;
-                position: relative;
                 top: 1.8em;
                 right: 15em;
                 font-family: var(--secondary-font);
@@ -163,7 +160,7 @@
                 border-bottom-left-radius: 0.25em;
             }
         }
-        .Body {
+        .Body-Section {
             display: flex;
             flex-direction: column;
             padding: 4em;
@@ -191,11 +188,54 @@
     .Contact-Cards {
         display: flex;
         justify-content: space-evenly;
+        padding-bottom: 3em;
+        text-align: center;
+        h1 {
+            font-weight: 400;
+            font-family: var(--primary-font);
+        }
+        p {
+            font-family: var(--secondary-font);
+            font-weight: 200;
+        }
         div {
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
             align-items: center;
+            width: 30em;
+            height: 30em;
+            gap: 2em;
+            box-shadow: 0 0px 2.5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 0.7em;
+            padding: 2em;
+            .Heading-2 {
+                color: black;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1160px){
+    .AboutPage {
+        .Hero-Section
+        {
+            text-align: center;
+            display: flex;
+            .Hero-Right
+            {
+                display: none;
+            }
+            .Cards
+            {
+                text-align: left;
+                flex-direction: column;
+            }
+        }
+        .About-Services {
+            
+            .Read-More {
+                position: default;
+            }
         }
     }
 }

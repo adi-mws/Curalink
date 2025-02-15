@@ -5,12 +5,14 @@ import Doctor from '../../assets/imgs/About-Doctor.png';
 import right from '../../assets/icons/arrow-down.png';
 import LappyWoman from '../../assets/imgs/LappyWoman.png';
 import LappyMan from '../../assets/imgs/LappyMan.png';
+import SecondaryButton from '../../components/shared/buttons/SecondaryButton/SecondaryButton.jsx';
+import TertiaryButton from '../../components/shared/buttons/TertiaryButton/TertiaryButton.jsx';
 
 export default function AboutPage({ }) {
     return (
         <>
         <div className="AboutPage">
-            <div className="Hero">
+            <div className="Hero-Section">
                 <div className="Hero-Left">
                     <h1>We Make Healthcare Simple, Accessible, and Personalized for You</h1>
                     <br />
@@ -33,7 +35,7 @@ export default function AboutPage({ }) {
                 </div>
             </div>
             
-            <div className="Services">
+            <div className="About-Services">
                 <h1>What We Do ?</h1>
                 <div className="First">
                     <div className="Written-Block">
@@ -44,7 +46,9 @@ export default function AboutPage({ }) {
                         <img src={right} alt="" className="Right-Arrow" />
                         <p>Read More</p>
                     </div>
-                    <img src={Doctor} alt="" />
+                    <div className="Doctor-Image">
+                        <img src={Doctor} alt="" />
+                    </div>
                 </div>
                 <div className="Second">
                     <div>
@@ -81,7 +85,9 @@ export default function AboutPage({ }) {
                         <img src={right} alt="" className="Right-Arrow" />
                         <p>Read More</p>
                     </div>
-                    <img src={LappyWoman} alt="" />
+                    <div>
+                        <img src={LappyWoman} alt="" />
+                    </div>
                 </div>
                 <div className="Second">
                     <div>
@@ -128,7 +134,7 @@ export default function AboutPage({ }) {
                     <h1>How We're Different?</h1>
                     <div className="P-Block"></div>
                 </div>
-                <div className="Body">
+                <div className="Body-Section">
                     <div>
                         <img src={LappyMan} alt="" />
                         <div>
@@ -163,14 +169,14 @@ export default function AboutPage({ }) {
                 <div className="Discover-Services">
                     <h1>Discover Our Services</h1>
                     <p>We’re more than just a company – we’re your partner in success. Explore our diverse range of services designed to transform your goals into reality. From innovative solutions to expert guidance, we’re here to support you every step of the way</p>
-                    <button>Explore services</button>
-                    <h1>Are you a doctor?</h1>
-                    <button>Join Us</button>
+                    <SecondaryButton text={"Explore services"} fontSize={"1em"} />
+                    <h1 className="Heading-2">Are you a doctor?</h1>
+                    <TertiaryButton text={"Join Us"} fontSize={"1em"}></TertiaryButton>
                 </div>
                 <div className="Get-In-Touch">
                     <h1>Get in Touch</h1>
                     <p>Have questions or ready to take the next step? Reach out to us and let’s discuss how we can help you achieve your goals. Our team is here to assist you with any inquiries or collaboration opportunities.</p>
-                    <button>Contact Us</button>
+                    <SecondaryButton text={"Contact Us"} fontSize={"1em"} />
                 </div>
             </div>
         </div>
