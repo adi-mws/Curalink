@@ -42,10 +42,14 @@ export default function DoctorPublicProfilePage() {
             </div>
 
             <div className="Buttons">
+                <div className="button">
                 <button className="Book-Appointment"><img src={MenuIcon} alt="" /></button>
                 <p>Book Appointment</p>
+                </div>
+                <div className="button">
                 <button className="Prescription-Renewal"><img src={RefreshIcon} alt="" /></button>
                 <p>Priscription Renewal</p>
+                </div>
             </div>
             <div className="About-Doctor">
                     <p className='About-Doctor-Title'>About Doctor</p>

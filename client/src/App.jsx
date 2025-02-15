@@ -47,7 +47,7 @@ function App() {
             <Route path='/search-doctors' element={<DoctorsSearchPage />} />
             <Route path='/test' element={<DoctorsCard filter={true} />} />
             <Route path='/search-faqs' element={<FAQsPage />} />
-            <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
+            <Route path='/doctor-public-profile' element={<DoctorPublicProfilePage />} />
           </Route>
 
 
