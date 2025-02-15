@@ -23,7 +23,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1em;
     padding: 1em;
+    justify-items: stretch;
+    grid-column: 1 / -1;
   }
   .FAQsSection {
     padding: 1em;

@@ -7,8 +7,27 @@
     height: 60px;
     padding: 1em;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-   
+    
 
+    .file-list {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .attachment-button {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        cursor: pointer;
+    }
+
+    .support-ticket-form-heading {
+        font-family: var(--primary-font);
+        font-weight: bold; 
+        font-size: 1.2em;
+    }
 
     .dash-header-title {
         font-family: var(--primary-font);
