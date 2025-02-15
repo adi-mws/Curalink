@@ -1,11 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "./ScheduledAppointments.css";
 import DashboardHeader from "../../../layout/DashboardHeader/DashboardHeader";
 import VideoIcon from "../../../../assets/icons/videoTiny.png";
 import AudioIcon from "../../../../assets/icons/callIcon.png";
 import TertiaryButton from "../../../shared/buttons/TertiaryButton/TertiaryButton";
-import { useState } from "react";
-export default function ScheduledAppointments({appointmentsState='all'}) {
+import { useOutletContext } from "react-router-dom";
+const ScheduledAppointments = forwardRef(({appointmentsState='all'}, ref) => {
   const appointments = [
     {
       doctorName: "Dr. Harsh Mehta",
@@ -150,9 +150,10 @@ export default function ScheduledAppointments({appointmentsState='all'}) {
     
   ];  
 
+  const {setShowMenubar, showMenubar} = useOutletContext();
   return (
     <div className="ScheduledAppointments">
-      <DashboardHeader title={appointmentsState === "scheduled" ? "Scheduled Appointments" : appointmentsState === "past" ? "Past Appointments" : "All Appointments"} items={items} />
+      <DashboardHeader setShowMenubar={setShowMenubar} showMenubar={showMenubar} title={appointmentsState === "scheduled" ? "Scheduled Appointments" : appointmentsState === "past" ? "Past Appointments" : "All Appointments"} items={items} />
 
       <div className="appointments-container">
         <div className="grid-header">
@@ -186,4 +187,6 @@ export default function ScheduledAppointments({appointmentsState='all'}) {
       </div>
     </div>
   );
-}
+})
+
+export default ScheduledAppointments;
