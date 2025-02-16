@@ -23,6 +23,7 @@ import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
 import { SideBarStateContextProvider } from './components/contexts/SideBarStateContext.jsx';
 import { NotificationBarStateContextProvider } from './components/contexts/NotificationBarContext.jsx';
+import PatientLanding from './components/dashboard/patient/PatientLanding/PatientLanding.jsx';
 function App() {
   return (
     <>
@@ -54,6 +55,7 @@ function App() {
 
 
             <Route path='/dashboard' element={<DashboardLayout />}>
+              <Route path='/dashboard' element={<PatientLanding />} />
               <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
               <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
               <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
