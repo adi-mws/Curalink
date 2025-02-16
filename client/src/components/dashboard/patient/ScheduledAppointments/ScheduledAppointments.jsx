@@ -162,14 +162,13 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       link: "/dashboard/appointments",
     },
     {
-      text: "Schdeuled Appointments",
+      text: "Scheduled Appointments",
       link: "/dashboard/appointments/scheduled",
     },
     {
       text: "Past Appointments",
       link: "/dashboard/appointments/past",
     },
-
   ];
 
   const { setShowMenubar, showMenubar } = useOutletContext();
@@ -178,9 +177,13 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       <DashboardHeader setShowMenubar={setShowMenubar}
 
         showMenubar={showMenubar}
-        title={appointmentsState === "scheduled" ? "Scheduled Appointments" :
-          appointmentsState === "past" ? "Past Appointments" :
-            appointmentsState === "all" ? "All Appointments" : ""}
+        title={
+          appointmentsState === "scheduled"
+            ? "Scheduled Appointments"
+            : appointmentsState === "past"
+            ? "Past Appointments"
+            : "All Appointments"
+        }
         items={items}
       />
 
@@ -217,14 +220,19 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
               )}
             </span>
             <div className="DetailsButton">
-              <TertiaryButton fontSize=".9em" text="View Details" width="100%" padding=".8em 0.5em" textWrap="nowrap" />
+              <TertiaryButton
+                fontSize=".9em"
+                text="View Details"
+                width="100%"
+                padding=".8em 0.5em"
+                textWrap="nowrap"
+              />
             </div>
           </div>
-
         ))}
       </div>
     </div>
   );
-})
+});
 
 export default ScheduledAppointments;
