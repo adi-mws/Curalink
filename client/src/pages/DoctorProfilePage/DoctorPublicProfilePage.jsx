@@ -6,14 +6,17 @@ import MenuIcon from '../../assets/icons/Menu-Book.png'
 import RefreshIcon from '../../assets/icons/refresh-2.png'
 import CopyIcon from '../../assets/icons/copy.png'
 import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
-import { useEffect } from 'react';
+import { useEffect,useState  } from 'react';
 import DurationIcon from '../../assets/icons/Services-Duration-Icon.png' 
+import DownArrow from '../../assets/icons/arrow-down.png'
 
 export default function DoctorPublicProfilePage() {
     const { setSideBarState } = useSideBarState();
     useEffect(() => {
         setSideBarState('doctor-public-profile');
     }, []);
+
+    const [showAllReviews, setShowAllReviews] = useState(false);
     const doctor = {
         name: "Dr. Aisha Sharma",
         category: "Cardiologist",
@@ -24,6 +27,71 @@ export default function DoctorPublicProfilePage() {
         about: "Dr. Aisha Sharma is a renowned cardiologist with over 15 years of experience in treating heart-related conditions. She specializes in non-invasive cardiology and preventive care.",
         licenceNo: "ahskdfh432"
     }
+
+
+    const patientReviews = [
+      {
+        name: "Emily Johnson",
+        rating: 4.8,
+        review: "Dr. Williams is very kind and listens carefully. She diagnosed my condition accurately and provided excellent treatment.",
+        profilePicture: DummyImage
+      },
+      {
+        name: "Michael Smith",
+        rating: 4.5,
+        review: "A very knowledgeable doctor! He explained everything in detail and made sure I was comfortable with my treatment plan.",
+        profilePicture: DummyImage
+      },
+      {
+        name: "Sophia Brown",
+        rating: 4.9,
+        review: "Amazing doctor! She takes her time to explain everything and is always so patient. Highly recommended!",
+        profilePicture: DummyImage
+      },
+      {
+        name: "Daniel Wilson",
+        rating: 4.2,
+        review: "Good experience overall, but the waiting time was quite long. Dr. Anderson was professional and helpful.",
+        profilePicture: DummyImage
+      },
+      {
+        name: "Ava Martinez",
+        rating: 5.0,
+        review: "The best doctor I’ve ever visited! She truly cares about her patients and goes the extra mile.",
+        profilePicture: DummyImage
+      },
+      {
+        name: "James Lee",
+        rating: 4.6,
+        review: "Very professional and attentive. He took the time to address all my concerns and provided great advice.",
+        profilePicture: DummyImage
+      },
+      {
+        name: "Olivia Carter",
+        rating: 4.7,
+        review: "Dr. Martinez is very compassionate and knowledgeable. She made me feel at ease throughout my treatment.",
+        profilePicture: DummyImage
+      },
+      {
+        name: "Robert Anderson",
+        rating: 4.3,
+        review: "A good doctor with a lot of experience. However, the clinic was a bit crowded, which made the consultation feel rushed.",
+        profilePicture: DummyImage
+      },
+      {
+        name: "William Harris",
+        rating: 4.9,
+        review: "Excellent doctor! She is very thorough in her examination and always provides the best care.",
+        profilePicture: DummyImage
+      },
+      {
+        name: "Sarah Thompson",
+        rating: 4.4,
+        review: "Very patient and listens carefully to all concerns. A great doctor, though the appointment scheduling could be improved.",
+        profilePicture: DummyImage
+      }
+    ];
+    
     const services = [
         {
           "category": "General Consultation",
@@ -77,13 +145,13 @@ export default function DoctorPublicProfilePage() {
 
       const education = [
         {
-          "college_name": "Harvard University",
-          "degree": "Bachelor of Science (B.Sc.)",
-          "years": "2011-2014"
+          "college_name": "AIIMS DELHI",
+          "degree": "Bachelor of medicine, Bachelor of Surgery",
+          "years": "2005-2011"
         },
         {
-          "college_name": "Stanford University",
-          "degree": "Master of Business Administration (MBA)",
+          "college_name": "AIIMS DELHI",
+          "degree": "Master in Surgery",
           "years": "2011-2014"
         }
       ]
@@ -129,14 +197,14 @@ export default function DoctorPublicProfilePage() {
             </div>
         </div>
         <div className="Services-Section">
-            <p style={{fontSize:'1.5rem',fontWeight:'400',width:'100%',paddingLeft:'3em'}} className="Heading">Services</p>
+            <p style={{fontSize:'1.5rem',fontWeight:'400',width:'100%'}} className="Heading">Services</p>
             {services.map((service,index)=>(
                 <div className="Service">
                     <u className="Category">{service.category}</u>
                     <p className="Price">${service.price}</p>
                     <div className="totalAppointmentsAndDuration">
-                        <p className="TotalAppointments">{service.total_appointments}Appointments</p>
-                        <img src={DurationIcon} alt="" />
+                        <p className="TotalAppointments">{service.total_appointments} Appointments</p>
+                        <img style={{marginRight:'-0.5em'}} src={DurationIcon} alt="" />
                         <p className="Duration">{service.duration}</p>
                     </div>
                 </div>
@@ -154,7 +222,25 @@ export default function DoctorPublicProfilePage() {
             ))}
         </div>
 
-        <div className="Review-Section"></div>
+        <div className="Review-Section">
+          <p className="Heading">Reviews<p style={{color:"var(--gray-text)"}}> ({patientReviews.length})</p></p>
+          {patientReviews
+      .slice(0, showAllReviews ? patientReviews.length : 3)
+      .map((review,index)=>(
+        <div className="Review">
+            <div className="Patient-Detail">
+              <img className='ProfilePicture' src={review.profilePicture} alt="" />
+              <p className="Name">{review.name}</p>
+              <p className="Rating">{review.rating}</p>
+              <RatingDisplay rating={review.rating} />
+            </div>
+            <p className="Review-Content">{review.review}</p>
+        </div>
+    ))}
+            <button onClick={()=>setShowAllReviews(!showAllReviews)} className="View-All-Reviews">
+      {showAllReviews ? 'Show Less' : 'View All Reviews'} <img style={{transform:showAllReviews ? 'rotate(180deg)' : 'rotate(0deg)'}} src={DownArrow} alt="" />
+    </button>
+        </div>
     </div>
   )
 }

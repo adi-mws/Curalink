@@ -33,24 +33,6 @@ function App() {
 
             <Route path='/' element={<MainLayout />}>
 
-<<<<<<< HEAD
-          <Route path='/' element={<MainLayout />}>
-
-            <Route path='/' element={<DoctorsPage />} />
-            <Route path='/support' element={<SupportPage />} />
-            <Route path='/about' element={<AboutPage />} />
-            <Route path='/doctors' element={<DoctorsPage />} />
-            <Route path='/services' element={<ServicePage />} />
-            <Route path='/news' element={<NewsSearchPage />} />
-            <Route path='/news/:id' element={<NewsPage />} />
-            <Route path='/contact' element={<ContactPage />} />
-            <Route path='/login' element={<PatientLoginPage />} />
-            <Route path='/register' element={<PatientRegistrationPage />} />
-            <Route path='/search-doctors' element={<DoctorsSearchPage />} />
-            <Route path='/search-faqs' element={<FAQsPage />} />
-            <Route path='/doctor-public-profile' element={<DoctorPublicProfilePage />} />
-          </Route>
-=======
               <Route path='/' element={<DoctorsPage />} />
               <Route path='/support' element={<SupportPage />} />
               <Route path='/about' element={<AboutPage />} />
@@ -66,7 +48,6 @@ function App() {
               <Route path='/faqs' element={<FAQsPage />} />
               <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
             </Route>
->>>>>>> fd577141fc2eb5ffc7deb11edba6916df667296d
 
 
 
