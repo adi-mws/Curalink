@@ -47,7 +47,7 @@ const DashboardHeader = forwardRef(({ title, children, items, setShowMenubar, sh
             )}
 
             {children}
-            <UserInfoHeader />
+            <UserInfoHeader dashboard={true} />
         </div>
     );
 });

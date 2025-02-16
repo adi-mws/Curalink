@@ -8,7 +8,7 @@
   overflow-x: hidden;
   display: grid;
   grid-template: 65px calc(100% - 65px) / 1fr;
-
+  
   .SupportSystemContent {
     overflow-y: scroll;
     scrollbar-width: thin;

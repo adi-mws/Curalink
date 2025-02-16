@@ -5,7 +5,7 @@ import DummyImage from '../../assets/imgs/Surgeon-With-Mask.png';
 import FilterIcon from '../../assets/icons/filter.png';
 import DownArrow from '../../assets/icons/arrow-down.png';
 import PrimaryHollowButton from '../../components/shared/buttons/PrimaryHollowButton/PrimaryHollowButton.jsx';
-
+import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
 const doctorsData = [
     {
         profilePic: DummyImage,
@@ -212,6 +212,13 @@ const doctorsData = [
 const doctorCategories = ['All Category', ...new Set(doctorsData.map(doctor => doctor.specialization))];
 
 export default function DoctorsSearchPage({ categories = doctorCategories, doctorsList = doctorsData }) {
+    const { setSideBarState } = useSideBarState();
+    useEffect(() => {
+        setSideBarState('search-doctors');
+        return () => {
+            setSideBarState('');
+        }
+    }, []);
     const [selectedCategory, setSelectedCategory] = useState('All Category');
     const [isDropdownVisible, setDropdownVisible] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');

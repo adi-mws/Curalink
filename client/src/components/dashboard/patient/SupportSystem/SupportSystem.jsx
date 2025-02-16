@@ -2,7 +2,8 @@ import React from "react";
 import "./SupportSystem.css";
 import DashboardHeader from "../../../layout/DashboardHeader/DashboardHeader";
 import TertiaryButton from "../../../shared/buttons/TertiaryButton/TertiaryButton";
-
+import { useSideBarState } from "../../../contexts/SideBarStateContext";
+import { useEffect } from "react";
 export default function SupportSystem() {
   const supports = [
     {
@@ -38,10 +39,17 @@ export default function SupportSystem() {
       status: "Resolved",
     },
   ];
+  const { setSideBarState } = useSideBarState();
+  useEffect(() => {
+    setSideBarState('dash-support');
 
+    return () => {
+      setSideBarState('');
+    }
+  })
   return (
     <div className="SupportSystem">
-      <DashboardHeader title={"Support System"}> </DashboardHeader>
+      <DashboardHeader title={"Support Center"}> </DashboardHeader>
 
       <div className="SupportSystemContent">
         <div className="grid-headers">
@@ -59,7 +67,7 @@ export default function SupportSystem() {
                 <span style={{ color: "#a4a434" }}>{support.status}</span>
               )}
             </span>
-            <TertiaryButton text="Open Chat" textWrap="nowrap" padding=".8em 1em"/>
+            <TertiaryButton text="Open Chat" textWrap="nowrap" padding=".8em 1em" />
           </div>
         ))}
       </div>

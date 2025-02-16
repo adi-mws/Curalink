@@ -6,7 +6,7 @@ import arrowDown from "../../../assets/icons/arrow-down.png";
 import UserNotification from "../../shared/alerts/UserNotification/UserNotification";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-export default function UserInfoHeader() {
+export default function UserInfoHeader({ dashboard = false }) {
   const [showNotification, setShowNotification] = useState(false);
   const notificationRef = useRef(null);
   const [notificationCount, setNotificationCount] = useState(0);
@@ -16,7 +16,7 @@ export default function UserInfoHeader() {
 
   return (
     <div className="UserInfoHeader">
-      <UserNotification ref={notificationRef} showNotification={showNotification} setShowNotification={setShowNotification}/>
+      <UserNotification ref={notificationRef} showNotification={showNotification} setShowNotification={setShowNotification} />
       <button className="header-container">
         <div className="notification-section" onClick={() => setShowNotification(!showNotification)}>
           <img src={notification} alt="bellIcon" />
@@ -31,8 +31,17 @@ export default function UserInfoHeader() {
           <img src={arrowDown} alt="arrowDown" className="dropdown-icon" />
           <div className="dropdown-content">
             <ul>
-              <li className="dropdown-item dashboard"><a href="#">Dashboard</a></li>
-              <li className="dropdown-item"><Link to="/dashboard/support">Support</Link></li>
+              {dashboard ?
+                <>
+                  <li className="dropdown-item dashboard"><a href="/">Home</a></li>
+
+                  <li className="dropdown-item"><Link to="/dashboard/support">Support</Link></li>
+                </> :
+                <>
+                  <li className="dropdown-item"><Link to="/dashboard">Dashboard</Link></li>
+                  <li className="dropdown-item"><Link to="/support">Support</Link></li>
+                </>
+              }
               <li className="dropdown-item"><a href="#">Settings</a></li>
               <li className="dropdown-item logout"><a href="#">Logout</a></li>
             </ul>

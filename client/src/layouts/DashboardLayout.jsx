@@ -17,9 +17,9 @@ export default function DashboardLayout() {
     return (
         <>
             <div className="DashboardLayout" >
-                <Sidebar showMenubar={showMenubar} setShowMenubar={setShowMenubar} dashboard={true}  />
+                <Sidebar showMenubar={showMenubar} setShowMenubar={setShowMenubar} dashboard={'patient'}  />
                 <div className="outlet-wrapper">
-                    <Outlet context={{ showMenubar, setShowMenubar }} />
+                    <Outlet context={{ showMenubar, setShowMenubar }}/>
 
                 </div>
             </div>

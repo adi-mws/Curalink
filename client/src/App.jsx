@@ -21,16 +21,19 @@ import SupportSystem from './components/dashboard/patient/SupportSystem/SupportS
 import PrescriptionSystem from './components/dashboard/patient/PrescriptionSystem/PrescriptionSystem.jsx';
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
-
+import { SideBarStateContextProvider } from './components/contexts/SideBarStateContext.jsx';
 function App() {
   return (
     <>
+      <SideBarStateContextProvider>
+        <Router>
+          <ScrollToTop />
 
-      <Router>
-        <ScrollToTop />
+          <Routes>
 
-        <Routes>
+            <Route path='/' element={<MainLayout />}>
 
+<<<<<<< HEAD
           <Route path='/' element={<MainLayout />}>
 
             <Route path='/' element={<DoctorsPage />} />
@@ -47,18 +50,36 @@ function App() {
             <Route path='/search-faqs' element={<FAQsPage />} />
             <Route path='/doctor-public-profile' element={<DoctorPublicProfilePage />} />
           </Route>
+=======
+              <Route path='/' element={<DoctorsPage />} />
+              <Route path='/support' element={<SupportPage />} />
+              <Route path='/about' element={<AboutPage />} />
+              <Route path='/doctors' element={<DoctorsPage />} />
+              <Route path='/services' element={<ServicePage />} />
+              <Route path='/news' element={<NewsSearchPage />} />
+              <Route path='/news/:id' element={<NewsPage />} />
+              <Route path='/contact' element={<ContactPage />} />
+              <Route path='/login' element={<PatientLoginPage />} />
+              <Route path='/register' element={<PatientRegistrationPage />} />
+              <Route path='/search-doctors' element={<DoctorsSearchPage />} />
+              <Route path='/test' element={<DoctorsCard filter={true} />} />
+              <Route path='/faqs' element={<FAQsPage />} />
+              <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
+            </Route>
+>>>>>>> fd577141fc2eb5ffc7deb11edba6916df667296d
 
 
 
-          <Route path='/dashboard' element={<DashboardLayout />}>
-            <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
-            <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
-            <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
-            <Route path='/dashboard/support' element={<SupportSystem />} />
-            <Route path='/dashboard/prescription-system' element={<PrescriptionSystem />} />
-          </Route>
-        </Routes>
-      </Router>
+            <Route path='/dashboard' element={<DashboardLayout />}>
+              <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
+              <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
+              <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
+              <Route path='/dashboard/support' element={<SupportSystem />} />
+              <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
+            </Route>
+          </Routes>
+        </Router>
+      </SideBarStateContextProvider>
 
 
     </>
