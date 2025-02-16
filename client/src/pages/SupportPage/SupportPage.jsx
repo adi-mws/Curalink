@@ -9,7 +9,7 @@ import tickCircleYellow from '../../assets/icons/tick-circle-yellow.png'
 import tickCircleRed from '../../assets/icons/tick-circle-red.png'
 import tickCirclePurple from '../../assets/icons/tick-circle-purple.png'
 import ButtonIcon from '../../assets/icons/right-arrow-rectangle.png'
-import SupportTicketForm from '../../components/dashboard/patient/SupportTicket/SupportTicketForm'
+import SupportTicketForm from '../../components/dashboard/patient/SupportTicketForm/SupportTicketForm'
 
 export default function SupportPage() {
 
@@ -37,7 +37,7 @@ export default function SupportPage() {
                 <p className="Description">Our support team is here to help you with any questions or concerns you may have. We are dedicated to providing you with the best possible service.</p>
                 <div className="Buttons">
                     <div className="Button-Container">
-                        <PrimaryButton text="Raise a Ticket" padding="0.5em 5em" borderRadius="7.41px" width="100%"/>
+                        <PrimaryButton text="Raise a Ticket" onClick={() => setShowTicketForm(true)} padding="0.5em 5em" borderRadius="7.41px" width="100%"/>
                     </div>
                     <div className="Button-Container">
                         <SecondaryButton text="Email Us" padding="0.5em 5em" borderRadius="7.41px" width="100%"/>
@@ -65,7 +65,7 @@ export default function SupportPage() {
                 </div>
                 <div className="Method">
                     <p className="Head">Real TIme Updates</p>
-                    <p className="Body">Track your ticket’s progress and receive updates directly to your registered email or dashboard.</p>
+                    <p className="Body">Track your ticket's progress and receive updates directly to your registered email or dashboard.</p>
                 </div>
             </div>
             <button className="Support-Button" onClick={() => setShowTicketForm(true)}>Open Support Ticket Now <img src={ButtonIcon} alt="" /></button>

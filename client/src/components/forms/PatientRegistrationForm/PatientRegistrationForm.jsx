@@ -20,6 +20,7 @@ export default function PatientRegistrationForm(margin="0px",boxShadow="none") {
 
   const onSubmit = (data) => {
     console.log(data);
+    alert("Registration successful");
   };
 
   return (
@@ -75,7 +76,7 @@ export default function PatientRegistrationForm(margin="0px",boxShadow="none") {
           <div className="input-field">
             <label>Confirm Password</label>
             <input
-              type="password"
+              type="text"
               placeholder="Confirm password"
               style={{ outline: errors.confirmPassword ? "2px solid var(--red-color)" : "none" }}
               {...register("confirmPassword", {
