@@ -8,7 +8,8 @@ import ButtonIcon from '../../assets/icons/right-arrow-rectangle.png'
 import CoffeeMan from '../../assets/imgs/Man-Sofa-Coffee.png'
 import DummyVideo from '../../assets/videos/DoctorsPageDummyVideo.mp4'
 import JourneySectionImage from '../../assets/imgs/Journey-Section-Image.png'
-
+import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useEffect } from 'react';
 const Videos = [
   {
     video: DummyVideo,
@@ -87,6 +88,13 @@ const Dummyservices = [
 ];
 
 export default function ServicePage({Service = Dummyservices, VideosDescrition=Videos}) {
+  const { setSideBarState } = useSideBarState();
+  useEffect(() => {
+    setSideBarState('services');
+    return () => {
+      setSideBarState('');
+    }
+  }, []);
   return (
     <div className="ServicePage">
         <div className="Hero-Section">

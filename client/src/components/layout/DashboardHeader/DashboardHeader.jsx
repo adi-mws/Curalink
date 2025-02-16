@@ -35,7 +35,7 @@ const DashboardHeader = forwardRef(({ title, children, items, setShowMenubar, sh
                             <ul className="dash-header-title-list" style={{ display: showDropdown ? 'flex' : 'none' }}>
                                 
                                 {items?.map((item, index) => {
-                                    return <li className='dash-header-title-list-item-wrapper' >
+                                    return <li key={index} className='dash-header-title-list-item-wrapper' >
                                         <Link className='dash-header-title-list-item' to={item.link} key={index}>{item.text}</Link>
                                     </li>
                                 })}
@@ -45,7 +45,7 @@ const DashboardHeader = forwardRef(({ title, children, items, setShowMenubar, sh
                     </>
                 }
                 {children}
-                <UserInfoHeader />
+                <UserInfoHeader dashboard={true} />
 
             </div>
         </>

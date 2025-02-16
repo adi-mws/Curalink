@@ -7,8 +7,8 @@ import Pagination from '../../components/shared/Pagination/Pagination.jsx';
 import DummyImage from '../../assets/imgs/NewsCardLady.png';
 import BackgroundImageNewsPage from '../../assets/imgs/NewsSearchPage-bg-1368.png'
 import BackgroundImageNewsPage2 from '../../assets/imgs/NewsSearchPage-bg-992.png'
-
-
+import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useEffect } from 'react';
 const searchData = [
   'Advancements in AI for Healthcare',
   'New Vaccines Introduced',
@@ -20,11 +20,17 @@ const searchData = [
 ];
 
 
-export default function NewsSearchPage({ News, newsTitles = searchData }) {
+export default function NewsSearchPage({ News, newsTitles = searchData }) { 
+  const { setSideBarState } = useSideBarState();
+  useEffect(() => {
+    setSideBarState('news');
+    return () => {
+      setSideBarState('');
+    }
+  }, []);
   const [search, setSearch] = useState('');
   const [filteredNews, setFilteredNews] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
-  
   
 
   const handleChange = (event) => {

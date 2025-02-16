@@ -5,8 +5,13 @@ import DummyImage from '../../assets/imgs/Dummy-Doctor-Profile-Picture.png'
 import MenuIcon from '../../assets/icons/Menu-Book.png'
 import RefreshIcon from '../../assets/icons/refresh-2.png'
 import CopyIcon from '../../assets/icons/copy.png'
-
+import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useEffect } from 'react';
 export default function DoctorPublicProfilePage() {
+    const { setSideBarState } = useSideBarState();
+    useEffect(() => {
+        setSideBarState('doctor-public-profile');
+    }, []);
     const doctor = {
         name: "Dr. Aisha Sharma",
         category: "Cardiologist",
