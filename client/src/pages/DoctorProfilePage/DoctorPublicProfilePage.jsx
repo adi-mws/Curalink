@@ -9,6 +9,7 @@ import { useSideBarState } from '../../components/contexts/SideBarStateContext.j
 import { useEffect,useState  } from 'react';
 import DurationIcon from '../../assets/icons/Services-Duration-Icon.png' 
 import DownArrow from '../../assets/icons/arrow-down.png'
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function DoctorPublicProfilePage() {
     const { setSideBarState } = useSideBarState();
@@ -155,7 +156,15 @@ export default function DoctorPublicProfilePage() {
           "years": "2011-2014"
         }
       ]
-      
+      const [copied, setCopied] = useState(false);
+
+      const handleCopy = () => {
+        navigator.clipboard.writeText(doctor.licenceNo);
+        setCopied(true);
+      }
+      setTimeout(() => {
+        setCopied(false);
+      }, 2500);
       
   return (
     <div className='DoctorPublicProfilePage'>
@@ -164,7 +173,24 @@ export default function DoctorPublicProfilePage() {
                 <div className="Profile-Picture">
                     <img src={doctor.profilePicture} alt="" />
                 </div>
-            <p className="Licence-Id">Licence No: {doctor.licenceNo} <button className='Copy-Button'><img src={CopyIcon} alt="" /></button></p>
+            <p className="Licence-Id">Licence No: {doctor.licenceNo} <button onClick={handleCopy} className='Copy-Button'><img src={CopyIcon} alt="" /></button>
+            <div style={{backgroundColor:copied ? 'gray' : 'transparent'}} className="Copied-Message">
+                <AnimatePresence>
+                  {copied && (
+                    <motion.span
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.5 }}
+                      className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-2 py-1 rounded-md text-sm"
+                    >
+                      Copied!
+                    </motion.span>
+                  )}
+              </AnimatePresence>
+              </div>
+            
+            </p>
             </div>
             <div className="Doctor-Details">
                 <p className="Doctor-Name">{doctor.name}</p>
@@ -244,3 +270,4 @@ export default function DoctorPublicProfilePage() {
     </div>
   )
 }
+
