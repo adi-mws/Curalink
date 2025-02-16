@@ -3,6 +3,7 @@ import CoffeeMan from '../../assets/imgs/Man-Sofa-Coffee.png'
 import ButtonIcon from '../../assets/icons/right-arrow-rectangle.png'
 import './FAQsPage.css'
 import FAQs from '../../components/FAQs/FAQs.jsx'
+import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
 
 const defaultFaqData = [
     {
@@ -49,6 +50,13 @@ const defaultFaqData = [
 
 
 export default function FAQsPage({ faqData = defaultFaqData }) {
+    const { setSideBarState } = useSideBarState();
+    useEffect(() => {
+        setSideBarState('faqs');
+        return () => {
+            setSideBarState('');
+        }
+    }, []);
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredFaqs, setFilteredFaqs] = useState(faqData);
 

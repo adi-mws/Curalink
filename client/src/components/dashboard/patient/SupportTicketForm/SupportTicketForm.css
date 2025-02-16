@@ -103,6 +103,11 @@
     font-family: var(--secondary-font);
   }
 
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: solid 1px var(--primary-color);
+  }
+
   .form-group textarea {
     height: 100px;
     resize: none;

@@ -1,24 +1,23 @@
-
 .Sidebar::-webkit-scrollbar {
     display: none;
 }
 
 .Sidebar {
-    z-index: 1000; 
+    z-index: 1000;
     background: white;
     display: flex;
     flex-direction: column;
-    width: 276px;
-    position: fixed; 
+    width: 290px;
+    position: fixed;
     height: 100%;
-    top: 0; 
+    top: 0;
     left: 0;
     overflow-y: scroll;
     font-family: var(--secondary-font);
     gap: 2em;
     justify-content: space-evenly;
     box-shadow: 1px 0 3px whitesmoke;
-    
+
 
     .Logo-Cross {
         display: flex;
@@ -26,9 +25,12 @@
         align-items: center;
         height: 3.5em;
         width: 276px;
+        padding: 2em 0;
+
         .Logo {
             width: 8em;
         }
+
         .Cross {
             font-size: 1.7em;
             cursor: pointer;
@@ -43,11 +45,13 @@
         display: flex;
         flex-direction: column;
         gap: 1em;
+
         p {
             font-weight: 600;
             font-size: 1.2em;
         }
-        div > ul {
+
+        div>ul {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -56,43 +60,73 @@
             gap: 0.3em;
             padding: 0 1em 0 2em;
             font-size: 0.87em;
+
             li {
                 background-color: whitesmoke;
                 height: 3em;
-                padding-left: 2em;
-                display: flex;  
+                display: flex;
                 border-radius: 5px;
+                overflow: hidden;
                 align-items: center;
+
+                a {
+
+                    padding-left: 2em;
+                    align-items: center;
+                    cursor: pointer;
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    text-decoration: none;
+                    color: black;
+                }
+
             }
-            li:hover {
-                background-color: var(--primary-color);
-                color: white;
-                cursor: pointer;
+
+            li {
+
+
+                a:hover {
+                    background-color: var(--primary-color);
+                    color: white;
+                    color: white;
+                }
             }
         }
-        div > div {
+
+        div>div {
             img {
                 height: 1.5em;
                 padding-left: 0.5em;
             }
+
             padding-left: 0.7em;
             display: flex;
             gap: 0.7em;
             align-items: center;
         }
-        div > img {
+
+        div>img {
             display: flex;
         }
     }
+
     .Yellow-Card {
         display: flex;
+
         p {
             padding: 1em;
         }
+
         position: relative;
         left: 3px;
         width: 270px;
         background-color: #EEC521;
         border-radius: 10px;
+    }
+
+    .active {
+        background-color: var(--primary-color);
+        color: white !important;
     }
 }

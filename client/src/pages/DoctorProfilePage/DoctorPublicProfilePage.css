@@ -1,17 +1,21 @@
 .DoctorPublicProfilePage{
+    padding: 2rem;
     font-family: var(--secondary-font);
     overflow-x: hidden;
     .Doctor-Profile{
-        display: grid;
-        justify-items: center;
-        padding-left: 2em;
-        grid-template-columns: 0.6fr 0.7fr 0.35fr 1.5fr;
+        box-shadow: 0px 0px 2.5px 0px #00000025;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         position: relative;
         .Profile-Picture-Section{
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 1em;
-            width: 90%;
+            width: 20%;
+            padding: 1rem;
             .Profile-Picture{
                 width: 100%;
                 img{
@@ -21,6 +25,7 @@
             .Licence-Id{
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 gap: 0.5em;
                 color: var(--gray-text);
                 text-wrap: nowrap;
@@ -33,61 +38,64 @@
         }
         .Licence-Id{
             position: relative;
+            font-size: 0.8em;
         }
         .Doctor-Details{
             display: flex;
-            width: 100%;
-            padding-left: 2em;
-            padding-right: 1em;
+            padding: 1rem;
+            gap: 1rem;
             flex-direction: column;
+            height: 100%;
             justify-content: space-evenly;
             align-items: flex-start;
-            .Doctor-Rating{
-                display: flex;
-                align-items: center;
-                margin-left: 1em;
-                gap: 1em;
-            }
-            .Doctor-Name{
-                font-size: 1.5em;
-                margin-left: 1rem;
-            }
-            .Doctor-Category{
-                color: var(--gray-text);
-                margin-left: 1em;
-            }
-            .Consultation-Reviews{
-                display: flex;
-                width: 18.5em;
-                background-color: #CDFFCF;
-                height: 73px;
-                border-radius: 20px;
-                align-items: center;
-                padding: 1em;
-                align-items: center;
-                justify-content: space-evenly;
-                gap: 1.5em;
-                .Consultation-Number, .Reviews-Number{
+                .Doctor-Rating{
                     display: flex;
-                    flex-direction: column;
                     align-items: center;
-                    font-size: 1.3em;
-                    font-weight: 400;
-                    p{
-                        font-size: 0.8em;
-                        font-weight: 300;
-                    }
+                    margin-left: 1em;
+                    gap: 1em;
                 }
-                
-            }
+                .Doctor-Name{
+                    font-size: 1.5em;
+                    margin-left: 1rem;
+                }
+                .Doctor-Category{
+                    color: var(--gray-text);
+                    margin-left: 1em;
+                }
+                .Consultation-Reviews{
+                    display: flex;
+                    width: 18.5em;
+                    background-color: #CDFFCF;
+                    height: 73px;
+                    border-radius: 20px;
+                    align-items: center;
+                    padding: 1em;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    gap: 1.5em;
+                    .Consultation-Number, .Reviews-Number{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        font-size: 1.3em;
+                        font-weight: 400;
+                        p{
+                            font-size: 0.8em;
+                            font-weight: 300;
+                        }
+                    }
+                    
+                }
             
             
         }
         .About-Doctor{
             display: flex;
             flex-direction: column;
-            gap: 1em;
+            gap: 2em;
             padding: 1em;
+            height: 100%;
+            width: 25em;
             .About-Doctor-Title{
                 font-size: 1.5em;
             }
@@ -97,8 +105,11 @@
         }
         .Buttons{
             font-size: 0.8em;
+            box-shadow: 0px 0px 2.5px 0px #00000025;
             gap: 1em;
+            height: 100%;
             display: flex;
+            padding: 0.5em;
             text-wrap: nowrap;
             flex-direction: column;
             justify-content: center;
@@ -117,6 +128,67 @@
             p{
                 margin-bottom: 1em;
             }
+            .button{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                align-items: center;
+            }
+        }
+    }
+    .Services-Section{
+        display: flex;
+        justify-items: stretch;
+        align-items: center;
+        padding-top: 3em;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+        .Service{
+            min-width: 275px;
+            padding: 1em;
+            flex: 1 1 100%;
+            max-width: 310px;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            .Price{
+                font-size: 2.5rem;
+            }
+        }
+        .totalAppointmentsAndDuration{
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 1em;
+        }
+    }
+    .Education{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 5rem;
+        gap: 1em;
+        margin-top: 3rem;
+        .Education-Item{
+            display: flex;
+            flex-direction: column;
+            background-color: var(--secondary-color);
+            gap: 1em;
+            padding: 1em;
+            align-items: center;
+            width: 18em;
+            border-radius: 10px;
+            justify-content: space-evenly;
+            text-align: center;
+            .College-Name{
+                font-size: 1.5rem;
+            }
+            .Degree{
+                color: var(--primary-color);
+            }
         }
     }
 }
@@ -124,21 +196,267 @@
 
 
 @media screen and (max-width:1168px){
-
+    .DoctorPublicProfilePage {
+        .Doctor-Profile {
+            .Profile-Picture-Section {
+                .Profile-Picture {
+                    img {
+                    }
+                }
+                .Licence-Id {
+                    .Copy-Button {
+                    }
+                }
+            }
+            .Doctor-Details {
+                .Doctor-Rating {
+                }
+                .Doctor-Name {
+                }
+                .Doctor-Category {
+                }
+                .Consultation-Reviews {
+                    .Consultation-Number, .Reviews-Number {
+                        p {
+                        }
+                    }
+                }
+            }
+            .About-Doctor {
+                .About-Doctor-Title {
+                }
+                .About-Doctor-Description {
+                }
+            }
+            .Buttons {
+                
+                .Book-Appointment {
+                }
+                .Prescription-Renewal {
+                }
+                .Book-Appointment, .Prescription-Renewal {
+                }
+                p {
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width:992px){
-
+    .DoctorPublicProfilePage {
+        .Doctor-Profile {
+            display: grid;
+            grid-template-areas: 
+            "A B"
+            "C C"
+            "D D";
+            padding: 0;
+            grid-template-rows: 1fr 0.4fr 0.7fr;
+            grid-template-columns: 0.8fr 1.2fr;
+            .Profile-Picture-Section {
+                width: 100%;
+                justify-self: center;
+                gap: 1em;
+                grid-area: A;
+                .Profile-Picture {
+                    img {
+                    }
+                }
+                .Licence-Id {
+                    .Copy-Button {
+                    }
+                }
+            }
+            .Doctor-Details {
+                grid-area: B;
+                justify-self: center;
+                .Doctor-Rating {
+                }
+                .Doctor-Name {
+                }
+                .Doctor-Category {
+                }
+                .Consultation-Reviews {
+                    .Consultation-Number, .Reviews-Number {
+                        p {
+                        }
+                    }
+                }
+            }
+            .About-Doctor {
+                grid-area: D;
+                width: 100%;
+                .About-Doctor-Title {
+                }
+                .About-Doctor-Description {
+                }
+            }
+            .Buttons {
+                grid-area: C;
+                flex-direction: row;
+                .Book-Appointment {
+                }
+                .Prescription-Renewal {
+                }
+                .Book-Appointment, .Prescription-Renewal {
+                    flex-direction: column;
+                }
+                p {
+                }
+            }
+        }
+    }
 }
+
+
 
 @media screen and (max-width:768px){
-
+    .DoctorPublicProfilePage {
+        .Doctor-Profile {
+            .Profile-Picture-Section {
+                .Profile-Picture {
+                    img {
+                    }
+                }
+                .Licence-Id {
+                    .Copy-Button {
+                    }
+                }
+            }
+            .Doctor-Details {
+                .Doctor-Rating {
+                }
+                .Doctor-Name {
+                }
+                .Doctor-Category {
+                }
+                .Consultation-Reviews {
+                    .Consultation-Number, .Reviews-Number {
+                        p {
+                        }
+                    }
+                }
+            }
+            .About-Doctor {
+                .About-Doctor-Title {
+                }
+                .About-Doctor-Description {
+                }
+            }
+            .Buttons {
+                .Book-Appointment {
+                }
+                .Prescription-Renewal {
+                }
+                .Book-Appointment, .Prescription-Renewal {
+                }
+                p {
+                }
+            }
+        }
+    }
 }
+
 
 @media screen and (max-width:576px){
 
+    .DoctorPublicProfilePage {
+        .Doctor-Profile {
+            display: flex;
+            flex-direction: column;
+            .Profile-Picture-Section {
+                .Profile-Picture {
+                    width: 100%;
+                    max-width: 15em;
+                    img {
+                    }
+                }
+                .Licence-Id {
+                    .Copy-Button {
+                    }
+                }
+            }
+            .Doctor-Details {
+                align-items: center;
+                .Doctor-Rating {
+                }
+                .Doctor-Name {
+                }
+                .Doctor-Category {
+                }
+                .Consultation-Reviews {
+                    .Consultation-Number, .Reviews-Number {
+                        p {
+                        }
+                    }
+                }
+            }
+            .About-Doctor {
+                .About-Doctor-Title {
+                }
+                .About-Doctor-Description {
+                }
+            }
+            .Buttons {
+                width: 100%;
+                .Book-Appointment {
+                }
+                .Prescription-Renewal {
+                }
+                .Book-Appointment, .Prescription-Renewal {
+                }
+                p {
+                }
+            }
+        }
+    }
 }
 
-@media screen and (max-width:400px){
 
+@media screen and (max-width:400px){
+    .DoctorPublicProfilePage {
+        .Doctor-Profile {
+            .Profile-Picture-Section {
+                .Profile-Picture {
+                    img {
+                    }
+                }
+                .Licence-Id {
+                    .Copy-Button {
+                    }
+                }
+            }
+            .Doctor-Details {
+                .Doctor-Rating {
+                }
+                .Doctor-Name {
+                }
+                .Doctor-Category {
+                }
+                .Consultation-Reviews {
+                    .Consultation-Number, .Reviews-Number {
+                        p {
+                        }
+                    }
+                }
+            }
+            .About-Doctor {
+                .About-Doctor-Title {
+                }
+                .About-Doctor-Description {
+                }
+            }
+            .Buttons {
+                .Book-Appointment {
+                }
+                .Prescription-Renewal {
+                }
+                .Book-Appointment, .Prescription-Renewal {
+                }
+                p {
+                }
+            }
+        }
+    }
 }
