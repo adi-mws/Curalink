@@ -5,119 +5,9 @@ import VideoIcon from "../../../../assets/icons/videoTiny.png";
 import AudioIcon from "../../../../assets/icons/callIcon.png";
 import TertiaryButton from "../../../shared/buttons/TertiaryButton/TertiaryButton";
 import { useOutletContext } from "react-router-dom";
-const ScheduledAppointments = forwardRef(({appointmentsState='all'}, ref) => {
+
+const ScheduledAppointments = forwardRef(({ appointmentsState = "all" }, ref) => {
   const appointments = [
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "audio",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "audio",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "audio",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
-    {
-      doctorName: "Dr. Harsh Mehta",
-      date: "04-01-2025",
-      time: "09:30 AM",
-      category: "General Healthcare",
-      mode: "video",
-    },
     {
       doctorName: "Dr. Harsh Mehta",
       date: "04-01-2025",
@@ -140,20 +30,30 @@ const ScheduledAppointments = forwardRef(({appointmentsState='all'}, ref) => {
       link: "/dashboard/appointments",
     },
     {
-      text: "Schdeuled Appointments",
+      text: "Scheduled Appointments",
       link: "/dashboard/appointments/scheduled",
     },
     {
       text: "Past Appointments",
       link: "/dashboard/appointments/past",
     },
-    
-  ];  
+  ];
 
-  const {setShowMenubar, showMenubar} = useOutletContext();
+  const { setShowMenubar, showMenubar } = useOutletContext();
   return (
     <div className="ScheduledAppointments">
-      <DashboardHeader setShowMenubar={setShowMenubar} showMenubar={showMenubar} title={appointmentsState === "scheduled" ? "Scheduled Appointments" : appointmentsState === "past" ? "Past Appointments" : "All Appointments"} items={items} />
+      <DashboardHeader
+        setShowMenubar={setShowMenubar}
+        showMenubar={showMenubar}
+        title={
+          appointmentsState === "scheduled"
+            ? "Scheduled Appointments"
+            : appointmentsState === "past"
+            ? "Past Appointments"
+            : "All Appointments"
+        }
+        items={items}
+      />
 
       <div className="appointments-container">
         <div className="grid-header">
@@ -179,14 +79,19 @@ const ScheduledAppointments = forwardRef(({appointmentsState='all'}, ref) => {
               )}
             </span>
             <div className="DetailsButton">
-              <TertiaryButton fontSize=".9em" text="View Details" width="100%" padding=".8em 0.5em" textWrap="nowrap"/>
+              <TertiaryButton
+                fontSize=".9em"
+                text="View Details"
+                width="100%"
+                padding=".8em 0.5em"
+                textWrap="nowrap"
+              />
             </div>
           </div>
-
         ))}
       </div>
     </div>
   );
-})
+});
 
 export default ScheduledAppointments;

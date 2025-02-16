@@ -11,7 +11,7 @@
   width: 100%;
   height: 100vh; 
   grid-template: 65px calc(100% - 65px) / 1fr;
-
+  font-size: .9em;
   .appointments-container {
     padding: 20px;
     overflow-y: scroll;
