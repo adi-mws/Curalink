@@ -166,13 +166,13 @@
             padding: 4em;
             justify-content: space-evenly;
             gap: 5em;
-            > div {
+            > div{
                 display: flex;
                 gap: 2em;
                 justify-content: space-evenly;
                 > div {
                     justify-content: center;
-                    b {
+                    b{
                         font-family: var(--primary-font);
                         font-size: 1.2em;
                     }

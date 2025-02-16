@@ -1,0 +1,12 @@
+.DashboardLayout {
+    width: 100%; 
+    display: grid; 
+    position: relative;
+    grid-template: 100% / 22% 78%;
+}
+
+.DashboardLayout > div {
+    width: 100% ;
+    height: 100%; 
+}
+

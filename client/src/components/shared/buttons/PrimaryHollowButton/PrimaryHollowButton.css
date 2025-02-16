@@ -8,8 +8,8 @@
 }
 
 .PrimaryHollowButton:hover {
-    border-bottom: 3px solid var(--primary-color);
+    box-shadow: 0 3px 2px var(--primary-color);
 }
 .selected{
-    border-bottom: 3px solid var(--primary-color);
+    box-shadow: 0 3px 2px var(--primary-color);
 }

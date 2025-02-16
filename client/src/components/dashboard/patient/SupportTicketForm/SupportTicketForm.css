@@ -1,0 +1,200 @@
+.SupportTicketForm {
+  width: 95vw;
+  max-width: 90%;
+  height: 90vh;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 80.6px 31px rgba(0, 0, 0, 0.25);
+  margin: 20px auto; 
+  font-family: var(--secondary-font);
+  top: 50%;
+  transform-origin: center;
+  left: 0%;
+  position: fixed;
+  transform: translate(0, -50%);
+  z-index: 500;
+
+  .form-group-container {
+    display: flex;
+    width: 100%;
+    gap: 5%;
+
+    .form-group {
+      width: 48%;
+    }
+  }
+
+  .form-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .file-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    
+    img {
+      width: 15px;
+
+    }
+    
+    .attachment-file-item {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      cursor: pointer;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      padding: .8em 2em;
+      border-radius: 10px;
+      font-size: .75em;
+      justify-content: center;
+    }
+  }
+
+  .patient-support-ticket-attachment-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: .8em 2em;
+    border-radius: 10px;
+    font-size: .9em;
+    justify-content: center;
+    font-family: var(--secondary-font);
+  }
+
+  .support-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: var(--secondary-font);
+  }
+
+  .form-group textarea {
+    height: 100px;
+    resize: none;
+  }
+
+  .attachment-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .submit-part {
+    display: flex;
+    gap: 1.5em;
+    justify-content: space-between;
+    align-items: center;
+
+    .form-note {
+      font-size: 12px;
+      color: #666;
+      width: 65%;
+    }
+
+    .PrimaryButton {
+      height: 50px;
+    }
+  }
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .SupportTicketForm {
+    padding: 20px;
+
+
+    .form-heading {
+      font-size: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 8px;
+    }
+
+    .submit-btn {
+      font-size: 14px;
+      padding: 10px;
+    }
+    
+  }
+}
+
+@media (max-width: 576px) {
+  .SupportTicketForm {
+    padding: 15px;
+    height: 90vh;
+
+
+
+    .form-heading {
+      font-size: 18px;
+    }
+
+    .form-note {
+
+      width: 90%;
+    }
+
+
+    .form-group label {
+      font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      font-size: 13px;
+    }
+
+    .PrimaryButton {
+      width: 100% !important;
+    }
+
+    .submit-btn {
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    .submit-part {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

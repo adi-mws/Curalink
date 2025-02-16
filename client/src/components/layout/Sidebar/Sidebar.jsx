@@ -8,22 +8,38 @@ import appointments from '../../../assets/icons/health.png';
 import others from '../../../assets/icons/colorfilter.png';
 import prescriptions from '../../../assets/icons/menu-board.png';
 import legals from '../../../assets/icons/stickynote.png';
+export default function Sidebar({ showMenubar = false, dashboard=false, setShowMenubar, hamBurgerRef = null }) {
+    const sidebarRef = useRef(null);
 
-export default function Sidebar({ }) {
-    const [data, setData] = useState(false);
     useEffect(() => {
-        console.log("Hello!")
-        sidebar.current.style.background = "white";
-    }, [data])
-    const sidebar = useRef(null);
+        function handleClickOutside(event) {
+            
+            if (sidebarRef.current &&
+                !sidebarRef.current.contains(event.target) &&
+                hamBurgerRef.current &&
+                !hamBurgerRef.current.contains(event.target)
+            ) {
+                setShowMenubar(false);
+            }
+        }
+
+        if (showMenubar) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showMenubar]);
+
     return (
-        <div className='Sidebar' ref={sidebar}>
+        <div po ref={sidebarRef} className='Sidebar' style={{ transform: `${showMenubar ? 'translate(0px)' : 'translate(-400px)'}`, position: `${dashboard ? 'relative' : 'fixed'}`, transition: '.3s' }}>
             <div className="Logo-Cross">
-                <img src={logo} alt="" className="Logo"/>
-                <div className="Cross">&#10005;</div>
+                <img src={logo} alt="" className="Logo" />
+                <div className="Cross"></div>
             </div>
             <div className="Complete-Your-Profile">
-                <CompleteYourProfile/>
+                <CompleteYourProfile />
             </div>
             <div className="Menu-Bar">
                 <div>

@@ -4,6 +4,7 @@
     color: white;
     font-weight: 300;
     border-radius: 10px;
+    padding: .8em 3em;
 }
 
 .PrimaryButton:hover {

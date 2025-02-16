@@ -1,8 +1,8 @@
 import './SecondaryButton.css';
 import React from 'react'
 
-export default function SecondaryButton({text, fontSize, onClick, width = "auto", borderRadius="10px", padding = '.6em 3em', type = "button"}) {
+export default function SecondaryButton({text, textWrap,image, fontSize, onClick, width = "auto", borderRadius="10px", padding = '.6em 3em', type = "button"}) {
   return (
-    <button className='SecondaryButton' onClick={onClick} style={{fontSize: fontSize, width: width, borderRadius: borderRadius, padding: padding}} type={type}>{text}</button>
+    <button className='SecondaryButton' onClick={onClick} style={{fontSize: fontSize,textWrap:{textWrap}, width: width, borderRadius: borderRadius, padding: padding}} type={type}>{image ? <img src={image} /> : <></>} {text}</button>
   )
 }

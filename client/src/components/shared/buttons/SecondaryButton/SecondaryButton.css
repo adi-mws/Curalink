@@ -1,10 +1,20 @@
 .SecondaryButton {
-    padding: .6em 3em;
+    padding: .8em 3em;
     background: var(--secondary-color);
     font-family: var(--secondary-font);
     color: var(--primary-color);
     font-weight: 500;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    
+
+    img{
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .SecondaryButton:hover {

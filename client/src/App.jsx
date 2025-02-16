@@ -15,13 +15,19 @@ import PatientRegistrationPage from './pages/PatientRegistrationPage/PatientRegi
 import ScrollToTop from './components/shared/primitive/ScrollToTop/ScrollToTop';
 import DoctorsCard from './components/DoctorsCard/DoctorsCard.jsx'
 import DoctorsSearchPage from './pages/DoctorsSearchPage/DoctorsSearchPage.jsx';
+import DashboardLayout from './layouts/DashboardLayout.jsx';
+import ScheduledAppointments from './components/dashboard/patient/ScheduledAppointments/ScheduledAppointments.jsx';
+import SupportSystem from './components/dashboard/patient/SupportSystem/SupportSystem.jsx';
+import PrescriptionSystem from './components/dashboard/patient/PrescriptionSystem/PrescriptionSystem.jsx';
+import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
+import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
 
 function App() {
   return (
     <>
 
       <Router>
-      <ScrollToTop />
+        <ScrollToTop />
 
         <Routes>
 
@@ -37,8 +43,20 @@ function App() {
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/login' element={<PatientLoginPage />} />
             <Route path='/register' element={<PatientRegistrationPage />} />
-            <Route path='/searchdoctors' element={<DoctorsSearchPage />} />
-            <Route path='/test' element={<><DoctorsCard/><DoctorsCard filter={true}/></>} />
+            <Route path='/search-doctors' element={<DoctorsSearchPage />} />
+            <Route path='/test' element={<DoctorsCard filter={true} />} />
+            <Route path='/search-faqs' element={<FAQsPage />} />
+            <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
+          </Route>
+
+
+
+          <Route path='/dashboard' element={<DashboardLayout />}>
+            <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
+            <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
+            <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
+            <Route path='/dashboard/support-system' element={<SupportSystem />} />
+            <Route path='/dashboard/prescription-system' element={<PrescriptionSystem />} />
           </Route>
         </Routes>
       </Router>

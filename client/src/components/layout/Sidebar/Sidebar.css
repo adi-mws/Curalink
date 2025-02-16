@@ -4,6 +4,8 @@
 }
 
 .Sidebar {
+    z-index: 1000; 
+    background: white;
     display: flex;
     flex-direction: column;
     width: 276px;

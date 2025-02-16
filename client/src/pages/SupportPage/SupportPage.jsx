@@ -1,104 +1,96 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './SupportPage.css'
-import PrimaryButton from '../../components/shared/buttons/PrimaryButton/PrimaryButton.jsx'
-import SecondaryButton from '../../components/shared/buttons/SecondaryButton/SecondaryButton.jsx'
-import SupportPageMainImage from '../../assets/imgs/SupportPageMainImage.png'
-import YellowCircle from '../../assets/icons/tick-circle-yellow.png'
-import redCircle from '../../assets/icons/tick-circle-red.png'
-import purpleCircle from '../../assets/icons/tick-circle-purple.png'
-import TicketButtonIcon from '../../assets/icons/right-arrow-rectangle.png'
-import FAQs from '../../components/FAQs/FAQs.jsx'
+import MainImage from '../../assets/imgs/SupportPageMainImage.png'
+import { Link } from 'react-router-dom'
+import PrimaryButton from '../../components/shared/buttons/PrimaryButton/PrimaryButton'
+import SecondaryButton from '../../components/shared/buttons/SecondaryButton/SecondaryButton'
+import FAQs from '../../components/FAQs/FAQs'
+import tickCircleYellow from '../../assets/icons/tick-circle-yellow.png'
+import tickCircleRed from '../../assets/icons/tick-circle-red.png'
+import tickCirclePurple from '../../assets/icons/tick-circle-purple.png'
+import ButtonIcon from '../../assets/icons/right-arrow-rectangle.png'
+import SupportTicketForm from '../../components/dashboard/patient/SupportTicketForm/SupportTicketForm'
 
 export default function SupportPage() {
+
+    const [showTicketForm, setShowTicketForm] = useState(false);
+
+    const supportTickets = [
+        { issue: "Unable to log in to the portal", status: "Open" },
+        { issue: "Payment not processed after transaction", status: "In Progress" },
+        { issue: "Website loading slowly for users", status: "Open" },
+        { issue: "Error 404 on clicking the 'Help' page", status: "Resolved" },
+        { issue: "Mobile app crashes on startup", status: "In Progress" },
+        { issue: "Email notifications not being sent", status: "Open" },
+        { issue: "Password reset link not working", status: "Closed" },
+        { issue: "Video not playing on streaming platform", status: "In Progress" },
+        { issue: "User profile images not updating", status: "Resolved" },
+        { issue: "Live chat support not responding", status: "Pending Review" }
+    ];
+    
   return (
-    <div className="SupportPage">
+    <div className='SupportPage'>
+        <SupportTicketForm  showTicketForm={showTicketForm} setShowTicketForm={setShowTicketForm} /> 
         <div className="Hero-Section">
-        <div className="SupportHeading">
-        <p className="HeadingMain">Dedicated Support for Your Healthcare Needs</p>
-        <p className="HeadingBody">Have questions or need help? Our team is here to assist you with quick solutions and expert guidance to ensure a seamless experience.</p>
-        <div className="HeadingButtons">
-            <PrimaryButton text="Raise a Ticket Now" padding='1em 5em'/>
-            <SecondaryButton text="Email Us" padding='1em 7.4em'/>
+            <div className="Hero-Content">
+                <p className="Heading">Dedicated Support for Your Healthcare Needs</p>
+                <p className="Description">Our support team is here to help you with any questions or concerns you may have. We are dedicated to providing you with the best possible service.</p>
+                <div className="Buttons">
+                    <div className="Button-Container">
+                        <PrimaryButton text="Raise a Ticket" onClick={() => setShowTicketForm(true)} padding="0.5em 5em" borderRadius="7.41px" width="100%"/>
+                    </div>
+                    <div className="Button-Container">
+                        <SecondaryButton text="Email Us" padding="0.5em 5em" borderRadius="7.41px" width="100%"/>
+                    </div>
+                </div>
+            </div>
+            <img src={MainImage} alt="" className="mainImage" />
+            <div className="Checklist-Section">
+                <div style={{backgroundColor:"#FFD9D9"}} className="Checklist">Simplified Issue Reporting <div className="CheckImage"><img src={tickCircleRed} alt="" /></div> </div>
+                <div style={{backgroundColor:"#F8FBA5"}} className="Checklist">Quick and Reliable Assistance<div className="CheckImage"><img src={tickCircleYellow} alt="" /></div> </div>
+                <div style={{backgroundColor:"#F3D9FF"}} className="Checklist">Comprehensive Query Tracking<div className="CheckImage"><img src={tickCirclePurple} alt="" /></div> </div>
+            </div>
+        </div>
+
+        <div className="Support-Section">
+            <div className="Heading">How We Support You?</div>
+            <div className="Support-Methods">
+                <div className="Method">
+                    <p className="Head">Ticket System</p>
+                    <p className="Body">Easily submit your concerns using our ticket system. Provide details about your issue, and our team will respond promptly.</p>
+                </div>
+                <div className="Method">
+                    <p className="Head">Email Support</p>
+                    <p className="Body">Prefer email? Reach out to us directly at support@curalink.com for quick assistance.</p>
+                </div>
+                <div className="Method">
+                    <p className="Head">Real TIme Updates</p>
+                    <p className="Body">Track your ticket's progress and receive updates directly to your registered email or dashboard.</p>
+                </div>
+            </div>
+            <button className="Support-Button" onClick={() => setShowTicketForm(true)}>Open Support Ticket Now <img src={ButtonIcon} alt="" /></button>
+        </div>
+
+        <div className="Status-Section">
+            <div className="Heading">Your Tickets</div>
+            <div className="Status-Container">
+                <div className="Status-headings">
+                    <div className="Issue-Head">Issue</div>
+                    <div className="status-Head">Status</div>
+                    <div className="Actions-Head">Actions</div>
+                </div>
+                {supportTickets.map((ticket, index) => (
+                    <div className="Ticket" key={index}>
+                        <div  className="Ticket-Issue">{ticket.issue}</div>
+                        <div style={{color: ticket.status === "Open" ? "#FFD9D9" : ticket.status === "In Progress" ? "#A4A434" : "#F3D9FF"}} className="Ticket-Status">{ticket.status}</div>
+                        <button><SecondaryButton text="View Details" textWrap="nowrap" padding="0.8em 4em" borderRadius="7.41px" width="100%"/></button>
+                    </div>
+                ))}
+            </div>
+        </div>
+        <div className="FAQ-Section">
+            <FAQs/>
         </div>
     </div>
-
-        <div className="MainImage">
-            <img src={SupportPageMainImage}  />
-        </div>
-
-
-
-        <div className="ChecklistSection">
-            <div className="Checklist-1 Checklist">
-                <p>Simplified Issue Reporting</p>
-                <div>
-                    <img src={redCircle} alt="" />
-                </div>
-            </div>
-            <div className="Checklist-2 Checklist">
-                <p> Quick and Reliable Assistance</p>
-                <div>
-                    <img src={YellowCircle} alt="" />
-                </div>
-            </div>
-            <div className="Checklist-3 Checklist">
-                <p>Comprehensive Query Tracking</p>
-                <div>
-                    <img src={purpleCircle} alt="" />
-                </div></div>    
-        </div>  
-        </div>  
-
-        <div className="SupportTicketDetails">
-            <div className="TicketDetailsHeading">
-                <p>How Do We Support You?</p>
-            </div>
-            <div className="TicketDetailsDiscription">
-                <div className="discription">
-                    <div className="Head">Ticket System</div>
-                    <div className="Body">Easily submit your concerns using our ticket system. Provide details about your issue, and our team will respond promptly.</div>
-                </div>
-                <div className="discription">
-                    <div className="Head">Direct Email Support</div>
-                    <div className="Body">Prefer email? Reach out to us directly at support@curalink.com for quick assistance.</div>
-                </div>
-                <div className="discription">
-                    <div className="Head">Real Time Updates</div>
-                    <div className="Body">Track your ticket’s progress and receive updates directly to your registered email or dashboard.</div>
-                </div>
-            </div>
-            <button className="SupportTicketButton">Open Support Ticket Now  <img src={ TicketButtonIcon} alt="" /></button>
-        </div>
-
-        <div className="SupportTicketStatus">
-            <div className="TicketStatusHeading">Your Ticket</div>
-            <div className="TicketStatusBody">
-                <div className="StatusFields">
-                    <p className="StatusField-Issue">Issue</p>
-                    <p className="StatusField-Status">Status</p>
-                    <p className="StatusField-Action">Action</p>
-                </div>
-                <div className="IssueDetails">
-                    <p>Facing certain issues regarding new version</p>
-                    <p className="TicketStatus">Pending</p>
-                    <SecondaryButton text="View Details"/></div>
-                <div className="IssueDetails">
-                    <p>Facing certain issues regarding new version</p>
-                    <p className="TicketStatus" >Pending</p>
-                    <SecondaryButton text="View Details"/>
-                </div>
-                <div className="IssueDetails">
-                    <p>Facing certain issues regarding new version</p>
-                    <p className="TicketStatus" >Pending</p>
-                    <SecondaryButton text="View Details"/>
-                </div>
-            </div>
-        </div>
-
-        <div className="FAQs-Section">
-            <FAQs></FAQs>
-        </div>
-
-    </div>
-  )
+  );
 }
