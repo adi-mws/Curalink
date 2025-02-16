@@ -5,7 +5,7 @@ import VideoIcon from "../../../../assets/icons/videoTiny.png";
 import AudioIcon from "../../../../assets/icons/callIcon.png";
 import TertiaryButton from "../../../shared/buttons/TertiaryButton/TertiaryButton";
 import { useOutletContext } from "react-router-dom";
-const ScheduledAppointments = forwardRef(({appointmentsState='all'}, ref) => {
+const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) => {
   const appointments = [
     {
       doctorName: "Dr. Harsh Mehta",
@@ -147,13 +147,19 @@ const ScheduledAppointments = forwardRef(({appointmentsState='all'}, ref) => {
       text: "Past Appointments",
       link: "/dashboard/appointments/past",
     },
-    
-  ];  
 
-  const {setShowMenubar, showMenubar} = useOutletContext();
+  ];
+
+  const { setShowMenubar, showMenubar } = useOutletContext();
   return (
     <div className="ScheduledAppointments">
-      <DashboardHeader setShowMenubar={setShowMenubar} showMenubar={showMenubar} title={appointmentsState === "scheduled" ? "Scheduled Appointments" : appointmentsState === "past" ? "Past Appointments" : "All Appointments"} items={items} />
+      <DashboardHeader setShowMenubar={setShowMenubar}
+        showMenubar={showMenubar}
+        title={appointmentsState === "scheduled" ? "Scheduled Appointments" :
+          appointmentsState === "past" ? "Past Appointments" :
+            appointmentsState === "all" ? "All Appointments" : ""}
+        items={items}
+      />
 
       <div className="appointments-container">
         <div className="grid-header">
@@ -179,7 +185,7 @@ const ScheduledAppointments = forwardRef(({appointmentsState='all'}, ref) => {
               )}
             </span>
             <div className="DetailsButton">
-              <TertiaryButton fontSize=".9em" text="View Details" width="100%" padding=".8em 0.5em" textWrap="nowrap"/>
+              <TertiaryButton fontSize=".9em" text="View Details" width="100%" padding=".8em 0.5em" textWrap="nowrap" />
             </div>
           </div>
 

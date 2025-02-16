@@ -1,38 +1,70 @@
-.SupportSystem{
+.SupportSystem>div {
+  width: 100%;
+  height: 100%;
+}
+
+.SupportSystem {
   width: 100%;
   overflow-x: hidden;
+  display: grid;
+  grid-template: 65px calc(100% - 65px) / 1fr;
+
   .SupportSystemContent {
+    overflow-y: scroll;
+    scrollbar-width: thin;
     padding: 20px;
+    height: calc(100vh - 65px);
     font-family: var(--secondary-font);
 
     .grid-headers,
     .grid-rows {
       display: grid;
       grid-gap: 0.5em;
-      grid-template-columns: repeat(3, 2fr);
+      font-size: .9em;
+      grid-template-columns: 2fr 1fr 1fr;
       align-items: center;
       padding: 12px 20px;
       border-bottom: 1px solid #ddd;
-      text-align: center;
     }
 
     .grid-headers {
       font-weight: 700;
     }
 
+    .grid-headers>span:last-child {
+      text-align: center;
 
+    }
   }
 }
 
 @media screen and (max-width: 576px) {
-  .SupportSystem  {
-  .SupportSystemContent .grid-headers,
-   .SupportSystemContent .grid-rows {
-    grid-template-columns: 1.2fr 0.8fr;
-  }
+  .SupportSystem {
 
-  .hideStatus {
-    display: none;
+    .SupportSystemContent .grid-headers,
+    .SupportSystemContent .grid-rows {
+      grid-template-columns: 1fr .8fr;
+      font-size: .8em !important;
+    }
+
+    .hideStatus {
+      display: none;
+    }
   }
 }
+
+
+@media screen and (max-width: 400px) {
+  .SupportSystem {
+
+    .SupportSystemContent .grid-headers,
+    .SupportSystemContent .grid-rows {
+      font-size: .75em;
+      padding: .5em 0;
+    }
+
+    .SupportSystemContent {
+      padding: 10px;
+    }
+  }
 }

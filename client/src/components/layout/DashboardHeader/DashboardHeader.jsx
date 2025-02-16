@@ -5,11 +5,13 @@ import Hamburger from '../../shared/primitive/Hamburger/Hamburger';
 import React, { useState, useRef, forwardRef } from 'react'
 import useWindowSize from '../../../hooks/useWindowSize';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const DashboardHeader = forwardRef(({ title, children, items, setShowMenubar, showMenubar }, hamBurgerRef) => {
     const [showDropdown, setShowDropdown] = useState(false);
     const { width } = useWindowSize();
     const [showHamburger, setShowHamburger] = useState(false);
+    const [showCloseButton, setShowCloseButton] = useState(false);
 
     useEffect(() => {
         if (width < 992) {
@@ -31,10 +33,10 @@ const DashboardHeader = forwardRef(({ title, children, items, setShowMenubar, sh
                         <div className="dash-header-title-wrapper">
                             <p className='dash-header-title' onClick={() => setShowDropdown(!showDropdown)}>{title} <img className='dash-header-title-dropdown-icon' src={dropdownIcon} alt="dropdown-icon" style={{ transform: showDropdown ? 'rotate(180deg)' : 'rotate(0deg)' }} /></p>
                             <ul className="dash-header-title-list" style={{ display: showDropdown ? 'flex' : 'none' }}>
-
+                                
                                 {items?.map((item, index) => {
                                     return <li className='dash-header-title-list-item-wrapper' >
-                                        <a className='dash-header-title-list-item' href={item.link} key={index}>{item.text}</a>
+                                        <Link className='dash-header-title-list-item' to={item.link} key={index}>{item.text}</Link>
                                     </li>
                                 })}
 
@@ -43,7 +45,8 @@ const DashboardHeader = forwardRef(({ title, children, items, setShowMenubar, sh
                     </>
                 }
                 {children}
-                < UserInfoHeader />
+                <UserInfoHeader />
+
             </div>
         </>
     )
