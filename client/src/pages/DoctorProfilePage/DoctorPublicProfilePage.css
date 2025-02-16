@@ -136,6 +136,61 @@
             }
         }
     }
+    .Services-Section{
+        display: flex;
+        justify-items: stretch;
+        align-items: center;
+        padding-top: 3em;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+        .Service{
+            min-width: 275px;
+            padding: 1em;
+            flex: 1 1 100%;
+            max-width: 310px;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            .Price{
+                font-size: 2.5rem;
+            }
+        }
+        .totalAppointmentsAndDuration{
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 1em;
+        }
+    }
+    .Education{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 5rem;
+        gap: 1em;
+        margin-top: 3rem;
+        .Education-Item{
+            display: flex;
+            flex-direction: column;
+            background-color: var(--secondary-color);
+            gap: 1em;
+            padding: 1em;
+            align-items: center;
+            width: 18em;
+            border-radius: 10px;
+            justify-content: space-evenly;
+            text-align: center;
+            .College-Name{
+                font-size: 1.5rem;
+            }
+            .Degree{
+                color: var(--primary-color);
+            }
+        }
+    }
 }
 
 

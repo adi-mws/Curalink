@@ -13,7 +13,7 @@ export default function DashboardLayout() {
             setShowMenubar(true);
         } else setShowMenubar(false);
     }, [width]);
-    
+        
     return (
         <>
             <div className="DashboardLayout" >

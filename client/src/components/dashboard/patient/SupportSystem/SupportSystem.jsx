@@ -59,7 +59,7 @@ export default function SupportSystem() {
                 <span style={{ color: "#a4a434" }}>{support.status}</span>
               )}
             </span>
-            <TertiaryButton text="Open Chat" textWrap="nowrap" padding="1em 0.5em"/>
+            <TertiaryButton text="Open Chat" textWrap="nowrap" padding=".8em 1em"/>
           </div>
         ))}
       </div>
