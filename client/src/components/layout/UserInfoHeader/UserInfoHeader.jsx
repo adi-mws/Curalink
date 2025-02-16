@@ -6,19 +6,19 @@ import arrowDown from "../../../assets/icons/arrow-down.png";
 import UserNotification from "../../shared/alerts/UserNotification/UserNotification";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { useNotificationBarState } from "../../contexts/NotificationBarContext";
 export default function UserInfoHeader({ dashboard = false }) {
-  const [showNotification, setShowNotification] = useState(false);
   const notificationRef = useRef(null);
   const [notificationCount, setNotificationCount] = useState(0);
   useEffect(() => {
     setNotificationCount(notificationRef.current?.notificationCount);
   }, [notificationRef.current?.notificationCount]);
-
+  const { showNotificationBar, setShowNotificationBar } = useNotificationBarState();
   return (
     <div className="UserInfoHeader">
-      <UserNotification ref={notificationRef} showNotification={showNotification} setShowNotification={setShowNotification} />
+      <UserNotification ref={notificationRef} showNotification={showNotificationBar} setShowNotification={setShowNotificationBar} />
       <button className="header-container">
-        <div className="notification-section" onClick={() => setShowNotification(!showNotification)}>
+        <div className="notification-section" onClick={() => setShowNotificationBar(!showNotificationBar  )}>
           <img src={notification} alt="bellIcon" />
           {notificationRef.current?.notificationCount > 0 && (
             <span className="numberCircle">{notificationCount}</span>

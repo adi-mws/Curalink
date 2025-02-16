@@ -22,12 +22,14 @@ import PrescriptionSystem from './components/dashboard/patient/PrescriptionSyste
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
 import { SideBarStateContextProvider } from './components/contexts/SideBarStateContext.jsx';
+import { NotificationBarStateContextProvider } from './components/contexts/NotificationBarContext.jsx';
 function App() {
   return (
     <>
       <SideBarStateContextProvider>
-        <Router>
-          <ScrollToTop />
+        <NotificationBarStateContextProvider>
+          <Router>
+            <ScrollToTop />
 
           <Routes>
 
@@ -59,7 +61,8 @@ function App() {
               <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
             </Route>
           </Routes>
-        </Router>
+          </Router>
+        </NotificationBarStateContextProvider>
       </SideBarStateContextProvider>
 
 
