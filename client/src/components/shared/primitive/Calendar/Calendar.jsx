@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Calendar.css";
 
-export default function Calendar({ date = new Date() }) {
+export default function Calendar({ date = new Date(), dashboard = 'patient', bookingStatus=[], patientAppointments }) {
     const [currentDate, setCurrentDate] = useState(date);
     const [bookingData, setBookingData] = useState([]);
     const currentYear = currentDate.getFullYear();
@@ -9,19 +9,9 @@ export default function Calendar({ date = new Date() }) {
 
     // Add useEffect to fetch booking data when month changes
     useEffect(() => {
-        const fetchBookingData = async () => {
-            setBookingData([
-                { date: '2025-02-17', percentage: 75 },
-                { date: '2025-02-02', percentage: 50 },
-                { date: '2025-01-08', percentage: 30 },
-                { date: '2025-01-03', percentage: 30 },
-                { date: '2025-01-10', percentage: 30 },
-                { date: '2025-02-20', percentage: 30 },
-            ]); 
-        };
-
-        fetchBookingData();
-    }, [currentYear, currentMonth]);
+        console.log(bookingStatus);
+        setBookingData(bookingStatus);
+    }, [bookingStatus]);
 
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
     const firstDay = new Date(currentYear, currentMonth, 1).getDay();
@@ -33,6 +23,16 @@ export default function Calendar({ date = new Date() }) {
         const formattedDate = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
         const bookingInfo = bookingData.find(booking => booking.date === formattedDate);
         return bookingInfo?.percentage || 0;
+    };
+
+    const hasAppointment = (day) => {
+        const formattedDate = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        return patientAppointments?.appointments?.includes(formattedDate);
+    };
+
+    const hasMedication = (day) => {
+        const formattedDate = `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        return patientAppointments?.medications?.includes(formattedDate);
     };
 
     const renderDays = () => {
@@ -47,10 +47,12 @@ export default function Calendar({ date = new Date() }) {
             const percentage = getBookingPercentage(day);
             const circumference = 2 * Math.PI * 17; // Circle radius is 17px
             const offset = circumference - (percentage / 100) * circumference;
+            const hasAppt = hasAppointment(day);
+            const hasMed = hasMedication(day);
 
             calendarItems.push(
                 <div key={day} className={`calendar-item ${day === date.getDate() && currentMonth === date.getMonth() && currentYear === date.getFullYear() ? 'current-day' : ''}`}>
-                    <svg className="booking-progress" width="40" height="40">
+                    {dashboard === 'doctor' ? <svg className="booking-progress" width="40" height="40">
                         <circle
                             className="booking-progress-bg"
                             cx="20"
@@ -70,7 +72,14 @@ export default function Calendar({ date = new Date() }) {
                             strokeDashoffset={offset}
                             transform="rotate(-90 20 20)"
                         />
-                    </svg>
+                    </svg> : (
+                        dashboard === 'patient' && (
+                            <div className="event-indicators">
+                                {hasAppt && <div className="event-dot appointment-dot"></div>}
+                                {hasMed && <div className="event-dot medication-dot"></div>}
+                            </div>
+                        )
+                    )}
                     <span className="day-number">{day}</span>
                 </div>
             );
