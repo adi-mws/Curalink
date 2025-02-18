@@ -1,4 +1,4 @@
-.UpdateInfoForm2 {
+.EducationForm {
     font-family: var(--secondary-font);
     background-color: white;
     width: 75vw;
@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.heading {
+.EducationForm .heading {
     display: flex;
     width: 100%;
     font-size: 1.5rem;
@@ -20,7 +20,7 @@
     position: relative;
 }
 
-.close-icon {
+.EducationForm .close-icon {
     position: absolute;
     right: 0;
     top: 50%;
@@ -30,7 +30,7 @@
     height: 24px;
 }
 
-form {
+.EducationForm form {
     display: grid;
     grid-template-rows: minmax(3rem, 5rem) calc(50vh - 6rem) 3rem;
     gap: 1em;
@@ -38,78 +38,71 @@ form {
     width: 100%;
 }
 
-.form-area {
+.EducationForm .form-area {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     gap: 1.5rem;
+    overflow-y: scroll;
 }
 
-.error {
+.EducationForm .error {
     font-size: 0.8em;
     color: var(--red-color);
 }
 
-.Button-Container {
+.EducationForm .Button-Container {
     width: 80%;
     justify-content: flex-start;
     display: flex;
 }
 
-.inputFields {
+.EducationForm .inputFields {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
     width: 100%;
     align-items: flex-start;
+}
 
-    label {
-        font-size: 0.8em;
-        width: 100%;
-        max-width: 19.9em;
-    }
+.EducationForm .inputFields label {
+    font-size: 0.8em;
+    width: 100%;
+    max-width: 19.9em;
+}
 
-    input, textarea {
-        padding: .8em 1em;
-        background-color: #F2F2F2;
-        border-radius: 5px;
-        width: 80%;
-        padding-right: 2rem;
-        font-family: var(--secondary-font);
-        border: 0;
-        outline: none;
-    }
+.EducationForm .inputFields input {
+    padding: .8em 1em;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    width: 80%;
+    padding-right: 2rem;
+    font-family: var(--secondary-font);
+    height: 3.3em;
+    border: 0;
+    outline: none;
+}
 
-    input {
-        height: 3.3em;
-    }
+.EducationForm .inputFields .input-error {
+    border: 1px solid var(--red-color);
+}
 
-    textarea {
-        height: 6em;
-        resize: vertical;
-        min-height: 3.3em;
-    }
-
-    .input-error {
-        border: 1px solid var(--red-color);
-    }
-
-    .input-error:focus {
-        outline: 2px solid var(--red-color);
-    }
+.EducationForm .inputFields .input-error:focus {
+    outline: 2px solid var(--red-color);
 }
 
 @media screen and (max-width:568px) {
-    .UpdateInfoForm2 {
+    .EducationForm {
         width: 95vw;
         font-size: 1rem;
     }
-    .Button-Container {
+    
+    .EducationForm .Button-Container {
         width: 100%;
     }
-    .inputFields {
-        input, textarea {
-            width: 100%;
-        }
+    
+    .EducationForm .inputFields input {
+        width: 100%;
     }
 }
