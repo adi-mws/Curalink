@@ -129,7 +129,7 @@ export default function AboutPage({ }) {
                         </div>
                     </div>
                 </div>
-                <div className="Different">
+                <div className="how-we-are-different">
                     <hr />
                     <div className="Heading">
                         <h1>How We're Different?</h1>
