@@ -74,7 +74,7 @@ export default function Sidebar({ showMenubar = false, dashboard = null, setShow
                     </div>
                     <br />
                     <ul className='menu-bar-list'>
-                        <li><Link to="/dashboard" className={sideBarState === 'dashboard' ? 'active' : ''}>Dashboard</Link></li>
+                        <li><Link to="/dashboard" className={sideBarState === 'dash-patient-landing' || sideBarState === 'dash-doctor-landing' ? 'active' : ''}>Dashboard</Link></li>
                         <li><Link to="/dashboard/support" className={sideBarState === 'dash-support' ? 'active' : ''}>Support</Link></li>
                     </ul>
                     <br />
@@ -88,7 +88,7 @@ export default function Sidebar({ showMenubar = false, dashboard = null, setShow
                     <ul className='menu-bar-list'>
                         <li><Link to="/login" className={sideBarState === 'login' ? 'active' : ''}>Login</Link></li>
                         <li><Link to="/" className={sideBarState === 'home' ? 'active' : ''}>Home</Link></li>
-                        <li><Link to="/dashboard" className={sideBarState === 'dashboard' ? 'active' : ''}>Dashboard</Link></li>
+                        <li><Link to="/dashboard" className={sideBarState === 'dash-patient-landing' || sideBarState === 'dash-doctor-landing' ? 'active' : ''}>Dashboard</Link></li>
                         <li><Link to="/faqs" className={sideBarState === 'faqs' ? 'active' : ''}>FAQ's</Link></li>
                         <li><Link to="/support" className={sideBarState === 'support' ? 'active' : ''}>Support</Link></li>
                     </ul>
@@ -117,7 +117,7 @@ export default function Sidebar({ showMenubar = false, dashboard = null, setShow
                         <br />
                     </div>
                     : <></>}
-               
+
                 <div className='menu-bar-category'>
                     <div>
                         <img src={company} alt="" />

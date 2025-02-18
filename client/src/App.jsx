@@ -21,11 +21,11 @@ import SupportSystem from './components/dashboard/patient/SupportSystem/SupportS
 import PrescriptionSystem from './components/dashboard/patient/PrescriptionSystem/PrescriptionSystem.jsx';
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
-import CalendarPopUp from './pages/CalendarDayPop/CalendarPopUp.jsx';
+import CalendarPopUp from './components/shared/primitive/PatientCalendarPopUp/PatientCalendarPopUp.jsx';
 import ExperienceForm from './components/dashboard/doctor/forms/ExperienceForm/ExperienceForm.jsx';
 import { SideBarStateContextProvider } from './components/contexts/SideBarStateContext.jsx';
 import { NotificationBarStateContextProvider } from './components/contexts/NotificationBarContext.jsx';
-
+import PatientLanding from './components/dashboard/patient/PatientLanding/PatientLanding.jsx';
 function App() {
   return (
     <>
@@ -58,11 +58,12 @@ function App() {
 
 
           <Route path='/dashboard' element={<DashboardLayout />}>
+            <Route path='/dashboard' element={<PatientLanding />} />
             <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
             <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
             <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
             <Route path='/dashboard/support' element={<SupportSystem />} />
-            <Route path='/dashboard/prescription-system' element={<PrescriptionSystem />} />
+            <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
           </Route>
         </Routes>
       </Router>

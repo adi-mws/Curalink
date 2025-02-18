@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import "./Calendar.css";
+import PatientCalendarPopUp from '../PatientCalendarPopUp/PatientCalendarPopUp';
 
-export default function Calendar({ date = new Date(), dashboard = 'patient', bookingStatus=[], patientAppointments }) {
+export default function Calendar({ date = new Date(), dashboard = 'patient', bookingStatus = [], patientAppointments }) {
     const [currentDate, setCurrentDate] = useState(date);
     const [bookingData, setBookingData] = useState([]);
+    const [showCalendarPopUp, setShowCalendarPopUp] = useState(false);
+    const [selectedDate, setSelectedDate] = useState(null);
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth();
 
@@ -35,6 +38,11 @@ export default function Calendar({ date = new Date(), dashboard = 'patient', boo
         return patientAppointments?.medications?.includes(formattedDate);
     };
 
+    const popUpHandler = (date) => {
+        setSelectedDate(date);
+        setShowCalendarPopUp(true);
+    }
+
     const renderDays = () => {
         const calendarItems = [];
         const totalSlots = 42;
@@ -51,7 +59,8 @@ export default function Calendar({ date = new Date(), dashboard = 'patient', boo
             const hasMed = hasMedication(day);
 
             calendarItems.push(
-                <div key={day} className={`calendar-item ${day === date.getDate() && currentMonth === date.getMonth() && currentYear === date.getFullYear() ? 'current-day' : ''}`}>
+
+                <div key={day} onClick={() => popUpHandler(`${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`)} className={`calendar-item ${day === date.getDate() && currentMonth === date.getMonth() && currentYear === date.getFullYear() ? 'current-day' : ''}`}>
                     {dashboard === 'doctor' ? <svg className="booking-progress" width="40" height="40">
                         <circle
                             className="booking-progress-bg"
@@ -103,6 +112,12 @@ export default function Calendar({ date = new Date(), dashboard = 'patient', boo
                 ))}
                 {renderDays()}
             </div>
+            {dashboard === 'patient' ?
+
+                <PatientCalendarPopUp showCalendarPopUp={showCalendarPopUp} setShowCalendarPopUp={setShowCalendarPopUp} selectedDate={selectedDate} />
+
+                : null
+            }
         </div>
     );
 }
