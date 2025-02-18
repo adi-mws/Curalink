@@ -40,7 +40,7 @@ export default function AboutPage({ }) {
                     </div>
                 </div>
 
-                <div className="Services">
+                <div className="Services-section">
                     <h1>What We Do ?</h1>
                     <div className="First">
                         <div className="Written-Block">
