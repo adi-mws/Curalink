@@ -1,0 +1,145 @@
+.CalendarPopUp {
+  width: 70vw;
+  max-width: 90%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 80.6px 31px rgba(0, 0, 0, 0.25);
+  margin: 20px auto;
+  font-family: var(--secondary-font);
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+
+  .calendar-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .CalendarAppointments {
+    background-color: #f6f6f6;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+
+    .doctor-appointment {
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      text-align: center;
+      gap: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .doctorName-image {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .doctorImage {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: #d9d9d9;
+    }
+
+    .doctorSchedule-icon {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .doctorSchedule-icon img {
+      width: 30px;
+    }
+  }
+
+  .medicines-container {
+    background-color: #f6f6f6;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+
+    .medicines-container p {
+      text-align: center;
+      font-size: 18px;
+      padding-bottom: 10px;
+    }
+
+    .medicines-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .medicine-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .checkbox {
+      width: 30px;
+      height: 30px;
+      background-color: #6b6b6b;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .CalendarPopUp {
+    width: 100vw;
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .CalendarPopUp {
+    width: 90vw;
+  }
+  .doctor-appointment:nth-child(2) {
+    display: none;
+  }
+
+  .doctor-appointment {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .doctor-appointment {
+    flex-direction: column;
+  }
+
+  .doctorName-image {
+    flex-direction: column;
+  }
+
+  .doctorSchedule-icon {
+    flex-direction: column-reverse;
+  }
+
+  .medicines-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

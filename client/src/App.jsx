@@ -21,22 +21,25 @@ import SupportSystem from './components/dashboard/patient/SupportSystem/SupportS
 import PrescriptionSystem from './components/dashboard/patient/PrescriptionSystem/PrescriptionSystem.jsx';
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
+<<<<<<< HEAD
 import { SideBarStateContextProvider } from './components/contexts/SideBarStateContext.jsx';
 import UpdateInfoForm1 from './components/dashboard/doctor/forms/UpdateInfoForm/UpdateInfoForm1.jsx';
 import UpdateInfoForm2 from './components/dashboard/doctor/forms/UpdateInfoForm/UpdateInfoForm2.jsx';
 import UpdateInfoForm3 from './components/dashboard/doctor/forms/UpdateInfoForm/UpdateInfoForm3.jsx';
+=======
+import CalendarPopUp from './pages/CalendarDayPop/CalendarPopUp.jsx';
+>>>>>>> fb978af6f0355dcd9f0c544992c483490adddee9
 
 function App() {
   return (
     <>
-      <SideBarStateContextProvider>
-        <Router>
-          <ScrollToTop />
 
-          <Routes>
+      <Router>
+        <ScrollToTop />
 
-            <Route path='/' element={<MainLayout />}>
+        <Routes>
 
+<<<<<<< HEAD
               <Route path='/' element={<DoctorsPage />} />
               <Route path='/support' element={<SupportPage />} />
               <Route path='/about' element={<AboutPage />} />
@@ -53,20 +56,39 @@ function App() {
               <Route path='/doctor-public-profile' element={<DoctorPublicProfilePage />} />
               <Route path='/doctor-profile/update-info' element={<UpdateInfoForm3 />} />
             </Route>
+=======
+          <Route path='/' element={<MainLayout />}>
+
+            <Route path='/' element={<DoctorsPage />} />
+            <Route path='/support' element={<SupportPage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/doctors' element={<DoctorsPage />} />
+            <Route path='/services' element={<ServicePage />} />
+            <Route path='/news' element={<NewsSearchPage />} />
+            <Route path='/news/:id' element={<NewsPage />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='/login' element={<PatientLoginPage />} />
+            <Route path='/register' element={<PatientRegistrationPage />} />
+            <Route path='/search-doctors' element={<DoctorsSearchPage />} />
+            <Route path='/test' element={<DoctorsCard filter={true} />} />
+            <Route path='/search-faqs' element={<FAQsPage />} />
+            <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
+          </Route>
+>>>>>>> fb978af6f0355dcd9f0c544992c483490adddee9
 
 
 
-            <Route path='/dashboard' element={<DashboardLayout />}>
-              <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
-              <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
-              <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
-              <Route path='/dashboard/support' element={<SupportSystem />} />
-              <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
-            </Route>
-          </Routes>
-        </Router>
-      </SideBarStateContextProvider>
+          <Route path='/dashboard' element={<DashboardLayout />}>
+            <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
+            <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
+            <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
+            <Route path='/dashboard/support' element={<SupportSystem />} />
+            <Route path='/dashboard/prescription-system' element={<PrescriptionSystem />} />
+          </Route>
+        </Routes>
+      </Router>
 
+      <CalendarPopUp />
 
     </>
   )

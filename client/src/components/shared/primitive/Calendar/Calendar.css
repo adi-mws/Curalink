@@ -1,0 +1,138 @@
+.Calendar {
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 0 2em;
+    font-family: var(--secondary-font);
+    font-size: .8em;
+    display: grid;
+    grid-template-rows: auto auto;
+
+    .calendar-header {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 1.2em;
+    }
+
+    .calendar-body {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template: repeat(7, 1fr) / repeat(7, 1fr);
+        gap: .5em;
+        
+        .calendar-item {
+            display: grid;
+            place-items: center;
+            width: 40px;
+            height: 40px;
+            background: white;
+            justify-self: center;
+            font-weight: 600;
+            position: relative;
+            border-radius: 50%;
+
+            .booking-progress {
+                position: absolute;
+                top: 0;
+                left: 0;
+                
+                .booking-progress-bg {
+                    stroke: #f0f0f0;
+                }
+                
+                .booking-progress-indicator {
+                    stroke: var(--primary-color);
+                    transition: stroke-dashoffset 0.3s ease;
+                }
+            }
+
+            .day-number {
+                position: relative;
+                z-index: 1;
+            }
+
+            .event-indicators {
+                position: absolute;
+                bottom: 5px;
+                display: flex;
+                gap: 4px;
+                
+                .event-dot {
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                }
+
+                .appointment-dot {
+                    background-color: #FFD700; /* Yellow */
+                }
+
+                .medication-dot {
+                    background-color: #32CD32; /* Green */
+                }
+            }
+        }
+
+        .calendar-item:not(.weekday-item) {
+            cursor: pointer;
+        }
+
+        .calendar-item:hover .booking-progress-bg {
+            stroke: var(--primary-color);
+        }
+
+        .calendar-item:hover > .event-indicators > .appointment-dot {
+            background: white !important;
+            box-shadow: 0 0 10px 1px rgb(255, 255, 255) !important;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+
+        .calendar-item:hover > .event-indicators > .medication-dot {
+            background: white !important;
+            box-shadow: 0 0 10px 1px rgb(255, 255, 255) !important;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+
+        .calendar-item:hover .booking-progress-indicator {
+            stroke: white;
+        }
+
+        .calendar-item:not(.weekday-item, .no-hover):hover {
+            .booking-progress-indicator {
+                stroke: white;
+                filter: drop-shadow(0 0 2px white);
+                transition: stroke 0.2s ease-in-out, filter 0.2s ease-in-out;
+            
+            }
+            color: white;
+            background-color: var(--primary-color);
+        }
+
+        .calendar-item:hover.calendar-item:nth-child(7n + 1) {
+            color: white;
+        }
+
+        .weekday-item {
+            color: var(--gray-text);
+        }
+
+        .current-day {
+            background-color: var(--secondary-color);
+            
+            .booking-progress-indicator {
+                stroke: var(--primary-color);
+            }
+        }
+
+        .calendar-item:nth-child(7n + 1):not(.weekday-item) {
+            color: var(--red-color);
+        }
+    }
+}
+
