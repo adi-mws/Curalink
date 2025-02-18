@@ -1,19 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CalendarPopUp.css";
 import cutIcon from "../../assets/icons/cutIcon.png";
 import videoIcon from "../../assets/icons/videoIcon.png";
-
-const MedicineCard = ({ name, dose, time }) => (
-  <div className="medicine-card">
-    <div className="checkbox"></div>
-    <div>
-      <p>
-        {name} - {dose}
-      </p>
-      <p>{time}</p>
-    </div>
-  </div>
-);
 
 const DoctorAppointment = ({ name, specialty, time, duration }) => (
   <div className="doctor-appointment">
@@ -38,11 +26,17 @@ const DoctorAppointment = ({ name, specialty, time, duration }) => (
 );
 
 const CalendarPopUp = () => {
-  return (
+  const [isOpen, setIsOpen] = useState(true);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return isOpen ? (
     <div className="CalendarPopUp">
       <div className="calendar-heading">
-        <p>21 JAN 2025</p>
-        <button>
+        <p style={{color: "var(--primary-color)", fontWeight: "bold", fontSize: "34px"}}>21 <span style={{color: "grey"}}>JAN</span> 2025</p>
+        <button onClick={togglePopup}>
           <img src={cutIcon} alt="cutIcon" />
         </button>
       </div>
@@ -59,22 +53,8 @@ const CalendarPopUp = () => {
           />
         ))}
       </div>
-
-      <div className="medicines-container">
-        <p>Medicines To-Do</p>
-        <div className="medicines-grid">
-          {[1, 2, 3, 4].map((_, index) => (
-            <MedicineCard
-              key={index}
-              name="Acne Cream"
-              dose="25"
-              time="Before Breakfast"
-            />
-          ))}
-        </div>
-      </div>
     </div>
-  );
+  ) : null; // Return null when isOpen is false
 };
 
 export default CalendarPopUp;

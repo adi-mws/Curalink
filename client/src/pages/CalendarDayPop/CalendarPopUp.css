@@ -66,44 +66,6 @@
       width: 30px;
     }
   }
-
-  .medicines-container {
-    background-color: #f6f6f6;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 15px;
-
-    .medicines-container p {
-      text-align: center;
-      font-size: 18px;
-      padding-bottom: 10px;
-    }
-
-    .medicines-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-
-    .medicine-card {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      background-color: white;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .checkbox {
-      width: 30px;
-      height: 30px;
-      background-color: #6b6b6b;
-      border-radius: 4px;
-    }
-  }
 }
 
 @media (max-width: 768px) {
@@ -118,7 +80,8 @@
   .CalendarPopUp {
     width: 90vw;
   }
-  .doctor-appointment:nth-child(2) {
+
+  .CalendarAppointments .doctor-appointment:nth-of-type(2) {
     display: none;
   }
 
@@ -137,9 +100,5 @@
 
   .doctorSchedule-icon {
     flex-direction: column-reverse;
-  }
-
-  .medicines-grid {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
