@@ -1,0 +1,108 @@
+.UpdateInfoForm1 {
+    font-family: var(--secondary-font);
+    background-color: white;
+    width: 75vw;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.2rem;
+    height: 100%;
+    position: relative;
+    .heading {
+        display: flex;
+        width: 100%;
+        font-size: 1.5rem;
+        font-family: var(--primary-font);
+        justify-content: flex-start;
+        align-items: center;
+        padding-right: 1em;
+        position: relative;
+    }
+    
+    .close-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+    }
+    
+    form {
+        display: grid;
+        grid-template-rows: minmax(3rem, 5rem) calc(50vh - 6rem) 3rem;
+        gap: 1em;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .form-area{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .error {
+        font-size: 0.8em;
+        color: var(--red-color);
+    }
+    
+    .Button-Container{
+        width: 80%;
+        justify-content: flex-start;
+        display: flex;
+    }
+    
+    .inputFields {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        width: 100%;
+        align-items: flex-start;
+        label {
+            font-size: 0.8em;
+            width: 100%;
+            max-width: 19.9em;
+        }
+    
+        input, select {
+            padding: .8em 1em;
+            background-color: #F2F2F2;
+            border-radius: 5px;
+            width: 80%;
+            padding-right: 2rem;
+            font-family: var(--secondary-font);
+            height: 3.3em;
+            border: 0;
+            outline: none;
+        }
+    
+        .input-error {
+            border: 1px solid var(--red-color);
+        }
+    
+        .input-error:focus {
+            outline: 2px solid var(--red-color);
+        }
+    }
+}
+
+
+
+@media screen and (max-width:568px){
+    .UpdateInfoForm1 {
+        width: 95vw;
+        font-size: 1rem;
+        .Button-Container{
+            width: 100%;
+        }
+        .inputFields{     
+            input, select{
+                width: 100%;
+            }
+        }
+    }
+    
+}
+

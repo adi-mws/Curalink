@@ -22,6 +22,10 @@ import PrescriptionSystem from './components/dashboard/patient/PrescriptionSyste
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
 import { SideBarStateContextProvider } from './components/contexts/SideBarStateContext.jsx';
+import UpdateInfoForm1 from './components/dashboard/doctor/forms/UpdateInfoForm/UpdateInfoForm1.jsx';
+import UpdateInfoForm2 from './components/dashboard/doctor/forms/UpdateInfoForm/UpdateInfoForm2.jsx';
+import UpdateInfoForm3 from './components/dashboard/doctor/forms/UpdateInfoForm/UpdateInfoForm3.jsx';
+
 function App() {
   return (
     <>
@@ -46,7 +50,8 @@ function App() {
               <Route path='/search-doctors' element={<DoctorsSearchPage />} />
               <Route path='/test' element={<DoctorsCard filter={true} />} />
               <Route path='/faqs' element={<FAQsPage />} />
-              <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
+              <Route path='/doctor-public-profile' element={<DoctorPublicProfilePage />} />
+              <Route path='/doctor-profile/update-info' element={<UpdateInfoForm3 />} />
             </Route>
 
 

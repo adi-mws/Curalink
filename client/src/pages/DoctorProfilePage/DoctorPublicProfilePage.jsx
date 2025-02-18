@@ -29,7 +29,6 @@ export default function DoctorPublicProfilePage() {
         licenceNo: "ahskdfh432"
     }
 
-
     const patientReviews = [
       {
         name: "Emily Johnson",
@@ -197,7 +196,7 @@ export default function DoctorPublicProfilePage() {
                 <p className="Doctor-Category">{doctor.category}</p>
                 <div className="Doctor-Rating"><p style={{fontSize:'2rem',fontWeight:'500'}}>{doctor.rating}</p>
                 <RatingDisplay rating={doctor.rating} /></div>
-                <div className="Consultation-Reviews">
+            <div className="Consultation-Reviews">
                     <div className="Consultation">
                         <p className='Consultation-Number'>{doctor.consultations} <p className='Consultation-Text'>Consultations</p></p>
                     </div>
