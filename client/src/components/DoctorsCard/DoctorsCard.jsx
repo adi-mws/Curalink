@@ -10,18 +10,18 @@ import propTypes from 'prop-types';
 
 
 
-export default function DoctorsCard({DoctorProfile = data, filter = false}) {
+export default function DoctorsCard({ DoctorProfile = data, filter = false }) {
     const [filterEnabled, changeFilter] = useState(filter);
-  return (
-    <div className='DoctorsCard'>
-        <div className="ImageAndRating">
-            <img src={DoctorProfile.profilePic} alt="" className="ProfilePicture" />
-            <div className="Reviews">
-                <p className="AvgRating">{DoctorProfile.review.toFixed(1)}</p>
-                <RatingDisplay rating={DoctorProfile.review}/>
-                <p className="TotalReviews" style={{ display:filterEnabled ? "none" : ""}}>{DoctorProfile.totalreviews}+ reviews</p>
-                <p className="ViewProfile"style={{ display:filterEnabled ? "" : "none"}}>View Profile</p>
-            </div>
+    return (
+        <div className='DoctorsCard'>
+            <div className="ImageAndRating">
+                <img src={DoctorProfile.profilePic} alt="" className="ProfilePicture" />
+                <div className="Reviews">
+                    <p className="AvgRating">{DoctorProfile.review.toFixed(1)}</p>
+                    <RatingDisplay rating={DoctorProfile.review} />
+                    <p className="TotalReviews" style={{ display: filterEnabled ? "none" : "" }}>{DoctorProfile.totalreviews}+ reviews</p>
+                    <p className="ViewProfile" style={{ display: filterEnabled ? "" : "none" }}>View Profile</p>
+                </div>
             </div>
             <div className="NameAndSpec">
                 <p className="Name">{DoctorProfile.name}</p>
@@ -29,7 +29,7 @@ export default function DoctorsCard({DoctorProfile = data, filter = false}) {
             </div>
 
             <div className="ButtonsOrPrice">
-                <div style={{ display:filterEnabled ? "" : "none"}} className="PriceAndDuration">
+                <div style={{ display: filterEnabled ? "" : "none" }} className="PriceAndDuration">
                     <p className="Price">{DoctorProfile.Currency}{DoctorProfile.price}</p>
                     <div className="Duration">
                         <img src={DurationIcon} alt="" className="DurationIcon" />
@@ -37,22 +37,20 @@ export default function DoctorsCard({DoctorProfile = data, filter = false}) {
                     </div>
                 </div>
 
-                    <div className="ProfileButton" style={{ display:filterEnabled ? "none" : ""}} ><SecondaryButton width='100%' padding="1em 0em" text="View Profile"/></div>
-                    <div className="BookAppointment"><TertiaryButton width='100%' padding="1em 0em" text="Book Appointment"/></div>
-                
-            </div>
+                <div className="ProfileButton" style={{ display: filterEnabled ? "none" : "" }} ><SecondaryButton width='100%' padding="1em 0em" text="View Profile" /></div>
+                <div className="BookAppointment"><TertiaryButton width='100%' padding="1em 0em" text="Book Appointment" /></div>
 
-        
-    </div>
-  )
+            </div>
+        </div>
+    )
 }
 
 
-DoctorsCard.propTypes={
+DoctorsCard.propTypes = {
     name: propTypes.string,
     specialization: propTypes.string,
     review: propTypes.number,
-    totalreviews:propTypes.number,
+    totalreviews: propTypes.number,
     price: propTypes.number,
     duration: propTypes.number,
     Currency: propTypes.string
@@ -63,8 +61,8 @@ const data = {
     name: "Dr. John Carter",
     specialization: "Cardiologist",
     review: 4.0,
-    totalreviews:700,
+    totalreviews: 700,
     price: 150,
     duration: 10,
-    Currency:"$"
-  }
+    Currency: "$"
+}

@@ -1,0 +1,280 @@
+.PatientLanding>div {
+    width: 100%;
+    height: 100%;
+}
+
+.PatientLanding {
+    width: 100%;
+    height: 100%;
+    display: grid;
+
+    grid-template-rows: 65px calc(100% - 65px);
+
+    .DashboardHeader {
+        box-shadow: none;
+    }
+
+    .PatientLandingContent {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        scrollbar-width: thin;
+        scrollbar-color: var(--primary-color) var(--white);
+        overflow-y: scroll;
+        padding: .5em;
+
+    }
+
+    .patient-landing-hero {
+        width: 100%;
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 1.2fr 1fr;
+        font-family: var(--secondary-font);
+    }
+
+    .patient-landing-hero>div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .patient-landing-profile-section {
+        display: grid;
+        grid-template-rows: 50% 50%;
+
+    }
+
+    .patient-landing-profile-section>div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .patient-profile {
+        padding: 0 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .patient-profile>div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .patient-profile-avatar {
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .patient-profile-details {
+        display: flex;
+        gap: .5em;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .patient-profile-name {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    .patient-profile-gender {
+        font-size: .9em;
+        font-weight: 400;
+        color: var(--primary-color);
+    }
+
+    .patient-profile-age {
+        font-size: .9em;
+        font-weight: 400;
+        color: var(--gray-text);
+    }
+
+
+    .patient-landing-redirections {
+        box-shadow: 0 0 2.5px 0 rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 1em;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+
+    .patient-landing-redirections>div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .patient-landing-redirections>button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .5em;
+
+        img {
+            transition: all .3s ease-in-out;
+
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            font-family: var(--secondary-font);
+            font-size: .9em;
+            font-weight: 400;
+            color: var(--gray-text);
+        }
+    }
+
+    #request-follow-up:hover {
+        img {
+            rotate: 180deg;
+        }
+    }
+
+    .patient-landing-redirections>button:hover {
+        span {
+            color: black;
+        }
+    }
+
+    #search-doctors:hover {
+        img {
+            animation: search-doctors-animation .5s linear forwards;
+        }
+    }
+
+    #view-appointments:hover {
+        img {
+            animation: search-doctors-animation .5s linear forwards;
+        }
+    }
+    #book-appointment:hover {
+        img {
+            animation: search-doctors-animation .5s linear forwards;
+        }
+    }
+
+
+    .active-prescription-section {
+        margin-top: 1em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        font-family: var(--secondary-font);
+    }
+
+    .main-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+
+    .active-prescription-section>.main-heading {
+        width: 100%;
+    }
+
+    .prescription-container {
+        display: flex;
+        flex-direction: row;  
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        width: 100%; 
+        padding: 0 1em;
+        flex-wrap: wrap;
+    }
+
+    .prescription-card {    
+        max-width: 450px;
+        min-width: 350px;
+        flex: 1 1 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: whitesmoke;
+        padding: .5em;
+        border-radius: 10px;
+    }
+
+    .prescription-card > div:first-child {
+        display: flex;
+        gap: .6em;
+
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        font-size: .9em;
+        font-weight: 400;
+        color: var(--gray-text);
+        justify-content: center;   
+
+        p:first-child {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: black;
+        }
+
+        p:nth-child(2) {
+            font-size: 1em;
+            font-weight: 400;
+        }
+    }
+
+    .prescription-card > div:last-child {   
+        display: flex;
+        width: 40%;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+    }
+
+    .prescription-duration > p {
+        position: absolute;
+        top: 50%;
+        background-color: white;
+        padding: .5em 1em;
+
+        left: 70%;
+        border-radius: 50px;
+        text-wrap: nowrap;
+        transform: translate(-50%, -50%);
+        font-size: 1em;
+        font-weight: 400;
+        color: var(--primary-color);
+    }
+}
+
+@keyframes search-doctors-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(30deg);
+    }
+    30% {
+        transform: rotate(0deg);
+    }
+    45% {
+        transform: rotate(-30deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

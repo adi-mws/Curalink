@@ -1,0 +1,133 @@
+.PatientCalendarPopUp > div {
+  width: 100%; 
+  height: 100%;
+}
+
+.PatientCalendarPopUp {
+  width: 70vw;
+  height: 90vh;
+  overflow: hidden;
+  max-width: 90%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 80.6px 31px rgba(0, 0, 0, 0.25);
+  margin: 20px auto;
+  font-family: var(--secondary-font);
+  top: 50%;
+  left: 50%;
+  z-index: 2000;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  display: grid; 
+  grid-template-rows: 50px calc(100% -50px);
+
+  .calendar-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .CalendarAppointments {
+    background-color: #f6f6f6;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    .doctor-appointment {
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      text-align: center;
+      gap: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .CalendarAppointments-heading {
+      font-size: 2em;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .doctorName-image {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .doctorImage {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: #d9d9d9;
+    }
+
+    .doctorSchedule-icon {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .doctorSchedule-icon img {
+      width: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .PatientPatientCalendarPopUp {
+    width: 100vw;
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .CalendarAppointments-heading {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .PatientCalendarPopUp {
+    width: 90vw;
+
+    .doctorImage {
+      width: 100px !important; 
+      height: 100px !important;
+    }
+  
+
+    .doctor-appointment {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .doctor-appointment {
+      flex-direction: column;
+    }
+
+    .doctorName-image {
+      flex-direction: column;
+    }
+
+    .doctorSchedule-icon {
+      flex-direction: column-reverse;
+    }
+  }
+
+
+
+}
