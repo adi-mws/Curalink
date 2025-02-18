@@ -21,52 +21,48 @@ import SupportSystem from './components/dashboard/patient/SupportSystem/SupportS
 import PrescriptionSystem from './components/dashboard/patient/PrescriptionSystem/PrescriptionSystem.jsx';
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
-import { SideBarStateContextProvider } from './components/contexts/SideBarStateContext.jsx';
-import { NotificationBarStateContextProvider } from './components/contexts/NotificationBarContext.jsx';
-import PatientLanding from './components/dashboard/patient/PatientLanding/PatientLanding.jsx';
+import CalendarPopUp from './pages/CalendarDayPop/CalendarPopUp.jsx';
+
 function App() {
   return (
     <>
-      <SideBarStateContextProvider>
-        <NotificationBarStateContextProvider>
-          <Router>
-            <ScrollToTop />
 
-          <Routes>
+      <Router>
+        <ScrollToTop />
 
-            <Route path='/' element={<MainLayout />}>
+        <Routes>
 
-              <Route path='/' element={<DoctorsPage />} />
-              <Route path='/support' element={<SupportPage />} />
-              <Route path='/about' element={<AboutPage />} />
-              <Route path='/doctors' element={<DoctorsPage />} />
-              <Route path='/services' element={<ServicePage />} />
-              <Route path='/news' element={<NewsSearchPage />} />
-              <Route path='/news/:id' element={<NewsPage />} />
-              <Route path='/contact' element={<ContactPage />} />
-              <Route path='/login' element={<PatientLoginPage />} />
-              <Route path='/register' element={<PatientRegistrationPage />} />
-              <Route path='/search-doctors' element={<DoctorsSearchPage />} />
-              <Route path='/test' element={<DoctorsCard filter={true} />} />
-              <Route path='/faqs' element={<FAQsPage />} />
-              <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
-            </Route>
+          <Route path='/' element={<MainLayout />}>
 
+            <Route path='/' element={<DoctorsPage />} />
+            <Route path='/support' element={<SupportPage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/doctors' element={<DoctorsPage />} />
+            <Route path='/services' element={<ServicePage />} />
+            <Route path='/news' element={<NewsSearchPage />} />
+            <Route path='/news/:id' element={<NewsPage />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='/login' element={<PatientLoginPage />} />
+            <Route path='/register' element={<PatientRegistrationPage />} />
+            <Route path='/search-doctors' element={<DoctorsSearchPage />} />
+            <Route path='/test' element={<DoctorsCard filter={true} />} />
+            <Route path='/search-faqs' element={<FAQsPage />} />
+            <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
+          </Route>
 
 
-            <Route path='/dashboard' element={<DashboardLayout />}>
-              <Route path='/dashboard' element={<PatientLanding />} />
-              <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
-              <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
-              <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
-              <Route path='/dashboard/support' element={<SupportSystem />} />
-              <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
-            </Route>
-          </Routes>
-          </Router>
-        </NotificationBarStateContextProvider>
-      </SideBarStateContextProvider>
 
+          <Route path='/dashboard' element={<DashboardLayout />}>
+            <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
+            <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
+            <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
+            <Route path='/dashboard/support' element={<SupportSystem />} />
+            <Route path='/dashboard/prescription-system' element={<PrescriptionSystem />} />
+          </Route>
+        </Routes>
+      </Router>
+
+      <CalendarPopUp />
 
     </>
   )
