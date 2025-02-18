@@ -1,71 +1,82 @@
 .AboutPage {
 
-    .Hero > div {
-        width: 100%; 
+    .Hero>div {
+        width: 100%;
         height: 100%;
     }
-    .Hero{
-        
-        display: grid; 
-        grid-template-columns: 60% 40%;
-        gap: 1em;
+
+    .Hero {
+
+        display: grid;
+        grid-template-columns: 52.5% 42.5%;
+        gap: 5%;
 
         .Hero-Left {
             font-family: var(--primary-font);
             padding: 3em;
+
             h1 {
-                font-size: 2.7em;  
+                font-size: 2.7em;
                 color: black;
-                padding-bottom: 0.5em;  
+                padding-bottom: 0.5em;
             }
+
             p {
                 font-family: var(--secondary-font);
                 font-size: 0.95em;
                 line-height: 1.8em;
-                padding-bottom: 3em;  
+                padding-bottom: 3em;
             }
-         
+
             .Cards {
                 display: flex;
                 justify-content: center;
                 gap: 4em;
+
                 div {
                     border-radius: 0.5em;
                     display: flex;
                     flex-direction: column;
+
                     p {
                         font-size: 0.8em;
                         padding-bottom: 0em;
                     }
+
                     a {
                         font-size: 0.8em;
                         font-family: var(--secondary-font);
                         color: black;
                     }
+
                     padding: 1em;
                     gap: 0.8em;
                 }
+
                 .Vision {
                     background-color: #E9F682;
                 }
+
                 .Mission {
                     background-color: #FFC0EA;
                 }
             }
 
         }
-        .Hero-Right{
+
+        .Hero-Right {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 4em;
             padding-top: 1em;
-    
-            .Smiling-Woman{
+
+            .Smiling-Woman {
                 height: 37em;
             }
         }
     }
+
     .Services-section {
         width: 100%;
 
@@ -76,55 +87,88 @@
             font-family: var(--primary-font);
             padding-top: 1em;
         }
+
+        .First>div {
+            width: 100%;
+            height: 100%;
+        }
+
         .First {
-            display: flex;
-            padding: 4em;
-            align-items: center;
-            gap: 3em;
+            display: grid;
+            grid-template-columns: 70% 30%;
+
+
+            .First-Content-Wrapper {
+                display: grid;
+                grid-template: 100% / 70% 30%;
+                place-items: center;
+                padding: 2em 3em;
+            }
+
+            .First-Content-Wrapper>div {
+                width: 100%;
+                height: 100%;
+            }
+
             .Written-Block {
                 display: flex;
+
                 flex-direction: column;
                 position: relative;
                 bottom: 1em;
                 gap: 3em;
-                padding-right: 15em;
+
+
                 .First-P {
                     font-size: 2em;
                     font-family: var(--primary-font);
                 }
+
                 .Second-P {
                     font-family: var(--secondary-font);
                 }
             }
-            .Read-More {
-                display: flex;
-                gap: 1em;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                border-radius: 0.5em;
-                background-color:#8623741A;
-                top: 1.8em;
-                right: 15em;
-                font-family: var(--secondary-font);
-                width: 40em;
-                height: 9em;
-                .Right-Arrow {
-                    transform: rotate(270deg);
-                    width: 1.7em;
-                }
+
+
+        }
+
+        .First>.First-Content-Wrapper>.Read-More:hover {
+            background-color: var(--hover-secondary-color);
+
+        }
+
+        .First>.First-Content-Wrapper>.Read-More {
+            display: flex;
+            gap: .5em;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.5em;
+            background-color: #8623741A;
+            width: 7.5em;
+            height: 7.5em;
+            border-radius: 10px;
+            font-family: var(--secondary-font);
+            font-size: .9em;
+            cursor: pointer;
+
+            .Right-Arrow {
+                transform: rotate(270deg);
+                width: 1.7em;
             }
         }
+
         .Second {
             padding: 4em;
             padding-top: 0em;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+
             div {
                 border-radius: 0.5em;
                 display: flex;
+                flex: 300px 1 1;
                 padding: 2.1em;
                 background-color: var(--secondary-color);
                 width: 26em;
@@ -132,23 +176,63 @@
                 min-height: fit-content;
                 flex-direction: column;
                 font-family: var(--secondary-font);
+
                 p {
                     font-size: 0.8em;
                 }
+
                 h3 {
                     font-size: 1em;
                     font-family: var(--primary-font);
                 }
-              
+
             }
+
             gap: 1em;
         }
     }
+
     .how-we-are-different {
+
+        .hwd-content-container {
+            display: flex;
+            flex-direction: column;
+
+            gap: 1em;
+        }
+
+
+        .hwd-content-item {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            align-items: center;
+            padding: 1em 2em;
+            gap: 1em;
+
+            .hwd-content-item-content {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+
+            .hwd-content-item-heading {
+                font-family: var(--primary-font);
+                font-size: 1.2em;
+            }
+
+            .hwd-content-item-description {
+                font-family: var(--secondary-font);
+            }
+        }
+
+        .hwd-content-item:nth-child(even) {
+            grid-template-columns: 70% 30%;
+        }
 
         .Heading {
             display: flex;
             gap: 1.7em;
+
             h1 {
                 color: black;
                 font-size: 2.5em;
@@ -156,6 +240,7 @@
                 padding-top: 0.5em;
                 padding-left: 1.6em;
             }
+
             .P-Block {
                 background-color: #818DDC;
                 width: 3em;
@@ -166,22 +251,27 @@
                 border-bottom-left-radius: 0.25em;
             }
         }
+
         .Body-Section {
             display: flex;
             flex-direction: column;
             padding: 4em;
             justify-content: space-evenly;
             gap: 5em;
-            > div{
+
+            >div {
                 display: flex;
                 gap: 2em;
                 justify-content: space-evenly;
-                > div {
+
+                >div {
                     justify-content: center;
-                    b{
+
+                    b {
                         font-family: var(--primary-font);
                         font-size: 1.2em;
                     }
+
                     font-family: var(--secondary-font);
                     display: flex;
                     flex-direction: column;
@@ -191,19 +281,23 @@
             }
         }
     }
+
     .Contact-Cards {
         display: flex;
         justify-content: space-evenly;
         padding-bottom: 3em;
         text-align: center;
+
         h1 {
             font-weight: 400;
             font-family: var(--primary-font);
         }
+
         p {
             font-family: var(--secondary-font);
             font-weight: 200;
         }
+
         div {
             display: flex;
             flex-direction: column;
@@ -214,6 +308,7 @@
             box-shadow: 0 0px 2.5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             border-radius: 0.7em;
             padding: 2em;
+
             .Heading-2 {
                 color: black;
             }
@@ -221,26 +316,37 @@
     }
 }
 
-@media screen and (max-width: 1160px){
+@media screen and (max-width: 1160px) {
     .AboutPage {
-        .Hero-Section
-        {
+        .Hero-Section {
             text-align: center;
             display: flex;
-            .Hero-Right
-            {
+
+            .Hero-Right {
                 display: none;
             }
-            .Cards
-            {
+
+            .Cards {
                 text-align: left;
                 flex-direction: column;
             }
         }
+
         .Services-section {
-            
+
             .Read-More {
                 position: default;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .AboutPage {
+        .Services-section {
+            .Second {
+                flex-direction: column;
             }
         }
     }
