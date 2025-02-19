@@ -32,7 +32,7 @@ export default function Header({ }) {
                 {showHamburger ?
                     <Hamburger isCross={showMenubar} ref={hamBurgerRef} onClick={() => setShowMenubar(!showMenubar)} /> : <></>
                 }
-                <div className="Logo" ><img src={logo} alt="" /></div>
+                <div className="Logo" onClick={() => {navigate('/')}}><img src={logo} alt="" /></div>
                 <div className="nav-bar">
                     <div><Link to="/">Home</Link></div>
                     <div><Link to="/about">About</Link></div>

@@ -10,6 +10,7 @@ import searchDoctorsIcon from '../../../../assets/icons/search-doctors.png'
 import requestFollowUpIcon from '../../../../assets/icons/request-followup.png'
 import viewAppointmentsIcon from '../../../../assets/icons/view-appointments.png'
 import { useSideBarState } from '../../../contexts/SideBarStateContext'
+import PrimaryButton from '../../../shared/buttons/PrimaryButton/PrimaryButton'
 export default function PatientLanding() {
 
   const { setSideBarState } = useSideBarState();
@@ -25,6 +26,8 @@ export default function PatientLanding() {
   const [patientAppointments, setPatientAppointments] = useState({});
   const [bookingStatus, setBookingStatus] = useState([]);
   const [activePrescriptions, setActivePrescriptions] = useState([]);
+  const [recentAppointments, setRecentAppointments] = useState([]);
+  const [showMenubar, setShowMenubar] = useState(false);
   const medicationData = [
     { date: '2024-02-17', totalDosage: 20, completedDosage: 20 },
     { date: '2024-02-16', totalDosage: 20, completedDosage: 15 },
@@ -68,6 +71,14 @@ export default function PatientLanding() {
       { name: 'General Consultancy', doctor: 'Dr. John Doe', date: '2025-02-17', totalDuration: '14 days' },
       { name: 'General Consultancy', doctor: 'Dr. John Doe', date: '2025-02-11', totalDuration: '14 days' },
     ])
+
+    setRecentAppointments([
+      { doctorName: 'Dr. Harsh Mehta', date: '2025-02-17', status: 'Scheduled' },
+      { doctorName: 'Dr. Harsh Mehta', date: '2025-02-17', status: 'Scheduled' },
+      { doctorName: 'Dr. Harsh Mehta', date: '2025-02-17', status: 'Completed' },
+      { doctorName: 'Dr. Harsh Mehta', date: '2025-02-17', status: 'Scheduled' },
+
+    ])
   }, [])
 
   const calculateRemainingDays = (prescriptionDate, totalDuration) => {
@@ -90,7 +101,7 @@ export default function PatientLanding() {
 
   return (
     <div className='PatientLanding'>
-      <DashboardHeader title='Good Morning' />
+      <DashboardHeader title='Good Morning'/>
       <div className='PatientLandingContent'>
         <div className="patient-landing-hero">
           <div className='patient-landing-profile-section'>
@@ -139,7 +150,12 @@ export default function PatientLanding() {
                   </div>
 
                   <div className="prescription-duration">
-                    <svg width="150" height="150" viewBox="0 0 80 80">
+                    <svg 
+                      width="150" 
+                      height="150" 
+                      viewBox="0 0 80 80"
+                      style={{ "--final-offset": `${offset}px` }}
+                    >
                       <circle
                         cx="40"
                         cy="40"
@@ -158,6 +174,7 @@ export default function PatientLanding() {
                         strokeDasharray={circumference}
                         strokeDashoffset={offset}
                         transform="rotate(-90 40 40)"
+                        className="progress-circle"
                       />
                     </svg>
                     <p className='duration-tooltip'>{remainingDays} days left</p>
@@ -167,9 +184,25 @@ export default function PatientLanding() {
             })}
           </div>
 
-          <div className="recent-prescriptions-section">
-            <p>Recent Prescriptions</p>
-            <SecondaryButton text='View All' padding='.8em 3em' />
+          <div className="recent-appointments-section">
+            <div className="recent-appointments-section-heading">
+              <p>Recent Appointments</p>
+            </div>
+            <div className="recent-appointments-container">
+              {recentAppointments.map((item, index) => {
+                return <div className="recent-appointment-card">
+                  <div className="recent-appointment-card-details">
+                    <p className='recent-appointment-card-doctor-name'>Dr. Harsh Mehta</p>
+                    <p className='recent-appointment-card-date'>2025-02-17</p>
+                  </div>
+                  <p className='recent-appointment-card-status'>Scheduled</p>
+                  <PrimaryButton text='View Details' padding='.8em 3em' />
+                </div>
+              })}
+
+            </div>
+
+
           </div>
         </div>
 

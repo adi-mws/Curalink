@@ -104,7 +104,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        
+
     }
 
     .patient-landing-redirections>div {
@@ -157,6 +157,7 @@
             animation: search-doctors-animation .5s linear forwards;
         }
     }
+
     #book-appointment:hover {
         img {
             animation: search-doctors-animation .5s linear forwards;
@@ -186,16 +187,16 @@
 
     .prescription-container {
         display: flex;
-        flex-direction: row;  
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 1em;
-        width: 100%; 
+        width: 100%;
         padding: 0 1em;
         flex-wrap: wrap;
     }
 
-    .prescription-card {    
+    .prescription-card {
         max-width: 450px;
         min-width: 350px;
         flex: 1 1 300px;
@@ -207,7 +208,7 @@
         border-radius: 10px;
     }
 
-    .prescription-card > div:first-child {
+    .prescription-card>div:first-child {
         display: flex;
         gap: .6em;
 
@@ -217,7 +218,7 @@
         font-size: .9em;
         font-weight: 400;
         color: var(--gray-text);
-        justify-content: center;   
+        justify-content: center;
 
         p:first-child {
             font-size: 1.2em;
@@ -231,7 +232,7 @@
         }
     }
 
-    .prescription-card > div:last-child {   
+    .prescription-card>div:last-child {
         display: flex;
         width: 40%;
         align-items: center;
@@ -239,7 +240,7 @@
         justify-content: center;
     }
 
-    .prescription-duration > p {
+    .prescription-duration>p {
         position: absolute;
         top: 50%;
         background-color: white;
@@ -253,28 +254,177 @@
         font-weight: 400;
         color: var(--primary-color);
     }
+
+
+    .recent-appointments-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 0 1em;
+
+    }
+
+    .recent-appointment-card-date {
+        font-size: 1em;
+        font-weight: 400;
+        color: var(--primary-color);
+    }
+
+    .recent-appointments-section-heading {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .recent-appointments-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .recent-appointment-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+        max-width: 400px;
+        min-width: 300px;
+        border-radius: 10px;
+        background-color: var(--secondary-color);
+        flex: 1 1 300px;
+        font-size: .9em;
+
+        .recent-appointment-card-status {
+            font-size: 1em;
+            font-weight: 400;
+            color: var(--gray-text);
+        }
+    }
+
+    .recent-appointment-card-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
 }
 
 @keyframes search-doctors-animation {
     0% {
         transform: rotate(0deg);
     }
+
     15% {
         transform: rotate(30deg);
     }
+
     30% {
         transform: rotate(0deg);
     }
+
     45% {
         transform: rotate(-30deg);
     }
+
     60% {
         transform: rotate(0deg);
     }
+
     75% {
         transform: rotate(30deg);
     }
+
     100% {
         transform: rotate(0deg);
+    }
+}
+
+.progress-circle {
+    animation: progress-circle-animation 1s ease-out forwards;
+}
+
+@keyframes progress-circle-animation {
+    from {
+        stroke-dashoffset: 157.08;
+        /* This is the circumference value (2 * PI * 25) */
+    }
+
+    to {
+        stroke-dashoffset: var(--final-offset);
+    }
+}
+
+
+
+@media screen and (max-width: 1068px) {
+    .patient-landing-hero {
+        grid-template: 48.25% 48.25% / 1fr !important;
+        gap: 5%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .PatientLanding {
+        grid-template-rows: 120px calc(100% - 120px);
+        .patient-landing-hero {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 5em !important;
+            height: fit-content;
+            align-items: center;
+        }
+
+        
+
+        .patient-landing-redirections {
+            flex-wrap: wrap;
+            gap: 2em !important;
+            box-shadow: none;
+        }
+
+        .Calendar {
+
+            padding: 0;
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .PatientLanding {
+        .patient-landing-profile-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .patient-profile {
+            display: flex !important;
+            gap: 1em;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            div {
+                width: auto;
+            }
+            
+            .SecondaryButton {
+                width: 80vw !important;
+            } 
+            div:last-child {
+                align-items: center;;
+            }
+        }
     }
 }
