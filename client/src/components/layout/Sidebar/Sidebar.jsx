@@ -11,12 +11,14 @@ import legals from '../../../assets/icons/stickynote.png';
 import cutIcon from '../../../assets/icons/cutIcon.png';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { Link } from 'react-router-dom';
+import { useSideBar } from '../../../components/contexts/SidebarContext.jsx';
 import { useSideBarState } from '../../../components/contexts/SideBarStateContext.jsx';
-export default function Sidebar({ showMenubar = false, dashboard = null, setShowMenubar, hamBurgerRef = null }) {
+export default function Sidebar({ dashboard = null, hamBurgerRef = null }) {
     const sidebarRef = useRef(null);
     const { width } = useWindowSize();
     const { sideBarState, setSideBarState } = useSideBarState();
     const [showCloseButton, setShowCloseButton] = useState(false);
+    const {showSidebar, setShowSidebar} = useSideBar();
 
     useEffect(() => {
         if (dashboard) {
@@ -32,7 +34,11 @@ export default function Sidebar({ showMenubar = false, dashboard = null, setShow
     useEffect(() => {
         if (width < 992 && dashboard) {
             setShowCloseButton(true);
-        } else setShowCloseButton(false);
+            setShowSidebar(false);
+        } else if (width > 992 && dashboard) {
+            setShowCloseButton(false);
+            setShowSidebar(true);
+        }
     }, [width]);
 
     useEffect(() => {
@@ -42,26 +48,26 @@ export default function Sidebar({ showMenubar = false, dashboard = null, setShow
                 hamBurgerRef?.current &&
                 !hamBurgerRef.current?.contains(event.target)
             ) {
-                setShowMenubar(false);
+                setShowSidebar(false);
             }
         }
 
-        if (showMenubar) {
+        if (showSidebar) {
             document.addEventListener('mousedown', handleClickOutside);
         }
 
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [showMenubar]);
+    }, [showSidebar]);
 
     return (
-        <div ref={sidebarRef} className='Sidebar' style={{ transform: `${showMenubar ? 'translate(0px)' : 'translate(-400px)'}`, position: `${dashboard ? 'relative' : 'fixed'}`, transition: '.3s' }}>
+        <div ref={sidebarRef} className='Sidebar' style={{ transform: `${showSidebar ? 'translate(0px)' : 'translate(-400px)'}`, position: `${dashboard ? 'relative' : 'fixed'}`, transition: '.3s' }}>
 
             <div className="Logo-Cross">
                 <img src={logo} alt="" className="Logo" />
                 {dashboard && showCloseButton ?
-                    <div className="Cross" onClick={() => setShowMenubar(false)}><img src={cutIcon} alt="" /></div> : <></>}
+                    <div className="Cross" onClick={() => setShowSidebar(false)}><img src={cutIcon} alt="" /></div> : <></>}
             </div>
             {/* <div className="Complete-Your-Profile">
                 <CompleteYourProfile />

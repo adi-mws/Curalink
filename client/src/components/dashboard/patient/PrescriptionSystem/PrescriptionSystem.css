@@ -36,6 +36,8 @@
   
   @media screen and (max-width: 576px) {
     .PrescriptionSystem {
+      grid-template-rows: 120px calc(100% - 120px);
+
       .PrescriptionSystemContent {
         padding: .5em;
     .prescription-headers,

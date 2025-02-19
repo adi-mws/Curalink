@@ -112,6 +112,11 @@
       display: flex; 
       gap: 1em;
     }
+
+      .numberCircle {
+        left: 12px;
+      }
+  
    
     .header-container {
      width: auto;
@@ -126,3 +131,12 @@
 }
 
 
+
+
+@media (max-width: 400px) {
+  .UserInfoHeader {
+    .numberCircle {
+      left: 0px;
+    }
+  }
+}

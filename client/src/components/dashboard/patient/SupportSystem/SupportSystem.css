@@ -7,8 +7,9 @@
   width: 100%;
   overflow-x: hidden;
   display: grid;
+
   grid-template: 65px calc(100% - 65px) / 1fr;
-  
+
   .SupportSystemContent {
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -56,6 +57,8 @@
 
 @media screen and (max-width: 400px) {
   .SupportSystem {
+    grid-template-rows: 120px calc(100% - 120px);
+
 
     .SupportSystemContent .grid-headers,
     .SupportSystemContent .grid-rows {

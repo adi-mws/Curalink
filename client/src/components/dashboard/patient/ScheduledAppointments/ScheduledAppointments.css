@@ -66,6 +66,8 @@
 
 @media (max-width: 576px) {
   .ScheduledAppointments {
+    grid-template-rows: 120px calc(100% - 120px);
+
     .appointments-container {
       .grid-header,
       .grid-row {

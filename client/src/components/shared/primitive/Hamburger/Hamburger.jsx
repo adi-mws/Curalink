@@ -1,9 +1,10 @@
 import './Hamburger.css';
 import React, { forwardRef, useState } from 'react';
-
-const Hamburger = forwardRef(({ onClick, isCross=false }, ref) => {
+import { useSideBar } from '../../../../components/contexts/SidebarContext.jsx';
+const Hamburger = forwardRef((props, ref) => {
+  const {setShowSidebar, showSidebar} = useSideBar();
   return (
-    <div ref={ref} className={`Hamburger ${isCross ? 'hamburger-cross' : ''}`} onClick={onClick}  >
+    <div ref={ref} className={`Hamburger ${showSidebar ? 'hamburger-cross' : ''}`} onClick={() => {setShowSidebar(!showSidebar)}}  >
       <div></div>
       <div></div>
       <div></div>

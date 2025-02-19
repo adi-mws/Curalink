@@ -40,16 +40,18 @@ export default function AboutPage({ }) {
                     </div>
                 </div>
 
-                <div className="Services">
+                <div className="Services-section">
                     <h1>What We Do ?</h1>
                     <div className="First">
-                        <div className="Written-Block">
-                            <p className="First-P">Services for Patients</p>
-                            <p className="Second-P">At CuraLink, we believe that healthcare should be a fundamental right, accessible to everyone, no matter where they are or what their circumstances may be. We are committed to bridging the gap between patients and medical professionals, making quality healthcare not just efficient but also deeply personalized to meet the unique needs of each individual.</p>
-                        </div>
-                        <div className="Read-More">
-                            <img src={right} alt="" className="Right-Arrow" />
-                            <p>Read More</p>
+                        <div className="First-Content-Wrapper">
+                            <div className="Written-Block">
+                                <p className="First-P">Services for Patients</p>
+                                <p className="Second-P">At CuraLink, we believe that healthcare should be a fundamental right, accessible to everyone, no matter where they are or what their circumstances may be. We are committed to bridging the gap between patients and medical professionals, making quality healthcare not just efficient but also deeply personalized to meet the unique needs of each individual.</p>
+                            </div>
+                            <div className="Read-More">
+                                <img src={right} alt="" className="Right-Arrow" />
+                                <p>Read More</p>
+                            </div>
                         </div>
                         <img src={Doctor} alt="" />
                     </div>
@@ -80,14 +82,18 @@ export default function AboutPage({ }) {
                         </div>
                     </div>
                     <div className="First">
-                        <div className="Written-Block">
-                            <p className="First-P">Services for Doctors</p>
-                            <p className="Second-P">CuraLink is committed to transforming the way doctors manage their practices by offering innovative tools and features that enhance efficiency, improve patient care, and streamline daily operations. Our platform is designed to empower medical professionals by reducing administrative burdens and enabling seamless communication with patients.</p>
+                        <div className="First-Content-Wrapper">
+
+                            <div className="Written-Block">
+                                <p className="First-P">Services for Doctors</p>
+                                <p className="Second-P">CuraLink is committed to transforming the way doctors manage their practices by offering innovative tools and features that enhance efficiency, improve patient care, and streamline daily operations. Our platform is designed to empower medical professionals by reducing administrative burdens and enabling seamless communication with patients.</p>
+                            </div>
+                            <div className="Read-More">
+                                <img src={right} alt="" className="Right-Arrow" />
+                                <p>Read More</p>
+                            </div>
                         </div>
-                        <div className="Read-More">
-                            <img src={right} alt="" className="Right-Arrow" />
-                            <p>Read More</p>
-                        </div>
+
                         <img src={LappyWoman} alt="" />
                     </div>
                     <div className="Second">
@@ -129,38 +135,38 @@ export default function AboutPage({ }) {
                         </div>
                     </div>
                 </div>
-                <div className="Different">
+                <div className="how-we-are-different">
                     <hr />
                     <div className="Heading">
                         <h1>How We're Different?</h1>
                         <div className="P-Block"></div>
                     </div>
-                    <div className="Body">
-                        <div>
+                    <div className="hwd-content-container">
+                        <div className="hwd-content-item">
                             <img src={LappyMan} alt="" />
-                            <div>
-                                <p><b>Own Communication Software ensuring security and encyption</b></p>
-                                <p>CuraLink is committed to transforming the way doctors manage their practices by offering innovative tools and features that enhance efficiency, improve patient care, and streamline daily operations. Our platform is designed to empower medical professionals by reducing administrative burdens and enabling seamless communication with patients.</p>
+                            <div className='hwd-content-item-content'>
+                                <p className='hwd-content-item-heading'><b>Own Communication Software ensuring security and encyption</b></p>
+                                <p className='hwd-content-item-description'>CuraLink is committed to transforming the way doctors manage their practices by offering innovative tools and features that enhance efficiency, improve patient care, and streamline daily operations. Our platform is designed to empower medical professionals by reducing administrative burdens and enabling seamless communication with patients.</p>
                             </div>
                         </div>
-                        <div>
-                            <div>
-                                <p><b>Own Communication Software ensuring security and encyption</b></p>
-                                <p>CuraLink is committed to transforming the way doctors manage their practices by offering innovative tools and features that enhance efficiency, improve patient care, and streamline daily operations. Our platform is designed to empower medical professionals by reducing administrative burdens and enabling seamless communication with patients.</p>
+                        <div className="hwd-content-item">
+                            <div className='hwd-content-item-content'>
+                                <p className='hwd-content-item-heading'><b>Own Communication Software ensuring security and encyption</b></p>
+                                <p className='hwd-content-item-description'>CuraLink is committed to transforming the way doctors manage their practices by offering innovative tools and features that enhance efficiency, improve patient care, and streamline daily operations. Our platform is designed to empower medical professionals by reducing administrative burdens and enabling seamless communication with patients.</p>
                             </div>
                             <img src={LappyMan} alt="" />
                         </div>
-                        <div>
+                        <div className="hwd-content-item">
                             <img src={LappyMan} alt="" />
-                            <div>
-                                <p><b>Own Communication Software ensuring security and encyption</b></p>
-                                <p>CuraLink is committed to transforming the way doctors manage their practices by offering innovative tools and features that enhance efficiency, improve patient care, and streamline daily operations. Our platform is designed to empower medical professionals by reducing administrative burdens and enabling seamless communication with patients.</p>
+                            <div className='hwd-content-item-content'>
+                                <p className='hwd-content-item-heading'><b>Own Communication Software ensuring security and encyption</b></p>
+                                <p className='hwd-content-item-description'>CuraLink is committed to transforming the way doctors manage their practices by offering innovative tools and features that enhance efficiency, improve patient care, and streamline daily operations. Our platform is designed to empower medical professionals by reducing administrative burdens and enabling seamless communication with patients.</p>
                             </div>
                         </div>
-                        <div>
-                            <div>
-                                <p><b>Own Communication Software ensuring security and encyption</b></p>
-                                <p>CuraLink is committed to transforming the way doctors manage their practices by offering innovative tools and features that enhance efficiency, improve patient care, and streamline daily operations. Our platform is designed to empower medical professionals by reducing administrative burdens and enabling seamless communication with patients.</p>
+                        <div className="hwd-content-item">
+                            <div className='hwd-content-item-content'>
+                                <p className='hwd-content-item-heading'><b>Own Communication Software ensuring security and encyption</b></p>
+                                <p className='hwd-content-item-description'>CuraLink is committed to transforming the way doctors manage their practices by offering innovative tools and features that enhance efficiency, improve patient care, and streamline daily operations. Our platform is designed to empower medical professionals by reducing administrative burdens and enabling seamless communication with patients.</p>
                             </div>
                             <img src={LappyMan} alt="" />
                         </div>
