@@ -21,11 +21,11 @@ import SupportSystem from './components/dashboard/patient/SupportSystem/SupportS
 import PrescriptionSystem from './components/dashboard/patient/PrescriptionSystem/PrescriptionSystem.jsx';
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
-import ExperienceForm from './components/dashboard/doctor/forms/ExperienceForm/ExperienceForm.jsx';
 import { SideBarStateContextProvider } from './components/contexts/SideBarStateContext.jsx';
 import { NotificationBarStateContextProvider } from './components/contexts/NotificationBarContext.jsx';
 import PatientLanding from './components/dashboard/patient/PatientLanding/PatientLanding.jsx';
 import { SideBarProvider } from './components/contexts/SidebarContext.jsx';
+import ShowServices from './components/dashboard/doctor/forms/ServiceForm/ShowServices.jsx';
 
 function App() {
   return (
@@ -54,7 +54,7 @@ function App() {
                   <Route path='/test' element={<DoctorsCard filter={true} />} />
                   <Route path='/search-faqs' element={<FAQsPage />} />
                   <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
-                  <Route path='/doctor-profile/experience' element={<ExperienceForm />} />
+                  <Route path='/doctor-profile/show-services' element={<ShowServices />} />
                 </Route>
 
 
