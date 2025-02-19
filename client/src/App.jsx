@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import DoctorsPage from './pages/DoctorsPage/DoctorsPage';
 import ServicePage from './pages/ServicePage/ServicePage';
+import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import NewsPage from './pages/NewsPage/NewsPage';
 import NewsSearchPage from './pages/NewsSearchPage/NewsSearchPage';
 import HomePage from './pages/HomePage/HomePage';
@@ -39,6 +40,7 @@ function App() {
           <Route path='/' element={<MainLayout />}>
 
             <Route path='/' element={<DoctorsPage />} />
+            <Route path='/announcement' element={<AnnouncementPage />} />
             <Route path='/support' element={<SupportPage />} />
             <Route path='/about' element={<AboutPage />} />
             <Route path='/doctors' element={<DoctorsPage />} />
