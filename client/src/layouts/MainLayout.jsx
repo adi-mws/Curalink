@@ -6,7 +6,6 @@ import useWindowSize from '../hooks/useWindowSize'
 import Sidebar from '../components/layout/Sidebar/Sidebar'
 import { useSideBar } from '../components/contexts/SidebarContext.jsx';
 export default function MainLayout() {
-  const { width } = useWindowSize();
   return (
     <>
       <Header />

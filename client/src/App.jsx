@@ -26,7 +26,7 @@ import { SideBarStateContextProvider } from './components/contexts/SideBarStateC
 import { NotificationBarStateContextProvider } from './components/contexts/NotificationBarContext.jsx';
 import PatientLanding from './components/dashboard/patient/PatientLanding/PatientLanding.jsx';
 import { SideBarProvider } from './components/contexts/SidebarContext.jsx';
-
+import DoctorLanding from './components/dashboard/doctor/DoctorLanding/DoctorLanding.jsx';
 function App() {
   return (
     <>
@@ -66,6 +66,10 @@ function App() {
                   <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
                   <Route path='/dashboard/support' element={<SupportSystem />} />
                   <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
+                </Route>
+
+                <Route path='/doctor-dashboard' element={<DashboardLayout />}>
+                  <Route path='/doctor-dashboard' element={<DoctorLanding />} />
                 </Route>
               </Routes>
             </Router>

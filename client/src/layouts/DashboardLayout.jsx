@@ -13,6 +13,7 @@ export default function DashboardLayout() {
             setShowMenubar(true);
         } else setShowMenubar(false);
     }, [width]);
+    
         
     return (
         <>
@@ -20,7 +21,6 @@ export default function DashboardLayout() {
                 <Sidebar showMenubar={showMenubar} setShowMenubar={setShowMenubar} dashboard={'patient'}  />
                 <div className="outlet-wrapper">
                     <Outlet context={{ showMenubar, setShowMenubar }}/>
-
                 </div>
             </div>
 
