@@ -26,6 +26,7 @@ import { NotificationBarStateContextProvider } from './components/contexts/Notif
 import PatientLanding from './components/dashboard/patient/PatientLanding/PatientLanding.jsx';
 import { SideBarProvider } from './components/contexts/SidebarContext.jsx';
 import ShowServices from './components/dashboard/doctor/forms/ServiceForm/ShowServices.jsx';
+import UpdateInfoForm1 from './components/dashboard/doctor/forms/UpdateInfoForm/UpdateInfoForm1.jsx';
 
 function App() {
   return (
