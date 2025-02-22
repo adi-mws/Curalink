@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import DoctorsPage from './pages/DoctorsPage/DoctorsPage';
 import ServicePage from './pages/ServicePage/ServicePage';
+import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import NewsPage from './pages/NewsPage/NewsPage';
 import NewsSearchPage from './pages/NewsSearchPage/NewsSearchPage';
 import HomePage from './pages/HomePage/HomePage';
@@ -21,12 +22,16 @@ import SupportSystem from './components/dashboard/patient/SupportSystem/SupportS
 import PrescriptionSystem from './components/dashboard/patient/PrescriptionSystem/PrescriptionSystem.jsx';
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
-import ExperienceForm from './components/dashboard/doctor/forms/ExperienceForm/ExperienceForm.jsx';
 import { SideBarStateContextProvider } from './components/contexts/SideBarStateContext.jsx';
 import { NotificationBarStateContextProvider } from './components/contexts/NotificationBarContext.jsx';
 import PatientLanding from './components/dashboard/patient/PatientLanding/PatientLanding.jsx';
 import { SideBarProvider } from './components/contexts/SidebarContext.jsx';
+<<<<<<< HEAD
 import DoctorLanding from './components/dashboard/doctor/DoctorLanding/DoctorLanding.jsx';
+=======
+import ShowServices from './components/dashboard/doctor/forms/ServiceForm/ShowServices.jsx';
+
+>>>>>>> 83a76efb4709c8d10a193953684cbf6b40d8cee2
 function App() {
   return (
     <>
@@ -54,7 +59,7 @@ function App() {
                   <Route path='/test' element={<DoctorsCard filter={true} />} />
                   <Route path='/search-faqs' element={<FAQsPage />} />
                   <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
-                  <Route path='/doctor-profile/experience' element={<ExperienceForm />} />
+                  <Route path='/doctor-profile/show-services' element={<ShowServices />} />
                 </Route>
 
 

@@ -1,0 +1,129 @@
+.AddService {
+    font-family: var(--secondary-font);
+    background-color: white;
+    width: 75vw;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.2rem;
+    height: 100%;
+    position: relative;
+    
+    .info-text {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #666;
+        width: 80%;
+    }
+
+    .heading {
+        display: flex;
+        width: 100%;
+        font-size: 1.5rem;
+        font-family: var(--primary-font);
+        justify-content: flex-start;
+        align-items: center;
+        padding-right: 1em;
+        position: relative;
+
+        .close-icon {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    form {
+        display: grid;
+        grid-template-rows: minmax(3rem, 5rem) calc(50vh - 6rem) 3rem;
+        gap: 1em;
+        padding: 1rem;
+        width: 100%;
+
+        .form-area {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            justify-content: space-evenly;
+        }
+
+        .Button-Container {
+            width: 80%;
+            justify-content: flex-start;
+            display: flex;
+        }
+
+        .inputFields {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            width: 100%;
+            align-items: flex-start;
+
+            label {
+                font-size: 0.8em;
+                width: 100%;
+                max-width: 19.9em;
+            }
+
+            select {
+                padding: .8em 1em;
+                background-color: #F2F2F2;
+                border-radius: 5px;
+                width: 80%;
+                height: 3.3em;
+                font-family: var(--secondary-font);
+                border: 0;
+                outline: none;
+                cursor: pointer;
+                appearance: none;
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+                background-repeat: no-repeat;
+                background-position: right 1em center;
+                background-size: 1em;
+                padding-right: 2.5em;
+            }
+
+            .input-error {
+                border: 1px solid var(--red-color);
+            }
+
+            .input-error:focus {
+                outline: 2px solid var(--red-color);
+            }
+        }
+
+        .error {
+            font-size: 0.8em;
+            color: var(--red-color);
+        }
+    }
+}
+
+@media screen and (max-width:568px) {
+    .AddService {
+        width: 95vw;
+        font-size: 1rem;    
+        .heading{
+            font-size: 1.2rem;
+        }
+
+        .info-text{
+            width: 100%;
+        }
+
+        .Button-Container {
+            width: 100% !important;
+        }
+
+        .inputFields {
+            select {
+                width: 100% !important;
+            }
+        }
+    }
+}
