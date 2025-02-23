@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import DoctorsPage from './pages/DoctorsPage/DoctorsPage';
 import ServicePage from './pages/ServicePage/ServicePage';
+import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import NewsPage from './pages/NewsPage/NewsPage';
 import NewsSearchPage from './pages/NewsSearchPage/NewsSearchPage';
 import HomePage from './pages/HomePage/HomePage';
