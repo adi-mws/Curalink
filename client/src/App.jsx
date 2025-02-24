@@ -28,6 +28,7 @@ import PatientLanding from './components/dashboard/patient/PatientLanding/Patien
 import { SideBarProvider } from './components/contexts/SidebarContext.jsx';
 import ShowServices from './components/dashboard/doctor/forms/ServiceForm/ShowServices.jsx';
 import UpdateInfoForm1 from './components/dashboard/doctor/forms/UpdateInfoForm/UpdateInfoForm1.jsx';
+import DoctorLanding from './components/dashboard/doctor/DoctorLanding/DoctorLanding.jsx';
 
 function App() {
   return (
@@ -68,6 +69,10 @@ function App() {
                   <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
                   <Route path='/dashboard/support' element={<SupportSystem />} />
                   <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
+                </Route>
+
+                <Route path='/doctor-dashboard' element={<DashboardLayout />}>
+                  <Route path='/doctor-dashboard' element={<DoctorLanding />} />
                 </Route>
               </Routes>
             </Router>
