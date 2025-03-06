@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import DoctorsPage from './pages/DoctorsPage/DoctorsPage';
 import ServicePage from './pages/ServicePage/ServicePage';
+import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import NewsPage from './pages/NewsPage/NewsPage';
 import NewsSearchPage from './pages/NewsSearchPage/NewsSearchPage';
 import HomePage from './pages/HomePage/HomePage';
@@ -22,68 +23,65 @@ import PrescriptionSystem from './components/dashboard/patient/PrescriptionSyste
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
 import { SideBarStateContextProvider } from './components/contexts/SideBarStateContext.jsx';
-import UpdateInfoForm1 from './components/dashboard/doctor/forms/UpdateInfoForm/UpdateInfoForm1.jsx';
-import UpdateInfoForm2 from './components/dashboard/doctor/forms/UpdateInfoForm/UpdateInfoForm2.jsx';
-import UpdateInfoForm3 from './components/dashboard/doctor/forms/UpdateInfoForm/UpdateInfoForm3.jsx';
-import CalendarPopUp from './pages/CalendarDayPop/CalendarPopUp.jsx';
+import { SideBarProvider } from './components/contexts/SideBarContext.jsx';
+import { NotificationBarStateContextProvider } from './components/contexts/NotificationBarContext.jsx';
+import PatientLanding from './components/dashboard/patient/PatientLanding/PatientLanding.jsx';
+import DoctorLanding from './components/dashboard/doctor/DoctorLanding/DoctorLanding.jsx';
+import ShowServices from './components/dashboard/doctor/forms/ServiceForm/ShowServices.jsx';
+import { AuthProvider } from './components/contexts/AuthContext.jsx';
 
 function App() {
+  const { user } = useAuth();
   return (
     <>
+      <AuthProvider>
+        <SideBarProvider>
+          <SideBarStateContextProvider>
+            <NotificationBarStateContextProvider>
+              <Router>
+                <ScrollToTop />
 
-      <Router>
-        <ScrollToTop />
+                <Routes>
 
-        <Routes>
+                  <Route path='/' element={<MainLayout />}>
 
-              <Route path='/' element={<DoctorsPage />} />
-              <Route path='/support' element={<SupportPage />} />
-              <Route path='/about' element={<AboutPage />} />
-              <Route path='/doctors' element={<DoctorsPage />} />
-              <Route path='/services' element={<ServicePage />} />
-              <Route path='/news' element={<NewsSearchPage />} />
-              <Route path='/news/:id' element={<NewsPage />} />
-              <Route path='/contact' element={<ContactPage />} />
-              <Route path='/login' element={<PatientLoginPage />} />
-              <Route path='/register' element={<PatientRegistrationPage />} />
-              <Route path='/search-doctors' element={<DoctorsSearchPage />} />
-              <Route path='/test' element={<DoctorsCard filter={true} />} />
-              <Route path='/faqs' element={<FAQsPage />} />
-              <Route path='/doctor-public-profile' element={<DoctorPublicProfilePage />} />
-              <Route path='/doctor-profile/update-info' element={<UpdateInfoForm3 />} />
-            </Routes>
-          <Route path='/' element={<MainLayout />}>
-
-            <Route path='/' element={<DoctorsPage />} />
-            <Route path='/support' element={<SupportPage />} />
-            <Route path='/about' element={<AboutPage />} />
-            <Route path='/doctors' element={<DoctorsPage />} />
-            <Route path='/services' element={<ServicePage />} />
-            <Route path='/news' element={<NewsSearchPage />} />
-            <Route path='/news/:id' element={<NewsPage />} />
-            <Route path='/contact' element={<ContactPage />} />
-            <Route path='/login' element={<PatientLoginPage />} />
-            <Route path='/register' element={<PatientRegistrationPage />} />
-            <Route path='/search-doctors' element={<DoctorsSearchPage />} />
-            <Route path='/test' element={<DoctorsCard filter={true} />} />
-            <Route path='/search-faqs' element={<FAQsPage />} />
-            <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
-          </Route>
+                    <Route path='/' element={<DoctorsPage />} />
+                    <Route path='/support' element={<SupportPage />} />
+                    <Route path='/about' element={<AboutPage />} />
+                    <Route path='/doctors' element={<DoctorsPage />} />
+                    <Route path='/services' element={<ServicePage />} />
+                    <Route path='/news' element={<NewsSearchPage />} />
+                    <Route path='/news/:id' element={<NewsPage />} />
+                    <Route path='/contact' element={<ContactPage />} />
+                    <Route path='/login' element={<PatientLoginPage />} />
+                    <Route path='/register' element={<PatientRegistrationPage />} />
+                    <Route path='/search-doctors' element={<DoctorsSearchPage />} />
+                    <Route path='/test' element={<DoctorsCard filter={true} />} />
+                    <Route path='/search-faqs' element={<FAQsPage />} />
+                    <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
+                    <Route path='/doctor-profile/show-services' element={<ShowServices />} />
+                  </Route>
 
 
 
+                  <Route path='/dashboard' element={<DashboardLayout />}>
+                    <Route path='/dashboard' element={<PatientLanding />} />
+                    <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
+                    <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
+                    <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
+                    <Route path='/dashboard/support' element={<SupportSystem />} />
+                    <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
+                  </Route>
 
-          <Route path='/dashboard' element={<DashboardLayout />}>
-            <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
-            <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
-            <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
-            <Route path='/dashboard/support' element={<SupportSystem />} />
-            <Route path='/dashboard/prescription-system' element={<PrescriptionSystem />} />
-          </Route>
-      </Router>
-
-      <CalendarPopUp />
-
+                  <Route path='/doctor-dashboard' element={<DashboardLayout />}>
+                    <Route path='/doctor-dashboard' element={<DoctorLanding />} />
+                  </Route>
+                </Routes>
+              </Router>
+            </NotificationBarStateContextProvider>
+          </SideBarStateContextProvider>
+        </SideBarProvider>
+      </AuthProvider>
     </>
   )
 }

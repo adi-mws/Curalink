@@ -1,4 +1,4 @@
-import mongoose from mongoose; 
+import mongoose from 'mongoose';
 const AppointmentSchema = new mongoose.Schema({
   appointmentDate: { type: Date, required: true },
   appointmentTime: { type: String, required: true },
@@ -6,7 +6,7 @@ const AppointmentSchema = new mongoose.Schema({
   patient: { type: mongoose.Schema.Types.ObjectId, ref: 'Patient', required: true },
   doctor: { type: mongoose.Schema.Types.ObjectId, ref: 'Doctor', required: true },
   service: { type: mongoose.Schema.Types.ObjectId, ref: 'Service', required: true },
-  followUpDuration: { type: Number, required: false }, // in days (if applicable)
+
   status: { type: String, enum: ['Scheduled', 'Completed', 'Cancelled'], default: 'Scheduled' },
   treatment: {
     doctorName: { type: String },
@@ -33,7 +33,7 @@ const AppointmentSchema = new mongoose.Schema({
         description: { type: String },
         instructions: { type: String },
         status: {type: String, enum: ['pending', 'completed'], default: 'pending'},
-        fileUrl: {type: String}
+        fileUrl: {type: String, required: true}
       }
     ],
     notes: { type: String },

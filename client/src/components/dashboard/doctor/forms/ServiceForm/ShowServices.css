@@ -1,0 +1,101 @@
+.ShowServices {
+    width: 75vw;
+    padding: 1rem;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    height:50vh;
+    box-shadow: 0px 4px 80.6px 31px #00000040;
+    justify-items: center;
+    padding-right: 1rem;
+    grid-template-rows: minmax(3rem, 5rem) calc(50vh - 6rem) 3rem;
+    .heading {
+        display: flex;
+        width: 80%;
+        padding: 1rem;
+        font-size: 1.5rem;
+        font-family: var(--primary-font);
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+
+        img{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .services-container {
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        .service {
+            width: 100%;
+            background-color: var(--secondary-color);
+            display: grid;
+            grid-template-columns: 1.5fr 0.5fr;
+            border-radius: 10px;
+            justify-items: center;
+            color: var(--primary-color);
+            padding: 1rem 3rem;
+            .service-name {
+
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .button {
+        width: 80%;
+        padding: 1rem;
+        padding-right: 2rem;
+        .AddButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            width: 100%;
+            border-radius: 10px;
+            background-color: #F2F2F2;
+            padding: 1rem 3rem;
+            color: var(--gray-text);
+            font-size: 1.1rem;
+            img {
+            }
+        }
+    }
+}
+@media screen and (max-width:568px) {
+    .AddService {
+        width: 95vw;
+        font-size: 1rem;    
+        .heading{
+            font-size: 1.2rem;
+        }
+
+        .info-text{
+            width: 100%;
+        }
+
+        .Button-Container {
+            width: 100% !important;
+        }
+
+        .inputFields {
+            select {
+                width: 100% !important;
+            }
+        }
+    }
+}

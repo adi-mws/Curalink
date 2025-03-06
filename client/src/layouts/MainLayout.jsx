@@ -4,15 +4,8 @@ import Footer from '../components/layout/Footer/Footer'
 import { Outlet } from 'react-router-dom'
 import useWindowSize from '../hooks/useWindowSize'
 import Sidebar from '../components/layout/Sidebar/Sidebar'
+import { useSideBar } from '../components/contexts/SidebarContext.jsx';
 export default function MainLayout() {
-  const { width } = useWindowSize();
-  const [showMenubar, setShowMenubar] = useState(false);
-
-  useEffect(() => {
-    if (width <= 576) {
-      setShowMenubar(true);
-    } else setShowMenubar(false);
-  }, [width]);
   return (
     <>
       <Header />

@@ -62,6 +62,7 @@
     right: 10px;
     width: 200px;
     display: none;
+    z-index: 1000;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
@@ -111,6 +112,11 @@
       display: flex; 
       gap: 1em;
     }
+
+      .numberCircle {
+        left: 12px;
+      }
+  
    
     .header-container {
      width: auto;
@@ -125,3 +131,12 @@
 }
 
 
+
+
+@media (max-width: 400px) {
+  .UserInfoHeader {
+    .numberCircle {
+      left: 0px;
+    }
+  }
+}

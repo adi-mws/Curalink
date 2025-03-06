@@ -151,7 +151,9 @@
             display: none !important;
         }
 
-      
+        .UserInfoHeader {
+            display: none !important;
+        }
 
         .Hamburger {
             order: 2;
