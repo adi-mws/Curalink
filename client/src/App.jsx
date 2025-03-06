@@ -23,7 +23,7 @@ import PrescriptionSystem from './components/dashboard/patient/PrescriptionSyste
 import FAQsPage from './pages/FAQsPage/FAQsPage.jsx';
 import DoctorPublicProfilePage from './pages/DoctorProfilePage/DoctorPublicProfilePage.jsx';
 import { SideBarStateContextProvider } from './components/contexts/SideBarStateContext.jsx';
-import { SideBarProvider } from './components/contexts/SideBarContext.jsx';
+import { SideBarProvider } from './components/contexts/SidebarContext.jsx';
 import { NotificationBarStateContextProvider } from './components/contexts/NotificationBarContext.jsx';
 import PatientLanding from './components/dashboard/patient/PatientLanding/PatientLanding.jsx';
 import DoctorLanding from './components/dashboard/doctor/DoctorLanding/DoctorLanding.jsx';
