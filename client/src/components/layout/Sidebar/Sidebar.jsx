@@ -11,8 +11,8 @@ import legals from '../../../assets/icons/stickynote.png';
 import cutIcon from '../../../assets/icons/cutIcon.png';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { Link } from 'react-router-dom';
-import { useSideBar } from '../../../components/contexts/SidebarContext.jsx';
-import { useSideBarState } from '../../../components/contexts/SideBarStateContext.jsx';
+import { useSideBar } from '../../../contexts/SideBarContext.jsx';
+import { useSideBarState } from '../../../contexts/SideBarStateContext.jsx';
 export default function Sidebar({ dashboard = null, hamBurgerRef = null }) {
     const sidebarRef = useRef(null);
     const { width } = useWindowSize();

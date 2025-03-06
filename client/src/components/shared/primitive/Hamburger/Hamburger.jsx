@@ -1,6 +1,6 @@
 import './Hamburger.css';
 import React, { forwardRef, useState } from 'react';
-import { useSideBar } from '../../../../components/contexts/SidebarContext.jsx';
+import { useSideBar } from '../../../../contexts/SideBarContext';
 const Hamburger = forwardRef((props, ref) => {
   const {setShowSidebar, showSidebar} = useSideBar();
   return (

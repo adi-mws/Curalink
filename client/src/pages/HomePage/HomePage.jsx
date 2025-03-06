@@ -1,4 +1,4 @@
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
 function HomePage() {
     const { setSideBarState } = useSideBarState();

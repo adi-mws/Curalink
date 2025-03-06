@@ -8,7 +8,7 @@ import twitter from '../../assets/icons/twitter.png'
 import facebook from '../../assets/icons/facebook.png'
 import instagram from '../../assets/icons/instagram.png'
 import linkedIn from '../../assets/icons/linkedin.png'
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
 export default function ContactPage() {
   const { setSideBarState } = useSideBarState();

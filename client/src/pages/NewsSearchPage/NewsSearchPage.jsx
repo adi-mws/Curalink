@@ -7,7 +7,7 @@ import Pagination from '../../components/shared/Pagination/Pagination.jsx';
 import DummyImage from '../../assets/imgs/NewsCardLady.png';
 import BackgroundImageNewsPage from '../../assets/imgs/NewsSearchPage-bg-1368.png'
 import BackgroundImageNewsPage2 from '../../assets/imgs/NewsSearchPage-bg-992.png'
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
 const searchData = [
   'Advancements in AI for Healthcare',

@@ -94,9 +94,11 @@ const PatientCalendarPopUp = ({ selectedDate, showCalendarPopUp, setShowCalendar
 
   ];
 
+
   useEffect(() => {
-    console.log(selectedDate);
-  }, [selectedDate]);
+    console.log("Aditya");
+
+  }, []);
   const closePopup = () => {
     setShowCalendarPopUp(false);
   };
