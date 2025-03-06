@@ -9,7 +9,7 @@ import SecondaryButton from '../../components/shared/buttons/SecondaryButton/Sec
 import contentImage from '../../assets/imgs/patientLoginPageDoctor.png'
 import Header from '../../components/layout/Header/Header.jsx'
 import Footer from '../../components/layout/Footer/Footer.jsx'
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
 export default function PatientLoginPage() {
   const { setSideBarState } = useSideBarState();

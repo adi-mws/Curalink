@@ -5,7 +5,7 @@ import VideoIcon from "../../../../assets/icons/videoTiny.png";
 import AudioIcon from "../../../../assets/icons/callIcon.png";
 import TertiaryButton from "../../../shared/buttons/TertiaryButton/TertiaryButton";
 import { useOutletContext } from "react-router-dom";
-import { useSideBarState } from '../../../contexts/SideBarStateContext';
+import { useSideBarState } from '../../../../contexts/SideBarStateContext';
 import { useEffect } from "react";
 const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) => {
   const { setSideBarState } = useSideBarState();

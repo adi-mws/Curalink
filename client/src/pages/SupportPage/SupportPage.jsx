@@ -10,7 +10,7 @@ import tickCircleRed from '../../assets/icons/tick-circle-red.png'
 import tickCirclePurple from '../../assets/icons/tick-circle-purple.png'
 import ButtonIcon from '../../assets/icons/right-arrow-rectangle.png'
 import SupportTicketForm from '../../components/dashboard/patient/SupportTicketForm/SupportTicketForm'
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
 export default function SupportPage() {
     const { setSideBarState } = useSideBarState();
