@@ -1,7 +1,43 @@
 import express from "express";
 import dotenv from 'dotenv'; 
+import connectDB from "./db/connectDB.js";
+import cors from 'cors';
+import path from 'path';    
+import { fileURLToPath } from 'url';
+import userRoutes from './routes/userRoutes.js';
 
 dotenv.config();
 const app = express(); 
-const PORT = 
-app.listen(process.env.PORT)
+const PORT = process.env.PORT || 3000;
+app.use(cors({
+    origin: ['http://hhfc.in'],
+    credentials: true,
+
+}));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// Middleware
+app.use(express.json()); // For parsing application/json
+app.use(express.json({ limit: '80mb' })); // Adjust the size limit
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
+
+// Database Connection
+connectDB(process.env.MONGO_URI);
+
+
+
+// User Routes (handles login/register/verification of user)
+app.use('/api/user', userRoutes);
+
+app.get('/', (req, res) => {
+    res.send('Curalink Backend Server is running!');
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT} at http://localhost:${PORT}`);
+});
+
+
+

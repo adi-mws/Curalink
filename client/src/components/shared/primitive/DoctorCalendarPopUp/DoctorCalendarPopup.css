@@ -1,0 +1,96 @@
+.DoctorCalendarPopup {
+    width: 70vw;
+    /* height: 70vh; */
+    max-width: 90%;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 80.6px 31px rgba(0, 0, 0, 0.25);
+    font-family: var(--secondary-font);
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    text-align: center;
+  
+    .calendar-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+  
+      img {
+        cursor: pointer;
+      }
+    }
+
+    .progressContainer{
+        width: 100%;
+        background-color: #eeeeee;
+        border-radius: 12px;
+        overflow: hidden;
+        height: 18px;
+        position: relative;
+
+        .progressBar{
+            height: 100%;
+            width: 50%;
+            border-radius: 12px;
+            background-color: #c58bc4;
+        }
+    }
+
+    .Booking{
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .container{
+
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+
+        .appointments{
+            height: 140px;
+            width: 140px;
+            background-color: #eeeeee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .scheduled{
+            height: 140px;
+            width: 140px;
+            background-color: #eeeeee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .reports{
+            height: 140px;
+            width: 140px;
+            background-color: #eeeeee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+}
+
+@media (max-width: 576px) {
+    .container{
+        flex-wrap: wrap;
+    }
+}

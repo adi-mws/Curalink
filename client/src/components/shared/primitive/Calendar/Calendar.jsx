@@ -12,7 +12,7 @@ export default function Calendar({ date = new Date(), dashboard = 'patient', boo
 
     // Add useEffect to fetch booking data when month changes
     useEffect(() => {
-        console.log(bookingStatus);
+        // console.log(bookingStatus);
         setBookingData(bookingStatus);
     }, [bookingStatus]);
 

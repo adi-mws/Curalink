@@ -9,8 +9,9 @@ import bookAppointmentIcon from '../../../../assets/icons/book-appointment.png'
 import searchDoctorsIcon from '../../../../assets/icons/search-doctors.png'
 import requestFollowUpIcon from '../../../../assets/icons/request-followup.png'
 import viewAppointmentsIcon from '../../../../assets/icons/view-appointments.png'
-import { useSideBarState } from '../../../contexts/SideBarStateContext'
+import { useSideBarState } from '../../../../contexts/SideBarStateContext'
 import PrimaryButton from '../../../shared/buttons/PrimaryButton/PrimaryButton'
+import { useNavigate } from 'react-router-dom'
 export default function PatientLanding() {
 
   const { setSideBarState } = useSideBarState();
@@ -21,7 +22,7 @@ export default function PatientLanding() {
     }
   }, []);
 
-
+  const navigate = useNavigate();
 
   const [patientAppointments, setPatientAppointments] = useState({});
   const [bookingStatus, setBookingStatus] = useState([]);
@@ -119,7 +120,7 @@ export default function PatientLanding() {
             </div>
             <div className='patient-landing-redirections'>
               <button id='book-appointment'><img src={bookAppointmentIcon} alt="" /><span>Book Appointment</span></button>
-              <button id='view-appointments'><img src={viewAppointmentsIcon} alt="" /><span>View Appointments</span></button>
+              <button id='view-appointments' onClick={() => {navigate('/dashboard/appointments')}}><img src={viewAppointmentsIcon} alt="" /><span>View Appointments</span></button>
               <button id='search-doctors'><img src={searchDoctorsIcon} alt="" /><span>Search Doctors</span></button>
               <button id='request-follow-up'><img src={requestFollowUpIcon} alt="" /><span>Request Follow Up</span></button>
             </div>
@@ -190,7 +191,7 @@ export default function PatientLanding() {
             </div>
             <div className="recent-appointments-container">
               {recentAppointments.map((item, index) => {
-                return <div className="recent-appointment-card">
+                return <div className="recent-appointment-card" key={index}>
                   <div className="recent-appointment-card-details">
                     <p className='recent-appointment-card-doctor-name'>Dr. Harsh Mehta</p>
                     <p className='recent-appointment-card-date'>2025-02-17</p>

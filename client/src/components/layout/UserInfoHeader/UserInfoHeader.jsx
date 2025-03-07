@@ -6,7 +6,7 @@ import arrowDown from "../../../assets/icons/arrow-down.png";
 import UserNotification from "../../shared/alerts/UserNotification/UserNotification";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { useNotificationBarState } from "../../contexts/NotificationBarContext";
+import { useNotificationBarState } from "../../../contexts/NotificationBarContext";
 export default function UserInfoHeader({ dashboard = false }) {
   const notificationRef = useRef(null);
   const [notificationCount, setNotificationCount] = useState(0);

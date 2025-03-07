@@ -5,7 +5,7 @@ import DummyImage from '../../assets/imgs/Dummy-Doctor-Profile-Picture.png'
 import MenuIcon from '../../assets/icons/Menu-Book.png'
 import RefreshIcon from '../../assets/icons/refresh-2.png'
 import CopyIcon from '../../assets/icons/copy.png'
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect,useState  } from 'react';
 import DurationIcon from '../../assets/icons/Services-Duration-Icon.png' 
 import DownArrow from '../../assets/icons/arrow-down.png'

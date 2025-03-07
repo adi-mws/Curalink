@@ -8,7 +8,7 @@ import SecondaryButton from '../../components/shared/buttons/SecondaryButton/Sec
 import SupportStaff from '../../assets/imgs/Support-Staff-1.png'
 import TestimonialsImage from '../../assets/imgs/Surgeon-With-Mask.png'
 import JoinButtonImage from '../../assets/icons/right-arrow-rectangle.png'
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
 export default function DoctorsPage() {
   const { setSideBarState } = useSideBarState();

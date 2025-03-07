@@ -8,7 +8,7 @@ import circleArrow from '../../assets/icons/ArrowCircleRight.png'
 import Header from '../../components/layout/Header/Header.jsx'
 import Footer from '../../components/layout/Footer/Footer.jsx'
 
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
 
 export default function PatientRegistrationPage() {

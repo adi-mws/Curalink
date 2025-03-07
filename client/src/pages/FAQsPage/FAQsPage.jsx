@@ -3,7 +3,7 @@ import CoffeeMan from '../../assets/imgs/Man-Sofa-Coffee.png'
 import ButtonIcon from '../../assets/icons/right-arrow-rectangle.png'
 import './FAQsPage.css'
 import FAQs from '../../components/FAQs/FAQs.jsx'
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 
 const defaultFaqData = [
     {
