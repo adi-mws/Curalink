@@ -4,9 +4,19 @@
     padding: 4em;
     .Announcement-Hero-Section {
         display: grid;
-        grid-template-columns: 55% 45%;
-        div {
-            
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        grid-gap: 1em;
+        .Announcement-Hero-Section-Content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1.5em;
+        }
+        .Announcement-Hero-Section-Image {
+            img {
+                width: 22em;
+            }
         }
     }
 }

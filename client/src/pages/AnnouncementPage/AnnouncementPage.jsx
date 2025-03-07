@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './AnnouncementPage.css';
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import announcement_rectangle from '../../assets/imgs/Announcement-Page-Rectangle.png';
 import announcement_speaker from '../../assets/imgs/Announcement-Page-Speaker.png';
 
