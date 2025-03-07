@@ -8,7 +8,7 @@ import ButtonIcon from '../../assets/icons/right-arrow-rectangle.png'
 import CoffeeMan from '../../assets/imgs/Man-Sofa-Coffee.png'
 import DummyVideo from '../../assets/videos/DoctorsPageDummyVideo.mp4'
 import JourneySectionImage from '../../assets/imgs/Journey-Section-Image.png'
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
 const Videos = [
   {

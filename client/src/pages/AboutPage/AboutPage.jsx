@@ -5,7 +5,9 @@ import Doctor from '../../assets/imgs/About-Doctor.png';
 import right from '../../assets/icons/arrow-down.png';
 import LappyWoman from '../../assets/imgs/LappyWoman.png';
 import LappyMan from '../../assets/imgs/LappyMan.png';
-import { useSideBarState } from '../../components/contexts/SideBarStateContext.jsx';
+import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
+import Carousel1 from '../../components/shared/carousel/Carousel1.jsx';
+import OurValuesSection from '../../components/sections/OurValuesSection/OurValuesSection.jsx';
 export default function AboutPage({ }) {
     const { setSideBarState } = useSideBarState();
     useEffect(() => {
@@ -16,6 +18,7 @@ export default function AboutPage({ }) {
     }, []);
     return (
         <>
+
             <div className="AboutPage">
                 <div className="Hero">
                     <div className="Hero-Left">
@@ -135,6 +138,7 @@ export default function AboutPage({ }) {
                         </div>
                     </div>
                 </div>
+                <OurValuesSection />
                 <div className="how-we-are-different">
                     <hr />
                     <div className="Heading">

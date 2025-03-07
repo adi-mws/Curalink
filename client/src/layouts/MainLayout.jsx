@@ -4,7 +4,6 @@ import Footer from '../components/layout/Footer/Footer'
 import { Outlet } from 'react-router-dom'
 import useWindowSize from '../hooks/useWindowSize'
 import Sidebar from '../components/layout/Sidebar/Sidebar'
-import { useSideBar } from '../components/contexts/SidebarContext.jsx';
 export default function MainLayout() {
   return (
     <>

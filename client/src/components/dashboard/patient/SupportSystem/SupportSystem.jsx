@@ -2,7 +2,7 @@ import React from "react";
 import "./SupportSystem.css";
 import DashboardHeader from "../../../layout/DashboardHeader/DashboardHeader";
 import TertiaryButton from "../../../shared/buttons/TertiaryButton/TertiaryButton";
-import { useSideBarState } from "../../../contexts/SideBarStateContext";
+import { useSideBarState } from "../../../../contexts/SideBarStateContext";
 import { useEffect } from "react";
 export default function SupportSystem() {
   const supports = [
