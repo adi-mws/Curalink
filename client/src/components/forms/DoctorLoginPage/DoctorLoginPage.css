@@ -1,0 +1,17 @@
+.DoctorLoginPage{
+    width: 70vw;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--secondary-font);
+
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+}
