@@ -1,0 +1,12 @@
+.AnnouncementPage {
+    display: flex;
+    flex-direction: column;
+    padding: 4em;
+    .Announcement-Hero-Section {
+        display: grid;
+        grid-template-columns: 55% 45%;
+        div {
+            
+        }
+    }
+}

@@ -42,6 +42,7 @@ function App() {
                 <Route path='/' element={<MainLayout />}>
 
                   <Route path='/' element={<DoctorsPage />} />
+                  <Route path='/announcements' element={<AnnouncementPage />} />
                   <Route path='/support' element={<SupportPage />} />
                   <Route path='/about' element={<AboutPage />} />
                   <Route path='/doctors' element={<DoctorsPage />} />
