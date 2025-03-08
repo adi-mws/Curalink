@@ -17,4 +17,4 @@ export default function AddQualification() {
         <PrimaryButton text = "Save Details" type = "submit" />
     </div>
   )
-}
+} 
