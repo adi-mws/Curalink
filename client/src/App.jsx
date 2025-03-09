@@ -35,7 +35,7 @@ function App() {
   // const { user } = useAuth();
   return (
     <>
-    {/* <DoctorCalendarPopup /> */}
+    <DoctorCalendarPopup />
     {/* <DoctorLoginPage /> */}
       <AuthProvider>
         <SideBarProvider>
