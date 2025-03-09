@@ -1,4 +1,4 @@
-.DoctorLoginPage {
+.DoctorRegistrationPage {
   font-family: var(--secondary-font);
   padding: 30px;
   display: grid;
@@ -21,7 +21,7 @@
     }
 
     .text {
-      width: 60%;
+      width: 70%;
     }
   }
 
@@ -35,11 +35,11 @@
 
     .backgroundDiv {
       width: 75%;
-      height: 200px;
+      height: 220px;
       background-color: var(--secondary-color);
       position: absolute;
       z-index: -1;
-      top: 50%;
+      top: 45%;
       border-radius: 10px;
     }
 
@@ -50,9 +50,15 @@
     }
 
     .buttons {
+      height: 70px;
+      max-width: 70%;
+      background-color: white;
       display: flex;
+      align-items: center;
+      padding-inline: 10px;
       gap: 20px;
       margin-top: 20px;
+      border-radius: 10px;
     }
   }
 
@@ -204,7 +210,7 @@
 }
 
 @media screen and (max-width: 976px) {
-  .DoctorLoginPage {
+  .DoctorRegistrationPage {
     grid-template-columns: 1fr;
     grid-template-areas:
       "box-1"
@@ -215,7 +221,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .DoctorLoginPage {
+  .DoctorRegistrationPage {
     .second {
       .backgroundDiv {
         width: 90%;
@@ -225,7 +231,7 @@
 }
 
 @media screen and (max-width: 576px) {
-  .DoctorLoginPage {
+  .DoctorRegistrationPage {
     padding: 20px;
 
     .first {
@@ -248,7 +254,12 @@
       .buttons {
         flex-direction: column;
         margin-top: 0px;
-        gap: 8px;
+        gap: 0px;
+        max-width: 80%;
+
+        p {
+          font-size: 14px;
+        }
       }
     }
   }

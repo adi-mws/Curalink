@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import "./DoctorLoginPage.css";
-import DoctorWork from "../../../assets/imgs/DoctorWork.png";
-import TertiaryButton from "../../shared/buttons/TertiaryButton/TertiaryButton";
-import PrimaryButton from "../../shared/buttons/PrimaryButton/PrimaryButton";
+import "./DoctorRegistrationPage.css";
+import TherapyCounseling from "../../assets/imgs/Therapy-Counseling.png";
+import TertiaryButton from "../../components/shared/buttons/TertiaryButton/TertiaryButton";
+import PrimaryButton from "../../components/shared/buttons/PrimaryButton/PrimaryButton";
 import { useForm } from "react-hook-form";
-import googleIcon from "../../../assets/icons/google-icon.webp";
-import eyeIcon from "../../../assets/icons/eye.png";
-import eyeSlashIcon from "../../../assets/icons/eye-slash.png";
+import googleIcon from "../../assets/icons/google-icon.webp";
+import eyeIcon from "../../assets/icons/eye.png";
+import eyeSlashIcon from "../../assets/icons/eye-slash.png";
 
-const DoctorLoginPage = () => {
+const DoctorRegistrationPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const {
     register,
@@ -18,21 +18,24 @@ const DoctorLoginPage = () => {
   } = useForm();
 
   return (
-    <div className="DoctorLoginPage">
+    <div className="DoctorRegistrationPage">
       <div className="first" style={{ gridArea: "box-1" }}>
-        <p className="title">Secure Access to Your Doctor's Dashboard</p>
+        <p className="title">
+          Expand Your Practice with Our Digital Healthcare Platform
+        </p>
         <p className="text">
-          Welcome back! Log in to manage your appointments, consult with
-          patients, and access your digital practice with ease.
+          Sign up to connect with patients, manage appointments, and provide
+          expert medical care through secure video consultations, chat, and
+          digital prescriptions.
         </p>
       </div>
 
       <div className="second" style={{ gridArea: "box-2" }}>
         <div className="backgroundDiv"></div>
-        <img src={DoctorWork} alt="doctorWork" />
+        <img src={TherapyCounseling} alt="TherapyCounseling" />
         <div className="buttons">
-          <PrimaryButton text="Explore Doctor Perks" />
-          <TertiaryButton text="Register As Doctor" />
+          <p>Already have a doctor account at Curalink?</p>
+          <PrimaryButton text="Login Now" />
         </div>
       </div>
 
@@ -114,4 +117,4 @@ const DoctorLoginPage = () => {
   );
 };
 
-export default DoctorLoginPage;
+export default DoctorRegistrationPage;
