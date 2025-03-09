@@ -29,7 +29,8 @@ import DoctorLanding from './components/dashboard/doctor/DoctorLanding/DoctorLan
 import ShowServices from './components/dashboard/doctor/forms/ServiceForm/ShowServices.jsx';
 import { AuthProvider } from './contexts/AuthContext.jsx';
 import { useAuth } from './contexts/AuthContext.jsx';
-import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx'
+import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
+import DoctorDetails from './components/dashboard/doctor/DoctorDetails/DoctorDetails.jsx';
 function App() {
   // const { user } = useAuth();
   return (
@@ -77,6 +78,7 @@ function App() {
 
                   <Route path='/doctor-dashboard' element={<DashboardLayout />}>
                     <Route path='/doctor-dashboard' element={<DoctorLanding />} />
+                    <Route path='/doctor-dashboard/doctor-details' element={<DoctorDetails/>}></Route>
                   </Route>
                 </Routes>
               </Router>

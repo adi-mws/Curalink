@@ -177,6 +177,7 @@ export default function DoctorLanding({newsData = newsList, Appointments = Dummy
     const [bookingStatus, setBookingStatus] = useState([]);
     const [selectedData, setSelectedDate] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('All Categories');
+    const [moreMeetings, setMoreMeetings] = useState(false);
     const Categories = [...new Set(Appointments.map(Appointment => Appointment.category))];
     useEffect(() => {
         setBookingStatus([
@@ -259,38 +260,45 @@ export default function DoctorLanding({newsData = newsList, Appointments = Dummy
                           ))}
                       </div>
                 </div>
-            </div>
-            <div className="Todays-Schedule">
-              <p className="Heading">Today's Schedules</p>
-              {schedules.map((obj) => (
-                <div  className="schedule">
-                  <div className="duration">{obj.duration}</div>
-                  <div className="timing">{obj.start} - {obj.end}</div>
-                </div>
-              ))}
-            </div>
-            <div className="meetings-section">
-              <p className="heading">Company Meetings / Events</p>
-              {meetings.map((meeting) => (
-                <div className="meeting">
-                <div className="meeting-text">
-                  <p className="title">344343</p>
-                  <p className="description">342535</p>
-                </div>
-                <p className="date">345435</p>
-                <div className="members-joining">
-                  <img src={doctorPfp} alt="" className="img-1" />
-                  <img src={doctorPfp} alt="" className="img-2" />
-                  <img src={doctorPfp} alt="" className="img-3" />
-                  <div className="members-joining-text">
-                    <p className="joining-members"></p>
-                    <button>Notify Me Too</button>
+                <div className="Todays-Schedule">
+                  <p className="Heading">Today's Schedules</p>
+                  <div className="schedules">
+                  {schedules.map((obj) => (
+                    <div  className="schedule">
+                      <div className="duration">{obj.duration}</div>
+                      <div className="timing">{obj.start} - {obj.end}</div>
+                    </div>
+                  ))}
                   </div>
-                </div>  
-              </div>
-              ))}
-              
-            </div>
+                </div>
+                  <div className="meetings-section">
+                    <p className="heading">Company Meetings / Events</p>
+                    {meetings.slice(0,!moreMeetings ? "2":meetings.length).map((meeting) => (
+                      <div className="meeting">
+                      <div className="meeting-text">
+                        <p className="title">{meeting.title}</p>
+                        <p className="description">{meeting.description}</p>
+                      </div>
+                      <div className="meeting-right">
+                      <p className="date">21 November 2024</p>
+                     
+                      <div className="members-joining">
+                        <div className="images">
+                          <img src={doctorPfp} alt="" className="img-1" />
+                          <img src={doctorPfp} alt="" className="img-2" />
+                          <img src={doctorPfp} alt="" className="img-3" />
+                        </div>
+                        <div className="members-joining-text">
+                          <p className="joining-members">{meeting.members}+ joining</p>
+                          <button>Notify Me Too</button>
+                        </div>
+                      </div>
+                      </div>  
+                    </div>
+                    ))}
+                    <button className='viewMore' onClick={() => setMoreMeetings(!moreMeetings)}>{moreMeetings ? "View Less":"View More"}</button>
+                  </div>
+            </div>   
         </div>
     )
 }
