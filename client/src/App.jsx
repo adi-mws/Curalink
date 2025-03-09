@@ -29,8 +29,7 @@ import DoctorLanding from './components/dashboard/doctor/DoctorLanding/DoctorLan
 import ShowServices from './components/dashboard/doctor/forms/ServiceForm/ShowServices.jsx';
 import { AuthProvider } from './contexts/AuthContext.jsx';
 import { useAuth } from './contexts/AuthContext.jsx';
-import DoctorCalendarPopup from './components/shared/primitive/DoctorCalendarPopUp/DoctorCalendarPopup.jsx';
-import DoctorLoginPage from './components/forms/DoctorLoginPage/DoctorLoginPage.jsx';
+import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx'
 function App() {
   // const { user } = useAuth();
   return (
@@ -56,6 +55,7 @@ function App() {
                     <Route path='/news/:id' element={<NewsPage />} />
                     <Route path='/contact' element={<ContactPage />} />
                     <Route path='/login' element={<PatientLoginPage />} />
+                    <Route path='/announcements' element={<AnnouncementPage />} />
                     <Route path='/register' element={<PatientRegistrationPage />} />
                     <Route path='/search-doctors' element={<DoctorsSearchPage />} />
                     <Route path='/test' element={<DoctorsCard filter={true} />} />
