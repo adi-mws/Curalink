@@ -30,12 +30,13 @@ import ShowServices from './components/dashboard/doctor/forms/ServiceForm/ShowSe
 import { AuthProvider } from './contexts/AuthContext.jsx';
 import { useAuth } from './contexts/AuthContext.jsx';
 import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx'
+import DoctorLoginPage from "./components/forms/DoctorLoginPage/DoctorLoginPage.jsx"
 function App() {
   // const { user } = useAuth();
   return (
     <>
-    <DoctorCalendarPopup />
-    {/* <DoctorLoginPage /> */}
+    {/* <DoctorCalendarPopup /> */}
+    <DoctorLoginPage />
       <AuthProvider>
         <SideBarProvider>
           <SideBarStateContextProvider>
