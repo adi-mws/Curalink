@@ -38,7 +38,7 @@ function App() {
     <>
     {/* <DoctorCalendarPopup /> */}
     {/* <DoctorLoginPage /> */}
-    <DoctorRegistrationPage />
+    {/* <DoctorRegistrationPage /> */}
       <AuthProvider>
         <SideBarProvider>
           <SideBarStateContextProvider>
