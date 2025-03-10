@@ -1,0 +1,499 @@
+
+.DoctorDetails {
+    width: 100%;
+    height: 100%;
+    background-color: #F2F2F2;
+    .DoctorDetail-content {
+        height: 100%;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        padding-bottom: 5rem;
+      .hero-section {
+        background-color: #FFFFFF;
+        display: grid;
+        margin: 1rem;
+        border-radius: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        padding: 1rem;
+        .details {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            gap: 0.5rem;
+          .name {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          }
+          .gender {
+            color: var(--primary-color);
+          }
+          .age {
+            color: var(--gray-text);
+            margin-bottom: 1rem;
+          }
+        }
+        .doctors-message {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+          .heading {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+          }
+          .Message {
+            color: var(--gray-text);
+            overflow: hidden;
+          }
+        }
+        .profile-picture {
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+          .pfp{
+            height: 10rem;
+            width: 10rem;
+          }
+          .edit-profile {
+            display: flex;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding:0.5rem 1rem;
+            justify-content: space-evenly;
+
+          }
+        }
+      }
+  
+      .personal-information {
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        .infos-heading, .infos {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+        .infos-heading{
+            font-size: 1.1rem;
+        }
+        .infos{
+            color: var(--gray-text);
+        }
+        .infos .value{
+            font-weight: 300;
+        }
+      }
+  
+      .Qualification-Documents {
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        margin: 1rem;
+        display: flex;
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            p{
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+        .document{
+                display: flex;
+                justify-content: space-between;
+        }
+        .Add-New{
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            align-items: center;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 1rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+      }
+
+  
+      .services-section {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        .Heading {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+          .head-text {
+            font-weight: 500;
+            font-size: 1.2rem;
+          }
+        }
+        .category {
+            margin-bottom: 1rem;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            background-color: var(--secondary-color);
+            width: fit-content;
+        }
+        .Add-New {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #F2F2F2;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+        }
+      }
+  
+      .Education-section {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        margin: 1rem;
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        .Education {
+            padding: 1rem;
+            display: flex;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            width: 15rem;
+            flex-direction: column;
+            gap: 0.5rem;
+          .college {
+            font-size: 1.2rem;
+          }
+        }
+        .Add-More {
+            display: flex;
+            flex-direction: column;
+            height: 10rem;
+            width: 13rem;
+            justify-content: center;
+            align-items: center;
+            background-color: #F4F4F4;
+            border-radius: 10px;
+            img{
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+      }
+  
+      .Experience-section {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        .Education {
+            padding: 1rem;
+            display: flex;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            width: 15rem;
+            flex-direction: column;
+            gap: 0.5rem;
+          .college {
+            font-size: 1.2rem;
+          }
+        }
+        .Add-More {    
+            display: flex;
+            flex-direction: column;
+            height: 10rem;
+            width: 13rem;
+            justify-content: center;
+            align-items: center;
+            background-color: #F4F4F4;
+            border-radius: 10px;
+            img{
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+      }
+  
+      .License {
+        background-color: #FFFFFF; 
+        border-radius: 10px; 
+        margin: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        img{
+            position: absolute;
+            height: 1.5rem;
+            width: 1.5rem;
+            right: 8%;
+            top: 5%;
+        }
+        .licence-detail {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 0.5rem;
+            padding: 1rem;
+          .Head {
+            font-size: 1.1rem;
+          }
+          .body {
+            padding: 0.5rem 0.8rem;
+            border-radius: 10px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:1168px){
+    .DoctorDetails {
+        .DoctorDetail-content {
+          .hero-section {
+            .details {
+              .name {
+              }
+              .gender {
+              }
+              .age {
+              }
+            }
+            .doctors-message {
+              .heading {
+              }
+              .Message {
+              }
+            }
+            .profile-picture {
+              .pfp {
+              }
+              .edit-profile {
+              }
+            }
+          }
+      
+          .personal-information {
+            .infos-heading {
+            }
+            .infos {
+            }
+          }
+      
+          .Qualifications {
+            .Heading {
+            }
+            .Qualification {
+            }
+          }
+      
+          .Qualification-Documents {
+            .heading {
+            }
+            .document {
+            }
+            .Add-New {
+            }
+          }
+      
+          .services-section {
+            .Heading {
+              .head-text {
+              }
+            }
+            .category {
+            }
+            .Add-New {
+            }
+          }
+      
+          .Education-section {
+            .Education {
+              .college {
+              }
+              .degree {
+              }
+              .duration {
+              }
+            }
+            .Add-More {
+            }
+          }
+      
+          .Experience-section {
+            .Education {
+              .college {
+              }
+              .degree {
+              }
+              .duration {
+              }
+            }
+            .Add-More {
+            }
+          }
+      
+          .License {
+            .licence-detail {
+              .Head {
+              }
+              .body {
+              }
+            }
+          }
+        }
+    }
+  }
+  
+  @media screen and (max-width:992px){
+    .DoctorDetails {
+        .DoctorDetail-content {
+          .hero-section {
+            text-wrap: nowrap;
+            padding: 1rem;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            grid-template-areas: 
+            "A B"
+            "C C";
+            justify-content: space-evenly;
+            .details {
+                grid-area: A;
+                width: 50%;
+              .name {
+              }
+              .gender {
+              }
+              .age {
+              }
+            }
+            .doctors-message {
+                order: 5;
+                width: 100%;
+                grid-area: C;
+                text-wrap: wrap;
+              .heading {
+              }
+              .Message {
+              }
+            }
+            .profile-picture {
+                grid-area: B;
+                width: 50%;
+              .pfp {
+              }
+              .edit-profile {
+              }
+            }
+          }
+      
+          .personal-information {
+            .infos-heading {
+            }
+            .infos {
+            }
+          }
+      
+          .Qualifications {
+            .Heading {
+            }
+            .Qualification {
+            }
+          }
+      
+          .Qualification-Documents {
+            .heading {
+            }
+            .document {
+            }
+            .Add-New {
+            }
+          }
+      
+          .services-section {
+            .Heading {
+              .head-text {
+              }
+            }
+            .category {
+            }
+            .Add-New {
+            }
+          }
+      
+          .Education-section {
+            .Education {
+              .college {
+              }
+              .degree {
+              }
+              .duration {
+              }
+            }
+            .Add-More {
+            }
+          }
+      
+          .Experience-section {
+            .Education {
+              .college {
+              }
+              .degree {
+              }
+              .duration {
+              }
+            }
+            .Add-More {
+            }
+          }
+      
+          .License {
+            .licence-detail {
+              .Head {
+              }
+              .body {
+              }
+            }
+          }
+        }
+    }
+    
+  }
+  
+  @media screen and (max-width:768px){
+  
+  }
+  
+  @media screen and (max-width:576px){
+  
+  }
+  
+  @media screen and (max-width:400px){
+  
+  }
