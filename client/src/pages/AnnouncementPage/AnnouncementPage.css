@@ -12,6 +12,7 @@
             justify-content: center;
             flex-direction: column;
             gap: 2em;
+            padding-left: 1.2em;
             h1 {
                 color: black;
                 font-size: 2.5em;
@@ -20,7 +21,40 @@
         .Announcement-Hero-Section-Image {
             img {
                 width: 27em;
-                
+            }
+        }
+    }
+    .Announcement-Page-Recent-Announcements {
+        .Recent-Annoucements-Heading{
+            font-size: 1.3em;
+            padding: 2em 1em 0em 1em;
+        }
+        .Announcements-Container{
+            display: flex;
+            padding: 2em;
+            flex-direction: column;
+            gap: 1em;
+            .Announcements-Container-Cards, .Features-Container-Cards {
+                border-radius: 0.8em;
+                padding: 2em;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                font-size: 1em;
+            }
+            .Announcements-Container-Cards {
+                background-color: #D9FFCF;
+            }
+            .Features-Container-Cards {
+                background-color: #F5F5F5;
+            }
+        }
+        .View-More-Announcements{
+            display: flex;
+            justify-content: center;
+            gap: 0.5em;
+            img{
+                width: 1.4em;
             }
         }
     }

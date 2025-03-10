@@ -3,6 +3,7 @@ import './AnnouncementPage.css';
 import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import announcement_rectangle from '../../assets/imgs/Announcement-Page-Rectangle.png';
 import announcement_speaker from '../../assets/imgs/Announcement-Page-Speaker.png';
+import arrow_down from "../../assets/icons/arrow-down.png";
 
 export default function AnnouncementPage({ }) {
     const { setSideBarState } = useSideBarState();
@@ -12,6 +13,55 @@ export default function AnnouncementPage({ }) {
             setSideBarState('');
         }
     }, []);
+    const recent_announcements = [
+        {
+            title: "Doctor Support Enhancement",
+            description: "Welcome to our announcements page, where we keep you informed about new features, important updates, and upcoming events. Stay tuned for the latest improvements designed to enhance your healthcare experience!",
+            date: "Released on 12/02/2025"
+        },
+        {
+            title: "New Patient",
+            description: "Welcome to our announcements page, where we keep you informed about new features, important updates, and upcoming events. Stay tuned for the latest improvements designed to enhance your healthcare experience!",
+            date: "Released on 12/02/2025"
+        },
+        {
+            title: "Patient V1.2 Version",
+            description: "Welcome to our announcements page, where we keep you informed about new features, important updates, and upcoming events. Stay tuned for the latest improvements designed to enhance your healthcare experience!",
+            date: "Released on 12/02/2025"
+        },
+        {
+            title: "New Patient",
+            description: "Welcome to our announcements page, where we keep you informed about new features, important updates, and upcoming events. Stay tuned for the latest improvements designed to enhance your healthcare experience!",
+            date: "Released on 12/02/2025"
+        },
+        {
+            title: "New Patient ",
+            description: "Welcome to our announcements page, where we keep you informed about new features, important updates, and upcoming events. Stay tuned for the latest improvements designed to enhance your healthcare experience!",
+            date: "Released on 12/02/2025"
+        }
+    ];
+    const upcoming_features = [
+        {
+            title: "Doctor Support Enhancement",
+            description: "Welcome to our announcements page, where we keep you informed about new features, important updates, and upcoming events. Stay tuned for the latest improvements designed to enhance your healthcare experience!",
+            date: "Released on 12/02/2025"
+        },
+        {
+            title: "New Patient",
+            description: "Welcome to our announcements page, where we keep you informed about new features, important updates, and upcoming events. Stay tuned for the latest improvements designed to enhance your healthcare experience!",
+            date: "Released on 12/02/2025"
+        },
+        {
+            title: "New Patient",
+            description: "Welcome to our announcements page, where we keep you informed about new features, important updates, and upcoming events. Stay tuned for the latest improvements designed to enhance your healthcare experience!",
+            date: "Released on 12/02/2025"
+        },
+        {
+            title: "New Patient ",
+            description: "Welcome to our announcements page, where we keep you informed about new features, important updates, and upcoming events. Stay tuned for the latest improvements designed to enhance your healthcare experience!",
+            date: "Released on 12/02/2025"
+        }
+    ];
     return (
         <>
             <div className="AnnouncementPage">
@@ -23,6 +73,36 @@ export default function AnnouncementPage({ }) {
                     </div>
                     <div className="Announcement-Hero-Section-Image">
                         <img src={announcement_speaker} alt="" />
+                    </div>
+                </div>
+                <div className="Announcement-Page-Recent-Announcements">
+                    <p className="Recent-Annoucements-Heading">Recent Announcements</p>
+                    <div className="Announcements-Container">
+                        {
+                            recent_announcements.map((announcement, index) => (
+                                <div className="Announcements-Container-Cards">
+                                    <h3>{announcement.title}</h3>
+                                    <p>{announcement.description}</p>
+                                    <p>{announcement.date}</p>
+                                </div>
+                            ))
+                        }
+                    </div>
+                    <div className="View-More-Announcements">
+                        <p>View More Announcements</p>
+                        <img src={arrow_down}/>
+                    </div>
+                    <p className="Recent-Annoucements-Heading">Upcoming Features</p>
+                    <div className="Announcements-Container">
+                        {
+                            upcoming_features.map((features, index) => (
+                                <div className="Features-Container-Cards">
+                                    <h3>{features.title}</h3>
+                                    <p>{features.description}</p>
+                                    <p>{features.date}</p>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>
