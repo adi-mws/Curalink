@@ -29,14 +29,14 @@ import DoctorLanding from './components/dashboard/doctor/DoctorLanding/DoctorLan
 import ShowServices from './components/dashboard/doctor/forms/ServiceForm/ShowServices.jsx';
 import { AuthProvider } from './contexts/AuthContext.jsx';
 import { useAuth } from './contexts/AuthContext.jsx';
-<<<<<<< HEAD
+
 import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import DoctorDetails from './components/dashboard/doctor/DoctorDetails/DoctorDetails.jsx';
-=======
-import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx'
+
+// import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx'
 import DoctorLoginPage from "./components/forms/DoctorLoginPage/DoctorLoginPage.jsx"
 import DoctorRegistrationPage from './pages/DoctorRegistrationPage/DoctorRegistrationPage.jsx';
->>>>>>> 3acfb6c95a35f746101ce213e36b1bcd4826c1b3
+
 function App() {
   // const { user } = useAuth();
   return (
