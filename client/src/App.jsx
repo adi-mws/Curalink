@@ -29,14 +29,8 @@ import DoctorLanding from './components/dashboard/doctor/DoctorLanding/DoctorLan
 import ShowServices from './components/dashboard/doctor/forms/ServiceForm/ShowServices.jsx';
 import { AuthProvider } from './contexts/AuthContext.jsx';
 import { useAuth } from './contexts/AuthContext.jsx';
-
 import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import DoctorDetails from './components/dashboard/doctor/DoctorDetails/DoctorDetails.jsx';
-
-// import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx'
-import DoctorLoginPage from "./components/forms/DoctorLoginPage/DoctorLoginPage.jsx"
-import DoctorRegistrationPage from './pages/DoctorRegistrationPage/DoctorRegistrationPage.jsx';
-
 function App() {
   // const { user } = useAuth();
   return (
