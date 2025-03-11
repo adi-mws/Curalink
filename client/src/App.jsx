@@ -31,6 +31,7 @@ import { AuthProvider } from './contexts/AuthContext.jsx';
 import { useAuth } from './contexts/AuthContext.jsx';
 import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import DoctorDetails from './components/dashboard/doctor/DoctorDetails/DoctorDetails.jsx';
+import AdminLoginPage from './components/forms/AdminLoginPage/AdminLoginPage.jsx';
 function App() {
   // const { user } = useAuth();
   return (
@@ -38,6 +39,7 @@ function App() {
     {/* <DoctorCalendarPopup /> */}
     {/* <DoctorLoginPage /> */}
     {/* <DoctorRegistrationPage /> */}
+    {/* <AdminLoginPage /> */}
       <AuthProvider>
         <SideBarProvider>
           <SideBarStateContextProvider>
