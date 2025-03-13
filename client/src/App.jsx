@@ -33,6 +33,7 @@ import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import DoctorDetails from './components/dashboard/doctor/DoctorDetails/DoctorDetails.jsx';
 import DoctorLoginPage from "./components/forms/DoctorLoginPage/DoctorLoginPage.jsx"
 import DoctorRegistrationPage from './pages/DoctorRegistrationPage/DoctorRegistrationPage.jsx';
+import AdminLoginPage from './components/forms/AdminLoginPage/AdminLoginPage.jsx';
 function App() {
   // const { user } = useAuth();
   return (
@@ -40,6 +41,7 @@ function App() {
     {/* <DoctorCalendarPopup /> */}
     {/* <DoctorLoginPage /> */}
     {/* <DoctorRegistrationPage /> */}
+    {/* <AdminLoginPage /> */}
       <AuthProvider>
         <SideBarProvider>
           <SideBarStateContextProvider>
