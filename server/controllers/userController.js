@@ -11,14 +11,13 @@ const generateToken = (userId, role) => {
 };
 
 dotenv.config();
-
 export const loginUser = async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { email, password, role } = req.body;
 
-        // Check if user exists
-        const user = await User.findOne({ email });
-        if (!user) return res.status(400).json({ message: "Invalid credentials" });
+        // Check if user with given email and role exists
+        const user = await User.findOne({ email, role });
+        if (!user) return res.status(400).json({ message: "Account does not exist" });
 
         // Check Password
         const isMatch = await bcrypt.compare(password, user.password);
@@ -32,6 +31,7 @@ export const loginUser = async (req, res) => {
         res.status(500).json({ message: "Server error", error: error.message });
     }
 };
+
 
 
 export const registerUser = async (req, res) => {

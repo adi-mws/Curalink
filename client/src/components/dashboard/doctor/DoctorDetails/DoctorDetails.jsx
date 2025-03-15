@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import './DoctorDetails.css'
 import GallaryEdit from '../../../../assets/icons/gallery-edit.png'
 import DashboardHeader from '../../../layout/DashboardHeader/DashboardHeader';
@@ -8,7 +8,7 @@ import editIcon from '../../../../assets/icons/edit-icon.png'
 import doctorPfp from '../../../../assets/imgs/DoctorDashboardImage.png'
 import documentIcon from '../../../../assets/icons/document-text.png'
 import addSquare from '../../../../assets/icons/add-square.png'
-
+import { useSideBarState } from '../../../../contexts/SideBarStateContext.jsx';
 export default function DoctorDetails() {
   const doctorCategories = [
     "Cardiologist",  
@@ -19,6 +19,13 @@ export default function DoctorDetails() {
     "Psychiatrist",  
     "Oncologist"
 ];
+const {setSideBarState} = useSideBarState(); 
+useEffect(() => {
+  setSideBarState('dash-doctor-account-details');
+  return  () => {
+    setSideBarState('')
+  }
+}, [])
 
 
   return (

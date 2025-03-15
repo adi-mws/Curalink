@@ -58,7 +58,7 @@ const PrescriptionSystem = () => {
 
   return (
     <div className="PrescriptionSystem">
-      <DashboardHeader title={"Prescription System"}> </DashboardHeader>
+      <DashboardHeader title={"Prescriptions"}> </DashboardHeader>
 
       <div className="PrescriptionSystemContent">
         <div className="prescription-headers">

@@ -27,6 +27,8 @@
     }
 
     .progressContainer{
+        font-size: 1em;
+
         width: 100%;
         background-color: #eeeeee;
         border-radius: 12px;
@@ -45,6 +47,7 @@
     .Booking{
         text-align: center;
         padding-top: 20px;
+        font-size: 1.5em;
     }
 
     .container{

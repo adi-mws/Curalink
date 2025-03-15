@@ -8,6 +8,8 @@ import SecondaryButton from '../../../shared/buttons/SecondaryButton/SecondaryBu
 import AppointmentIcon from '../../../../assets/icons/profile-2user.png'
 import NewsDummy from '../../../../assets/imgs/doctor-landing-page-news-dummy.png'
 import DownArrow from '../../../../assets/icons/arrow-down.png'
+import DoctorCalendarPopup from '../../../shared/primitive/DoctorCalendarPopUp/DoctorCalendarPopup'
+import { useSideBarState } from '../../../../contexts/SideBarStateContext'
 const newsList = [
   {
     image: NewsDummy,
@@ -178,7 +180,15 @@ export default function DoctorLanding({ newsData = newsList, Appointments = Dumm
   const [selectedData, setSelectedDate] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All Categories');
   const [moreMeetings, setMoreMeetings] = useState(false);
+  const { setSideBarState } = useSideBarState();
   const Categories = [...new Set(Appointments.map(Appointment => Appointment.category))];
+
+  useEffect(() => {
+    setSideBarState(`dash-doctor-landing`);
+    return () => {
+      setSideBarState('');
+    }
+  }, [])
   useEffect(() => {
     setBookingStatus([
       { date: '2025-02-17', percentage: 90 },
@@ -196,6 +206,7 @@ export default function DoctorLanding({ newsData = newsList, Appointments = Dumm
 
   return (
     <div className='DoctorLanding'>
+      <DoctorCalendarPopup />
       <DashboardHeader title='Good Morning' />
       <div className="doctor-landing-content">
         <div className='doctor-landing-hero-section'>
@@ -239,7 +250,7 @@ export default function DoctorLanding({ newsData = newsList, Appointments = Dumm
             </div>
             <div className="Appointments">
               {Appointments.map((Appointment, index) => (
-                <div className="Appointment">
+                <div className="Appointment" key={index}>
                   <p className="name">{Appointment.patient}</p>
                   <p className="Category">{Appointment.category}</p>
                   <p className="time">{Appointment.time}</p>
@@ -263,8 +274,8 @@ export default function DoctorLanding({ newsData = newsList, Appointments = Dumm
         <div className="Todays-Schedule">
           <p className="Heading">Today's Schedules</p>
           <div className="schedules">
-            {schedules.map((obj) => (
-              <div className="schedule">
+            {schedules.map((obj, index) => (
+              <div className="schedule" key={index}>
                 <div className="duration">{obj.duration}</div>
                 <div className="timing">{obj.start} - {obj.end}</div>
               </div>
@@ -273,8 +284,8 @@ export default function DoctorLanding({ newsData = newsList, Appointments = Dumm
         </div>
         <div className="meetings-section">
           <p className="heading">Company Meetings / Events</p>
-          {meetings.slice(0, !moreMeetings ? "2" : meetings.length).map((meeting) => (
-            <div className="meeting">
+          {meetings.slice(0, !moreMeetings ? "2" : meetings.length).map((meeting, index) => (
+            <div className="meeting" key={index}>
               <div className="meeting-text">
                 <p className="title">{meeting.title}</p>
                 <p className="description">{meeting.description}</p>
