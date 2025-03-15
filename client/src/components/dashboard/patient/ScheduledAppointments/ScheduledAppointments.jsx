@@ -23,7 +23,6 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       time: "09:30 AM",
       status: 'Scheduled',
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
@@ -38,7 +37,6 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       status: 'Completed',
       time: "09:30 AM",
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
@@ -46,7 +44,6 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       time: "09:30 AM",
       status: 'Completed',
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
@@ -54,7 +51,6 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       time: "09:30 AM",
       status: 'Completed',
       category: "General Healthcare",
-      mode: "audio",
     },
     {
       doctorName: "Dr. Harsh Mehta",
@@ -62,7 +58,6 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       time: "09:30 AM",
       status: 'Completed',
       category: "General Healthcare",
-      mode: "audio",
     },
     {
       doctorName: "Dr. Harsh Mehta",
@@ -70,7 +65,6 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       time: "09:30 AM",
       status: 'Completed',
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
@@ -78,7 +72,6 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       time: "09:30 AM",
       status: 'Completed',
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
@@ -86,7 +79,6 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       time: "09:30 AM",
         status: 'Completed',
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
@@ -94,7 +86,6 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       time: "09:30 AM",
       status: 'Completed',
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
@@ -102,7 +93,6 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       time: "09:30 AM",
       status: 'Completed',
       category: "General Healthcare",
-      mode: "audio",
     },
     {
       doctorName: "Dr. Harsh Mehta",
@@ -110,49 +100,42 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
       time: "09:30 AM",
       status: 'Completed',
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
       date: "04-01-2025",
       time: "09:30 AM",
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
       date: "04-01-2025",
       time: "09:30 AM",
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
       date: "04-01-2025",
       time: "09:30 AM",
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
       date: "04-01-2025",
       time: "09:30 AM",
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
       date: "04-01-2025",
       time: "09:30 AM",
       category: "General Healthcare",
-      mode: "video",
     },
     {
       doctorName: "Dr. Harsh Mehta",
       date: "04-01-2025",
       time: "09:30 AM",
       category: "General Healthcare",
-      mode: "audio",
     },
   ];
 
@@ -197,7 +180,6 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
             <span className="hideTime">Time</span>
           }
           <span className="hide-category">Category</span>
-          <span className="Show-mode">Mode</span>
           <span>Action</span>
         </div>
 
@@ -212,13 +194,7 @@ const ScheduledAppointments = forwardRef(({ appointmentsState = 'all' }, ref) =>
               <span className="hideTime time">{appt?.time}</span>
             }
             <span className="hide-category">{appt?.category}</span>
-            <span className="icons">
-              {appt.mode === "video" ? (
-                <img src={VideoIcon} alt="video-icon" />
-              ) : (
-                <img src={AudioIcon} alt="audio-icon" />
-              )}
-            </span>
+
             <div className="DetailsButton">
               <TertiaryButton
                 fontSize=".9em"

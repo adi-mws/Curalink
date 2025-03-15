@@ -1,0 +1,150 @@
+.AdminLoginPage {
+  max-width: 90%;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: var(--secondary-font);
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+
+    .DoctorForm {
+      background-color: white;
+      box-shadow: 0px 0px 80.6px 31px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      padding: 1.5em;
+      align-items: center;
+      border-radius: 0.4em;
+
+      form {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        height: fit-content;
+        width: 24em;
+        align-items: center;
+        border-radius: 0.4em;
+      }
+
+      .password {
+        position: relative;
+        padding-left: 0.2em;
+      }
+
+      .password-error {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 0.5em;
+        margin-left: 1em;
+        label {
+          font-size: 0.8em;
+        }
+
+        input {
+          padding: 0.8em 1em;
+          background-color: #f2f2f2;
+          border: 1px solid var(--primary-color);
+          border-radius: 5px;
+          width: 28.9em;
+          font-family: var(--secondary-font);
+          height: 3.3em;
+          border: 0px;
+          outline: none;
+        }
+      }
+
+      .error {
+        font-size: 0.8em;
+        color: var(--red-color);
+      }
+
+      .email {
+        margin-top: 1.5em;
+        padding-left: 0.2em;
+      }
+
+      .email-error {
+        padding-left: 0.2em;
+      }
+
+      .inputFields > label {
+        margin-right: auto;
+      }
+
+      .recovery {
+        width: 100%;
+      }
+
+      .recovery > a {
+        color: var(--primary-color);
+        margin-left: 1em;
+        font-size: 0.8em;
+      }
+
+      .googleLogin {
+        display: flex;
+        gap: 1em;
+        padding: 0.6em;
+        margin-bottom: 2em;
+        background-color: #f2f2f2;
+        justify-content: center;
+        height: 2.8em;
+        width: 25.7em;
+        align-items: center;
+        border-radius: 0.3em;
+        font-size: 0.9em;
+
+        img {
+          width: 3em;
+        }
+
+        p {
+          text-wrap: none;
+        }
+      }
+
+      .inputFields {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        position: relative;
+        label {
+          font-size: 0.8em;
+        }
+
+        input {
+          padding: 0.8em 1em;
+          background-color: #f2f2f2;
+          border: 1px solid var(--primary-color);
+          border-radius: 5px;
+          width: 28.9em;
+          font-family: var(--secondary-font);
+          height: 3.3em;
+          border: 0px;
+          outline: none;
+        }
+
+        .password {
+          padding-left: 1em;
+          margin: 0px;
+        }
+
+        .input-error:focus {
+          outline: 2px solid var(--red-color);
+        }
+      }
+      .eye-icon {
+        position: absolute;
+        top: 2em;
+        right: 1.2em;
+        cursor: pointer;
+        font-size: 18px;
+      }
+    }
+  }
+

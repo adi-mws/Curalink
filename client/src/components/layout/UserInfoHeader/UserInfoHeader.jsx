@@ -7,7 +7,9 @@ import UserNotification from "../../shared/alerts/UserNotification/UserNotificat
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNotificationBarState } from "../../../contexts/NotificationBarContext";
+import { useSideBar } from "../../../contexts/SideBarContext";
 export default function UserInfoHeader({ dashboard = false }) {
+  const { setShowSidebar } = useSideBar();
   const notificationRef = useRef(null);
   const [notificationCount, setNotificationCount] = useState(0);
   useEffect(() => {
@@ -18,7 +20,7 @@ export default function UserInfoHeader({ dashboard = false }) {
     <div className="UserInfoHeader">
       <UserNotification ref={notificationRef} showNotification={showNotificationBar} setShowNotification={setShowNotificationBar} />
       <button className="header-container">
-        <div className="notification-section" onClick={() => setShowNotificationBar(!showNotificationBar  )}>
+        <div className="notification-section" onClick={() => setShowNotificationBar(!showNotificationBar)}>
           <img src={notification} alt="bellIcon" />
           {notificationRef.current?.notificationCount > 0 && (
             <span className="numberCircle">{notificationCount}</span>
@@ -33,7 +35,7 @@ export default function UserInfoHeader({ dashboard = false }) {
             <ul>
               {dashboard ?
                 <>
-                  <li className="dropdown-item dashboard"><a href="/">Home</a></li>
+                  <li className="dropdown-item dashboard"><Link onClick={() => setShowSidebar(false)} to="/">Home</Link></li>
 
                   <li className="dropdown-item"><Link to="/dashboard/support">Support</Link></li>
                 </> :

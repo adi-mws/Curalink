@@ -18,7 +18,7 @@ export default function Sidebar({ dashboard = null, hamBurgerRef = null }) {
     const { width } = useWindowSize();
     const { sideBarState, setSideBarState } = useSideBarState();
     const [showCloseButton, setShowCloseButton] = useState(false);
-    const {showSidebar, setShowSidebar} = useSideBar();
+    const { showSidebar, setShowSidebar } = useSideBar();
 
     useEffect(() => {
         if (dashboard) {
@@ -80,8 +80,11 @@ export default function Sidebar({ dashboard = null, hamBurgerRef = null }) {
                     </div>
                     <br />
                     <ul className='menu-bar-list'>
-                        <li><Link to="/dashboard" className={sideBarState === 'dash-patient-landing' || sideBarState === 'dash-doctor-landing' ? 'active' : ''}>Dashboard</Link></li>
-                        <li><Link to="/dashboard/support" className={sideBarState === 'dash-support' ? 'active' : ''}>Support</Link></li>
+                        <li><Link to={dashboard == 'doctor' ? '/doctor/dashboard' : '/dashboard'} className={sideBarState === 'dash-patient-landing' || sideBarState === 'dash-doctor-landing' ? 'active' : ''}>Dashboard</Link></li>
+                        <li><Link to={dashboard == 'doctor' ? '/doctor/dashboard/account-details' : '/dashboard/account-details'} className={sideBarState === 'dash-patient-account-details' || sideBarState === 'dash-doctor-account-details' ? 'active' : ''}>Your Account</Link></li>
+                        <li><Link to={dashboard == 'doctor' ? '/doctor/dashboard/support' : '/dashboard/support'} className={sideBarState === 'dash-support' ? 'active' : ''}>Support</Link></li>
+                        <li><Link to={dashboard == 'doctor' ? '/doctor/dashboard/earnings' : '/dashboard/payments'} className={sideBarState === 'dash-patient-payments' || sideBarState === 'dash-doctor-earnings' ? 'active' : ''}>{dashboard == 'doctor' ? 'Earnings' : 'Payments'}</Link></li>
+
                     </ul>
                     <br />
                 </div>
@@ -93,9 +96,9 @@ export default function Sidebar({ dashboard = null, hamBurgerRef = null }) {
                     <br />
                     <ul className='menu-bar-list'>
                         <li><Link to="/login" className={sideBarState === 'login' ? 'active' : ''}>Login</Link></li>
-                        <li><Link to="/" className={sideBarState === 'home' ? 'active' : ''}>Home</Link></li>
+                        <li><Link to="/" onClick={() => { setShowSidebar(false) }} className={sideBarState === 'home' ? 'active' : ''}>Home</Link></li>
                         <li><Link to="/dashboard" className={sideBarState === 'dash-patient-landing' || sideBarState === 'dash-doctor-landing' ? 'active' : ''}>Dashboard</Link></li>
-                        <li><Link to="/faqs" className={sideBarState === 'faqs' ? 'active' : ''}>FAQ's</Link></li>
+                        <li><Link to="/faqs" onClick={() => { setShowSidebar(false) }} className={sideBarState === 'faqs' ? 'active' : ''}>FAQ's</Link></li>
                         <li><Link to="/support" className={sideBarState === 'support' ? 'active' : ''}>Support</Link></li>
                     </ul>
                     <br />
@@ -124,6 +127,24 @@ export default function Sidebar({ dashboard = null, hamBurgerRef = null }) {
                     </div>
                     : <></>}
 
+
+                {dashboard && dashboard == 'doctor' ?
+                    <div className='menu-bar-category'>
+
+                        <div>
+                            <img src={appointments} alt="" />
+                            <p>Appointments</p>
+                        </div>
+                        <br />
+                        <ul className='menu-bar-list'>
+                            <li><Link to="/doctor/dashboard/appointments/" className={sideBarState === 'dash-all-appointments' ? 'active' : ''}>Appointments</Link></li>
+                            <li><Link to="/doctor/dashboard/prescriptions" className={sideBarState === 'dash-prescriptions' ? 'active' : ''}>Prescriptions</Link></li>
+                        </ul>
+                        <br />
+                    </div>
+                    : <></>}
+
+
                 <div className='menu-bar-category'>
                     <div>
                         <img src={company} alt="" />
@@ -132,7 +153,7 @@ export default function Sidebar({ dashboard = null, hamBurgerRef = null }) {
                     <br />
                     <ul className='menu-bar-list'>
                         <li><Link to="/events">Events</Link></li>
-                        <li><Link to="/announcements">Announcements</Link></li>
+                        <li><Link onClick={() => {setShowSidebar(false)}} to="/announcements">Announcements</Link></li>
                     </ul>
                     <br />
                 </div>
@@ -143,11 +164,10 @@ export default function Sidebar({ dashboard = null, hamBurgerRef = null }) {
                     </div>
                     <br />
                     <ul className='menu-bar-list'>
-                        <li><Link to="/news">News</Link></li>
-                        <li><Link to="/contact-us">Contact Us</Link></li>
-                        <li><Link to="/about-us">About Us</Link></li>
-                        <li><Link to="/daily-reads">Daily Reads</Link></li>
-                        <li><Link to="/app-updates">App Updates</Link></li>
+                        <li><Link onClick={() => { setShowSidebar(false) }} to="/news">News</Link></li>
+                        <li><Link onClick={() => { setShowSidebar(false) }} to="/contact-us">Contact Us</Link></li>
+                        <li><Link onClick={() => { setShowSidebar(false) }} to="/about-us">About Us</Link></li>
+                        <li><Link onClick={() => { setShowSidebar(false) }} to="/announcements">Announcements</Link></li>
                     </ul>
                     <br />
                 </div>

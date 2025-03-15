@@ -10,8 +10,10 @@ import TestimonialsImage from '../../assets/imgs/Surgeon-With-Mask.png'
 import JoinButtonImage from '../../assets/icons/right-arrow-rectangle.png'
 import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
 export default function DoctorsPage() {
   const { setSideBarState } = useSideBarState();
+  const navigate = useNavigate();
   useEffect(() => {
     setSideBarState('doctors');
   }, []);
@@ -142,7 +144,7 @@ console.log(doctors);
           <div className="Joining-Perk"><p>Leverage powerful tools for streamlined care.</p></div>
           <div className="Joining-Perk"><p>Reach more patients effortlessly</p></div>
           </div>
-          <button className="Join-Button">Join Us Now <img src={JoinButtonImage} alt="" /></button>
+          <button className="Join-Button" onClick={() => navigate('/doctor/registration')}>Join Us Now <img src={JoinButtonImage} alt="" /></button>
         </div>
 
         <div className="FAQs-Section">

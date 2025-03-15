@@ -21,12 +21,13 @@
   .appointments-container {
     padding: 20px;
     overflow-y: scroll;
+    scrollbar-width: thin;
 
 
     .grid-header,
     .grid-row {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5,  1fr);
       align-items: center;
       padding: 12px 15px;
       border-bottom: 1px solid #ddd;
@@ -55,7 +56,7 @@
     .appointments-container {
       .grid-header,
       .grid-row {
-      grid-template-columns: 1fr 0.8fr 0.8fr 0.5fr 1fr;
+      grid-template-columns: 1fr 0.8fr 0.8fr 1fr;
       }
       .hide-category {
         display: none;

@@ -1,4 +1,5 @@
-import { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // Create the context
 const SideBarContext = createContext();
@@ -15,7 +16,7 @@ export const useSideBar = () => {
 // Provider component
 export const SideBarProvider = ({ children }) => {
     const [showSidebar, setShowSidebar] = useState(false);
-
+    
     const value = {
         showSidebar,
         setShowSidebar

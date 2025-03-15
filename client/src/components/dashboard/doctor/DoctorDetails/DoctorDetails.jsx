@@ -1,5 +1,6 @@
 
 import {React, useState} from 'react'
+import React, { useEffect } from 'react'
 import './DoctorDetails.css'
 import GallaryEdit from '../../../../assets/icons/gallery-edit.png'
 import DashboardHeader from '../../../layout/DashboardHeader/DashboardHeader';
@@ -8,16 +9,7 @@ import editIcon from '../../../../assets/icons/edit-icon.png'
 import doctorPfp from '../../../../assets/imgs/DoctorDashboardImage.png'
 import documentIcon from '../../../../assets/icons/document-text.png'
 import addSquare from '../../../../assets/icons/add-square.png'
-import UpdateInfoForm1 from '../forms/UpdateInfoForm/UpdateInfoForm1.jsx';
-import UpdateInfoForm2 from '../forms/UpdateInfoForm/UpdateInfoForm2.jsx';
-import UpdateInfoForm3 from '../forms/UpdateInfoForm/UpdateInfoForm3.jsx';
-import EducationForm from '../forms/EducationForm/EducationForm.jsx';
-import ExperienceForm from '../forms/ExperienceForm/ExperienceForm.jsx';
-import AddQualification from '../forms/QualificationForm/AddQualification.jsx';
-import ShowServices from '../forms/ServiceForm/ShowServices.jsx';
-import AddService from '../forms/ServiceForm/AddService.jsx';
-import ShowQualification from '../forms/QualificationForm/ShowQualification.jsx';
-
+import { useSideBarState } from '../../../../contexts/SideBarStateContext.jsx';
 export default function DoctorDetails() {
   const doctorCategories = [
     "Cardiologist",  
@@ -28,6 +20,13 @@ export default function DoctorDetails() {
     "Psychiatrist",  
     "Oncologist"
 ];
+const {setSideBarState} = useSideBarState(); 
+useEffect(() => {
+  setSideBarState('dash-doctor-account-details');
+  return  () => {
+    setSideBarState('')
+  }
+}, [])
 
   const [showUpdateInfoForm1, setShowUpdateInfoForm1] = useState(false);
   const [showUpdateInfoForm2, setShowUpdateInfoForm2] = useState(false);

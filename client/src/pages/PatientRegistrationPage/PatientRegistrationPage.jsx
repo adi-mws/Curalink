@@ -7,11 +7,12 @@ import googleIcon from '../../assets/icons/google-icon.webp'
 import circleArrow from '../../assets/icons/ArrowCircleRight.png'
 import Header from '../../components/layout/Header/Header.jsx'
 import Footer from '../../components/layout/Footer/Footer.jsx'
-
+import { useNavigate } from 'react-router-dom'
 import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
 
 export default function PatientRegistrationPage() {
+  const navigate = useNavigate();
   const { setSideBarState } = useSideBarState();
   useEffect(() => {
     setSideBarState('register');
@@ -32,7 +33,7 @@ export default function PatientRegistrationPage() {
       </div>
 
       <div className="google-sign-in">
-        <button className="registerHere">Register Here <img src={circleArrow} alt="" /></button>
+        <button className="registerHere" onClick={() => navigate('/registration')}>Register Here <img src={circleArrow} alt="" /></button>
         <p>or</p>
         <button className="ContinueWithGoogle"><img src={googleIcon} alt="" /> Continue with Google </button>
       </div>
@@ -42,7 +43,7 @@ export default function PatientRegistrationPage() {
           <b>Already have an account?</b>
           <p>Log in now to book appointments seamlessly, track your medical history, and manage everything through our intuitive dashboard.</p>
         </div>
-        <button><SecondaryButton text="Login Now" padding="1em 6em" borderRadius='4px'/></button>
+        <button onClick={() => navigate('/login')}><SecondaryButton text="Login Now" padding="1em 6em" borderRadius='4px'/></button>
       </div>
 
       <div className="SmallHeading">
