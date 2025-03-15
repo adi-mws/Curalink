@@ -4,10 +4,15 @@
     display: grid;
     align-self: center;
     justify-self: center;
+    background-color: white;
     height:50vh;
+    border-radius: 20px;
     box-shadow: 0px 4px 80.6px 31px #00000040;
     justify-items: center;
     padding-right: 1rem;
+    position: fixed;
+    z-index: 500;
+    opacity: 100% !important;
     grid-template-rows: minmax(3rem, 5rem) calc(50vh - 6rem) 3rem;
     .heading {
         display: flex;

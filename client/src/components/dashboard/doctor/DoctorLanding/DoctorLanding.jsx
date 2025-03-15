@@ -8,6 +8,7 @@ import SecondaryButton from '../../../shared/buttons/SecondaryButton/SecondaryBu
 import AppointmentIcon from '../../../../assets/icons/profile-2user.png' 
 import NewsDummy from '../../../../assets/imgs/doctor-landing-page-news-dummy.png'
 import DownArrow from '../../../../assets/icons/arrow-down.png'
+import UpdateInfoForm1 from '../forms/UpdateInfoForm/UpdateInfoForm1'
 const newsList = [
     {
       image: NewsDummy,
@@ -197,6 +198,7 @@ export default function DoctorLanding({newsData = newsList, Appointments = Dummy
     return (
         <div className='DoctorLanding'>
             <DashboardHeader title='Good Morning' />
+
             <div className="doctor-landing-content">
                 <div className='doctor-landing-hero-section'>
                     <div className="doctor-landing-profile-section">

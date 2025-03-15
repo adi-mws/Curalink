@@ -11,11 +11,11 @@ const Data = {
     endDate: '2023-12-31'
 }
 
-export default function ExperienceForm({formData=Data}) {
+export default function ExperienceForm({formData=Data,showExperienceForm, setShowExperienceForm}) {
     const { register, handleSubmit, formState: { errors } } = useForm();
   
     return (
-        <div className='ExperienceForm'>
+        <div className='ExperienceForm' style={{ transition: '.3s',  opacity: `${showExperienceForm ? 1 : 0}`, transform: `${showExperienceForm ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, -50%) scale(0)'}`, width: `${showExperienceForm ? '70%' : '0%'}`, height: `${showExperienceForm ? '90vh' : '0%'}`, top: '55%', left: '60% ' }}>
             <form onSubmit={handleSubmit((data) => console.log(data))}>
                 <div className="heading">
                     <h2>Experience Information</h2>
@@ -23,7 +23,7 @@ export default function ExperienceForm({formData=Data}) {
                         src={CutIcon} 
                         alt="close" 
                         className="close-icon"
-                        onClick={() => {}}
+                        onClick={() => {setShowExperienceForm(false)}}
                     />
                 </div>
                 

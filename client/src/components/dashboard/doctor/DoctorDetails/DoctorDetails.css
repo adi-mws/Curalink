@@ -7,6 +7,7 @@
         height: 100%;
         overflow-y: scroll;
         scrollbar-width: thin;
+        position: relative;
         padding-bottom: 5rem;
       .hero-section {
         background-color: #FFFFFF;
@@ -156,7 +157,7 @@
             padding: 1rem 2rem;
             border-radius: 10px;
             background-color: var(--secondary-color);
-            width: fit-content;
+            text-wrap: nowrap;
         }
         .Add-New {
             display: flex;
@@ -176,6 +177,11 @@
         display: flex;
         gap: 1rem;
         padding: 1rem;
+        flex-wrap: wrap;
+        .Heading{
+          width: 100%;
+          font-size: 1.5rem;
+        }
         .Education {
             padding: 1rem;
             display: flex;
@@ -211,6 +217,11 @@
         padding: 1rem;
         display: flex;
         gap: 1rem;
+        flex-wrap: wrap;
+        .Heading{
+          width: 100%;
+          font-size: 1.5rem;
+        }
         .Education {
             padding: 1rem;
             display: flex;
@@ -246,6 +257,7 @@
         display: flex;
         justify-content: space-evenly;
         position: relative;
+        flex-wrap: wrap;
         img{
             position: absolute;
             height: 1.5rem;
@@ -273,103 +285,7 @@
     }
   }
 
-  @media screen and (max-width:1168px){
-    .DoctorDetails {
-        .DoctorDetail-content {
-          .hero-section {
-            .details {
-              .name {
-              }
-              .gender {
-              }
-              .age {
-              }
-            }
-            .doctors-message {
-              .heading {
-              }
-              .Message {
-              }
-            }
-            .profile-picture {
-              .pfp {
-              }
-              .edit-profile {
-              }
-            }
-          }
-      
-          .personal-information {
-            .infos-heading {
-            }
-            .infos {
-            }
-          }
-      
-          .Qualifications {
-            .Heading {
-            }
-            .Qualification {
-            }
-          }
-      
-          .Qualification-Documents {
-            .heading {
-            }
-            .document {
-            }
-            .Add-New {
-            }
-          }
-      
-          .services-section {
-            .Heading {
-              .head-text {
-              }
-            }
-            .category {
-            }
-            .Add-New {
-            }
-          }
-      
-          .Education-section {
-            .Education {
-              .college {
-              }
-              .degree {
-              }
-              .duration {
-              }
-            }
-            .Add-More {
-            }
-          }
-      
-          .Experience-section {
-            .Education {
-              .college {
-              }
-              .degree {
-              }
-              .duration {
-              }
-            }
-            .Add-More {
-            }
-          }
-      
-          .License {
-            .licence-detail {
-              .Head {
-              }
-              .body {
-              }
-            }
-          }
-        }
-    }
-  }
+  
   
   @media screen and (max-width:992px){
     .DoctorDetails {
@@ -386,114 +302,90 @@
             .details {
                 grid-area: A;
                 width: 50%;
-              .name {
-              }
-              .gender {
-              }
-              .age {
-              }
             }
             .doctors-message {
                 order: 5;
                 width: 100%;
                 grid-area: C;
                 text-wrap: wrap;
-              .heading {
-              }
-              .Message {
-              }
             }
-            .profile-picture {
-                grid-area: B;
-                width: 50%;
-              .pfp {
-              }
-              .edit-profile {
-              }
-            }
-          }
-      
-          .personal-information {
-            .infos-heading {
-            }
-            .infos {
-            }
-          }
-      
-          .Qualifications {
-            .Heading {
-            }
-            .Qualification {
-            }
-          }
-      
-          .Qualification-Documents {
-            .heading {
-            }
-            .document {
-            }
-            .Add-New {
-            }
-          }
-      
-          .services-section {
-            .Heading {
-              .head-text {
-              }
-            }
-            .category {
-            }
-            .Add-New {
-            }
-          }
-      
-          .Education-section {
-            .Education {
-              .college {
-              }
-              .degree {
-              }
-              .duration {
-              }
-            }
-            .Add-More {
-            }
-          }
-      
-          .Experience-section {
-            .Education {
-              .college {
-              }
-              .degree {
-              }
-              .duration {
-              }
-            }
-            .Add-More {
-            }
-          }
-      
-          .License {
-            .licence-detail {
-              .Head {
-              }
-              .body {
-              }
-            }
-          }
         }
     }
     
-  }
+  }}
   
   @media screen and (max-width:768px){
-  
+    .DoctorDetails {
+      .DoctorDetail-content {
+        .hero-section {
+          justify-items: flex-end;
+          .details {
+            justify-self: flex-start;
+          }
+          }
+      }
   }
+}
   
   @media screen and (max-width:576px){
-  
+    .DoctorDetails {
+      .DoctorDetail-content {
+        .hero-section {
+          grid-template-areas: 
+          "B"
+          "A"
+          "C";
+          grid-template-rows: auto auto auto;
+          grid-template-columns: 1fr;
+          justify-items: center;
+          .details {
+            justify-self: center;
+            align-items: center;
+            margin-bottom: 1rem;
+          }}   
+      }
   }
+}
   
   @media screen and (max-width:400px){
+    .DoctorDetails{
+      .DoctorDetail-content{
+        .services-section {
+          .category {
+            width: 100%;
+            text-align: center;
+            color: var(--primary-color);
+          }
+          .Add-New {
+            width: 100%;
+            justify-content: center;
+          }
+        }
+        .personal-information {
+          .infos {
+            flex-direction: column ;
+            align-items: center;
+          }
+        }
+        .License {
+          flex-wrap: wrap;
+          .licence-detail {
+            flex-wrap: wrap;
+            align-items: center;
+          }
+        }
+        .Experience-section, .Education-section{
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+        }
+        .Experience-section > div{
+          width: 100% !important;
+        }
+        .Education-section > div{
+          width: 100% !important;
+        }
+      }
+    }
   
   }

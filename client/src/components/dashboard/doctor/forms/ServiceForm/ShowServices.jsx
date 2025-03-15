@@ -9,7 +9,7 @@ import removeIcon from '../../../../../assets/icons/tag-cross.png'
 
 const CurrentServices = ["general consultation", "dental check-up", "eye examination", "pediatric care", "dermatology"]
 
-export default function ShowServices({Services = CurrentServices}) {
+export default function ShowServices({Services = CurrentServices,showShowServiceForm, setShowShowServiceForm}) {
   const [services, setServices] = useState(Services)
   const handleRemoveService = (index) => {
     const newServices = [...services]
@@ -17,8 +17,8 @@ export default function ShowServices({Services = CurrentServices}) {
     setServices(newServices)
   }
   return (
-    <div className='ShowServices'>
-        <div className="heading">Services <img src={cutIcon} alt="" /></div>
+    <div className='ShowServices' style={{ transition: '.3s',  opacity: `${showShowServiceForm ? 1 : 0}`, transform: `${showShowServiceForm ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, -50%) scale(0)'}`, width: `${showShowServiceForm ? '70%' : '0%'}`, height: `${showShowServiceForm ? '90vh' : '0%'}`, top: '55%', left: '60% ' }}>
+        <div className="heading">Services <img src={cutIcon} alt="" onClick={()=>{setShowShowServiceForm(false)}} /></div>
         <div className="services-container">
             {services.map((service, index) => (
                 <div className="service" key={index}>

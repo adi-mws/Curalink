@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useState} from 'react'
 import { useForm } from 'react-hook-form'
 import './EducationForm.css'
 import PrimaryButton from '../../../../shared/buttons/PrimaryButton/PrimaryButton.jsx'
@@ -11,11 +11,11 @@ const Data = {
     completionDate: '2020-05-31'
 }
 
-export default function EducationForm({formData=Data}) {
+export default function EducationForm({formData=Data, showEducationForm, setShowEducationForm}) {
     const { register, handleSubmit, formState: { errors } } = useForm();
   
     return (
-        <div className='EducationForm'>
+        <div className='EducationForm' style={{ transition: '.3s',  opacity: `${showEducationForm ? 1 : 0}`, transform: `${showEducationForm ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, -50%) scale(0)'}`, width: `${showEducationForm ? '70%' : '0%'}`, height: `${showEducationForm ? '90vh' : '0%'}`, top: '55%', left: '60% ' }}>
             <form onSubmit={handleSubmit((data) => console.log(data))}>
                 <div className="heading">
                     <h2>Education Information</h2>
@@ -23,7 +23,7 @@ export default function EducationForm({formData=Data}) {
                         src={CutIcon} 
                         alt="close" 
                         className="close-icon"
-                        onClick={() => {}}
+                        onClick={() => {setShowEducationForm(false)}}
                     />
                 </div>
                 
@@ -83,7 +83,7 @@ export default function EducationForm({formData=Data}) {
                     </div>
                 </div>
                 <div className="Button-Container">
-                    <PrimaryButton text="Save Details" width='100%' padding=".8em" borderRadius='5px' type='submit'/>
+                    <PrimaryButton onClick={() => {setShowEducationForm(false)}} text="Save Details" width='100%' padding=".8em" borderRadius='5px' type='submit'/>
                 </div>
             </form>
         </div>

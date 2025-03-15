@@ -12,11 +12,11 @@ const Services = [
   'Dermatology'
 ]
 
-export default function AddService({ formData = { service: '' } }) {
+export default function AddService({ formData = { service: '' }, showAddServiceForm, setShowAddServiceForm }) {
   const { register, handleSubmit, formState: { errors } } = useForm()
 
   return (
-    <div className='AddService'>
+    <div className='AddService' style={{ transition: '.3s',  opacity: `${showAddServiceForm ? 1 : 0}`, transform: `${showAddServiceForm ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, -50%) scale(0)'}`, width: `${showAddServiceForm ? '70%' : '0%'}`, height: `${showAddServiceForm ? '90vh' : '0%'}`, top: '55%', left: '60% ' }}>
       <form onSubmit={handleSubmit((data) => console.log(data))}>
         <div className="heading">
           <h2>Add Service</h2>
@@ -24,7 +24,7 @@ export default function AddService({ formData = { service: '' } }) {
             src={CutIcon} 
             alt="close" 
             className="close-icon"
-            onClick={() => {}}
+            onClick={() => {setShowAddServiceForm(false)}}
           />
         </div>
         

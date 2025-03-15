@@ -31,6 +31,7 @@ import { AuthProvider } from './contexts/AuthContext.jsx';
 import { useAuth } from './contexts/AuthContext.jsx';
 import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import DoctorDetails from './components/dashboard/doctor/DoctorDetails/DoctorDetails.jsx';
+import AddQualification from './components/dashboard/doctor/forms/QualificationForm/AddQualification.jsx';
 function App() {
   // const { user } = useAuth();
   return (
@@ -60,12 +61,11 @@ function App() {
                     <Route path='/announcements' element={<AnnouncementPage />} />
                     <Route path='/register' element={<PatientRegistrationPage />} />
                     <Route path='/search-doctors' element={<DoctorsSearchPage />} />
-                    <Route path='/test' element={<DoctorsCard filter={true} />} />
                     <Route path='/search-faqs' element={<FAQsPage />} />
                     <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
                     <Route path='/doctor-profile/show-services' element={<ShowServices />} />
+                    <Route path='/test' element={<AddQualification/>}/>
                   </Route>
-
 
 
                   <Route path='/dashboard' element={<DashboardLayout />}>

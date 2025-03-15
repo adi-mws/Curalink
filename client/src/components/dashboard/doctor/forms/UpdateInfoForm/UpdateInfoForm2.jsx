@@ -10,11 +10,11 @@ const Data = {
   address: '123 Main St, City, Country'
 }
 
-export default function UpdateInfoForm2({formData=Data}) {
+export default function UpdateInfoForm2({formData=Data, showUpdateInfoForm2, setShowUpdateInfoForm2}) {
     const { register, handleSubmit, formState: { errors } } = useForm();
   
     return (
-        <div className='UpdateInfoForm2'>
+        <div className='UpdateInfoForm2' style={{ transition: '.3s',  opacity: `${showUpdateInfoForm2 ? 1 : 0}`, transform: `${showUpdateInfoForm2 ? 'translate(-50%, -50%) scale(1)' : 'translate(-50%, -50%) scale(0)'}`, width: `${showUpdateInfoForm2 ? '70%' : '0%'}`, height: `${showUpdateInfoForm2 ? '90%' : '0%'}`, top: '50%', left: '60% ' }}>
             <form onSubmit={handleSubmit((data) => console.log(data))}>
                 <div className="heading">
                     <h2>Update Contact Information</h2>
@@ -22,7 +22,7 @@ export default function UpdateInfoForm2({formData=Data}) {
                         src={CutIcon} 
                         alt="close" 
                         className="close-icon"
-                        onClick={() => {}}
+                        onClick={() => {setShowUpdateInfoForm2(false)}}
                     />
                 </div>
                 
@@ -77,7 +77,7 @@ export default function UpdateInfoForm2({formData=Data}) {
                     </div>
                 </div>
                 <div className="Button-Container">
-                    <PrimaryButton text="Save Details" width='100%' padding=".8em" borderRadius='5px' type='submit'/>
+                    <PrimaryButton onClick={() => {setShowUpdateInfoForm2(false)}} text="Save Details" width='100%' padding=".8em" borderRadius='5px' type='submit'/>
                 </div>
             </form>
         </div>
