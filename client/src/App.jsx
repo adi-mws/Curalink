@@ -32,6 +32,7 @@ import { useAuth } from './contexts/AuthContext.jsx';
 import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import DoctorDetails from './components/dashboard/doctor/DoctorDetails/DoctorDetails.jsx';
 import AdminLoginPage from './components/forms/AdminLoginPage/AdminLoginPage.jsx';
+import PatientInformation from './components/dashboard/patient/PatientInformation/PatientInformation.jsx';
 function App() {
   // const { user } = useAuth();
   return (
@@ -40,6 +41,7 @@ function App() {
     {/* <DoctorLoginPage /> */}
     {/* <DoctorRegistrationPage /> */}
     {/* <AdminLoginPage /> */}
+    <PatientInformation />
       <AuthProvider>
         <SideBarProvider>
           <SideBarStateContextProvider>
@@ -77,6 +79,7 @@ function App() {
                     <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
                     <Route path='/dashboard/support' element={<SupportSystem />} />
                     <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
+                    <Route path='/dashboard/PatientInformation' element={<PatientInformation />} />
                   </Route>
 
                   <Route path='/doctor-dashboard' element={<DashboardLayout />}>
