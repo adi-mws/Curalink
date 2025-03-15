@@ -11,8 +11,10 @@ import Header from '../../components/layout/Header/Header.jsx'
 import Footer from '../../components/layout/Footer/Footer.jsx'
 import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
 export default function PatientLoginPage() {
   const { setSideBarState } = useSideBarState();
+  const navigate = useNavigate();
   useEffect(() => {
     setSideBarState('login');
     return () => {
@@ -38,7 +40,7 @@ export default function PatientLoginPage() {
         <div className="registerNow">
           <b>New to our platform?</b>
           <p>Create your account today to easily book appointments, manage prescriptions with a powerful dashboard.</p>
-          <div className="button"><SecondaryButton text="Register Now" padding="0.8em 4em" borderRadius='3px' /></div>
+          <div className="button"><SecondaryButton onClick={() => navigate('/registration')} text="Register Now" padding="0.8em 4em" borderRadius='3px' /></div>
         </div>
 
         <div className="form">

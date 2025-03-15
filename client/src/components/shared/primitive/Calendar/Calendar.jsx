@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Calendar.css";
 import PatientCalendarPopUp from '../PatientCalendarPopUp/PatientCalendarPopUp';
+import DoctorCalendarPopup from '../DoctorCalendarPopUp/DoctorCalendarPopup';
 
 export default function Calendar({ date = new Date(), dashboard = 'patient', bookingStatus = [], patientAppointments }) {
     const [currentDate, setCurrentDate] = useState(date);
@@ -115,6 +116,12 @@ export default function Calendar({ date = new Date(), dashboard = 'patient', boo
             {dashboard === 'patient' ?
 
                 <PatientCalendarPopUp showCalendarPopUp={showCalendarPopUp} setShowCalendarPopUp={setShowCalendarPopUp} selectedDate={selectedDate} />
+
+                : null
+            }
+            {dashboard === 'doctor' ?
+
+                <DoctorCalendarPopup showCalendarPopUp={showCalendarPopUp} setShowCalendarPopUp={setShowCalendarPopUp} selectedDate={selectedDate} />
 
                 : null
             }

@@ -10,7 +10,7 @@ dotenv.config();
 const app = express(); 
 const PORT = process.env.PORT || 3000;
 app.use(cors({
-    origin: ['http://hhfc.in'],
+    origin: ['http://localhost:5173', 'http://localhost:5174'],
     credentials: true,
 
 }));

@@ -31,17 +31,18 @@ import { AuthProvider } from './contexts/AuthContext.jsx';
 import { useAuth } from './contexts/AuthContext.jsx';
 import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import DoctorDetails from './components/dashboard/doctor/DoctorDetails/DoctorDetails.jsx';
+import DoctorLoginPage from "./components/forms/DoctorLoginPage/DoctorLoginPage.jsx"
+import DoctorRegistrationPage from './pages/DoctorRegistrationPage/DoctorRegistrationPage.jsx';
 import AdminLoginPage from './components/forms/AdminLoginPage/AdminLoginPage.jsx';
 import PatientInformation from './components/dashboard/patient/PatientInformation/PatientInformation.jsx';
 function App() {
   // const { user } = useAuth();
   return (
     <>
-    {/* <DoctorCalendarPopup /> */}
-    {/* <DoctorLoginPage /> */}
-    {/* <DoctorRegistrationPage /> */}
-    {/* <AdminLoginPage /> */}
-    <PatientInformation />
+      {/* <DoctorCalendarPopup /> */}
+      {/* <DoctorLoginPage /> */}
+      {/* <DoctorRegistrationPage /> */}
+      {/* <AdminLoginPage /> */}
       <AuthProvider>
         <SideBarProvider>
           <SideBarStateContextProvider>
@@ -62,12 +63,13 @@ function App() {
                     <Route path='/contact' element={<ContactPage />} />
                     <Route path='/login' element={<PatientLoginPage />} />
                     <Route path='/announcements' element={<AnnouncementPage />} />
-                    <Route path='/register' element={<PatientRegistrationPage />} />
+                    <Route path='/registration' element={<PatientRegistrationPage />} />
                     <Route path='/search-doctors' element={<DoctorsSearchPage />} />
                     <Route path='/test' element={<DoctorsCard filter={true} />} />
                     <Route path='/search-faqs' element={<FAQsPage />} />
-                    <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
-                    <Route path='/doctor-profile/show-services' element={<ShowServices />} />
+                    <Route path='/doctor-profile/:id' element={<DoctorPublicProfilePage />} />
+                    <Route path='/doctor/login' element={<DoctorLoginPage />} />
+                    <Route path='/doctor/registration' element={<DoctorRegistrationPage />} />
                   </Route>
 
 
@@ -82,10 +84,14 @@ function App() {
                     <Route path='/dashboard/PatientInformation' element={<PatientInformation />} />
                   </Route>
 
-                  <Route path='/doctor-dashboard' element={<DashboardLayout />}>
-                    <Route path='/doctor-dashboard' element={<DoctorLanding />} />
-                    <Route path='/doctor-dashboard/doctor-details' element={<DoctorDetails/>}></Route>
+                  <Route path='/doctor/dashboard' element={<DashboardLayout />}>
+                    <Route path='/doctor/dashboard' element={<DoctorLanding />} />
+                    <Route path='/doctor/dashboard/support' element={<SupportSystem />} />
+
+                    <Route path='/doctor/dashboard/account-details' element={<DoctorDetails />}></Route>
                   </Route>
+
+
                 </Routes>
               </Router>
             </NotificationBarStateContextProvider>
