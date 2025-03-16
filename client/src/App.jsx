@@ -31,14 +31,12 @@ import { AuthProvider } from './contexts/AuthContext.jsx';
 import { useAuth } from './contexts/AuthContext.jsx';
 import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import DoctorDetails from './components/dashboard/doctor/DoctorDetails/DoctorDetails.jsx';
-<<<<<<< HEAD
 import AddQualification from './components/dashboard/doctor/forms/QualificationForm/AddQualification.jsx';
-=======
 import DoctorLoginPage from "./components/forms/DoctorLoginPage/DoctorLoginPage.jsx"
 import DoctorRegistrationPage from './pages/DoctorRegistrationPage/DoctorRegistrationPage.jsx';
 import AdminLoginPage from './components/forms/AdminLoginPage/AdminLoginPage.jsx';
 import PatientInformation from './components/dashboard/patient/PatientInformation/PatientInformation.jsx';
->>>>>>> d50444c743a5e042c20e5cd650b7b392373d2838
+import AppointmentPage from './components/dashboard/doctor/AppointmentPage/AppointmentPage.jsx'
 function App() {
   // const { user } = useAuth();
   return (
@@ -70,15 +68,12 @@ function App() {
                     <Route path='/registration' element={<PatientRegistrationPage />} />
                     <Route path='/search-doctors' element={<DoctorsSearchPage />} />
                     <Route path='/search-faqs' element={<FAQsPage />} />
-<<<<<<< HEAD
                     <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
                     <Route path='/doctor-profile/show-services' element={<ShowServices />} />
                     <Route path='/test' element={<AddQualification/>}/>
-=======
                     <Route path='/doctor-profile/:id' element={<DoctorPublicProfilePage />} />
                     <Route path='/doctor/login' element={<DoctorLoginPage />} />
                     <Route path='/doctor/registration' element={<DoctorRegistrationPage />} />
->>>>>>> d50444c743a5e042c20e5cd650b7b392373d2838
                   </Route>
 
 
@@ -95,8 +90,8 @@ function App() {
                   <Route path='/doctor/dashboard' element={<DashboardLayout />}>
                     <Route path='/doctor/dashboard' element={<DoctorLanding />} />
                     <Route path='/doctor/dashboard/support' element={<SupportSystem />} />
-
                     <Route path='/doctor/dashboard/account-details' element={<DoctorDetails />}></Route>
+                    <Route path='/doctor/dashboard/appointments' element={<AppointmentPage />}></Route>
                   </Route>
 
 

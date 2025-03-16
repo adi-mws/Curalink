@@ -1,6 +1,4 @@
-
-import {React, useState} from 'react'
-import React, { useEffect } from 'react'
+import {React, useState, useEffect} from 'react'
 import './DoctorDetails.css'
 import GallaryEdit from '../../../../assets/icons/gallery-edit.png'
 import DashboardHeader from '../../../layout/DashboardHeader/DashboardHeader';

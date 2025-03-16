@@ -8,12 +8,8 @@ import SecondaryButton from '../../../shared/buttons/SecondaryButton/SecondaryBu
 import AppointmentIcon from '../../../../assets/icons/profile-2user.png'
 import NewsDummy from '../../../../assets/imgs/doctor-landing-page-news-dummy.png'
 import DownArrow from '../../../../assets/icons/arrow-down.png'
-<<<<<<< HEAD
-import UpdateInfoForm1 from '../forms/UpdateInfoForm/UpdateInfoForm1'
-=======
 import DoctorCalendarPopup from '../../../shared/primitive/DoctorCalendarPopUp/DoctorCalendarPopup'
 import { useSideBarState } from '../../../../contexts/SideBarStateContext'
->>>>>>> d50444c743a5e042c20e5cd650b7b392373d2838
 const newsList = [
   {
     image: NewsDummy,
@@ -208,84 +204,6 @@ export default function DoctorLanding({ newsData = newsList, Appointments = Dumm
 
 
 
-<<<<<<< HEAD
-    return (
-        <div className='DoctorLanding'>
-            <DashboardHeader title='Good Morning' />
-
-            <div className="doctor-landing-content">
-                <div className='doctor-landing-hero-section'>
-                    <div className="doctor-landing-profile-section">
-                        <div className="doctor-landing-profile-section-left">
-                            <img src={doctorPfp} alt="" />
-                        </div>
-                        <div className="doctor-landing-profile-section-right">
-                            <p className="doctor-name">Dr. Shilpa Singh</p>
-                            <p className="doctor-specialization">Cardiologist</p>
-                            <div className="doctor-landing-profile-section-right-redirections">
-                                <SecondaryButton text={'Edit Details'} padding='.7em 4em' fontSize={'.9em'} />
-                                <span className="doctor-rating"><i className='fa-solid fa-star'></i> 4.5</span>
-                            </div>
-                            <div className="Appointment-data">
-                                <div>
-                                    <p>Appointment Today</p>
-                                    <div className='data'>
-                                        <img src={AppointmentIcon} alt="" />
-                                        <p>101</p>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <p>Total Appointment</p>
-                                    <div className='data'>
-                                        <img src={AppointmentIcon} alt="" />
-                                        <p>350</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <Calendar dashboard='doctor' bookingStatus={bookingStatus} />
-                </div>
-                    <div className="News-category-section">
-                      <div className="Appointment-List">
-                        <div className="selection-Fields">
-                          <div className="Categories"></div>
-                          <div className="date"></div>
-                        </div>
-                        <div className="Appointments">
-                          {Appointments.map((Appointment,index) => (
-                            <div className="Appointment">
-                            <p className="name">{Appointment.patient}</p>
-                            <p className="Category">{Appointment.category}</p>
-                            <p className="time">{Appointment.time}</p>
-                          </div>
-                          ))}
-                        </div>
-                      </div>  
-                      <div className="Daily-News">
-                          <div className="Heading">Daily News</div>
-                          {newsData.map((news,index) => (
-                              <div key={index} className="newsCard">
-                                  <div className="news-text">
-                                      <p className="Heading">{news.heading}</p>
-                                      <p className="Body">{news.description}</p>
-                                  </div>
-                                  <img src={news.image} alt="" />
-                              </div>
-                          ))}
-                      </div>
-                </div>
-                <div className="Todays-Schedule">
-                  <p className="Heading">Today's Schedules</p>
-                  <div className="schedules">
-                  {schedules.map((obj) => (
-                    <div  className="schedule">
-                      <div className="duration">{obj.duration}</div>
-                      <div className="timing">{obj.start} - {obj.end}</div>
-                    </div>
-                  ))}
-=======
   return (
     <div className='DoctorLanding'>
       <DoctorCalendarPopup />
@@ -309,7 +227,6 @@ export default function DoctorLanding({ newsData = newsList, Appointments = Dumm
                   <div className='data'>
                     <img src={AppointmentIcon} alt="" />
                     <p>101</p>
->>>>>>> d50444c743a5e042c20e5cd650b7b392373d2838
                   </div>
                 </div>
 

@@ -1,0 +1,239 @@
+.AppointmentPage{
+    text-wrap: nowrap;
+    height: 100vh;
+    .Appointment-Page-Content{
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        height: 100%;
+        .Hero-section>div{
+            border: 2px solid #00000014;
+            
+        }
+        
+        .Hero-section{
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            grid-template-rows: 260px;
+            .Appointments-Details{
+                display: grid;
+                grid-gap: 0.5rem;
+                height: 100%;
+                padding: 1rem;
+                align-content: center;
+                grid-template-areas: 
+                "A B"
+                "A C"
+                "A D";
+                grid-template-columns: 175px auto ;
+                    .Todays-Appointments{
+                        position: relative;
+                        width: fit-content;
+                        height: fit-content;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        grid-area: A;
+                        .Total-Appointments{
+                            position: absolute;
+                            left: 40%;
+                            top:35%;
+                            text-align: center;
+                        }
+                    }
+                    .Date{
+                        grid-area: B;
+                        width: 235px;
+                        height:35px;
+                        display: flex;
+                        gap: 0.5rem;
+                        align-items: center;
+                        button{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                        img{
+                            height: 1.1rem;
+                            width: 1.1rem;
+                        }
+                    }
+                    .Pending-FollowUps{
+                        padding: 1rem;
+                        grid-area: C;
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        flex-direction: column;
+                        gap: 0.8rem;
+                        border-radius: 10px;
+                        max-width: 240px;
+                        background-color: var(--secondary-color);
+                        b{
+                            font-weight: 500;
+                            margin: 0.5rem;
+                            font-size: 1.1rem;
+                        }
+                    }
+                    .Total-Duration{
+                        grid-area: D;
+                        display: flex;
+                        gap: 1rem;
+                        margin-top: 1rem;
+                        b{
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+                .Booking-Status{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1rem;
+                    gap: 1rem;
+                    .heading{
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .Shift-Details{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+                        border-radius: 10px;
+                        margin-bottom: 0px;
+                        background-color: #F6F6F6;
+                        padding: 1rem;
+                        .shift{
+                            display: grid;
+                            grid-template-columns: 1fr 4fr 1fr;
+                            gap: 0.5rem;
+                            text-align: center;
+                            align-items: center;
+                            .Progress-Bar{
+                                width: 100%;
+                                background-color: #9FECBF;
+                                border-radius: 34.29px;
+                                height: 0.6rem;
+                                min-width: 30px;
+                                .Progress{
+                                    height: 100%;
+                                    background-color: #42A36A;
+                                    border-radius: 34.29px;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+         }
+        .Appointments-Section{
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            border: 2px solid #00000014;
+            border-top-width: 0px;
+            margin-bottom: 5em;
+            .appointments-header{
+                display: flex;
+                justify-content: space-between;
+                .Appointment-Category, .Shift-Category{
+                    display: flex;
+                    margin: 1rem;
+                    align-items: center;
+                    gap: 0.5rem;
+                    img{
+                        height: 1.1rem;
+                        width: 1.1rem;
+                        cursor: pointer;
+                        transition: 0.3s;
+                    }
+                    .rotated{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            .appointment{
+                display: grid;
+                justify-items: center;
+                grid-auto-rows: 3rem;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                border: 2px solid ;
+                align-items: center;
+                border: 2px solid #00000014;
+                border-width: 2px 0px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1168px){
+
+}
+
+@media screen and (max-width:992px){
+
+    .AppointmentPage{
+        .Appointment-Page-Content{
+            .Hero-section{
+                grid-template-rows: auto auto;
+                grid-template-columns: 1fr;
+                .Pending-FollowUps{
+                    max-width: none !important;
+                    flex-direction: row !important;
+                    justify-content: center !important;
+                }
+                
+            }
+            .Appointments-Section{
+                .appointment{
+                    grid-template-columns: 1fr 1fr 1fr;
+                    .category{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+
+}
+
+@media screen and (max-width:576px){
+    .AppointmentPage{
+        .Appointment-Page-Content{
+            .Hero-section{
+                
+                .Appointments-Details{
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto auto auto auto;
+                    grid-template-areas: 
+                    "A"
+                    "B"
+                    "C"
+                    "D";
+                    justify-items: center;
+                }
+            }
+            .Appointments-Section{
+                .appointment{
+                    grid-template-columns: 1fr 1fr;
+                    .category{
+                        display: none;
+                    }
+                    .button{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:400px){
+
+}
+
