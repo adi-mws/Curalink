@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import './AboutPage.css';
 import Frame from '../../assets/imgs/aboutFrame.png';
 import Doctor from '../../assets/imgs/About-Doctor.png';
-import right from '../../assets/icons/arrow-down.png';
 import LappyWoman from '../../assets/imgs/LappyWoman.png';
 import LappyMan from '../../assets/imgs/LappyMan.png';
 import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
@@ -18,7 +17,6 @@ export default function AboutPage({ }) {
     }, []);
     return (
         <>
-
             <div className="AboutPage">
                 <div className="Hero">
                     <div className="Hero-Left">
@@ -50,10 +48,6 @@ export default function AboutPage({ }) {
                             <div className="Written-Block">
                                 <p className="First-P">Services for Patients</p>
                                 <p className="Second-P">At CuraLink, we believe that healthcare should be a fundamental right, accessible to everyone, no matter where they are or what their circumstances may be. We are committed to bridging the gap between patients and medical professionals, making quality healthcare not just efficient but also deeply personalized to meet the unique needs of each individual.</p>
-                            </div>
-                            <div className="Read-More">
-                                <img src={right} alt="" className="Right-Arrow" />
-                                <p>Read More</p>
                             </div>
                         </div>
                         <img src={Doctor} alt="" />
@@ -90,10 +84,6 @@ export default function AboutPage({ }) {
                             <div className="Written-Block">
                                 <p className="First-P">Services for Doctors</p>
                                 <p className="Second-P">CuraLink is committed to transforming the way doctors manage their practices by offering innovative tools and features that enhance efficiency, improve patient care, and streamline daily operations. Our platform is designed to empower medical professionals by reducing administrative burdens and enabling seamless communication with patients.</p>
-                            </div>
-                            <div className="Read-More">
-                                <img src={right} alt="" className="Right-Arrow" />
-                                <p>Read More</p>
                             </div>
                         </div>
 
@@ -138,7 +128,7 @@ export default function AboutPage({ }) {
                         </div>
                     </div>
                 </div>
-                <OurValuesSection />
+                {/*<OurValuesSection />*/}
                 <div className="how-we-are-different">
                     <hr />
                     <div className="Heading">
