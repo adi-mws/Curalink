@@ -113,14 +113,13 @@
                 }
                 .nd-Speaker {
                     display: block;
-                    width: 30em;
                     align-self: center;
                     width: 100%;
                 }
                 .rd-Image {
                     display: block;
                     height: auto;
-                    width: auto; 
+                    width: 100%; 
                 }
                 .th-Image {
                     display: none;
