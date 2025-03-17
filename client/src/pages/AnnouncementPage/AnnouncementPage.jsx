@@ -76,9 +76,7 @@ export default function AnnouncementPage({ }) {
                         <img src={announcement_rectangle} alt="" className="th-Image"/>
                         <img src={announcement_rectangle_2} alt="" className="rd-Image"/>
                     </div>
-                    <div className="Announcement-Hero-Section-Image">
-                        <img src={announcement_speaker} alt="" className="st-Speaker"/>
-                    </div>
+                    <img src={announcement_speaker} alt="" className="st-Speaker"/>
                 </div>
                 <div className="Announcement-Page-Recent-Announcements">
                     <p className="Recent-Annoucements-Heading">Recent Announcements</p>

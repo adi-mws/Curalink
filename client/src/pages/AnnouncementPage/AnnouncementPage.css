@@ -14,7 +14,6 @@
             justify-content: center;
             flex-direction: column;
             gap: 2em;
-            padding-left: 1.2em;
             h1 {
                 color: black;
                 font-size: 2.5em;
@@ -26,10 +25,8 @@
                 display: none;
             }
         }
-        .Announcement-Hero-Section-Image {
-            .st-Speaker {
-                width: 27em;
-            }
+        .st-Speaker {
+            width: 90%;
         }
     }
     .Announcement-Page-Recent-Announcements {
@@ -69,16 +66,18 @@
     }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1168px) {
     .AnnouncementPage {
         .Announcement-Hero-Section {
             display: flex;
-            width: auto;
+            width: 100%;
             
-            .Announcement-Hero-Section-Image {
+            .st-Speaker {
                 display: none;
             }
             .Announcement-Hero-Section-Content {
+                padding: 0em;
+                width: 100%;
                 .nd-Speaker {
                     display: block;
                     width: 30em;
@@ -92,35 +91,84 @@
     }
 }
 
-@media screen and (max-width: 858px) {
+@media screen and (max-width: 992px) {
+    .AnnouncementPage {
+        .Announcement-Hero-Section {
+            display: flex;
+            width: 100%;
+            .Announcement-Hero-Section-Content {
+                padding: 0em;
+                width: 100%;
+                .nd-Speaker {
+                    display: block;
+                    width: 30em;
+                    align-self: center;
+                }
+                .rd-Image {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
     .AnnouncementPage {
         padding: 0em;
         .Announcement-Page-Recent-Announcements {
-            width: auto;
+            width: 100%;
         }
         .Announcement-Hero-Section {
             display: flex;
             width: 100% !important; 
             text-align: center;
-            
-            .Announcement-Hero-Section-Image {
-                display: none;
-            }
             .Announcement-Hero-Section-Content {
+                width: 100%;
                 padding: 1em;
                 h1{
                     font-size: 1.6em;
                 }
                 .nd-Speaker {
                     display: block;
+                    align-self: center;
                     width: 30em;
+                }
+                .rd-Image {
+                    display: block;
+                    width: 100%; 
+                }
+                .th-Image {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .AnnouncementPage {
+        padding: 0em;
+        .Announcement-Page-Recent-Announcements {
+            width: 100%;
+        }
+        .Announcement-Hero-Section {
+            display: flex;
+            width: 100% !important; 
+            text-align: center;
+            .Announcement-Hero-Section-Content {
+                padding: 1em;
+                width: 100%;
+                h1{
+                    font-size: 1.6em;
+                }
+                .nd-Speaker {
+                    display: block;
                     align-self: center;
                     width: 100%;
                 }
                 .rd-Image {
                     display: block;
-                    height: auto;
-                    width: auto; 
+                    width: 100%; 
                 }
                 .th-Image {
                     display: none;
