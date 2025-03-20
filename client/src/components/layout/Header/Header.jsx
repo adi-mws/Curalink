@@ -47,8 +47,13 @@ export default function Header({ }) {
                     <div><Link to="/support">Support</Link></div>
                 </div>
                 <div className="auth-buttons">
-                    <SecondaryButton text={"Login"} onClick={() => { navigate('/login') }} fontSize={"1em"} />
-                    <PrimaryButton text={"Register"} onClick={() => { navigate('/registration') }} fontSize={"1em"} />
+                    <div className="login-btn">
+                        <SecondaryButton text={"Login"} onClick={() => { navigate('/login') }} fontSize={"1em"} />
+
+                    </div>
+                    <div className="register-btn">
+                        <PrimaryButton text={"Register"} onClick={() => { navigate('/registration') }} fontSize={"1em"} />
+                    </div>
                 </div>
                 {/* <UserInfoHeader /> */}
             </header>
