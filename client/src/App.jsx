@@ -37,6 +37,8 @@ import DoctorRegistrationPage from './pages/DoctorRegistrationPage/DoctorRegistr
 import AdminLoginPage from './components/forms/AdminLoginPage/AdminLoginPage.jsx';
 import PatientInformation from './components/dashboard/patient/PatientInformation/PatientInformation.jsx';
 import AppointmentPage from './components/dashboard/doctor/AppointmentPage/AppointmentPage.jsx'
+import DoctorCalendarPopup from './components/shared/primitive/DoctorCalendarPopUp/DoctorCalendarPopup.jsx';
+import AdminSidebar from './components/layout/AdminSidebar/AdminSidebar.jsx';
 function App() {
   // const { user } = useAuth();
   return (
@@ -45,6 +47,7 @@ function App() {
       {/* <DoctorLoginPage /> */}
       {/* <DoctorRegistrationPage /> */}
       {/* <AdminLoginPage /> */}
+      <AdminSidebar />
       <AuthProvider>
         <SideBarProvider>
           <SideBarStateContextProvider>
