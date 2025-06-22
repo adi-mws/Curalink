@@ -7,8 +7,8 @@
         display: grid;
         grid-template-columns: 1fr 0.6fr;
         justify-items: center;
+        grid-gap: 1rem;
         width: 100%;
-        grid-gap: 1em;
         .Announcement-Hero-Section-Content {
             display: flex;
             justify-content: center;
@@ -24,9 +24,13 @@
             .rd-Image {
                 display: none;
             }
+            .th-Image{
+                width: 100%;
+            }
         }
         .st-Speaker {
             width: 90%;
+            height: auto;   
         }
     }
     .Announcement-Page-Recent-Announcements {

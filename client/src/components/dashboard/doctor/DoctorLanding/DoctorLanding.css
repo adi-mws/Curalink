@@ -355,8 +355,6 @@
     .doctor-landing-content {
       .News-category-section {
         grid-template-columns: 1fr;
-        grid-template:
-
       }
     }
   }
@@ -365,103 +363,12 @@
 
 @media screen and (max-width:1168px) {
   .DoctorLanding {
-    .DashboardHeader {}
 
     .doctor-landing-content {
       .doctor-landing-hero-section {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
-
-        .doctor-landing-profile-section {
-          .doctor-landing-profile-section-left {
-            img {}
-          }
-
-          .doctor-landing-profile-section-right {
-            .doctor-name {}
-
-            .doctor-specialization {}
-
-            .doctor-landing-profile-section-right-redirections {}
-
-            .Appointment-data {
-              div {
-                .data {
-                  p {}
-
-                  img {}
-                }
-              }
-            }
-
-            .doctor-rating {}
-          }
-        }
-      }
-
-      .News-category-section {
-        .Daily-News {
-          .newsCard {
-            .news-text {
-              .Heading {}
-
-              .Body {}
-            }
-          }
-        }
-
-        .Appointment-List {
-          .Appointments {
-            .Appointment {
-              .Category {}
-            }
-          }
-        }
-      }
-
-      .Todays-Schedule {
-        .Heading {}
-
-        .schedules {
-          .schedule {
-            .duration {}
-
-            .timing {}
-          }
-        }
-      }
-
-      .meetings-section {
-        .heading {}
-
-        .meeting {
-          .meeting-text {
-            .title {}
-
-            .description {}
-          }
-
-          .meeting-right {
-            .date {}
-          }
-
-          .members-joining {
-            .members-joining-text {
-              button {}
-            }
-
-            .images {
-              .img-1 {}
-
-              .img-2 {}
-
-              .img-3 {}
-            }
-          }
-        }
-
-        .viewMore {}
-      }
+      }  
     }
   }
 }
@@ -485,8 +392,6 @@
 
     .meetings-section {
       padding: 1em !important;
-
-      .meeting {}
     }
   }
 }

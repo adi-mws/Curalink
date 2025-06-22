@@ -47,7 +47,6 @@ function App() {
       {/* <DoctorLoginPage /> */}
       {/* <DoctorRegistrationPage /> */}
       {/* <AdminLoginPage /> */}
-      <AdminSidebar />
       <AuthProvider>
         <SideBarProvider>
           <SideBarStateContextProvider>
