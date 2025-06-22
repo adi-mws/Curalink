@@ -76,7 +76,7 @@ function App() {
                     <Route path='/test' element={<AddQualification/>}/>
                     <Route path='/doctor-profile/:id' element={<DoctorPublicProfilePage />} />
                     <Route path='/doctor/login' element={<DoctorLoginPage />} />
-                    <Route path='/doctor/registration' element={<DoctorRegistrationPage />} />
+                    <Route path='/doctor/register' element={<DoctorRegistrationPage />} />
                   </Route>
 
 
@@ -87,7 +87,7 @@ function App() {
                     <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
                     <Route path='/dashboard/support' element={<SupportSystem />} />
                     <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
-                    <Route path='/dashboard/PatientInformation' element={<PatientInformation />} />
+                    <Route path='/dashboard/patient-information' element={<PatientInformation />} />
                   </Route>
 
                   <Route path='/doctor/dashboard' element={<DashboardLayout />}>
