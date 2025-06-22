@@ -39,6 +39,7 @@ import PatientInformation from './components/dashboard/patient/PatientInformatio
 import AppointmentPage from './components/dashboard/doctor/AppointmentPage/AppointmentPage.jsx'
 import DoctorCalendarPopup from './components/shared/primitive/DoctorCalendarPopUp/DoctorCalendarPopup.jsx';
 import AdminSidebar from './components/layout/AdminSidebar/AdminSidebar.jsx';
+import ReviewReports from './components/dashboard/doctor/ReviewReports/ReviewReports.jsx';
 function App() {
   // const { user } = useAuth();
   return (
@@ -94,6 +95,7 @@ function App() {
                     <Route path='/doctor/dashboard/support' element={<SupportSystem />} />
                     <Route path='/doctor/dashboard/account-details' element={<DoctorDetails />}></Route>
                     <Route path='/doctor/dashboard/appointments' element={<AppointmentPage />}></Route>
+                    <Route path='/doctor/dashboard/review-reports' element={<ReviewReports />}></Route>
                   </Route>
 
 
