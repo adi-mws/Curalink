@@ -1,7 +1,7 @@
 import React from 'react'
-import PrimaryButton from '../shared/buttons/PrimaryButton/PrimaryButton.jsx'
-import DummyImage from '../../assets/imgs/NewsCardLady.png'
-import ArrowRightWhite from '../../assets/icons/arrow-right-white.png'
+import PrimaryButton from '../../buttons/PrimaryButton/PrimaryButton.jsx'
+import DummyImage from '../../../../assets/imgs/NewsCardLady.png'
+import ArrowRightWhite from '../../../../assets/icons/arrow-right-white.png'
 import './NewsCard.css'
 
 const Dummytxt1="5 Easy Steps to Boost Your Immunity Naturally";
