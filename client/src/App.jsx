@@ -13,7 +13,7 @@ import SupportPage from './pages/SupportPage/SupportPage';
 import PatientLoginPage from './pages/PatientLoginPage/PatientLoginPage';
 import PatientRegistrationPage from './pages/PatientRegistrationPage/PatientRegistrationPage';
 import ScrollToTop from './components/shared/primitive/ScrollToTop/ScrollToTop';
-import DoctorsCard from './components/DoctorsCard/DoctorsCard.jsx'
+import DoctorsCard from './components/shared/cards/DoctorsCard/DoctorsCard.jsx'
 import DoctorsSearchPage from './pages/DoctorsSearchPage/DoctorsSearchPage.jsx';
 import DashboardLayout from './layouts/DashboardLayout.jsx';
 import ScheduledAppointments from './components/dashboard/patient/ScheduledAppointments/ScheduledAppointments.jsx';
@@ -59,6 +59,7 @@ function App() {
                   <Route path='/' element={<MainLayout />}>
 
                     <Route path='/' element={<DoctorsPage />} />
+                    <Route path='/admin-sidebar' element={<AdminSidebar />} />
                     <Route path='/support' element={<SupportPage />} />
                     <Route path='/about' element={<AboutPage />} />
                     <Route path='/doctors' element={<DoctorsPage />} />
@@ -76,7 +77,8 @@ function App() {
                     <Route path='/test' element={<AddQualification/>}/>
                     <Route path='/doctor-profile/:id' element={<DoctorPublicProfilePage />} />
                     <Route path='/doctor/login' element={<DoctorLoginPage />} />
-                    <Route path='/doctor/registration' element={<DoctorRegistrationPage />} />
+                    <Route path='/doctor/register' element={<DoctorRegistrationPage />} />
+
                   </Route>
 
 
@@ -87,7 +89,7 @@ function App() {
                     <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
                     <Route path='/dashboard/support' element={<SupportSystem />} />
                     <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
-                    <Route path='/dashboard/PatientInformation' element={<PatientInformation />} />
+                    <Route path='/dashboard/patient-information' element={<PatientInformation />} />
                   </Route>
 
                   <Route path='/doctor/dashboard' element={<DashboardLayout />}>

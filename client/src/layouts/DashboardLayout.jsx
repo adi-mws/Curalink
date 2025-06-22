@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Sidebar from '../components/layout/Sidebar/Sidebar'
 import { Outlet, useLocation } from 'react-router-dom'
-import useWindowSize from '../hooks/useWindowSize'
+import useWindowSize from '../contexts/useWindowSize'
 import { useEffect, useRef } from 'react';
 import './layouts.css';
 

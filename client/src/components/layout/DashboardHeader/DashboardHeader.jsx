@@ -3,9 +3,8 @@ import './DashboardHeader.css';
 import dropdownIcon from '../../../assets/icons/arrow-down.png';
 import Hamburger from '../../shared/primitive/Hamburger/Hamburger';
 import React, { useState, useEffect, forwardRef } from 'react';
-import useWindowSize from '../../../hooks/useWindowSize';
+import useWindowSize from '../../../contexts/useWindowSize';
 import { Link } from 'react-router-dom';
-
 const DashboardHeader = ({ title, children, items }) => {
     const [showDropdown, setShowDropdown] = useState(false);
     const { width } = useWindowSize();

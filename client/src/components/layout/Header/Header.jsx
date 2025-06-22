@@ -5,7 +5,7 @@ import down from "../../../assets/icons/arrow-down.png";
 import SecondaryButton from '../../shared/buttons/SecondaryButton/SecondaryButton';
 import PrimaryButton from '../../shared/buttons/PrimaryButton/PrimaryButton';
 import { Link, useNavigate } from 'react-router-dom';
-import useWindowSize from '../../../hooks/useWindowSize';
+import useWindowSize from '../../../contexts/useWindowSize';
 import Hamburger from '../../shared/primitive/Hamburger/Hamburger';
 import Sidebar from '../Sidebar/Sidebar';
 import UserInfoHeader from '../UserInfoHeader/UserInfoHeader';

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './DoctorsSearchPage.css';
-import DoctorsCard from '../../components/DoctorsCard/DoctorsCard.jsx';
+import DoctorsCard from '../../components/shared/cards/DoctorsCard/DoctorsCard.jsx';
 import DummyImage from '../../assets/imgs/Surgeon-With-Mask.png';
 import FilterIcon from '../../assets/icons/filter.png';
 import DownArrow from '../../assets/icons/arrow-down.png';

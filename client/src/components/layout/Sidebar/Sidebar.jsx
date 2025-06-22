@@ -9,10 +9,12 @@ import others from '../../../assets/icons/colorfilter.png';
 import prescriptions from '../../../assets/icons/menu-board.png';
 import legals from '../../../assets/icons/stickynote.png';
 import cutIcon from '../../../assets/icons/cutIcon.png';
-import useWindowSize from '../../../hooks/useWindowSize';
+import useWindowSize from '../../../contexts/useWindowSize.jsx';
 import { Link } from 'react-router-dom';
 import { useSideBar } from '../../../contexts/SideBarContext.jsx';
 import { useSideBarState } from '../../../contexts/SideBarStateContext.jsx';
+
+// Two in one component (Patient Dashboard and Doctor Dashboard)
 export default function Sidebar({ dashboard = null, hamBurgerRef = null }) {
     const sidebarRef = useRef(null);
     const { width } = useWindowSize();

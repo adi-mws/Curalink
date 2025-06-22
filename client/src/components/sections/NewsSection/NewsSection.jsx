@@ -1,7 +1,7 @@
 import React from 'react';
 import{ useState } from 'react';
 import './NewsSection.css';
-import NewsCard from '../../NewsCard/NewsCard.jsx';
+import NewsCard from '../../shared/cards/NewsCard/NewsCard.jsx'
 import DummyImage from '../../../assets/imgs/NewsCardLady.png'
 
 

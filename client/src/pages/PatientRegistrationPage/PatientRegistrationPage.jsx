@@ -56,7 +56,6 @@ export default function PatientRegistrationPage() {
         <PatientRegistrationForm/>
       </div>
     </div>
-    <Footer/>
     </>
   )
 }

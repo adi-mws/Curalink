@@ -8,7 +8,7 @@ import facebook from '../../assets/icons/facebook.png'
 import instagram from '../../assets/icons/instagram.png'
 import linkedin from '../../assets/icons/linkedin.png'
 import CompleteYourProfile from '../../components/shared/adcards/CompleteYourProfile/CompleteYourProfile.jsx'
-import NewsCard from '../../components/NewsCard/NewsCard.jsx'
+import NewsCard from '../../components/shared/cards/NewsCard/NewsCard.jsx'
 
 export default function NewsPage({NewsArticles= NewsData, Heading="Revolutionizing Healthcare: The Role of AI in Early Disease Detection"}) {
   return (

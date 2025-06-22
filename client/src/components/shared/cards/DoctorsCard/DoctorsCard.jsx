@@ -1,11 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
 import './DoctorsCard.css'
-import DummyImage from "../../assets/imgs/Surgeon-With-Mask.png"
-import RatingDisplay from '../Rating/RatingDisplay'
-import TertiaryButton from '../shared/buttons/TertiaryButton/TertiaryButton'
-import SecondaryButton from '../shared/buttons/SecondaryButton/SecondaryButton'
-import DurationIcon from '../../assets/icons/Services-Duration-Icon.png'
+// import DummyImage from "../../../assets/imgs/Surgeon-With-Mask.png"
+import DummyImage from '../../../../assets/imgs/Surgeon-With-Mask.png'
+import RatingDisplay from '../../../Rating/RatingDisplay'
+import TertiaryButton from '../../buttons/TertiaryButton/TertiaryButton'
+import SecondaryButton from '../../buttons/SecondaryButton/SecondaryButton'
+import DurationIcon from '../../../../assets/icons/Services-Duration-Icon.png'
 import propTypes from 'prop-types';
 
 
