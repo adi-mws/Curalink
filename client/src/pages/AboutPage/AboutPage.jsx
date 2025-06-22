@@ -22,7 +22,7 @@ export default function AboutPage({ }) {
                     <div className="Hero-Left">
                         <h1>We Make Healthcare Simple, Accessible, and Personalized for You</h1>
                         <br />
-                        <p>At CuraLink, we are redefining healthcare accessibility and transforming the way patients and doctors connect across India. As a trusted online consultancy platform, our mission is to simplify healthcare by bringing it closer to those who need it most, while empowering doctors with tools to manage their practices efficiently.</p>
+                        <p className='Hero-Description'>At CuraLink, we are redefining healthcare accessibility and transforming the way patients and doctors connect across India. As a trusted online consultancy platform, our mission is to simplify healthcare by bringing it closer to those who need it most, while empowering doctors with tools to manage their practices efficiently.</p>
                         <div className="Cards">
                             <div className="Vision">
                                 <h3>Our Vision</h3>
@@ -78,6 +78,9 @@ export default function AboutPage({ }) {
                             <p>Easily request follow-up consultations with doctors and track your treatment progress.</p>
                         </div>
                     </div>
+                    <div className="TabViewImages">
+                        <img src={Doctor} alt="" /><img src={LappyWoman} alt="" />
+                    </div>
                     <div className="First">
                         <div className="First-Content-Wrapper">
 
@@ -128,7 +131,7 @@ export default function AboutPage({ }) {
                         </div>
                     </div>
                 </div>
-                {/*<OurValuesSection />*/}
+                <OurValuesSection />
                 <div className="how-we-are-different">
                     <hr />
                     <div className="Heading">
