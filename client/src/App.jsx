@@ -40,6 +40,7 @@ import AppointmentPage from './components/dashboard/doctor/AppointmentPage/Appoi
 import DoctorCalendarPopup from './components/shared/primitive/DoctorCalendarPopUp/DoctorCalendarPopup.jsx';
 import AdminSidebar from './components/layout/AdminSidebar/AdminSidebar.jsx';
 import ReviewReports from './components/dashboard/doctor/ReviewReports/ReviewReports.jsx';
+import AppointmentDetails from './components/dashboard/doctor/AppointmentDetails/AppointmentDetails.jsx';
 function App() {
   // const { user } = useAuth();
   return (
@@ -98,6 +99,7 @@ function App() {
                     <Route path='/doctor/dashboard/account-details' element={<DoctorDetails />}></Route>
                     <Route path='/doctor/dashboard/appointments' element={<AppointmentPage />}></Route>
                     <Route path='/doctor/dashboard/review-reports' element={<ReviewReports />}></Route>
+                    <Route path='/doctor/dashboard/appointment-details' element={<AppointmentDetails />}></Route>
                   </Route>
 
 
