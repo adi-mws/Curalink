@@ -1,378 +1,279 @@
+/* Converted flat CSS compatible with Tailwind setup */
+
 .AboutPage {
     width: 100%;
     margin: 0%;
+      
+  .Hero {
+    display: grid;
+    grid-template-columns: 52.5% 42.5%;
+    gap: 2em;
+    justify-content: center;
+    padding: 2rem;
+    align-content: center;
+  }
+  
+  .Hero-Left {
+    font-family: var(--primary-font);
+    padding-top: 2rem;
+  }
+  
+  .Hero-Left h1 {
+    font-size: 2.7em;
+    color: black;
+    padding-bottom: 0.5em;
+  }
+  
+  .Hero-Left p {
+    font-family: var(--secondary-font);
+    font-size: 0.95em;
+    line-height: 1.8em;
+    padding-bottom: 3em;
+  }
+  
+  .Cards {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 4%;
+  }
+  
+  .Cards div {
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 0.8em;
+  }
+  
+  .Cards div p {
+    font-size: 0.8em;
+    padding-bottom: 0;
+  }
+  
+  .Cards div a {
+    font-size: 0.8em;
+    font-family: var(--secondary-font);
+    color: black;
+  }
+  
+  .Vision {
+    background-color: #E9F682;
+  }
+  
+  .Mission {
+    background-color: #FFC0EA;
+  }
+  
+  .Hero-Right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Smiling-Woman {
+    height: 37em;
+  }
+  
+  .Services-section {
+    width: 100%;
+  }
+  
+  .TabViewImages {
+    display: none;
+  }
+  
+  .Services-section h1 {
+    text-align: center;
+    color: black;
+    font-size: 3em;
+    font-family: var(--primary-font);
+    padding-top: 1em;
+  }
+  
+  .First > div {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .First {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 3em;
+  }
+  
+  .First-Content-Wrapper {
+    display: grid;
+    grid-template: 100% / 70% 30%;
+    place-items: center;
+  }
+  
+  .Written-Block {
+    display: flex;
+    flex-direction: column;
+    bottom: 1em;
+    gap: 3em;
+  }
+  
+  .First-P {
+    font-size: 2em;
+    font-family: var(--primary-font);
+  }
+  
+  .Second-P {
+    font-family: var(--secondary-font);
+  }
+  
+  .Second {
+    padding: 4em;
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  
+  .Second div {
+    border-radius: 0.5em;
+    display: flex;
+    flex: 300px 1 1;
+    padding: 2.1em;
+    background-color: var(--secondary-color);
+    width: 26em;
+    gap: 0.5em;
+    min-height: fit-content;
+    flex-direction: column;
+    font-family: var(--secondary-font);
+  }
+  
+  .Second div p {
+    font-size: 0.8em;
+  }
+  
+  .Second div h3 {
+    font-size: 1em;
+    font-family: var(--primary-font);
+  }
+  
+  .how-we-are-different {
+  }
+  
+  .hwd-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  .hwd-content-item {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    padding: 1em 2em;
+    gap: 1em;
+  }
+  
+  .hwd-content-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  
+  .hwd-content-item-heading {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+  }
+  
+  .hwd-content-item-description {
+    font-family: var(--secondary-font);
+  }
+  
+  .hwd-content-item:nth-child(even) {
+    grid-template-columns: 70% 30%;
+  }
+  
+  .Heading {
+    display: flex;
+    gap: 1.7em;
+  }
+  
+  .Heading h1 {
+    color: black;
+    font-size: 2.5em;
+    font-family: var(--primary-font);
+    padding-top: 0.5em;
+    padding-left: 1.6em;
+  }
+  
+  .P-Block {
+    background-color: #818DDC;
+    width: 3em;
+    height: 4.2em;
+    position: relative;
+    bottom: 1px;
+    border-bottom-right-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+  }
+  
+  .Body-Section {
+    display: flex;
+    flex-direction: column;
+    padding: 4em;
+    justify-content: space-evenly;
+    gap: 5em;
+  }
+  
+  .Body-Section > div {
+    display: flex;
+    gap: 2em;
+    justify-content: space-evenly;
+  }
+  
+  .Body-Section > div > div {
+    justify-content: center;
+    font-family: var(--secondary-font);
+    display: flex;
+    flex-direction: column;
+    width: 46em;
+    gap: 2em;
+  }
+  
+  .Body-Section > div > div b {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+  }
+  
+  .Contact-Cards {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 3em;
+    text-align: center;
+  }
+  
+  .Contact-Cards h1 {
+    font-weight: 400;
+    font-family: var(--primary-font);
+  }
+  
+  .Contact-Cards p {
+    font-family: var(--secondary-font);
+    font-weight: 200;
+  }
+  
+  .Contact-Cards div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30em;
+    height: 30em;
+    gap: 2em;
+    box-shadow: 0 0px 2.5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.7em;
+    padding: 2em;
+  }
+  
+  .Contact-Cards .Heading-2 {
+    color: black;
+  }
+  }
 
-    .Hero {
-
-        display: grid;
-        grid-template-columns: 52.5% 42.5%;
-        gap: 2em;
-        justify-content: center;
-        padding: 2rem;
-        align-content: center;
-
-        .Hero-Left {
-            font-family: var(--primary-font);
-            padding-top: 2rem;
-
-            h1 {
-                font-size: 2.7em;
-                color: black;
-                padding-bottom: 0.5em;
-            }
-
-            p {
-                font-family: var(--secondary-font);
-                font-size: 0.95em;
-                line-height: 1.8em;
-                padding-bottom: 3em;
-            }
-
-            .Cards {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                gap: 4%;
-
-                div {
-                    border-radius: 0.5em;
-                    display: flex;
-                    flex-direction: column;
-
-                    p {
-                        font-size: 0.8em;
-                        padding-bottom: 0em;
-                    }
-
-                    a {
-                        font-size: 0.8em;
-                        font-family: var(--secondary-font);
-                        color: black;
-                    }
-
-                    padding: 1em;
-                    gap: 0.8em;
-                }
-
-                .Vision {
-                    background-color: #E9F682;
-                }
-
-                .Mission {
-                    background-color: #FFC0EA;
-                }
-            }
-
-        }
-
-        .Hero-Right {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .Smiling-Woman {
-                height: 37em;
-            }
-        }
-    }
-
-    .Services-section {
-        width: 100%;
-
-        .TabViewImages{
-            display: none;
-        }
-        h1 {
-            text-align: center;
-            color: black;
-            font-size: 3em;
-            font-family: var(--primary-font);
-            padding-top: 1em;
-        }
-
-        .First>div {
-            width: 100%;
-            height: 100%;
-        }
-
-        .First {
-            display: grid;
-            grid-template-columns: 70% 30%;
-            padding: 3em;
-
-            .First-Content-Wrapper {
-                display: grid;
-                grid-template: 100% / 70% 30%;
-                place-items: center;
-                
-            }
-
-            .Written-Block {
-                display: flex;
-
-                flex-direction: column;
-                bottom: 1em;
-                gap: 3em;
-
-
-                .First-P {
-                    font-size: 2em;
-                    font-family: var(--primary-font);
-                }
-
-                .Second-P {
-                    font-family: var(--secondary-font);
-                }
-            }
-
-
-        }
-
-        .Second {
-            padding: 4em;
-            padding-top: 0em;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-
-            div {
-                border-radius: 0.5em;
-                display: flex;
-                flex: 300px 1 1;
-                padding: 2.1em;
-                background-color: var(--secondary-color);
-                width: 26em;
-                gap: .5em;
-                min-height: fit-content;
-                flex-direction: column;
-                font-family: var(--secondary-font);
-
-                p {
-                    font-size: 0.8em;
-                }
-
-                h3 {
-                    font-size: 1em;
-                    font-family: var(--primary-font);
-                }
-
-            }
-
-            gap: 1em;
-        }
-    }
-
-    .how-we-are-different {
-
-        .hwd-content-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-        }
-
-
-        .hwd-content-item {
-            display: grid;
-            grid-template-columns: 30% 70%;
-            align-items: center;
-            padding: 1em 2em;
-            gap: 1em;
-
-            .hwd-content-item-content {
-                display: flex;
-                flex-direction: column;
-                gap: 1em;
-            }
-
-            .hwd-content-item-heading {
-                font-family: var(--primary-font);
-                font-size: 1.2em;
-            }
-
-            .hwd-content-item-description {
-                font-family: var(--secondary-font);
-            }
-        }
-
-        .hwd-content-item:nth-child(even) {
-            grid-template-columns: 70% 30%;
-        }
-
-        .Heading {
-            display: flex;
-            gap: 1.7em;
-
-            h1 {
-                color: black;
-                font-size: 2.5em;
-                font-family: var(--primary-font);
-                padding-top: 0.5em;
-                padding-left: 1.6em;
-            }
-
-            .P-Block {
-                background-color: #818DDC;
-                width: 3em;
-                height: 4.2em;
-                position: relative;
-                bottom: 1px;
-                border-bottom-right-radius: 0.25em;
-                border-bottom-left-radius: 0.25em;
-            }
-        }
-
-        .Body-Section {
-            display: flex;
-            flex-direction: column;
-            padding: 4em;
-            justify-content: space-evenly;
-            gap: 5em;
-
-            >div {
-                display: flex;
-                gap: 2em;
-                justify-content: space-evenly;
-
-                >div {
-                    justify-content: center;
-
-                    b {
-                        font-family: var(--primary-font);
-                        font-size: 1.2em;
-                    }
-
-                    font-family: var(--secondary-font);
-                    display: flex;
-                    flex-direction: column;
-                    width: 46em;
-                    gap: 2em;
-                }
-            }
-        }
-    }
-
-    .Contact-Cards {
-        display: flex;
-        justify-content: space-evenly;
-        padding-bottom: 3em;
-        text-align: center;
-
-        h1 {
-            font-weight: 400;
-            font-family: var(--primary-font);
-        }
-
-        p {
-            font-family: var(--secondary-font);
-            font-weight: 200;
-        }
-
-        div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 30em;
-            height: 30em;
-            gap: 2em;
-            box-shadow: 0 0px 2.5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            border-radius: 0.7em;
-            padding: 2em;
-
-            .Heading-2 {
-                color: black;
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width:1168px){
-
-}
-
-@media screen and (max-width:992px){
-    .AboutPage{
-        .Hero{
-            text-align: center;
-            grid-template-rows: auto auto auto;
-            grid-template-columns: 1fr;
-            .Hero-Right{
-                .Smiling-Woman{
-                    display: none;
-                }
-            }
-            .Hero-Left{
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-                h1{
-                    font-size: 2rem;
-                }
-                .Hero-Description{
-                    width: 80%;
-                }
-                .Cards{
-                    flex-direction: column;
-                    gap: 2rem;
-                    text-align: start;
-                    align-items: center;
-                }
-                .Cards>div{
-                    width: 80%;
-                }
-            }
-        }
-    }
-    .Services-section{
-        
-        .First{
-            grid-template-columns: 1fr !important;
-            img{
-                display: none;
-            }
-        }
-        .TabViewImages{
-            display: flex !important;
-            width: 100% !important;
-            justify-content: space-evenly !important;
-        }
-    }
-    .how-we-are-different{
-        .hwd-content-container{
-            .hwd-content-item{
-                display: flex;
-                flex-direction: column;
-            }
-            .hwd-content-item:nth-child(even){
-                flex-direction: column-reverse;
-            }
-        }
-    }
-}
-
-@media screen and (max-width:768px){
-
-}
-
-@media screen and (max-width:576px){
-    .AboutPage{
-        .Hero{
-            .Hero-Left{
-                h1{
-                    font-size: 1.5rem;
-                }
-                .Hero-Description{
-                    width: 100%;
-                }
-                .Cards>div{
-                    width: 100%;
-                }
-            }
-        }
-        
-    }
-}
-
-@media screen and (max-width:400px){
-
-}
+  
