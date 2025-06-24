@@ -2,56 +2,61 @@ import React from "react";
 import "./AdminSidebar.css";
 import { Link, useLocation } from "react-router-dom";
 
-const AdminSidebar = () => {
-
-    const categories = [
-        {
-            name: 'Overview',
-            list: {
-
-            },
-            link: '/admin/dashboard'
-        },
-        {
-            name: 'Essentials',
-            list: {
-                analytics: '/admin/dashboard/analytics',
-                analytics: '/admin/dashboard/analytics',
-                analytics: '/admin/dashboard/analytics',
-            }
-        }
+const sidebarData = [
+  {
+    section: 'Essentials',
+    items: [
+      { label: 'Analytics', badge: 2 },
+      { label: 'News Content' },
+      { label: 'FAQs Content' },
+      { label: 'Contacts', badge: 2 }
     ]
-    const location = useLocation();
-    const camelToSpaceBaseCapital = (text) => {
-        // newsContent => News Content
+  },
+  {
+    section: 'Support',
+    items: [
+      { label: 'Patient Support', badge: 2 },
+      { label: 'Doctor Support', badge: 2 }
+    ]
+  },
+  {
+    section: 'Doctors',
+    items: [
+      { label: 'Doctors' }
+    ]
+  }
+]
 
-        return '0'
-    }
+function AdminSidebar() {
+  const location = useLocation()
+  const [active, setActive] = useState('Analytics')
 
-    return (
-        <div className="AdminSidebar">
-            <div className="logo-wrapper">
-                <img src="" alt="" className="logo" />
-            </div>
-            {categories.map((item, index) => (
+  return (
+    <div className="admin-sidebar">
+      <div className="section-title">
+        Overview <span className="dot green"></span>
+      </div>
 
-                <div className="category" key={index}>
-                    <div className="head">
-                        <Link to={item.link} className="title">{item.name}</Link>
-                        <span className="indicator"></span>
-                    </div>
-                    <ul className="category-list">
-                        {item.list && Object.keys(item.list).map((item_key, index) => (
-                            <li key={index} className="list-item"><Link to={item.list[item_key]} className={`${location.pathname.includes(item.list[item_key])? 'active' : ''}`}>{camelToSpaceBaseCapital(item_key)}</Link></li>
-                        ))
-
-                        }
-
-                    </ul> : <></>
-                </div>
+      {sidebarData.map(section => (
+        <div key={section.section}>
+          <div className="section-title">
+            {section.section} <span className="dot gray"></span>
+          </div>
+          <div className="section-items">
+            {section.items.map(item => (
+              <Link
+                to={item.path}
+                key={item.label}
+                className={`sidebar-item ${location.pathname === item.path ? 'active' : ''}`}
+              >
+                {item.label}
+              </Link>
             ))}
-
-        </div>)
+          </div>
+        </div>
+      ))}
+    </div>
+  )
 };
 
 export default AdminSidebar;
