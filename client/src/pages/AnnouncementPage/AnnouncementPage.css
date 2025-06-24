@@ -1,3 +1,5 @@
+/* Flattened CSS for AnnouncementPage compatible with Tailwind/PostCSS */
+
 .AnnouncementPage {
     display: flex;
     flex-direction: column;
@@ -9,175 +11,204 @@
         justify-items: center;
         grid-gap: 1rem;
         width: 100%;
-        .Announcement-Hero-Section-Content {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            gap: 2em;
-            h1 {
-                color: black;
-                font-size: 2.5em;
-            }
-            .nd-Speaker {
-                display: none;
-            }
-            .rd-Image {
-                display: none;
-            }
-            .th-Image{
-                width: 100%;
-            }
-        }
-        .st-Speaker {
-            width: 90%;
-            height: auto;   
-        }
+      }
+      
+      .Announcement-Hero-Section-Content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2em;
+      }
+      
+      .Announcement-Hero-Section-Content h1 {
+        color: black;
+        font-size: 2.5em;
+      }
+      
+      .nd-Speaker,
+      .rd-Image {
+        display: none;
+      }
+      
+      .th-Image {
+        width: 100%;
+      }
+      
+      .st-Speaker {
+        width: 90%;
+        height: auto;
+      }
+      
+      .Recent-Annoucements-Heading {
+        font-size: 1.3em;
+        padding: 2em 1em 0em 1em;
+      }
+      
+      .Announcements-Container {
+        display: flex;
+        padding: 2em;
+        flex-direction: column;
+        gap: 1em;
+      }
+      
+      .Announcements-Container-Cards,
+      .Features-Container-Cards {
+        border-radius: 0.8em;
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        font-size: 1em;
+      }
+      
+      .Announcements-Container-Cards {
+        background-color: #D9FFCF;
+      }
+      
+      .Features-Container-Cards {
+        background-color: #F5F5F5;
+      }
+      
+      .View-More-Announcements {
+        display: flex;
+        justify-self: center;
+        gap: 0.5em;
+        font-size: 1.2em;
+      }
+      
+      .View-More-Announcements img {
+        width: 1.4em;
+      }
+      
+  
+  @media screen and (max-width: 1168px) {
+  
+    .Announcement-Hero-Section {
+      display: flex;
+      width: 100%;
     }
+  
+    .st-Speaker {
+      display: none;
+    }
+  
+    .Announcement-Hero-Section-Content {
+      padding: 0;
+      width: 100%;
+    }
+  
+    .Announcement-Hero-Section-Content .nd-Speaker {
+      display: block;
+      width: 30em;
+      align-self: center;
+    }
+  
+    .Announcement-Hero-Section-Content .rd-Image {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .Announcement-Hero-Section {
+      display: flex;
+      width: 100%;
+    }
+  
+    .Announcement-Hero-Section-Content {
+      padding: 0;
+      width: 100%;
+    }
+  
+    .Announcement-Hero-Section-Content .nd-Speaker {
+      display: block;
+      width: 30em;
+      align-self: center;
+    }
+  
+    .Announcement-Hero-Section-Content .rd-Image {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .AnnouncementPage {
+      padding: 0;
+    }
+  
     .Announcement-Page-Recent-Announcements {
-        .Recent-Annoucements-Heading{
-            font-size: 1.3em;
-            padding: 2em 1em 0em 1em;
-        }
-        .Announcements-Container{
-            display: flex;
-            padding: 2em;
-            flex-direction: column;
-            gap: 1em;
-            .Announcements-Container-Cards, .Features-Container-Cards {
-                border-radius: 0.8em;
-                padding: 2em;
-                display: flex;
-                flex-direction: column;
-                gap: 1em;
-                font-size: 1em;
-            }
-            .Announcements-Container-Cards {
-                background-color: #D9FFCF;
-            }
-            .Features-Container-Cards {
-                background-color: #F5F5F5;
-            }
-        }
-        .View-More-Announcements{
-            display: flex;
-            justify-self: center;
-            gap: 0.5em;
-            font-size: 1.2em;
-            img{
-                width: 1.4em;
-            }
-        }
+      width: 100%;
     }
-}
-
-@media screen and (max-width: 1168px) {
+  
+    .Announcement-Hero-Section {
+      display: flex;
+      width: 100% !important;
+      text-align: center;
+    }
+  
+    .Announcement-Hero-Section-Content {
+      width: 100%;
+      padding: 1em;
+    }
+  
+    .Announcement-Hero-Section-Content h1 {
+      font-size: 1.6em;
+    }
+  
+    .Announcement-Hero-Section-Content .nd-Speaker {
+      display: block;
+      align-self: center;
+      width: 30em;
+    }
+  
+    .Announcement-Hero-Section-Content .rd-Image {
+      display: block;
+      width: 100%;
+    }
+  
+    .Announcement-Hero-Section-Content .th-Image {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
     .AnnouncementPage {
-        .Announcement-Hero-Section {
-            display: flex;
-            width: 100%;
-            
-            .st-Speaker {
-                display: none;
-            }
-            .Announcement-Hero-Section-Content {
-                padding: 0em;
-                width: 100%;
-                .nd-Speaker {
-                    display: block;
-                    width: 30em;
-                    align-self: center;
-                }
-                .rd-Image {
-                    display: none;
-                }
-            }
-        }
+      padding: 0;
     }
-}
-
-@media screen and (max-width: 992px) {
-    .AnnouncementPage {
-        .Announcement-Hero-Section {
-            display: flex;
-            width: 100%;
-            .Announcement-Hero-Section-Content {
-                padding: 0em;
-                width: 100%;
-                .nd-Speaker {
-                    display: block;
-                    width: 30em;
-                    align-self: center;
-                }
-                .rd-Image {
-                    display: none;
-                }
-            }
-        }
+  
+    .Announcement-Page-Recent-Announcements {
+      width: 100%;
     }
-}
-
-@media screen and (max-width: 768px) {
-    .AnnouncementPage {
-        padding: 0em;
-        .Announcement-Page-Recent-Announcements {
-            width: 100%;
-        }
-        .Announcement-Hero-Section {
-            display: flex;
-            width: 100% !important; 
-            text-align: center;
-            .Announcement-Hero-Section-Content {
-                width: 100%;
-                padding: 1em;
-                h1{
-                    font-size: 1.6em;
-                }
-                .nd-Speaker {
-                    display: block;
-                    align-self: center;
-                    width: 30em;
-                }
-                .rd-Image {
-                    display: block;
-                    width: 100%; 
-                }
-                .th-Image {
-                    display: none;
-                }
-            }
-        }
+  
+    .Announcement-Hero-Section {
+      display: flex;
+      width: 100% !important;
+      text-align: center;
     }
-}
-
-@media screen and (max-width: 576px) {
-    .AnnouncementPage {
-        padding: 0em;
-        .Announcement-Page-Recent-Announcements {
-            width: 100%;
-        }
-        .Announcement-Hero-Section {
-            display: flex;
-            width: 100% !important; 
-            text-align: center;
-            .Announcement-Hero-Section-Content {
-                padding: 1em;
-                width: 100%;
-                h1{
-                    font-size: 1.6em;
-                }
-                .nd-Speaker {
-                    display: block;
-                    align-self: center;
-                    width: 100%;
-                }
-                .rd-Image {
-                    display: block;
-                    width: 100%; 
-                }
-                .th-Image {
-                    display: none;
-                }
-            }
-        }
+  
+    .Announcement-Hero-Section-Content {
+      padding: 1em;
+      width: 100%;
     }
-}
+  
+    .Announcement-Hero-Section-Content h1 {
+      font-size: 1.6em;
+    }
+  
+    .Announcement-Hero-Section-Content .nd-Speaker {
+      display: block;
+      align-self: center;
+      width: 100%;
+    }
+  
+    .Announcement-Hero-Section-Content .rd-Image {
+      display: block;
+      width: 100%;
+    }
+  
+    .Announcement-Hero-Section-Content .th-Image {
+      display: none;
+    }
+  }
+  }
+  
+  
