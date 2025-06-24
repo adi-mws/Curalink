@@ -1,6 +1,7 @@
 import React from "react";
 import "./AdminSidebar.css";
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const sidebarData = [
   {
@@ -44,13 +45,14 @@ function AdminSidebar() {
           </div>
           <div className="section-items">
             {section.items.map(item => (
-              <Link
-                to={item.path}
-                key={item.label}
-                className={`sidebar-item ${location.pathname === item.path ? 'active' : ''}`}
-              >
-                {item.label}
-              </Link>
+                <Link
+                    to={item.path}
+                    key={item.label}
+                    className={`sidebar-item ${location.pathname === item.path ? 'active' : ''}`}
+                >
+                    <span>{item.label}</span>
+                    {item.badge && <span className="badge">{item.badge}</span>}
+                </Link>
             ))}
           </div>
         </div>
