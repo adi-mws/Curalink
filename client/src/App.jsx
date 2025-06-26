@@ -57,7 +57,7 @@ function App() {
 
                   <Route path='/' element={<MainLayout />}>
 
-                    <Route path='/' element={<DoctorsPage />} />
+                    <Route path='/' element={<HomePage />} />
                     <Route path='/admin-sidebar' element={<AdminSidebar />} />
                     <Route path='/support' element={<SupportPage />} />
                     <Route path='/about' element={<AboutPage />} />

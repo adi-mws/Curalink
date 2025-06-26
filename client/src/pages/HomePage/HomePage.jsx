@@ -1,3 +1,4 @@
+import HeroSection from '../../components/home/HeroSection/HeroSection.jsx';
 import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
 function HomePage() {
@@ -10,7 +11,7 @@ function HomePage() {
     }, []);
     return (
         <>
-            <h1>Welcome to Curalink Home Page!</h1>
+            <HeroSection />
         </>
     )
 }
