@@ -1,7 +1,6 @@
 import React from "react";
 import "./Footer.css";
 import NewsletterPerson from "../../shared/graphics/NewsletterPerson/NewsletterPerson.jsx";
-import logo from "../../../assets/logo/logo.png"
 import twitterIcon from "../../../assets/icons/twitter.png";
 import facebookIcon from "../../../assets/icons/facebook.png";
 import instagramIcon from "../../../assets/icons/instagram.png";
@@ -13,7 +12,7 @@ const Footer = () => {
     <div className="Footer">
       <div className="footer-main-content">
         <div class="footer-section">
-          <img className="logo" src={logo} alt="Curalink Logo" />
+          <img className="logo" src='/imgs/logo/logo.png' alt="Curalink Logo" />
           <p>Follow us on</p>
           <div class="social-icons">
             <a href="#">

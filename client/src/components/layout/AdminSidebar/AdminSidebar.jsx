@@ -5,6 +5,11 @@ import { useState } from "react";
 
 const sidebarData = [
   {
+    section: 'Overview',
+    link: '/admin/dashboard', 
+    items: []
+  },
+  {
     section: 'Essentials',
     items: [
       { label: 'Analytics', badge: 2 },
@@ -34,8 +39,9 @@ function AdminSidebar() {
 
   return (
     <div className="admin-sidebar">
-      <div className="section-title">
-        Overview <span className="dot green"></span>
+
+      <div className="section-logo">
+        <img src="/imgs/logo/logo.png" alt="" className="logo" />
       </div>
 
       {sidebarData.map(section => (

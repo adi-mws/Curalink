@@ -1,0 +1,28 @@
+.AdminHeader {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+    font-family:var(--secondary-font)
+
+    .greeting {
+        font-family: var(--primary-font);
+        font-size: 1.4em; 
+        font-weight: bold; 
+    }
+
+    .administrator {
+        display: flex; 
+        font-size: .9em;
+        gap: 1em;
+        align-items: center;
+        
+    }
+
+    .administrator img {
+        background: whitesmoke;
+        width: 60px; 
+        height: 60px;
+        border-radius: 50%;
+    }
+}

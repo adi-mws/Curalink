@@ -43,6 +43,8 @@ import ReviewReports from './components/dashboard/doctor/ReviewReports/ReviewRep
 import AppointmentDetails from './components/dashboard/doctor/AppointmentDetails/AppointmentDetails.jsx';
 import AdminFAQForm from './components/forms/AdminDashboardForm/AdminFAQForm/AdminFAQForm.jsx';
 import AdminAnnouncementForm from './components/forms/AdminDashboardForm/AdminAnnouncementForm/AdminAnnouncementForm.jsx';
+import AdminDashboardLayout from './layouts/AdminDashboardLayout.jsx';
+import AdminOverview from './components/dashboard/admin/AdminOverview/AdminOverview.jsx';
 
 function App() {
   const [showForm, setShowForm] = useState(true);
@@ -108,7 +110,10 @@ function App() {
                     <Route path='/doctor/dashboard/appointment-details' element={<AppointmentDetails />}></Route>
                   </Route>
 
-
+                  <Route path='/admin/dashboard' element={<AdminDashboardLayout />}>
+                    <Route index element={<AdminOverview />} />
+                  
+                  </Route>
                 </Routes>
               </Router>
             </NotificationBarStateContextProvider>

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Sidebar.css';
-import logo from '../../../assets/logo/logo.png';
 import CompleteYourProfile from '../../shared/adcards/CompleteYourProfile/CompleteYourProfile';
 import essentials from '../../../assets/icons/3dcube.png';
 import company from '../../../assets/icons/building.png';
@@ -67,7 +66,7 @@ export default function Sidebar({ dashboard = null, hamBurgerRef = null }) {
         <div ref={sidebarRef} className='Sidebar' style={{ transform: `${showSidebar ? 'translate(0px)' : 'translate(-400px)'}`, position: `${dashboard ? 'relative' : 'fixed'}`, transition: '.3s' }}>
 
             <div className="Logo-Cross">
-                <img src={logo} alt="" className="Logo" />
+                <img src='/imgs/logo/logo.png' alt="" className="Logo" />
                 {dashboard && showCloseButton ?
                     <div className="Cross" onClick={() => setShowSidebar(false)}><img src={cutIcon} alt="" /></div> : <></>}
             </div>
