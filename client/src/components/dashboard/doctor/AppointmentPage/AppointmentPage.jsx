@@ -6,7 +6,6 @@ import CalanderIcon from '../../../../assets/icons/calendar.png'
 import DownArrow from '../../../../assets/icons/arrow-down.png'
 import Calendar from '../../../shared/primitive/Calendar/Calendar';
 
-
 export default function AppointmentPage() {
 
   const [showAppointmentFilter, setShowAppointmentFilter] = useState(false);
