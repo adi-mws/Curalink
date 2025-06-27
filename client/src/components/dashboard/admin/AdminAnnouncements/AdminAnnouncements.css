@@ -1,9 +1,9 @@
 .AdminAnnouncements {
 
-    .announcements-body{
+    .announcements-body {
         display: flex;
         flex-direction: column;
-        gap: .3em; 
+        gap: .3em;
         background: whitesmoke;
         color: var(--gray-text);
 
@@ -22,25 +22,28 @@
     }
 
     .announcement-tag {
-        padding: .7em 1.3em;;
+        padding: .7em 1.3em;
+        ;
         border-radius: 30px;
         font-size: .9em;
-        background: #bee9d0; 
+        background: #bee9d0;
         color: #39397e
     }
 
     .announcement-control {
-        display: flex; 
-        align-items:center; 
+        display: flex;
+        align-items: center;
         justify-content: center;
         gap: .6em;
-        
+
     }
+
     .announcement-control button {
         display: flex;
-         align-items: center; 
-         justify-content: center;
+        align-items: center;
+        justify-content: center;
     }
+
     .announcement-control img {
         width: 1.5em;
     }
@@ -53,10 +56,11 @@
     .announcement-details .body {
         gap: 2em;
     }
+
     .announcement-details .body-head {
-        display: flex; 
+        display: flex;
         font-weight: bold;
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         font-family: var(--primary-font);
@@ -68,24 +72,28 @@
 }
 
 
-@media screen and (max-width:1168px){
+@media screen and (max-width:1168px) {}
 
+@media screen and (max-width:992px) {}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:576px) {
+
+    .announcement-item {
+        grid-template-columns: repeat(2, 1fr) !important;
+        place-items: center;
+    }
+    .announcement-item .announcement-control {
+        display: none;
+
+    }
+
+    .announcement-tag-wrapper {
+        display: none;
+    }
+
+   
 }
 
-@media screen and (max-width:992px){
-
-}
-
-@media screen and (max-width:768px){
-    
-
-}
-
-@media screen and (max-width:576px){
-
-}
-
-@media screen and (max-width:400px){
-
-}
-
+@media screen and (max-width:400px) {}

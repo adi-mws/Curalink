@@ -1,18 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AdminAnnouncementForm.css";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-const AdminAnnouncementForm = ({ showForm, setShowForm }) => {
+const AdminAnnouncementForm = ({ showForm, setShowForm, editMode = false, editData }) => {
+  const location = useLocation();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [isFeature, setIsFeature] = useState(false);
-  const location = useLocation();
+
+  useEffect(() => {
+    if (editMode && editData) {
+      setTitle(editData.title || "");
+      setDescription(editData.content || "");
+      setIsFeature(editData.feature || false);
+    } else {
+      setTitle("");
+      setDescription("");
+      setIsFeature(false);
+    }
+  }, [editMode, editData, showForm]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { title, description, isFeature };
     console.log("Notification Sent:", data);
+    // Optionally: call backend API or parent handler
+    setShowForm(false); // optionally close form
   };
+
   return (
     <div
       className="AdminAnnouncementForm"
@@ -23,14 +38,14 @@ const AdminAnnouncementForm = ({ showForm, setShowForm }) => {
     >
       <div className="form-container" onClick={(e) => e.stopPropagation()}>
         <div className="form-header">
-          <h2>Announcement</h2>
+          <h2>{editMode ? "Edit Announcement" : "New Announcement"}</h2>
           <button
             className="close-button"
             onClick={() => {
               setShowForm(false);
             }}
           >
-            ×
+            <img src="/icons/cut.svg" alt="close-icon" />
           </button>
         </div>
 
@@ -63,7 +78,7 @@ const AdminAnnouncementForm = ({ showForm, setShowForm }) => {
           </div>
 
           <button type="submit" className="submit-button">
-            Send Notification
+            {editMode ? "Update Announcement" : "Send Notification"}
           </button>
         </form>
       </div>
