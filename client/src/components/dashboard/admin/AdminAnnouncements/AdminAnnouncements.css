@@ -1,0 +1,91 @@
+.AdminAnnouncements {
+
+    .announcements-body{
+        display: flex;
+        flex-direction: column;
+        gap: .3em; 
+        background: whitesmoke;
+        color: var(--gray-text);
+
+    }
+
+    .announcement-item {
+        display: grid;
+        background: white;
+        padding: 1.2em 2em;
+        grid-template-columns: 1.5fr repeat(3, 1fr);
+        font-size: .9em;
+    }
+
+    .announcement-title {
+        font-weight: 500;
+    }
+
+    .announcement-tag {
+        padding: .7em 1.3em;;
+        border-radius: 30px;
+        font-size: .9em;
+        background: #bee9d0; 
+        color: #39397e
+    }
+
+    .announcement-control {
+        display: flex; 
+        align-items:center; 
+        justify-content: center;
+        gap: .6em;
+        
+    }
+    .announcement-control button {
+        display: flex;
+         align-items: center; 
+         justify-content: center;
+    }
+    .announcement-control img {
+        width: 1.5em;
+    }
+
+    .announcement-item:hover {
+        background-color: var(--dashboard-item-hover);
+    }
+
+
+    .announcement-details .body {
+        gap: 2em;
+    }
+    .announcement-details .body-head {
+        display: flex; 
+        font-weight: bold;
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--primary-font);
+    }
+
+    .announcement-content {
+        font-size: .9em;
+    }
+}
+
+
+@media screen and (max-width:1168px){
+
+}
+
+@media screen and (max-width:992px){
+
+}
+
+@media screen and (max-width:768px){
+    
+
+}
+
+@media screen and (max-width:576px){
+
+}
+
+@media screen and (max-width:400px){
+
+}
+

@@ -17,6 +17,7 @@
   font-weight: 600;
   color: #333;
   display: flex;
+  text-decoration: none;
   align-items: center;
   gap: 6px;
   margin-bottom: 8px;
@@ -42,28 +43,28 @@
 }
 
 .sidebar-item:hover {
-  background-color: var(--hover-secondary-color);
+  background-color: var(--dashboard-item-hover);
   color: var(--primary-color);
 }
 
 .sidebar-item.active {
-  background-color: #ffe5ec;
-  color: #c2185b;
+  background-color: var(--dashboard-item-hover);
+  color: var(--primary-color);
   font-weight: 500;
 }
 
 .badge {
   background-color: #e53935;
   color: white;
-  font-size: 9px;
-  font-weight: bold;
-  border-radius: 999px;
-  padding: 2px 7px;
+  font-size: 13px;
+  border-radius: 50%;
+  width: 1.5em; 
+  height: 1.5em; 
+  display: inline-block;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 15px;
-  height: 15px;
+  
 }
 
 .dot {

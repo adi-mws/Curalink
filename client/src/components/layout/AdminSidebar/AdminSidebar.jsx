@@ -6,13 +6,14 @@ import { useState } from "react";
 const sidebarData = [
   {
     section: 'Overview',
-    link: '/admin/dashboard', 
+    path: '/admin/dashboard', 
     items: []
   },
   {
     section: 'Essentials',
     items: [
       { label: 'Analytics', badge: 2 },
+      {label: 'Annoucements', badge: 2, path: '/admin/dashboard/annoucements'},
       { label: 'News Content' },
       { label: 'FAQs Content' },
       { label: 'Contacts', badge: 2 }
@@ -46,9 +47,9 @@ function AdminSidebar() {
 
       {sidebarData.map(section => (
         <div key={section.section}>
-          <div className="section-title">
+          <Link to={section.path} className="section-title">
             {section.section} <span className="dot gray"></span>
-          </div>
+          </Link>
           <div className="section-items">
             {section.items.map(item => (
                 <Link

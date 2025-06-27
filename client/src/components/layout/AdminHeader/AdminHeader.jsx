@@ -4,7 +4,7 @@ import './AdminHeader.css'
 export default function AdminHeader() {
   return (
     <div className='AdminHeader'>
-        <p className="greeting"></p>
+        <p className="greeting">Good Morning!</p>
         <div className="administrator">
             <img src="" alt="admin-pfp" />
             <span>Administrator</span>
