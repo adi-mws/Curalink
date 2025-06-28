@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./AdminSidebar.css";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
@@ -35,6 +35,13 @@ const sidebarData = [
 ]
 
 function AdminSidebar() {
+
+
+  useEffect(() => {
+    // api call 
+    
+  }, [])
+
   const location = useLocation()
   const [active, setActive] = useState('Analytics')
 

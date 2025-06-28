@@ -25,6 +25,7 @@
         background: var(--textbox-color);
         border-radius: 5px;
         overflow: hidden;
+        min-width: 25em;
     }
 
     .search-bar-wrapper>input {
@@ -32,7 +33,7 @@
         outline: none;
         border: none;
         border-radius: 5px;
-        width: 25em;
+        width: 100%;
         background: none;
     }
 
@@ -129,9 +130,9 @@
 
 @media screen and (max-width:1168px) {
     .admin-page-header {
-        .search-bar-wrapper > input {
+        /* .search-bar-wrapper > input {
             width: 150px;
-        }
+        } */
     }
 }
 
@@ -149,6 +150,7 @@
         height: 70vh;
         max-height: 90vh;
     }
+  
 
 }
 

@@ -41,8 +41,6 @@ import DoctorCalendarPopup from './components/shared/primitive/DoctorCalendarPop
 import AdminSidebar from './components/layout/AdminSidebar/AdminSidebar.jsx';
 import ReviewReports from './components/dashboard/doctor/ReviewReports/ReviewReports.jsx';
 import AppointmentDetails from './components/dashboard/doctor/AppointmentDetails/AppointmentDetails.jsx';
-import AdminFAQForm from './components/forms/AdminDashboardForm/AdminFAQForm/AdminFAQForm.jsx';
-import AdminAnnouncementForm from './components/forms/AdminDashboardForm/AdminAnnouncementForm/AdminAnnouncementForm.jsx';
 import AdminDashboardLayout from './layouts/AdminDashboardLayout.jsx';
 import AdminOverview from './components/dashboard/admin/AdminOverview/AdminOverview.jsx';
 import AdminAnnouncements from './components/dashboard/admin/AdminAnnouncements/AdminAnnouncements.jsx';
@@ -69,9 +67,6 @@ function App() {
                   <Route path='/' element={<MainLayout />}>
 
                     <Route path='/' element={<HomePage />} />
-                    <Route path='/admin-sidebar' element={<AdminSidebar />} />
-                    <Route path='/admin-announcement-form' element={<AdminAnnouncementForm showForm={showForm} setShowForm={setShowForm} />} />
-                    <Route path='/admin-faq-form' element={<AdminFAQForm showForm={showForm} setShowForm={setShowForm} />} />
                     <Route path='/support' element={<SupportPage />} />
                     <Route path='/about' element={<AboutPage />} />
                     <Route path='/doctors' element={<DoctorsPage />} />

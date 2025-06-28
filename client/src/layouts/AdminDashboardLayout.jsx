@@ -5,7 +5,9 @@ import AdminHeader from '../components/layout/AdminHeader/AdminHeader'
 export default function AdminDashboardLayout() {
     return (
         <div className='AdminDashboardLayout'>
-            <AdminSidebar />
+            <div className="AdminSidebar-static">
+                <AdminSidebar />
+            </div>
             <div className="outlet-wrapper">
                 <AdminHeader />
                 <Outlet />
