@@ -46,6 +46,8 @@ import AdminAnnouncementForm from './components/forms/AdminDashboardForm/AdminAn
 import AdminDashboardLayout from './layouts/AdminDashboardLayout.jsx';
 import AdminOverview from './components/dashboard/admin/AdminOverview/AdminOverview.jsx';
 import AdminAnnouncements from './components/dashboard/admin/AdminAnnouncements/AdminAnnouncements.jsx';
+import AdminContacts from './components/dashboard/admin/AdminContacts/AdminContacts.jsx';
+
 
 function App() {
   const [showForm, setShowForm] = useState(true);
@@ -114,6 +116,7 @@ function App() {
                   <Route path='/admin/dashboard' element={<AdminDashboardLayout />}>
                     <Route index element={<AdminOverview />} />
                     <Route path='/admin/dashboard/annoucements' element={<AdminAnnouncements />} />
+                    <Route path='/admin/dashboard/contacts' element={<AdminContacts />} />
                   
                   </Route>
                 </Routes>

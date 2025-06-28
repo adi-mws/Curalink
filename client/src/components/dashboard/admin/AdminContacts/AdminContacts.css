@@ -1,0 +1,49 @@
+.AdminContacts{
+    display: flex;
+    flex-direction: column;
+
+    .contacts-body{
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em;
+        background-color: #f2f2f2;
+    }
+    .admin-contacts{
+        display: grid;
+        background: white;
+        padding: 1.2em 2em;
+        grid-template-columns: 1.5fr repeat(4, 1fr);
+        font-size: .9em;
+    }
+    .admin-contacts:hover{
+        background-color: var(--dashboard-item-hover);
+    }
+
+    .view-button{
+        color: var(--primary-color);
+        font: 1.1em;
+    }
+
+}
+
+
+@media screen and (max-width:1168px){
+
+}
+
+@media screen and (max-width:992px){
+
+}
+
+@media screen and (max-width:768px){
+    
+
+}
+
+@media screen and (max-width:576px){
+
+}
+
+@media screen and (max-width:400px){
+
+}

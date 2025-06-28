@@ -16,7 +16,7 @@ const sidebarData = [
       {label: 'Annoucements', badge: 2, path: '/admin/dashboard/annoucements'},
       { label: 'News Content' },
       { label: 'FAQs Content' },
-      { label: 'Contacts', badge: 2 }
+      { label: 'Contacts', badge: 2, path:'/admin/dashboard/contacts' }
     ]
   },
   {
@@ -51,7 +51,7 @@ function AdminSidebar() {
             {section.section} <span className="dot gray"></span>
           </Link>
           <div className="section-items">
-            {section.items.map(item => (
+            {section.items?.map(item => (
                 <Link
                     to={item.path}
                     key={item.label}
