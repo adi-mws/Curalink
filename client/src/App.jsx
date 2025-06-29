@@ -46,6 +46,7 @@ import AdminDashboardLayout from './layouts/AdminDashboardLayout.jsx';
 import AdminOverview from './components/dashboard/admin/AdminOverview/AdminOverview.jsx';
 import AdminAnnouncements from './components/dashboard/admin/AdminAnnouncements/AdminAnnouncements.jsx';
 import AdminContacts from './components/dashboard/admin/AdminContacts/AdminContacts.jsx';
+import AdminFaqs from './components/dashboard/admin/Adminfaqs/Adminfaqs.jsx';
 
 
 function App() {
@@ -114,6 +115,7 @@ function App() {
                     <Route path='/admin/dashboard/annoucements' element={<AdminAnnouncements />} />
                     <Route path='/admin/dashboard/contacts' element={<AdminContacts />} />
                     <Route path='/admin/dashboard/notifications' element={<AdminNotifications />} />
+                    <Route path='/admin/dashboard/faqs' element={<AdminFaqs />} />
                     {/* <Route path='/admin/dashboard/meetings' element={ */}
 
                   </Route>
