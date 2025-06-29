@@ -1,0 +1,97 @@
+.AdminNotifications {
+
+    .notifications-body {
+        display: flex;
+        flex-direction: column;
+        gap: .3em;
+        background: whitesmoke;
+        color: var(--gray-text);
+
+    }
+
+    .notification-item {
+        display: grid;
+        background: white;
+        padding: 1.2em 2em;
+        grid-template-columns: 1.5fr repeat(2, 1fr);
+        font-size: .9em;
+    }
+
+    
+    .notification-title {
+        font-weight: 500;
+    }
+
+    .notification-tag {
+        padding: .7em 1.3em;
+        border-radius: 30px;
+        font-size: .9em;
+        background: #bee9d0;
+        color: #39397e
+    }
+
+    .notification-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .6em;
+
+    }
+
+    .notification-control button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .notification-control img {
+        width: 1.5em;
+    }
+
+    .notification-item:hover {
+        background-color: var(--dashboard-item-hover);
+    }
+
+    .notification-details .body {
+        gap: 2em;
+    }
+
+    .notification-details .body-head {
+        display: flex;
+        font-weight: bold;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--primary-font);
+    }
+
+    .notification-content {
+        font-size: .9em;
+    }
+}
+
+
+@media screen and (max-width:1168px) {}
+
+@media screen and (max-width:992px) {}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:576px) {
+
+    .notification-item {
+        grid-template-columns: repeat(2, 1fr) !important;
+        place-items: center;
+    }
+    .notification-item .notification-control {
+        display: none;
+
+    }
+
+    .notification-tag-wrapper {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:400px) {}
