@@ -17,6 +17,7 @@ const sidebarData = [
       { label: 'News Content' },
       { label: 'FAQs Content', path:'/admin/dashboard/faqs' },
       { label: 'Contacts', badge: 2, path:'/admin/dashboard/contacts' },
+      {label: 'Services', badge: 2, path: '/admin/dashboard/services'}
     
     ]
   },

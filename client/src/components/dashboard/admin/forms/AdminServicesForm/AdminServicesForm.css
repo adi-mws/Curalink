@@ -1,0 +1,134 @@
+.AdminServicesForm {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .AdminServicesForm .form-container {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .AdminServicesForm .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .AdminServicesForm .form-header h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  
+  .AdminServicesForm .form-header button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .AdminServicesForm form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  .AdminServicesForm form input[type="text"],
+  .AdminServicesForm form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #f9f9f9;
+  }
+  
+  .AdminServicesForm form textarea {
+    resize: none;
+    min-height: 100px;
+  }
+  
+  /* Custom File Upload */
+  .AdminServicesForm .file-upload-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .AdminServicesForm .file-upload-wrapper input[type="file"] {
+    display: none;
+  }
+  
+  .AdminServicesForm .file-upload-wrapper label {
+    display: inline-block;
+    background: #eaeaea;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .AdminServicesForm .file-upload-wrapper label:hover {
+    background: #d6d6d6;
+  }
+  
+  .AdminServicesForm .file-upload-wrapper .file-name {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  .AdminServicesForm form button[type="submit"] {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+  
+  .AdminServicesForm form button[type="submit"]:hover {
+    background: var(--hover-primary-color);
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 576px) {
+    .AdminServicesForm {
+      padding: 20px;
+    }
+  
+    .AdminServicesForm .form-container {
+      padding: 20px;
+    }
+  
+    .AdminServicesForm .form-header h2 {
+      font-size: 1.1rem;
+    }
+  
+    .AdminServicesForm form label,
+    .AdminServicesForm form input,
+    .AdminServicesForm form textarea {
+      font-size: 0.85rem;
+    }
+  }
+  
