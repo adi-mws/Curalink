@@ -1,7 +1,5 @@
 import mongoose from 'mongoose';
 const AppointmentSchema = new mongoose.Schema({
-  appointmentDate: { type: Date, required: true },
-  appointmentTime: { type: String, required: true },
   duration: { type: Number, required: true }, // in minutes
   patient: { type: mongoose.Schema.Types.ObjectId, ref: 'Patient', required: true },
   doctor: { type: mongoose.Schema.Types.ObjectId, ref: 'Doctor', required: true },
