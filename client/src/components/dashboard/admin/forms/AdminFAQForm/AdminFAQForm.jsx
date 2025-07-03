@@ -1,7 +1,8 @@
+import axios from "axios";
 import "./AdminFaqForm.css";
 import { useState, useEffect } from "react";
 
-const AdminFaqForm = ({ showForm, setShowForm, editData, editMode }) => {
+const AdminFaqForm = ({ showForm, setShowForm, editData, editMode, setAllFaqs }) => {
   const [question, setQuestion] = useState("");
   const [audience, setAudience] = useState("");
   const [answer, setAnswer] = useState("");
@@ -14,10 +15,21 @@ const AdminFaqForm = ({ showForm, setShowForm, editData, editMode }) => {
     }
   }, [editData, editMode]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = { question, target_audience: audience, answer };
-    console.log(editMode ? "Editing FAQ:" : "Creating FAQ:", formData);
+   try {
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/faqs`, formData);
+    if (response.status == 201) {
+      alert('Faqs created successfully')
+      console.log(response.data)
+    setAllFaqs(prev => [...prev, response.data.newFaq])
+
+    }
+   }
+   catch(error) {
+    console.error(error);
+   }
     setShowForm(false);
   };
 
