@@ -15,8 +15,10 @@ const sidebarData = [
       { label: 'Analytics', badge: 2 },
       {label: 'Annoucements', badge: 2, path: '/admin/dashboard/annoucements'},
       { label: 'News Content' },
-      { label: 'FAQs Content' },
-      { label: 'Contacts', badge: 2, path:'/admin/dashboard/contacts' }
+      { label: 'FAQs Content', path:'/admin/dashboard/faqs' },
+      { label: 'Contacts', badge: 2, path:'/admin/dashboard/contacts' },
+      {label: 'Services', badge: 2, path: '/admin/dashboard/services'}
+    
     ]
   },
   {

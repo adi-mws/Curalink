@@ -11,6 +11,7 @@ export const useSideBar = () => {
         throw new Error('useSideBar must be used within a SideBarProvider');
     }
     return context;
+
 };
 
 // Provider component

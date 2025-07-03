@@ -8,6 +8,7 @@ import DoctorsPage from './pages/DoctorsPage/DoctorsPage';
 import ServicePage from './pages/ServicePage/ServicePage';
 import NewsPage from './pages/NewsPage/NewsPage';
 import NewsSearchPage from './pages/NewsSearchPage/NewsSearchPage';
+import AdminNotifications from './components/dashboard/admin/AdminNotifications/AdminNotifications.jsx';
 import HomePage from './pages/HomePage/HomePage';
 import SupportPage from './pages/SupportPage/SupportPage';
 import PatientLoginPage from './pages/PatientLoginPage/PatientLoginPage';
@@ -45,6 +46,8 @@ import AdminDashboardLayout from './layouts/AdminDashboardLayout.jsx';
 import AdminOverview from './components/dashboard/admin/AdminOverview/AdminOverview.jsx';
 import AdminAnnouncements from './components/dashboard/admin/AdminAnnouncements/AdminAnnouncements.jsx';
 import AdminContacts from './components/dashboard/admin/AdminContacts/AdminContacts.jsx';
+import AdminFaqs from './components/dashboard/admin/Adminfaqs/Adminfaqs.jsx';
+import AdminServices from './components/dashboard/admin/AdminServices/AdminServices.jsx';
 
 
 function App() {
@@ -81,7 +84,7 @@ function App() {
                     <Route path='/search-faqs' element={<FAQsPage />} />
                     <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
                     <Route path='/doctor-profile/show-services' element={<ShowServices />} />
-                    <Route path='/test' element={<AddQualification/>}/>
+                    <Route path='/test' element={<AddQualification />} />
                     <Route path='/doctor-profile/:id' element={<DoctorPublicProfilePage />} />
                     <Route path='/doctor/login' element={<DoctorLoginPage />} />
                     <Route path='/doctor/register' element={<DoctorRegistrationPage />} />
@@ -112,7 +115,11 @@ function App() {
                     <Route index element={<AdminOverview />} />
                     <Route path='/admin/dashboard/annoucements' element={<AdminAnnouncements />} />
                     <Route path='/admin/dashboard/contacts' element={<AdminContacts />} />
-                  
+                    <Route path='/admin/dashboard/notifications' element={<AdminNotifications />} />
+                    <Route path='/admin/dashboard/faqs' element={<AdminFaqs />} />
+                    <Route path='/admin/dashboard/services' element={<AdminServices />} />
+                    {/* <Route path='/admin/dashboard/meetings' element={ */}
+
                   </Route>
                 </Routes>
               </Router>

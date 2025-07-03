@@ -1,0 +1,104 @@
+.AdminServices {
+
+    .services-body {
+        display: flex;
+        flex-direction: column;
+        gap: .3em;
+        background: whitesmoke;
+        color: var(--gray-text);
+    }
+
+    .service-item {
+        display: grid;
+        background: white;
+        padding: 1.2em 2em;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        font-size: .9em;
+    }
+
+    .service-name {
+        font-weight: 500;
+    }
+
+    .service-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .6em;
+    }
+
+    .service-control button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .service-control img {
+        width: 1.5em;
+    }
+
+    .service-item:hover {
+        background-color: var(--dashboard-item-hover);
+    }
+
+    .service-details .body {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .service-details .body-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--primary-font);
+        font-weight: bold;
+    }
+
+    .service-details .control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .6em;
+    }
+
+    .service-details .control button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .service-details .control img {
+        width: 1.5em;
+    }
+
+    .service-time {
+        font-size: .9em;
+    }
+
+    .service-description {
+        font-size: .9em;
+    }
+
+    .service-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    .service-details .body-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+    }
+}

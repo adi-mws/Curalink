@@ -1,4 +1,4 @@
-.AdminFAQForm {
+.AdminFaqForm {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.AdminFAQForm .form-container {
+.AdminFaqForm .form-container {
   width: 100%;
   max-width: 600px;
   background-color: white;
@@ -22,33 +22,33 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.AdminFAQForm .form-header {
+.AdminFaqForm .form-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.AdminFAQForm .form-header h2 {
+.AdminFaqForm .form-header h2 {
   margin: 0;
   font-size: 20px;
 }
 
-.AdminFAQForm .close-button {
+.AdminFaqForm .close-button {
   background: none;
   border: none;
   font-size: 22px;
   cursor: pointer;
 }
 
-.AdminFAQForm form label {
+.AdminFaqForm form label {
   display: block;
   margin-bottom: 5px;
 }
 
-.AdminFAQForm form input[type="text"],
-.AdminFAQForm form textarea,
-.AdminFAQForm form select {
+.AdminFaqForm form input[type="text"],
+.AdminFaqForm form textarea,
+.AdminFaqForm form select {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -59,11 +59,11 @@
   resize: none;
 }
 
-.AdminFAQForm form textarea {
+.AdminFaqForm form textarea {
   height: 100px;
 }
 
-.AdminFAQForm .submit-button {
+.AdminFaqForm .submit-button {
   width: 100%;
   padding: 12px;
   font-size: 16px;
@@ -75,76 +75,76 @@
   transition: background-color 0.3s ease;
 }
 
-.AdminFAQForm .submit-button:hover {
+.AdminFaqForm .submit-button:hover {
   background-color: var(--hover-primary-color) /* fallback for --hover-primary-color */
 }
 
 /* ========== Responsive Breakpoints ========== */
 
 @media (max-width: 1168px) {
-  .AdminFAQForm .form-container {
+  .AdminFaqForm .form-container {
     width: 90%;
   }
 }
 
 @media (max-width: 992px) {
-  .AdminFAQForm .form-header h2 {
+  .AdminFaqForm .form-header h2 {
     font-size: 18px;
   }
 }
 
 @media (max-width: 768px) {
-  .AdminFAQForm .form-container {
+  .AdminFaqForm .form-container {
     padding: 20px;
   }
 
-  .AdminFAQForm form input,
-  .AdminFAQForm form textarea,
-  .AdminFAQForm form select {
+  .AdminFaqForm form input,
+  .AdminFaqForm form textarea,
+  .AdminFaqForm form select {
     font-size: 13px;
   }
 
-  .AdminFAQForm .submit-button {
+  .AdminFaqForm .submit-button {
     font-size: 15px;
   }
 }
 
 @media (max-width: 576px) {
-  .AdminFAQForm {
+  .AdminFaqForm {
     padding: 0 10px;
   }
 
-  .AdminFAQForm .form-container {
+  .AdminFaqForm .form-container {
     width: 95%;
     padding: 15px;
   }
 
-  .AdminFAQForm .form-header h2 {
+  .AdminFaqForm .form-header h2 {
     font-size: 16px;
   }
 
-  .AdminFAQForm .submit-button {
+  .AdminFaqForm .submit-button {
     font-size: 14px;
   }
 }
 
 @media (max-width: 400px) {
-  .AdminFAQForm .form-container {
+  .AdminFaqForm .form-container {
     padding: 10px;
   }
 
-  .AdminFAQForm .form-header h2 {
+  .AdminFaqForm .form-header h2 {
     font-size: 15px;
   }
 
-  .AdminFAQForm form input,
-  .AdminFAQForm form textarea,
-  .AdminFAQForm form select {
+  .AdminFaqForm form input,
+  .AdminFaqForm form textarea,
+  .AdminFaqForm form select {
     font-size: 12px;
     padding: 8px;
   }
 
-  .AdminFAQForm .submit-button {
+  .AdminFaqForm .submit-button {
     font-size: 13px;
     padding: 10px;
   }
