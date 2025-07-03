@@ -48,9 +48,8 @@ const DoctorSchema = new mongoose.Schema({
             expiryDate: { type: Date, required: false }  
         }
     ],
-
-    createdAt: { type: Date, default: Date.now },
-    updatedAt: { type: Date, default: Date.now }
+},{
+    timestamps:true
 });
 
 export default mongoose.model('Doctor', DoctorSchema);
