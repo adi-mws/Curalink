@@ -24,7 +24,7 @@ export default function AdminFaqs() {
   const [editMode, setEditMode] = useState(false);
 
   useEffect(() => {
-    setAllFaqs(faq_items);
+    setAllFaqs([]);
   }, []);
 
   const filteredFaqs = allFaqs.filter(q => q.question.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -132,6 +132,7 @@ export default function AdminFaqs() {
         setShowForm={handleFormClose}
         editData={editData}
         editMode={editMode}
+        setAllFaqs={setAllFaqs}
       />
     </div>
   );

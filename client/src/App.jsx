@@ -48,6 +48,7 @@ import AdminAnnouncements from './components/dashboard/admin/AdminAnnouncements/
 import AdminContacts from './components/dashboard/admin/AdminContacts/AdminContacts.jsx';
 import AdminFaqs from './components/dashboard/admin/Adminfaqs/Adminfaqs.jsx';
 import AdminServices from './components/dashboard/admin/AdminServices/AdminServices.jsx';
+import VideoChat from './components/RTC/VideoChat.jsx';
 
 
 function App() {
@@ -118,6 +119,8 @@ function App() {
                     <Route path='/admin/dashboard/notifications' element={<AdminNotifications />} />
                     <Route path='/admin/dashboard/faqs' element={<AdminFaqs />} />
                     <Route path='/admin/dashboard/services' element={<AdminServices />} />
+                    <Route path='/admin/dashboard/video' element={<VideoChat />} />
+                    
                     {/* <Route path='/admin/dashboard/meetings' element={ */}
 
                   </Route>

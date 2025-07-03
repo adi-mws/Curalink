@@ -5,6 +5,7 @@ import cors from 'cors';
 import path from 'path';    
 import { fileURLToPath } from 'url';
 import userRoutes from './routes/userRoutes.js';
+import faqRoutes from './routes/faqRoutes.js'
 
 dotenv.config();
 const app = express(); 
@@ -30,6 +31,10 @@ connectDB(process.env.MONGO_URI);
 
 // User Routes (handles login/register/verification of user)
 app.use('/api/user', userRoutes);
+
+// FAQ Routes (handles all the faq (frequently asked questions) operations)
+app.use('/api/faqs', faqRoutes);
+
 
 app.get('/', (req, res) => {
     res.send('Curalink Backend Server is running!');
