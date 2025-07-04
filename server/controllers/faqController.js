@@ -3,8 +3,8 @@ import { Faq } from '../models/faq.js';
 // Create a new FAQ
 export const createFaq = async (req, res) => {
   try {
-    const { type, question, answer } = req.body;
-    const newFaq = new Faq({ type, question, answer });
+    const { target_audience, question, answer } = req.body;
+    const newFaq = new Faq({ target_audience, question, answer });
     await newFaq.save();
     res.status(201).json(newFaq);
   } catch (error) {
@@ -12,12 +12,16 @@ export const createFaq = async (req, res) => {
   }
 };
 
-// Get all FAQs (with optional filtering by type + pagination)
+// Get all FAQs (with optional filtering by target_audience + pagination)
+
 export const getAllFaqs = async (req, res) => {
   try {
-    const { type, page = 1, limit = 10 } = req.query;
+    const { target_audience = 'all', page = 1, limit = 10 } = req.query;
 
-    const filter = type ? { $or: [{ type }, { type: 'all' }] } : {};
+    const filter =
+      target_audience === 'all'
+        ? {} // Show all FAQs
+        : { target_audience: { $in: [target_audience, 'all'] } };
 
     const skip = (parseInt(page) - 1) * parseInt(limit);
     const faqs = await Faq.find(filter)
@@ -37,6 +41,12 @@ export const getAllFaqs = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+export const showAllFaqs = async(req, res) => {
+  const faqs = await Faq.find();
+  res.status(200).json(faqs)
+}
+
 
 // Get a single FAQ by ID
 export const getFaqById = async (req, res) => {
@@ -74,11 +84,11 @@ export const deleteFaq = async (req, res) => {
   }
 };
 
-// Get FAQs for doctors (type: "doctors" or "all") with pagination
+// Get FAQs for doctors (target_audience: "doctors" or "all") with pagination
 export const getAllDoctorFaqs = async (req, res) => {
   try {
     const { page = 1, limit = 10 } = req.query;
-    const filter = { type: { $in: ['doctors', 'all'] } };
+    const filter = { target_audience: { $in: ['doctors', 'all'] } };
 
     const skip = (parseInt(page) - 1) * parseInt(limit);
     const faqs = await Faq.find(filter)
@@ -99,11 +109,11 @@ export const getAllDoctorFaqs = async (req, res) => {
   }
 };
 
-// Get FAQs for patients (type: "patients" or "all") with pagination
+// Get FAQs for patients (target_audience: "patients" or "all") with pagination
 export const getAllPatientFaqs = async (req, res) => {
   try {
     const { page = 1, limit = 10 } = req.query;
-    const filter = { type: { $in: ['patients', 'all'] } };
+    const filter = { target_audience: { $in: ['patients', 'all'] } };
 
     const skip = (parseInt(page) - 1) * parseInt(limit);
     const faqs = await Faq.find(filter)

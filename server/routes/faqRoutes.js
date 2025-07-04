@@ -6,7 +6,8 @@ import {
   updateFaq,
   deleteFaq,
   getAllDoctorFaqs,
-  getAllPatientFaqs
+  getAllPatientFaqs,
+  showAllFaqs
 } from '../controllers/faqController.js';
 
 const router = express.Router();
@@ -15,7 +16,8 @@ const router = express.Router();
 router.post('/', createFaq);
 
 // Get all FAQs (optionally filtered via query)
-router.get('/', getAllFaqs);
+// router.get('/', getAllFaqs);
+router.get('/', showAllFaqs);
 
 // Get all doctor-specific FAQs (type: "doctors" or "all")
 router.get('/doctors', getAllDoctorFaqs);
