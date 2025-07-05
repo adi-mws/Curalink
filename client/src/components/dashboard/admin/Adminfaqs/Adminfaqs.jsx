@@ -8,7 +8,6 @@ import searchIcon from '../../../../assets/icons/search-normal.png';
 import truncateTextByLetter from '../../../../utils/textFormatter';
 import AdminFaqForm from '../forms/AdminFaqForm/AdminFaqForm';
 import axios from 'axios';
-import { useInView } from 'react-intersection-observer';
 
 export default function AdminFaqs() {
   const [allFaqs, setAllFaqs] = useState([]);
