@@ -1,0 +1,17 @@
+.CompleteProfileAlert {
+    width: 60%; 
+    height: auto; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white; 
+    z-index: 2000;
+    box-shadow: 0 0 3px 0 dimgray;
+    padding: 3em;
+    
+    .cta {
+        padding: .8em; 
+    }
+}
+

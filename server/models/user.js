@@ -10,30 +10,47 @@ const NotificationSchema = new mongoose.Schema({
         enum: ['Appointment', 'Prescription', 'Test Report', 'Reminder', 'System', 'Other'],
         required: true
     },    // Category of notification for organizing and filtering
-    
+
     // Dynamic reference to related documents based on notification type
     // For example: If type is 'Appointment', this will reference the Appointment model
     relatedId: { type: mongoose.Schema.Types.ObjectId, refPath: 'type' },
-    
+
     read: { type: Boolean, default: false },     // Tracks whether user has viewed the notification
     createdAt: { type: Date, default: Date.now } // Timestamp when notification was created
 });
+
 
 // Main User schema for authentication and user management
 const UserSchema = new mongoose.Schema({
     name: { type: String, required: true },      // User's full name
     email: { type: String, required: true, unique: true }, // Unique email for authentication
-    password: { type: String, required: true },   // Hashed password (never stored in plain text)
-    
+
+    // User profile picture not (important in the case of admin)
+    pfp: {type: String, required: function() {return this.role != 'admin'}},    
+
+
+    password: {
+        type: String,
+        required: function () {
+            return this.authType === 'normal';
+        }
+    },
+    // googleId will be taken through the google api  
+    googleId: {
+        type: String,
+        required: function () {
+            return this.authType === 'google';
+        }
+    },
+    // Different sign in ideas
+    authType: { type: String, enum: ['normal', 'google'] },
     // User type for role-based access control
     role: { type: String, enum: ['patient', 'doctor', 'admin'], required: true },
-    
+
     // Array of user notifications using the NotificationSchema
     notifications: [NotificationSchema],
-    
-    // Timestamps for document tracking
-    createdAt: { type: Date, default: Date.now }, // When user account was created
-    updatedAt: { type: Date, default: Date.now }  // Last update to user account
+
+    timestamps: true
 });
 
 

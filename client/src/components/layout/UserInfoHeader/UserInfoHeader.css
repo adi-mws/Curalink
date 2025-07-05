@@ -6,9 +6,9 @@
 
   .header-container {
     display: flex;
-    width: 320px;
+    width: auto;
     align-items: center;
-    gap: 20px;
+    gap: 2em;
     padding: 8px;
     border: none;
     border-radius: 10px;
@@ -44,12 +44,14 @@
     justify-content: space-between;
     background-color: #ffdedeb1;
     padding: 0 10px;
+    gap: .8em;
     border-radius: 10px;
 
 
     .user-name {
       font-weight: 600;
       color: #530542;
+      text-wrap: nowrap;
       font-family: var(--secondary-font);
 
     }

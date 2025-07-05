@@ -4,6 +4,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import useWindowSize from '../contexts/useWindowSize'
 import { useEffect, useRef } from 'react';
 import './layouts.css';
+import CompleteProfileAlert from '../components/shared/alerts/CompleteProfileAlert/CompleteProfileAlert';
 
 export default function DashboardLayout() {
     const [ dashboardState, setDashboardState ] = useState('patient');
@@ -25,6 +26,10 @@ export default function DashboardLayout() {
     return (
         <>
             <div className="DashboardLayout" >
+            {/* Alert after the first login */}
+            {/* Fixed alert boxes */}
+            <CompleteProfileAlert />
+
                 <Sidebar showMenubar={showMenubar} setShowMenubar={setShowMenubar} dashboard={dashboardState} />
                 <div className="outlet-wrapper">
                     <Outlet context={{ showMenubar, setShowMenubar }} />

@@ -9,11 +9,12 @@ import {
   getAllPatientFaqs,
   showAllFaqs
 } from '../controllers/faqController.js';
+import authenticateJWT, { authorizeRole } from '../middlewares/authMiddleware.js';
 
 const router = express.Router();
 
 // Create a new FAQ
-router.post('/', createFaq);
+router.post('/', authenticateJWT, authorizeRole('admin'), createFaq);
 
 // Get all FAQs (optionally filtered via query)
 // router.get('/', getAllFaqs);
