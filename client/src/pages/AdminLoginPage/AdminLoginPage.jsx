@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./AdminLoginPage.css";
-import eyeIcon from "../../../assets/icons/eye.png";
+import eyeIcon from "../../assets/icons/eye.png";
 import { useForm } from "react-hook-form";
-import eyeSlashIcon from "../../../assets/icons/eye-slash.png";
-import PrimaryButton from "../../shared/buttons/PrimaryButton/PrimaryButton";
+import eyeSlashIcon from "../../assets/icons/eye-slash.png";
+import PrimaryButton from "../../components/shared/buttons/PrimaryButton/PrimaryButton";
 
 const AdminLoginPage = () => {
 

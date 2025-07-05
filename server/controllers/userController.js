@@ -16,7 +16,7 @@ dotenv.config();
 
 export const registerUser = async (req, res) => {
     try {
-        const { name, email, password, role } = req.body;
+        const { email, password, role } = req.body;
 
         // Check if user already exists
         let user = await User.findOne({ email });
@@ -27,9 +27,17 @@ export const registerUser = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, salt);
 
         // Create New User
-        user = new User({ name, email, password: hashedPassword, role });
+        user = new User({ email: email, password: hashedPassword, role: role });
         await user.save();
 
+        try {
+            if (role == 'patient') {
+                
+            }
+
+        } catch (error) {
+            console.error(error);
+        }
 
 
         // Saving profile details of three different roles 
@@ -76,7 +84,7 @@ export const verifyUser = async (req, res) => {
                 name: user.name,
                 email: user.email,
                 role: user.role,
-               
+
             });
         } catch (error) {
             console.error(error);
@@ -96,7 +104,7 @@ export const googleAuth = async (req, res) => {
             idToken: token,
             audience: process.env.GOOGLE_CLIENT_ID
         });
-// aditya@email  
+        // aditya@email  
         const { sub, email, name, picture } = ticket.getPayload();  // Extract Google user data
         if (available) { // if user already exists
             const user = await User.findOne({ email: email, type: "google", googleId: sub }) // fetch the existing user

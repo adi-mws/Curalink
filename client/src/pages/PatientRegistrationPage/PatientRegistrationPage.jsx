@@ -5,8 +5,7 @@ import SecondaryButton from '../../components/shared/buttons/SecondaryButton/Sec
 import PatientRegistrationForm from '../../components/forms/PatientRegistrationForm/PatientRegistrationForm.jsx'
 import googleIcon from '../../assets/icons/google-icon.webp'
 import circleArrow from '../../assets/icons/ArrowCircleRight.png'
-import Header from '../../components/layout/Header/Header.jsx'
-import Footer from '../../components/layout/Footer/Footer.jsx'
+
 import { useNavigate } from 'react-router-dom'
 import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
@@ -20,8 +19,9 @@ export default function PatientRegistrationPage() {
       setSideBarState('');
     }
   }, []);
+
+
   return (<>
-  <Header/>
     <div className="PatientRegistrationPage">
       <div className="MainHeading">
         <h2>Join Us and Simplify Your Health Journey</h2>

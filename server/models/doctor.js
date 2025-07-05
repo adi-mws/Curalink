@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const DoctorSchema = new mongoose.Schema({
     userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    gender: { type: String, enum: ['Male', 'Female', 'Other'], required: true },
+    gender: { type: String, enum: ['male', 'female', 'other'], required: true },
     specialization: { type: String, required: true },
 
     experience: [

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./DoctorLoginPage.css";
-import DoctorWork from "../../../assets/imgs/DoctorWork.png";
-import TertiaryButton from "../../shared/buttons/TertiaryButton/TertiaryButton";
-import PrimaryButton from "../../shared/buttons/PrimaryButton/PrimaryButton";
+import DoctorWork from "../../assets/imgs/DoctorWork.png";
+import TertiaryButton from "../../components/shared/buttons/TertiaryButton/TertiaryButton";
+import PrimaryButton from "../../components/shared/buttons/PrimaryButton/PrimaryButton";
 import { useForm } from "react-hook-form";
-import googleIcon from "../../../assets/icons/google-icon.webp";
-import eyeIcon from "../../../assets/icons/eye.png";
-import eyeSlashIcon from "../../../assets/icons/eye-slash.png";
+import googleIcon from "../../assets/icons/google-icon.webp";
+import eyeIcon from "../../assets/icons/eye.png";
+import eyeSlashIcon from "../../assets/icons/eye-slash.png";
 
 const DoctorLoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);

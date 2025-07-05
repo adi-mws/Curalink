@@ -7,8 +7,6 @@ import instagram from '../../assets/icons/instagram.png'
 import linkedin from '../../assets/icons/linkedin.png'
 import SecondaryButton from '../../components/shared/buttons/SecondaryButton/SecondaryButton.jsx'
 import contentImage from '../../assets/imgs/patientLoginPageDoctor.png'
-import Header from '../../components/layout/Header/Header.jsx'
-import Footer from '../../components/layout/Footer/Footer.jsx'
 import { useSideBarState } from '../../contexts/SideBarStateContext.jsx';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'

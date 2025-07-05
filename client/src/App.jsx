@@ -11,8 +11,8 @@ import NewsSearchPage from './pages/NewsSearchPage/NewsSearchPage';
 import AdminNotifications from './components/dashboard/admin/AdminNotifications/AdminNotifications.jsx';
 import HomePage from './pages/HomePage/HomePage';
 import SupportPage from './pages/SupportPage/SupportPage';
-import PatientLoginPage from './pages/PatientLoginPage/PatientLoginPage';
-import PatientRegistrationPage from './pages/PatientRegistrationPage/PatientRegistrationPage';
+import PatientLoginPage from './pages/PatientLoginPage/PatientLoginPage.jsx';
+import PatientRegistrationPage from './pages/PatientRegistrationPage/PatientRegistrationPage.jsx'
 import ScrollToTop from './components/shared/primitive/ScrollToTop/ScrollToTop';
 import DoctorsCard from './components/shared/cards/DoctorsCard/DoctorsCard.jsx'
 import DoctorsSearchPage from './pages/DoctorsSearchPage/DoctorsSearchPage.jsx';
@@ -29,13 +29,12 @@ import PatientLanding from './components/dashboard/patient/PatientLanding/Patien
 import DoctorLanding from './components/dashboard/doctor/DoctorLanding/DoctorLanding.jsx';
 import ShowServices from './components/dashboard/doctor/forms/ServiceForm/ShowServices.jsx';
 import { AuthProvider } from './contexts/AuthContext.jsx';
-import { useAuth } from './contexts/AuthContext.jsx';
 import AnnouncementPage from './pages/AnnouncementPage/AnnouncementPage.jsx';
 import DoctorDetails from './components/dashboard/doctor/DoctorDetails/DoctorDetails.jsx';
 import AddQualification from './components/dashboard/doctor/forms/QualificationForm/AddQualification.jsx';
-import DoctorLoginPage from "./components/forms/DoctorLoginPage/DoctorLoginPage.jsx"
+import DoctorLoginPage from "./pages/DoctorLoginPage/DoctorLoginPage.jsx"
 import DoctorRegistrationPage from './pages/DoctorRegistrationPage/DoctorRegistrationPage.jsx';
-import AdminLoginPage from './components/forms/AdminLoginPage/AdminLoginPage.jsx';
+import AdminLoginPage from './pages/AdminLoginPage/AdminLoginPage.jsx';
 import PatientInformation from './components/dashboard/patient/PatientInformation/PatientInformation.jsx';
 import AppointmentPage from './components/dashboard/doctor/AppointmentPage/AppointmentPage.jsx'
 import DoctorCalendarPopup from './components/shared/primitive/DoctorCalendarPopUp/DoctorCalendarPopup.jsx';
@@ -49,6 +48,8 @@ import AdminContacts from './components/dashboard/admin/AdminContacts/AdminConta
 import AdminFaqs from './components/dashboard/admin/Adminfaqs/Adminfaqs.jsx';
 import AdminServices from './components/dashboard/admin/AdminServices/AdminServices.jsx';
 import VideoChat from './components/RTC/VideoChat.jsx';
+import { AlertMessageContextProvider } from './contexts/AlertContext.jsx';
+import AlertBox from './components/shared/alerts/AlertBox.jsx';
 
 
 function App() {
@@ -60,76 +61,81 @@ function App() {
       {/* <DoctorLoginPage /> */}
       {/* <DoctorRegistrationPage /> */}
       {/* <AdminLoginPage /> */}
-      <AuthProvider>
-        <SideBarProvider>
-          <SideBarStateContextProvider>
-            <NotificationBarStateContextProvider>
-              <Router>
-                <ScrollToTop />
-                <Routes>
 
-                  <Route path='/' element={<MainLayout />}>
+      <AlertMessageContextProvider>
+        <AuthProvider>
+          <SideBarProvider>
+            <SideBarStateContextProvider>
+              <NotificationBarStateContextProvider>
+                <Router>
+                  <ScrollToTop />
+                  <AlertBox />
+                  <Routes>
 
-                    <Route path='/' element={<HomePage />} />
-                    <Route path='/support' element={<SupportPage />} />
-                    <Route path='/about' element={<AboutPage />} />
-                    <Route path='/doctors' element={<DoctorsPage />} />
-                    <Route path='/services' element={<ServicePage />} />
-                    <Route path='/news' element={<NewsSearchPage />} />
-                    <Route path='/news/:id' element={<NewsPage />} />
-                    <Route path='/contact' element={<ContactPage />} />
-                    <Route path='/login' element={<PatientLoginPage />} />
-                    <Route path='/announcements' element={<AnnouncementPage />} />
-                    <Route path='/registration' element={<PatientRegistrationPage />} />
-                    <Route path='/search-doctors' element={<DoctorsSearchPage />} />
-                    <Route path='/search-faqs' element={<FAQsPage />} />
-                    <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
-                    <Route path='/doctor-profile/show-services' element={<ShowServices />} />
-                    <Route path='/test' element={<AddQualification />} />
-                    <Route path='/doctor-profile/:id' element={<DoctorPublicProfilePage />} />
-                    <Route path='/doctor/login' element={<DoctorLoginPage />} />
-                    <Route path='/doctor/register' element={<DoctorRegistrationPage />} />
+                    <Route path='/' element={<MainLayout />}>
 
-                  </Route>
+                      <Route path='/' element={<HomePage />} />
+                      <Route path='/support' element={<SupportPage />} />
+                      <Route path='/about' element={<AboutPage />} />
+                      <Route path='/doctors' element={<DoctorsPage />} />
+                      <Route path='/services' element={<ServicePage />} />
+                      <Route path='/news' element={<NewsSearchPage />} />
+                      <Route path='/news/:id' element={<NewsPage />} />
+                      <Route path='/contact' element={<ContactPage />} />
+                      <Route path='/login' element={<PatientLoginPage />} />
+                      <Route path='/announcements' element={<AnnouncementPage />} />
+                      <Route path='/registration' element={<PatientRegistrationPage />} />
+                      <Route path='/search-doctors' element={<DoctorsSearchPage />} />
+                      <Route path='/search-faqs' element={<FAQsPage />} />
+                      <Route path='/doctor-profile' element={<DoctorPublicProfilePage />} />
+                      <Route path='/doctor-profile/show-services' element={<ShowServices />} />
+                      <Route path='/test' element={<AddQualification />} />
+                      <Route path='/doctor-profile/:id' element={<DoctorPublicProfilePage />} />
+                      <Route path='/doctor/login' element={<DoctorLoginPage />} />
+                      <Route path='/doctor/register' element={<DoctorRegistrationPage />} />
+
+                    </Route>
 
 
-                  <Route path='/dashboard' element={<DashboardLayout />}>
-                    <Route path='/dashboard' element={<PatientLanding />} />
-                    <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
-                    <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
-                    <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
-                    <Route path='/dashboard/support' element={<SupportSystem />} />
-                    <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
-                    <Route path='/dashboard/patient-information' element={<PatientInformation />} />
-                  </Route>
+                    <Route path='/dashboard' element={<DashboardLayout />}>
+                      <Route path='/dashboard' element={<PatientLanding />} />
+                      <Route path='/dashboard/appointments' element={<ScheduledAppointments />} />
+                      <Route path='/dashboard/appointments/scheduled' element={<ScheduledAppointments appointmentsState='scheduled' />} />
+                      <Route path='/dashboard/appointments/past' element={<ScheduledAppointments appointmentsState='past' />} />
+                      <Route path='/dashboard/support' element={<SupportSystem />} />
+                      <Route path='/dashboard/prescriptions' element={<PrescriptionSystem />} />
+                      <Route path='/dashboard/patient-information' element={<PatientInformation />} />
+                    </Route>
 
-                  <Route path='/doctor/dashboard' element={<DashboardLayout />}>
-                    <Route path='/doctor/dashboard' element={<DoctorLanding />} />
-                    <Route path='/doctor/dashboard/support' element={<SupportSystem />} />
-                    <Route path='/doctor/dashboard/account-details' element={<DoctorDetails />}></Route>
-                    <Route path='/doctor/dashboard/appointments' element={<AppointmentPage />}></Route>
-                    <Route path='/doctor/dashboard/review-reports' element={<ReviewReports />}></Route>
-                    <Route path='/doctor/dashboard/appointment-details' element={<AppointmentDetails />}></Route>
-                  </Route>
+                    <Route path='/doctor/dashboard' element={<DashboardLayout />}>
+                      <Route path='/doctor/dashboard' element={<DoctorLanding />} />
+                      <Route path='/doctor/dashboard/support' element={<SupportSystem />} />
+                      <Route path='/doctor/dashboard/account-details' element={<DoctorDetails />}></Route>
+                      <Route path='/doctor/dashboard/appointments' element={<AppointmentPage />}></Route>
+                      <Route path='/doctor/dashboard/review-reports' element={<ReviewReports />}></Route>
+                      <Route path='/doctor/dashboard/appointment-details' element={<AppointmentDetails />}></Route>
+                    </Route>
 
-                  <Route path='/admin/dashboard' element={<AdminDashboardLayout />}>
-                    <Route index element={<AdminOverview />} />
-                    <Route path='/admin/dashboard/annoucements' element={<AdminAnnouncements />} />
-                    <Route path='/admin/dashboard/contacts' element={<AdminContacts />} />
-                    <Route path='/admin/dashboard/notifications' element={<AdminNotifications />} />
-                    <Route path='/admin/dashboard/faqs' element={<AdminFaqs />} />
-                    <Route path='/admin/dashboard/services' element={<AdminServices />} />
-                    <Route path='/admin/dashboard/video' element={<VideoChat />} />
-                    
-                    {/* <Route path='/admin/dashboard/meetings' element={ */}
+                    <Route path='/admin/dashboard' element={<AdminDashboardLayout />}>
+                      <Route index element={<AdminOverview />} />
+                      <Route path='/admin/dashboard/annoucements' element={<AdminAnnouncements />} />
+                      <Route path='/admin/dashboard/contacts' element={<AdminContacts />} />
+                      <Route path='/admin/dashboard/notifications' element={<AdminNotifications />} />
+                      <Route path='/admin/dashboard/faqs' element={<AdminFaqs />} />
+                      <Route path='/admin/dashboard/services' element={<AdminServices />} />
+                      <Route path='/admin/dashboard/video' element={<VideoChat />} />
 
-                  </Route>
-                </Routes>
-              </Router>
-            </NotificationBarStateContextProvider>
-          </SideBarStateContextProvider>
-        </SideBarProvider>
-      </AuthProvider>
+                      {/* <Route path='/admin/dashboard/meetings' element={ */}
+
+                    </Route>
+                  </Routes>
+                </Router>
+              </NotificationBarStateContextProvider>
+            </SideBarStateContextProvider>
+          </SideBarProvider>
+        </AuthProvider>
+      </AlertMessageContextProvider>
+
     </>
   )
 }

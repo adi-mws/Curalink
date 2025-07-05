@@ -4,13 +4,17 @@ import { useForm } from 'react-hook-form';
 import PrimaryButton from '../../shared/buttons/PrimaryButton/PrimaryButton';
 import eyeIcon from '../../../assets/icons/eye.png';
 import eyeSlashIcon from '../../../assets/icons/eye-slash.png';
+import { useAlert } from '../../../contexts/AlertContext';
 
-export default function PatientRegistrationForm(margin="0px",boxShadow="none") {
+export default function PatientRegistrationForm(margin = "0px", boxShadow = "none") {
   const [showPassword, setShowPassword] = useState(false);
   const styles = {
-    margin:margin,
-    boxShadow:boxShadow
+    margin: margin,
+    boxShadow: boxShadow
   };
+
+  const { showNotification } = useAlert();
+
   const {
     register,
     handleSubmit,
@@ -18,9 +22,23 @@ export default function PatientRegistrationForm(margin="0px",boxShadow="none") {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    data.role = 'patient'
     console.log(data);
-    alert("Registration successful");
+    try {
+      // const response = await axios.post(`${import.meta.env.VTIE_API_URL}/user/register`, data)
+
+      // if (response.status === 201) {
+      //   showNotification('Registration Successfull', 'success');
+      //   console.log("Registration Successful")
+      // }
+      // else {
+      //   showNotification(response.data.message, 'error');
+      // }
+    } catch (error) {
+      console.error(error);
+
+    }
   };
 
   return (
